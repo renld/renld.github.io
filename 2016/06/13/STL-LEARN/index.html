@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>简明STL学习笔记 | Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简明STL学习笔记  C++大学教程第22章.  算法参考cplusplus.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简明STL学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/06/13/STL-LEARN/index.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="简明STL学习笔记  C++大学教程第22章.  算法参考cplusplus.com">
+<meta property="og:updated_time" content="2016-06-14T00:37:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简明STL学习笔记">
+<meta name="twitter:description" content="简明STL学习笔记  C++大学教程第22章.  算法参考cplusplus.com">
+  
+    <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Renld</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+					        
+								<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~lxm/">lxm</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~zzz/">zzz</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Renld</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Renld</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+			        
+						<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-STL-LEARN" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/STL-LEARN/" class="article-date">
+  	<time datetime="2016-06-12T16:53:16.000Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简明STL学习笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <div id="toc" class="article-toc">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简明STL学习笔记"><span class="toc-number">1.</span> <span class="toc-text">简明STL学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#容器类型"><span class="toc-number">1.1.</span> <span class="toc-text">容器类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作-记得加括号"><span class="toc-number">1.2.</span> <span class="toc-text">基本操作(记得加括号)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迭代器"><span class="toc-number">1.3.</span> <span class="toc-text">迭代器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重要容器"><span class="toc-number">1.4.</span> <span class="toc-text">重要容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vector"><span class="toc-number">1.4.1.</span> <span class="toc-text">vector</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-number">1.4.2.</span> <span class="toc-text">list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关联容器"><span class="toc-number">1.4.3.</span> <span class="toc-text">关联容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器适配器"><span class="toc-number">1.5.</span> <span class="toc-text">容器适配器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#STL算法"><span class="toc-number">1.6.</span> <span class="toc-text">STL算法\</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变序算法"><span class="toc-number">1.6.1.</span> <span class="toc-text">变序算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非变序算法"><span class="toc-number">1.6.2.</span> <span class="toc-text">非变序算法</span></a></li></ol></li></ol></li></ol>
+          <hr/>
+        </div>
+        
+        <h1 id="简明STL学习笔记"><a href="#简明STL学习笔记" class="headerlink" title="简明STL学习笔记"></a>简明STL学习笔记</h1><p>  C++大学教程第22章.<br>  算法参考<code>cplusplus.com</code><br><a id="more"></a></p>
+<ul>
+<li>标准数组可以作为容器,只要把指针当做迭代器就好</li>
+</ul>
+<h2 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h2><ul>
+<li><p>序列容器</p>
+<p><code>vector</code>    <code>deque</code>    <code>list</code></p>
+</li>
+<li><p>关联容器(重载<code>&lt;</code>运算符,有些需要<code>==</code>)</p>
+<p><code>set``multiset</code> <strong>允许重复</strong>    <code>map</code>        <code>multimap</code></p>
+</li>
+<li><p>容器适配器</p>
+<p><code>stack``queue</code>  <code>priority_queue</code></p>
+</li>
+</ul>
+<h2 id="基本操作-记得加括号"><a href="#基本操作-记得加括号" class="headerlink" title="基本操作(记得加括号)"></a>基本操作(记得加括号)</h2><ul>
+<li>构造,拷贝构造,析构</li>
+<li><code>empty</code>,   <code>insert</code>  <code>size</code>  </li>
+<li>运算符重载(大小关系比较)</li>
+<li>位置: <code>max_size</code>, <code>begin</code> <code>end</code>  <code>rbegin</code>  <code>rend</code>  <code>erase</code>  <code>clear</code></li>
+</ul>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li><p>正向 <code>iterator</code></p>
+<ul>
+<li>随机访问<code>p[i]</code>表示和迭代器位置差p个元素的元素</li>
+</ul>
+</li>
+<li><p>反向 <code>reverse_iterator</code> <strong>对应rbegin和rend</strong></p>
+</li>
+<li><p><code>istream_iterator&lt;type&gt;</code>和<code>ostream_iterator&lt;type&gt;</code></p>
+<ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ostream_iterator&lt;<span class="keyword">int</span>&gt; output(<span class="built_in">cout</span>,<span class="string">" "</span>);</span><br><span class="line">copy(vec.begin(),vec.end(),output)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>const_iterator</code></p>
+</li>
+<li><p>尽量使用前缀++</p>
+</li>
+</ul>
+<h2 id="重要容器"><a href="#重要容器" class="headerlink" title="重要容器"></a>重要容器</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><ul>
+<li><code>insert(pos,num)</code>,在原来<code>pos</code>和<code>pos-1</code>之间插入<code>num</code>;</li>
+<li>容器必须是非空的,不然<code>front</code>,<code>end</code>没有意义</li>
+<li><code>front</code>,<code>back</code>是引用,<code>begin</code>,<code>back</code>是迭代器</li>
+</ul>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><ul>
+<li><p>对于中间元素的插入删除(对于首尾的使用<code>deque</code>)</p>
+</li>
+<li><p>splice</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// set some initial values:</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">4</span>; ++i)</span><br><span class="line">     mylist1.push_back(i);      <span class="comment">// mylist1: 1 2 3 4</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; ++i)</span><br><span class="line">     mylist2.push_back(i*<span class="number">10</span>);   <span class="comment">// mylist2: 10 20 30</span></span><br><span class="line"></span><br><span class="line">  it = mylist1.begin();</span><br><span class="line">  ++it;                         <span class="comment">// points to 2</span></span><br><span class="line"><span class="comment">//剪切到第一个迭代器位置(全部)</span></span><br><span class="line">  mylist1.splice (it, mylist2); <span class="comment">// mylist1: 1 10 20 30 2 3 4</span></span><br><span class="line">                                <span class="comment">// mylist2 (empty)</span></span><br><span class="line">                                <span class="comment">// "it" still points to 2 (the 5th element)</span></span><br><span class="line"><span class="comment">//剪切到第一个迭代器位置(之间)                                    </span></span><br><span class="line">  mylist2.splice (mylist2.begin(),mylist1, it);</span><br><span class="line">                                <span class="comment">// mylist1: 1 10 20 30 3 4</span></span><br><span class="line">                                <span class="comment">// mylist2: 2</span></span><br><span class="line">                                <span class="comment">// "it" is now invalid.</span></span><br><span class="line">  it = mylist1.begin();</span><br><span class="line">  <span class="built_in">std</span>::advance(it,<span class="number">3</span>);           <span class="comment">// "it" points now to 30</span></span><br><span class="line"></span><br><span class="line">  mylist1.splice ( mylist1.begin(), mylist1, it, mylist1.end());</span><br><span class="line">                                <span class="comment">// mylist1: 30 3 4 1 10 20</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.sort()</code>排序,<code>.unique()</code>排重<code>.merge(ano)</code>和ano依次合并112233…</p>
+</li>
+<li><p><code>.assign(beg,end);</code>把beg,end连个迭代器之间的赋值给本身</p>
+</li>
+<li><p><code>.remove(val)</code>删除所有这个值</p>
+</li>
+</ul>
+<h3 id="关联容器"><a href="#关联容器" class="headerlink" title="关联容器"></a>关联容器</h3><ul>
+<li><p>查询是否包含这个元素</p>
+<ul>
+<li><code>.count(a) == 0</code></li>
+<li><code>.find(a) == sl.end()</code></li>
+</ul>
+</li>
+<li><p>插入</p>
+<ul>
+<li><code>insert(make_pair( ) )</code></li>
+<li><code>Map[a] = b</code></li>
+</ul>
+</li>
+<li><p><code>set</code>相关函数</p>
+<ul>
+<li><p><code>it=std::set_union (first, first+5, second, second+5, v.begin());</code></p>
+</li>
+<li><p><code>it=std::set_difference (first, first+5, second, second+5, v.begin());</code></p>
+</li>
+<li><p><code>it=std::set_intersection (first, first+5, second, second+5, v.begin());</code></p>
+</li>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set_union(</span><br><span class="line">   setA.begin(), setA.end(),</span><br><span class="line">   setB.begin(), setB.end(),</span><br><span class="line">   insert_iterator&lt;<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;(ans,ans.begin()));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="容器适配器"><a href="#容器适配器" class="headerlink" title="容器适配器"></a>容器适配器</h2><ul>
+<li>不支持迭代器</li>
+</ul>
+<ul>
+<li><p>小顶堆<code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; q;</code></p>
+</li>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> cmp &#123;</span><br><span class="line">     <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">const</span> node &amp;a, <span class="keyword">const</span> node &amp;b)</span></span><br><span class="line">     </span>&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;node, <span class="built_in">vector</span>&lt;node&gt;, cmp&gt; p;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="STL算法"><a href="#STL算法" class="headerlink" title="STL算法\"></a>STL算法\<algorithm></algorithm></h2><h3 id="变序算法"><a href="#变序算法" class="headerlink" title="变序算法"></a>变序算法</h3><ul>
+<li><p><code>copy</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//std::copy ( myints, myints+7, myvector.begin() );</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> InputIterator, <span class="keyword">class</span> OutputIterator&gt;</span><br><span class="line">  <span class="function">OutputIterator <span class="title">copy</span> <span class="params">(InputIterator first, InputIterator last, OutputIterator result)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">    *result = *first;</span><br><span class="line">    ++result; ++first;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fill</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::fill (myvector.begin(),myvector.begin()+<span class="number">4</span>,<span class="number">5</span>);   <span class="comment">// myvector: 5 5 5 5 0 0 0 0</span></span><br><span class="line">fill_n(beg,num,val);</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> ForwardIterator, <span class="keyword">class</span> T&gt;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">fill</span> <span class="params">(ForwardIterator first, ForwardIterator last, <span class="keyword">const</span> T&amp; val)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first != last) &#123;</span><br><span class="line">    *first = val;</span><br><span class="line">    ++first;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>generate</code>     <em>Assigns the value returned by successive calls to gen to the elements in the range <code>[first,last)</code>.</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span>        <span class="comment">// std::time</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span>      <span class="comment">// std::rand, std::srand</span></span></span><br><span class="line"><span class="built_in">std</span>::srand ( <span class="keyword">unsigned</span> ( <span class="built_in">std</span>::time(<span class="number">0</span>) ) );</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">RandomNumber</span> <span class="params">()</span> </span>&#123; <span class="keyword">return</span> (<span class="built_in">std</span>::rand()%<span class="number">100</span>); &#125;</span><br><span class="line"><span class="built_in">std</span>::generate (myvector.begin(), myvector.end(), RandomNumber);</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> ForwardIterator, <span class="keyword">class</span> Generator&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">generate</span> <span class="params">( ForwardIterator first, ForwardIterator last, Generator gen)</span></span><br><span class="line">  </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (first != last) &#123;</span><br><span class="line">      *first = gen();</span><br><span class="line">      ++first;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>partion</code> <em>用一个函数把容器分成两个部分</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// partition algorithm example</span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span>     <span class="comment">// std::cout</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span>    <span class="comment">// std::partition</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span>       <span class="comment">// std::vector</span></span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">IsOdd</span> <span class="params">(<span class="keyword">int</span> i)</span> </span>&#123; <span class="keyword">return</span> (i%<span class="number">2</span>)==<span class="number">1</span>; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; myvector;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// set some values:</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">10</span>; ++i) myvector.push_back(i); <span class="comment">// 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator bound;</span><br><span class="line">    bound = <span class="built_in">std</span>::partition (myvector.begin(), myvector.end(), IsOdd);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// print out content:</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"odd elements:"</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it=myvector.begin(); it!=bound; ++it)</span><br><span class="line">      <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"even elements:"</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it=bound; it!=myvector.end(); ++it)</span><br><span class="line">      <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; *it;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> BidirectionalIterator, <span class="keyword">class</span> UnaryPredicate&gt;</span><br><span class="line"><span class="function">BidirectionalIterator <span class="title">partition</span> <span class="params">(BidirectionalIterator first,</span><br><span class="line">                             BidirectionalIterator last, UnaryPredicate pred)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">      <span class="keyword">while</span> (pred(*first)) &#123;</span><br><span class="line">        ++first;</span><br><span class="line">        <span class="keyword">if</span> (first==last) <span class="keyword">return</span> first;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">do</span> &#123;</span><br><span class="line">        --last;</span><br><span class="line">        <span class="keyword">if</span> (first==last) <span class="keyword">return</span> first;</span><br><span class="line">      &#125; <span class="keyword">while</span> (!pred(*last));</span><br><span class="line">      swap (*first,*last);</span><br><span class="line">      ++first;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> first;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>random_shuffle</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// using built-in random generator:</span></span><br><span class="line">  <span class="built_in">std</span>::random_shuffle ( myvector.begin(), myvector.end() );</span><br><span class="line"></span><br><span class="line"><span class="comment">// using myrandom:</span></span><br><span class="line"><span class="comment">// random generator function:</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myrandom</span> <span class="params">(<span class="keyword">int</span> i)</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">std</span>::rand()%i;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::random_shuffle ( myvector.begin(), myvector.end(), myrandom);</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> RandomAccessIterator, <span class="keyword">class</span> RandomNumberGenerator&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">random_shuffle</span> <span class="params">(RandomAccessIterator first, RandomAccessIterator last,</span><br><span class="line">                         RandomNumberGenerator&amp; gen)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    iterator_traits&lt;RandomAccessIterator&gt;::difference_type i, n;</span><br><span class="line">    n = (last-first);</span><br><span class="line">    <span class="keyword">for</span> (i=n<span class="number">-1</span>; i&gt;<span class="number">0</span>; --i) &#123;</span><br><span class="line">      swap (first[i],first[gen(i+<span class="number">1</span>)]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>replace</code>(注意这里和string不太一样)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myints[] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">30</span>, <span class="number">20</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">20</span> &#125;;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; myvector (myints, myints+<span class="number">8</span>);            <span class="comment">// 10 20 30 30 20 10 10 20</span></span><br><span class="line">  <span class="built_in">std</span>::replace (myvector.begin(), myvector.end(), <span class="number">20</span>, <span class="number">99</span>); <span class="comment">// 10 99 30 30 99 10 10 99</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> ForwardIterator, <span class="keyword">class</span> T&gt;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">replace</span> <span class="params">(ForwardIterator first, ForwardIterator last,</span><br><span class="line">                  <span class="keyword">const</span> T&amp; old_value, <span class="keyword">const</span> T&amp; new_value)</span></span><br><span class="line">  </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">      <span class="keyword">if</span> (*first == old_value) *first=new_value;</span><br><span class="line">      ++first;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//replace_if</span></span><br><span class="line">  <span class="keyword">template</span> &lt; <span class="keyword">class</span> ForwardIterator, <span class="keyword">class</span> UnaryPredicate, <span class="keyword">class</span> T &gt;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">replace_if</span> <span class="params">(ForwardIterator first, ForwardIterator last,</span><br><span class="line">                     UnaryPredicate pred, <span class="keyword">const</span> T&amp; new_value)</span></span><br><span class="line">  </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">      <span class="keyword">if</span> (pred(*first)) *first=new_value;</span><br><span class="line">      ++first;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>reverse</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">10</span>; ++i) myvector.push_back(i);   <span class="comment">// 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="built_in">std</span>::reverse(myvector.begin(),myvector.end());    <span class="comment">// 9 8 7 6 5 4 3 2 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> BidirectionalIterator&gt;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">reverse</span> <span class="params">(BidirectionalIterator first, BidirectionalIterator last)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> ((first!=last)&amp;&amp;(first!=--last)) &#123;</span><br><span class="line">    <span class="built_in">std</span>::iter_swap (first,last);</span><br><span class="line">    ++first;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>rotate</code>按照第二个参数位置旋转</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">10</span>; ++i) myvector.push_back(i); <span class="comment">// 1 2 3 4 5 6 7 8 9</span></span><br><span class="line"><span class="built_in">std</span>::rotate(myvector.begin(),myvector.begin()+<span class="number">3</span>,myvector.end());</span><br><span class="line">                                                  <span class="comment">// 4 5 6 7 8 9 1 2 3</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> ForwardIterator&gt;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">rotate</span> <span class="params">(ForwardIterator first, ForwardIterator middle,</span><br><span class="line">               ForwardIterator last)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  ForwardIterator next = middle;</span><br><span class="line">  <span class="keyword">while</span> (first!=next)</span><br><span class="line">  &#123;</span><br><span class="line">    swap (*first++,*next++);</span><br><span class="line">    <span class="keyword">if</span> (next==last) next=middle;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (first==middle) middle=next;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>swap_ranges</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; foo (<span class="number">5</span>,<span class="number">10</span>);        <span class="comment">// foo: 10 10 10 10 10</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; bar (<span class="number">5</span>,<span class="number">33</span>);        <span class="comment">// bar: 33 33 33 33 33</span></span><br><span class="line"><span class="built_in">std</span>::swap_ranges(foo.begin()+<span class="number">1</span>, foo.end()<span class="number">-1</span>, bar.begin());</span><br><span class="line"></span><br><span class="line">foo contains: <span class="number">10</span> <span class="number">33</span> <span class="number">33</span> <span class="number">33</span> <span class="number">10</span></span><br><span class="line">bar contains: <span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">33</span> <span class="number">33</span></span><br><span class="line">  </span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> ForwardIterator1, <span class="keyword">class</span> ForwardIterator2&gt;</span><br><span class="line">  <span class="function">ForwardIterator2 <span class="title">swap_ranges</span> <span class="params">(</span><br><span class="line">  ForwardIterator1 first1, ForwardIterator1 last1,ForwardIterator2 first2)</span></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first1!=last1) &#123;</span><br><span class="line">    swap (*first1, *first2);</span><br><span class="line">    ++first1; ++first2;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> first2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>transform</code> 转换到另一个数组内</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">6</span>; i++)</span><br><span class="line">foo.push_back (i*<span class="number">10</span>);                         <span class="comment">// foo: 10 20 30 40 50</span></span><br><span class="line"></span><br><span class="line">bar.resize(foo.size());                         <span class="comment">// allocate space</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::transform (foo.begin(), foo.end(), bar.begin(), op_increase);</span><br><span class="line">                                                  <span class="comment">// bar: 11 21 31 41 51</span></span><br><span class="line">  <span class="comment">// std::plus adds together its two arguments:</span></span><br><span class="line"><span class="built_in">std</span>::transform (foo.begin(), foo.end(), bar.begin(), foo.begin(),</span><br><span class="line">                <span class="built_in">std</span>::plus&lt;<span class="keyword">int</span>&gt;());					 <span class="comment">// foo: 21 41 61 81 101</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>unique</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">myfunction</span> <span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (i==j);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> myints[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">30</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">10</span>&#125;;           <span class="comment">// 10 20 20 20 30 30 20 20 10</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; myvector (myints,myints+<span class="number">9</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// using default comparison:</span></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line">  it = <span class="built_in">std</span>::unique (myvector.begin(), myvector.end());   <span class="comment">// 10 20 30 20 10 ?  ?  ?  ?                                                         //                </span></span><br><span class="line"></span><br><span class="line">myvector.resize( <span class="built_in">std</span>::distance(myvector.begin(),it) ); <span class="comment">// 10 20 30 20 10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// using predicate comparison:</span></span><br><span class="line"><span class="built_in">std</span>::unique (myvector.begin(), myvector.end(), myfunction);   <span class="comment">// (no changes)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="非变序算法"><a href="#非变序算法" class="headerlink" title="非变序算法"></a>非变序算法</h3><ul>
+<li><p><code>count</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myints[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">20</span>&#125;;   <span class="comment">// 8 elements</span></span><br><span class="line"><span class="keyword">int</span> mycount = <span class="built_in">std</span>::count (myints, myints+<span class="number">8</span>, <span class="number">10</span>);</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"10 appears "</span> &lt;&lt; mycount &lt;&lt; <span class="string">" times.\n"</span>;<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>find</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myints[] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> * p;</span><br><span class="line"></span><br><span class="line">p = <span class="built_in">std</span>::find (myints, myints+<span class="number">4</span>, <span class="number">30</span>);</span><br><span class="line"><span class="keyword">if</span> (p != myints+<span class="number">4</span>)<span class="comment">//no find</span></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> InputIterator, <span class="keyword">class</span> T&gt;</span><br><span class="line">  <span class="function">InputIterator <span class="title">find</span> <span class="params">(InputIterator first, InputIterator last, <span class="keyword">const</span> T&amp; val)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">    <span class="keyword">if</span> (*first==val) <span class="keyword">return</span> first;</span><br><span class="line">    ++first;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>search</code></p>
+<blockquote>
+<p>Searches the range <code>[first1,last1)</code> for the first occurrence of the sequence defined by <code>[first2,last2)</code>, and returns an iterator to its first element, or last1 if no occurrences are found.</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; haystack;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// set some values:        haystack: 10 20 30 40 50 60 70 80 90</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">10</span>; i++) haystack.push_back(i*<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// using default comparison:</span></span><br><span class="line">  <span class="keyword">int</span> needle1[] = &#123;<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>,<span class="number">70</span>&#125;;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line">  it = <span class="built_in">std</span>::search (haystack.begin(), haystack.end(), needle1, needle1+<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (it!=haystack.end())</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"needle1 found at position "</span> &lt;&lt; (it-haystack.begin()) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"needle1 not found\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> ForwardIterator1, <span class="keyword">class</span> ForwardIterator2&gt;</span><br><span class="line"><span class="function">ForwardIterator1 <span class="title">search</span> <span class="params">( ForwardIterator1 first1, ForwardIterator1 last1,</span><br><span class="line">                              ForwardIterator2 first2, ForwardIterator2 last2)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (first2==last2) <span class="keyword">return</span> first1;  <span class="comment">// specified in C++11</span></span><br><span class="line">    <span class="keyword">while</span> (first1!=last1)</span><br><span class="line">    &#123;</span><br><span class="line">      ForwardIterator1 it1 = first1;</span><br><span class="line">      ForwardIterator2 it2 = first2;</span><br><span class="line">      <span class="keyword">while</span> (*it1==*it2) &#123;    <span class="comment">// or: while (pred(*it1,*it2)) for version 2</span></span><br><span class="line">          ++it1; ++it2;</span><br><span class="line">          <span class="keyword">if</span> (it2==last2) <span class="keyword">return</span> first1;</span><br><span class="line">          <span class="keyword">if</span> (it1==last1) <span class="keyword">return</span> last1;</span><br><span class="line">      &#125;</span><br><span class="line">      ++first1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> last1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>equal</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> InputIterator1, <span class="keyword">class</span> InputIterator2&gt;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">equal</span> <span class="params">( InputIterator1 first1, InputIterator1 last1, InputIterator2 first2 )</span></span><br><span class="line">  </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (first1!=last1) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!(*first1 == *first2))   <span class="comment">// or: if (!pred(*first1,*first2)), for version 2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      ++first1; ++first2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>mismatch</code></p>
+<blockquote>
+<p>Compares the elements in the range [first1,last1) with those in the range beginning at first2, and returns the first element of both sequences that does not match.</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> InputIterator1, <span class="keyword">class</span> InputIterator2&gt;</span><br><span class="line">  pair&lt;InputIterator1, InputIterator2&gt;</span><br><span class="line">    mismatch (InputIterator1 first1, InputIterator1 last1, InputIterator2 first2 )</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">while</span> ( (first1!=last1) &amp;&amp; (*first1==*first2) )  <span class="comment">// or: pred(*first1,*first2), for version 2</span></span><br><span class="line">  &#123; ++first1; ++first2; &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">std</span>::make_pair(first1,first2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>lexicographical_compare</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::lexicographical_compare(foo,foo+<span class="number">5</span>,bar,bar+<span class="number">9</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">mycomp</span> <span class="params">(<span class="keyword">char</span> c1, <span class="keyword">char</span> c2)</span></span><br><span class="line"></span>&#123; <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">tolower</span>(c1)&lt;<span class="built_in">std</span>::<span class="built_in">tolower</span>(c2); &#125;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::lexicographical_compare(foo,foo+<span class="number">5</span>,bar,bar+<span class="number">9</span>,mycomp);</span><br><span class="line">  </span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> InputIterator1, <span class="keyword">class</span> InputIterator2&gt;</span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">lexicographical_compare</span> <span class="params">(InputIterator1 first1, InputIterator1 last1,</span><br><span class="line">                                InputIterator2 first2, InputIterator2 last2)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first1!=last1)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> (first2==last2 || *first2&lt;*first1) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (*first1&lt;*first2) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    ++first1; ++first2;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (first2!=last2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>lower_bound</code>找到一个已排序序列中第一个可能插入不变序位置</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lower_bound/upper_bound example</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span>     <span class="comment">// std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span>    <span class="comment">// std::lower_bound, std::upper_bound, std::sort</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span>       <span class="comment">// std::vector</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> myints[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">20</span>&#125;;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(myints,myints+<span class="number">8</span>);           <span class="comment">// 10 20 30 30 20 10 10 20</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::sort (v.begin(), v.end());                <span class="comment">// 10 10 10 20 20 20 30 30</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator low,up;</span><br><span class="line">  low=<span class="built_in">std</span>::lower_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">// 3         ^</span></span><br><span class="line">  up= <span class="built_in">std</span>::upper_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">// 6                 ^</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"lower_bound at position "</span> &lt;&lt; (low- v.begin()) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"upper_bound at position "</span> &lt;&lt; (up - v.begin()) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>equal_range</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">std</span>::pair&lt;<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator,<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator&gt; bounds;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// using default comparison:</span></span><br><span class="line">  <span class="built_in">std</span>::sort (v.begin(), v.end());                              <span class="comment">// 10 10 10 20 20 20 30 30</span></span><br><span class="line">  bounds=<span class="built_in">std</span>::equal_range (v.begin(), v.end(), <span class="number">20</span>);            <span class="comment">//          ^        </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// using "mygreater" as comp:</span></span><br><span class="line">  <span class="built_in">std</span>::sort (v.begin(), v.end(), mygreater);                   <span class="comment">// 30 30 20 20 20 10 10 10</span></span><br><span class="line">  bounds=<span class="built_in">std</span>::equal_range (v.begin(), v.end(), <span class="number">20</span>, mygreater); <span class="comment">//       ^</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>for_each</code> <code>sort</code> <code>min</code> <code>max</code></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/15/By-the-Year/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          By The Year
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'renld'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Renld
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+这里被临幸<span id="busuanzi_value_site_pv"></span>次啦，大神足迹<span id="busuanzi_value_site_uv"></span>人次，本文阅读量<span id="busuanzi_value_page_pv"></span>次
+
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
