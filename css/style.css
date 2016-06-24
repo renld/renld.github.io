@@ -630,11 +630,11 @@ a {
 #header .header-nav .social a.github:hover {
   border: 1px solid #909ab6;
 }
-#header .header-nav .social a.facebook {
-  background: url("/img/facebook.png") center no-repeat #3b5998;
+#header .header-nav .social a.CSDN {
+  background: url("/img/logo.png") center no-repeat #3b5998;
   border: 1px solid #3b5998;
 }
-#header .header-nav .social a.facebook:hover {
+#header .header-nav .social a.CSDN:hover {
   border: 1px solid #2d4373;
 }
 #header .header-nav .social a.google {
@@ -698,6 +698,7 @@ a {
   line-height: 30px;
 }
 #header .switch-part3 .switch-friends-link {
+  display: block;
   margin-right: 9px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
