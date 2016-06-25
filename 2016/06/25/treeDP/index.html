@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>树形动态规划 | Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.
+树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客刷题参考然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树形动态规划">
+<meta property="og:url" content="http://yoursite.com/2016/06/25/treeDP/index.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.
+树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客刷题参考然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没">
+<meta property="og:updated_time" content="2016-06-25T12:11:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树形动态规划">
+<meta name="twitter:description" content="一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.
+树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客刷题参考然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Renld</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+					        
+								<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/EE/" style="font-size: 10px;">EE</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/algorithm/" style="font-size: 20px;">algorithm</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~lxm/">lxm</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~zzz/">zzz</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Renld</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Renld</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+			        
+						<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-treeDP" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/25/treeDP/" class="article-date">
+  	<time datetime="2016-06-25T11:15:00.000Z" itemprop="datePublished">2016-06-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      树形动态规划
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <div id="toc" class="article-toc">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#yali-漆子超论文笔记"><span class="toc-number">1.</span> <span class="toc-text">yali_漆子超论文笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#poj-2342-Anniversary-party"><span class="toc-number">2.</span> <span class="toc-text">poj 2342 Anniversary party</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#poj2196-树上距离每个点最远距离"><span class="toc-number">3.</span> <span class="toc-text">poj2196 树上距离每个点最远距离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POJ1741"><span class="toc-number">4.</span> <span class="toc-text">POJ1741</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#期末附加题"><span class="toc-number">5.</span> <span class="toc-text">期末附加题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POJ1155-背包i-最多节点"><span class="toc-number">6.</span> <span class="toc-text">POJ1155 背包i 最多节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HDU-1011-1561-背包ii-取父才取子"><span class="toc-number">7.</span> <span class="toc-text">HDU 1011_1561 背包ii 取父才取子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POJ1974-背包iii"><span class="toc-number">8.</span> <span class="toc-text">POJ1974 背包iii</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HDU3586-切断根与叶子最小边权"><span class="toc-number">9.</span> <span class="toc-text">HDU3586,切断根与叶子最小边权</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为啥DP"><span class="toc-number">9.1.</span> <span class="toc-text">为啥DP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为啥二分"><span class="toc-number">9.2.</span> <span class="toc-text">为啥二分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POJ3107-树的重心"><span class="toc-number">10.</span> <span class="toc-text">POJ3107 树的重心</span></a></li></ol>
+          <hr/>
+        </div>
+        
+        <blockquote>
+<p>一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.</p>
+<p>树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客<a href="http://blog.csdn.net/woshi250hua/article/details/7644959" target="_blank" rel="external">刷题参考</a>然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没有达到一开始4+2那题的难度.</p>
+<p>东西都写在一个文档里面typora已经处理艰难,所以先将这篇文章发出来(刚刚发现是因为CF那道题的处理上发生了bug,删去了那段之后应该能愉快地继续使用了)</p>
+<p>相对概括一些说,它需要找到一个节点和树上其它节点(或者边)之间的关系,然后进行一遍或者两边的搜索.</p>
+<p>明天就是4+2了,与大家共勉</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="yali-漆子超论文笔记"><a href="#yali-漆子超论文笔记" class="headerlink" title="yali_漆子超论文笔记"></a>yali_漆子超论文笔记</h2><p>ps: 这里只有第一篇的题解.</p>
+<ul>
+<li><p>树的重心 <strong>删去后结点最多的树的个数最小</strong></p>
+<ul>
+<li><p>定理: 存在一个点使得分出来的子树的结点个数均不大于N/2</p>
+</li>
+<li><p>定理二: 如果一颗树中每个点的度<code>&lt;=D</code> 那么存在一条边使得分出来的两颗子树结点个数在$[\frac{N}{D+1},\frac{ND}{D+1}]$ =&gt; D为常数时基于边的分治递归最坏深度为<code>logN</code></p>
+</li>
+<li><blockquote>
+<p>所谓重心，就是删掉此结点后，剩下的结点最多的树结点个数最小。</p>
+<p>每次分治，我们首先算出重心，为了计算重心，需要进行两次dfs，第一次把以每个结点为根的子树大小求出来，第二次是从这些结点中找重心<br>其实POJ3107那里有重心的代码.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="poj-2342-Anniversary-party"><a href="#poj-2342-Anniversary-party" class="headerlink" title="poj 2342 Anniversary party"></a>poj 2342 Anniversary party</h2><p>不能选相邻的.记得<code>f[n][1] = max(f[m][0],f[m][1])</code>就可以</p>
+<h2 id="poj2196-树上距离每个点最远距离"><a href="#poj2196-树上距离每个点最远距离" class="headerlink" title="poj2196 树上距离每个点最远距离"></a>poj2196 树上距离每个点最远距离</h2><p><strong>Input file contains multiple test cases</strong></p>
+<ul>
+<li><p><strong>核心思想(三种方法)</strong> : 两遍DFS</p>
+</li>
+<li><p>方法: 记录每棵树根往下最大和第二大,两遍dfs分别更新往下的max和往下的max</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> v,<span class="keyword">int</span> dep)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    vis[v] = dep;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = e[v][i].to;</span><br><span class="line">        <span class="keyword">if</span> (!vis[u]) &#123;</span><br><span class="line">            dfs(u,dep+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">int</span> nt = dp[u][<span class="number">0</span>] + e[v][i].len;</span><br><span class="line">            <span class="keyword">if</span> (nt &gt; dp[v][<span class="number">1</span>]) &#123;</span><br><span class="line">                dp[v][<span class="number">1</span>] = nt;</span><br><span class="line">                <span class="keyword">if</span> (nt &gt; dp[v][<span class="number">0</span>]) &#123;</span><br><span class="line">                    dp[v][<span class="number">1</span>] = dp[v][<span class="number">0</span>];</span><br><span class="line">                    dp[v][<span class="number">0</span>] = nt;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="comment">//保留最大和第二大的子树最远节点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> v)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    vis[v] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = e[v][i].to;</span><br><span class="line">        <span class="keyword">if</span> (!vis[u]) &#123;</span><br><span class="line">        <span class="comment">//一个树上最远的节点,要么是两个最远的子树节点,要么是最远兄弟节点+1</span></span><br><span class="line">            <span class="keyword">if</span> (dp[v][<span class="number">0</span>] == dp[u][<span class="number">0</span>] + e[v][i].len) &#123;</span><br><span class="line">                dp[u][<span class="number">2</span>] = max(dp[v][<span class="number">2</span>], dp[v][<span class="number">1</span>]) + e[v][i].len;</span><br><span class="line">            &#125;<span class="keyword">else</span></span><br><span class="line">                dp[u][<span class="number">2</span>] = max(dp[v][<span class="number">2</span>], dp[v][<span class="number">0</span>]) + e[v][i].len;</span><br><span class="line">            dfs1(u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p><a href="http://www.cnblogs.com/wally/p/3311768.html" target="_blank" rel="external">方法2</a></p>
+<blockquote>
+<p>首先任意一次dfs求出树上最长直径的一个端点End,然后以该端点为起点再次dfs求出另一个端点，然后再次以求出的另一个端点为起点dfs,每次做dfs的时候都更新dist[]（dist[u]表示u到树上任意节点的最远距离），可以证明树上任意某个节点到树上任意节点的最远距离的端点一定会是树上直径的两个端点之一。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> v,<span class="keyword">int</span> fa,<span class="keyword">int</span> len)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(len &gt; max_len) </span><br><span class="line">       End = v,max_len = len;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[v][i].to,w = len + e[v][i].len;</span><br><span class="line">        <span class="keyword">if</span> (nt != fa) &#123;</span><br><span class="line">            dfs(nt, v, w);</span><br><span class="line">            dp[nt] = max(dp[nt],w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//v是当前节点,len是到现在节点的距离,dp[nt]表示的是现在点最远的子树距离</span></span><br><span class="line"></span><br><span class="line">dfs(<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>);     <span class="comment">//第一遍随意扫一遍,知道一个直径端点</span></span><br><span class="line">dfs(End, <span class="number">-1</span>, <span class="number">0</span>); <span class="comment">//第二遍从一个端点开始扫一遍,知道另一个端点</span></span><br><span class="line">dfs(End, <span class="number">-1</span>, <span class="number">0</span>); <span class="comment">//用另一个端点更新每个点的最远距离(前面两次也有更新)</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>(A了,没注意多重数据)自己不能理解为啥错了(有可能是写崩了)的方法_留在这里</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> v,<span class="keyword">int</span> dep)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    vis[v] = dep;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = e[v][i].to;</span><br><span class="line">        <span class="keyword">if</span> (!vis[u]) &#123;</span><br><span class="line">            dfs(u,dep+<span class="number">1</span>);</span><br><span class="line">            update(dp[v][<span class="number">0</span>],dp[u][<span class="number">0</span>] + e[v][i].len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;<span class="comment">//只记录往下的最大值  dp[i][0]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> v)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = e[v][i].to;</span><br><span class="line">        <span class="keyword">if</span> (vis[u] == vis[v] + <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> oth = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; e[v].size(); j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> p = e[v][j].to;</span><br><span class="line">                <span class="keyword">if</span> (vis[p] == vis[u] &amp;&amp; p != u) &#123;</span><br><span class="line">                    update(oth, e[v][j].len + dp[p][<span class="number">0</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(v != <span class="number">1</span>)</span><br><span class="line">                update(oth, dp[v][<span class="number">1</span>]);</span><br><span class="line">            dp[u][<span class="number">1</span>] = oth + e[v][i].len;</span><br><span class="line">            dfs1(u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//然后枚举     dp[i][1] = max(1.父节点向上 2.父到兄弟 + 兄向下) +到父亲距离</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##CF219D 求根集</p>
+<blockquote>
+<p>题目是给一张边有向的树形图。要选出首都的点，首都要都能走到其他点，因此要反转一些边的方向。问可以选哪几个点作为首都，使它们所需反转边的数量最少。</p>
+</blockquote>
+<p><a href="http://www.cnblogs.com/WABoss/p/5267944.html" target="_blank" rel="external">O(n)两遍DFS</a></p>
+<ul>
+<li>将要翻转的边赋值为1,不需要的边赋值为0,就是统计了</li>
+<li>一遍向下统计以该节点为根的变化量</li>
+<li>一遍向上统计它往上走的变化量</li>
+</ul>
+<ul>
+<li>最后求和</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs0</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> fa)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[u]; i!=<span class="number">-1</span>; i=edge[i].next)&#123;</span><br><span class="line">        <span class="keyword">int</span> v=edge[i].v;</span><br><span class="line">        <span class="keyword">if</span>(v==fa) <span class="keyword">continue</span>;</span><br><span class="line">        dfs0(v,u);</span><br><span class="line">        d[<span class="number">0</span>][u]+=d[<span class="number">0</span>][v]+edge[i].w;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//by 题解博客</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;fr,<span class="keyword">int</span> v)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = e[v][i];</span><br><span class="line">        <span class="keyword">if</span> (u != fr) &#123;</span><br><span class="line">            dp[u][<span class="number">1</span>] = dp[v][<span class="number">1</span>] + dp[v][<span class="number">0</span>] - dp[u][<span class="number">0</span>] + <span class="number">1</span>;</span><br><span class="line">   		<span class="comment">//父节点向上 + 父节点向下 - 当前节点向下 + 当前边反向的差 </span></span><br><span class="line">            dfs1(v, u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; re[v].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = re[v][i];</span><br><span class="line">        <span class="keyword">if</span> (u != fr) &#123;</span><br><span class="line">            dp[u][<span class="number">1</span>] = dp[v][<span class="number">1</span>] + dp[v][<span class="number">0</span>] - dp[u][<span class="number">0</span>] - <span class="number">1</span>;</span><br><span class="line">            dfs1(v, u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//向上DP</span></span><br></pre></td></tr></table></figure>
+<p><strong>DP思想: 有向图两边同时展开,看利用情况</strong></p>
+<h2 id="POJ1741"><a href="#POJ1741" class="headerlink" title="POJ1741"></a>POJ1741</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(i &lt; j) <span class="comment">//经典  </span></span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">while</span>(dis[i] + dis[j] &gt; k &amp;&amp; i &lt; j) j--;  </span><br><span class="line">        ret += j - i;  </span><br><span class="line">    i++;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="期末附加题"><a href="#期末附加题" class="headerlink" title="期末附加题"></a>期末附加题</h2><ul>
+<li>给一棵树,问能不能两两节点配对完</li>
+</ul>
+<ul>
+<li>完整代码见<a href="http://renld.github.io/2016/06/19/%E8%BD%AF%E8%AE%BE%E4%B8%89%E5%A5%97%E5%8D%B7%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">另一篇博客</a></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">10000</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; e[maxn];</span><br><span class="line"><span class="keyword">int</span> paired[maxn];<span class="comment">//存储是否配对成功</span></span><br><span class="line"><span class="keyword">int</span> n,a,b,flag;<span class="comment">//个数,两个临时变量,YES</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> pos,<span class="keyword">const</span> <span class="keyword">int</span> fa)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (flag == <span class="number">0</span>) <span class="keyword">return</span>;<span class="comment">//错误状态</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[pos].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[pos][i];</span><br><span class="line">        <span class="keyword">if</span> (nt != fa) &#123;</span><br><span class="line">            dfs(nt, pos);<span class="comment">//测试下一个配对情况</span></span><br><span class="line">            <span class="keyword">if</span> (flag == <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (paired[pos] == <span class="literal">false</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (fa &lt; <span class="number">0</span> || paired[fa] == <span class="number">1</span> ) &#123;</span><br><span class="line">            flag = <span class="number">0</span>;<span class="comment">//已经被配对,出现错误状态</span></span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">            paired[fa] = paired[pos] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="POJ1155-背包i-最多节点"><a href="#POJ1155-背包i-最多节点" class="headerlink" title="POJ1155 背包i 最多节点"></a>POJ1155 背包i 最多节点</h2><p>给一颗树,叶节点是客户,其它所有是中转站,求不亏损的情况下的最多客户</p>
+<p><a href="http://blog.csdn.net/libin56842/article/details/9908199" target="_blank" rel="external">第一个树形背包参考</a></p>
+<p>对于每一个节点的子节点向上进行优化</p>
+<p>这道题而言,就是每完成一次对于子节点的递归之后就回来优化根节点的状态</p>
+<ol>
+<li>状态定义为dp[i][j]表示第i个节点得到j个顾客的时候的最大获益</li>
+<li>num数组优化剪枝</li>
+<li>防错temp数组(存前)</li>
+<li>初始化的时候因为有负数,将<ol>
+<li>dp[i][0] = 0</li>
+<li>dp[i][1] = (i &gt; n + m)?val : -inf (因为后面的是有价值节点)</li>
+<li>dp[i][oth] = -inf</li>
+<li>num[i] = 0</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>关键代码</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[pos].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[pos][i].t,ct = e[pos][i].w;<span class="comment">//下一个节点以及花费</span></span><br><span class="line">        dfs(nt);</span><br><span class="line">        <span class="built_in">memcpy</span>(temp, dp[pos], <span class="keyword">sizeof</span>(dp[pos]));<span class="comment">//保存当前的值,防止背包使用更改的值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= nums[pos] ; j++) &#123;<span class="comment">//父节点已有情况</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt;= nums[nt]; k++) &#123;<span class="comment">//子节点已有情况</span></span><br><span class="line">                update(dp[pos][k+j],</span><br><span class="line">                       temp[j] + dp[nt][k] - ct);<span class="comment">//背包,看子节点的k个顾客能否优化父节点sum-k=j个的情况</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        nums[pos] += nums[nt];<span class="comment">//优化搜索空间,保存当前最多搜索的东西</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">		<span class="comment">//最后输出</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = m; i&gt;=<span class="number">0</span>; i--) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (dp[<span class="number">1</span>][i] &gt;= <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="HDU-1011-1561-背包ii-取父才取子"><a href="#HDU-1011-1561-背包ii-取父才取子" class="headerlink" title="HDU 1011_1561 背包ii 取父才取子"></a>HDU 1011_1561 背包ii 取父才取子</h2><p>1011给一颗树,每个节点都有花费和获得</p>
+<p>想要拿子节点的东西必须先拿父节点的</p>
+<p>1561较难抽象成树,但更好解决 (是1011的一个cost == 1特例)</p>
+<ul>
+<li><p>注意在m=0的时候输出0,不然会挂?==</p>
+</li>
+<li><p>关键代码分析(1011)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">const</span> <span class="keyword">int</span> fa)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="comment">//这里dp的状态是,不少于i个的时候能获得的量,那么初始化就是把cost后的都赋值为earn</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = bugs[pos]; j &lt;= m; j++)</span><br><span class="line">        dp[pos][j] = posi[pos];<span class="comment">//posi[pos]就是当前节点能获得的量(下面就不用搜以上了)</span></span><br><span class="line">  <span class="comment">//利用子树进行背包优化</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[pos].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[pos][i];</span><br><span class="line">        <span class="keyword">if</span>(nt == fa) <span class="keyword">continue</span>;</span><br><span class="line">        dfs(nt, pos);</span><br><span class="line">      	</span><br><span class="line">        <span class="comment">//从大到小背包,防止重复(因为是往上dp所以这样不会) </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = m; j &gt;= bugs[pos]; j--)</span><br><span class="line">          	<span class="comment">//父节点花费(bugs[pos],而且已经获得了posi[pos](最开始的赋值..))</span></span><br><span class="line">          	<span class="comment">//所以不能取到 j - bugs[pos] 以上,  	</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= j - bugs[pos]; k++) </span><br><span class="line">              	update(dp[pos][j],dp[nt][k] + dp[pos][j-k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="POJ1974-背包iii"><a href="#POJ1974-背包iii" class="headerlink" title="POJ1974 背包iii"></a>POJ1974 背包iii</h2><p>给一颗树,求最少删去多少条边能得到大小为p的子树</p>
+<p>一开始思路不知道挂在哪里了,三遍dfs把自己搞晕</p>
+<p><a href="http://www.2cto.com/kf/201503/381184.html" target="_blank" rel="external">参考</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> dp[maxn][maxn];<span class="comment">//以a为根size为b的最小子树删边</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;chi[maxn],fa[maxn];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*只遍历一次,因为是一棵树,所以对于每个节点的处理只有一次</span><br><span class="line">	1. 初始化,对于每个节点所有size都是不可以到达的,inf</span><br><span class="line">	2. size为1是子树本身,0</span><br><span class="line">	3. 对于每一个子树节点,有两种选择</span><br><span class="line">		a. 割去子树节点,也就是 b == 0 当前 = dp[p][a] + 1;</span><br><span class="line">		b. 不割去子树,用子树size更新 也就是 b != 0 的时候,用dp[p][a-b] + dp[nt][b]更新dp[p][a]</span><br><span class="line">	4. 由于对当前dp没有后效性,所以不需要temp数组</span><br><span class="line">	5. 然后最后在dfs外层扫一遍所有的P节点删去数,如果不是根节点,需要+1(因为删上面)</span><br><span class="line">	6. 好像发现自己懵逼在哪了......因为它只能保留子树,所以兄弟似乎不影响...往下看就行</span><br><span class="line">	*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> p)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  	fill(dp[p], dp[p] + maxn, inf);</span><br><span class="line">    dp[p][<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chi[p].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = chi[p][i];</span><br><span class="line">        solve(nt);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> a = N; a &gt;= <span class="number">1</span>; a--) <span class="comment">//被更新的size</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; a; b++) <span class="comment">//子树size</span></span><br><span class="line">                <span class="keyword">if</span> (b) </span><br><span class="line">                    update(dp[p][a], dp[p][a-b] + dp[nt][b]);</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[p][a] = dp[p][a] + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="HDU3586-切断根与叶子最小边权"><a href="#HDU3586-切断根与叶子最小边权" class="headerlink" title="HDU3586,切断根与叶子最小边权"></a>HDU3586,切断根与叶子最小边权</h2><p>给每一条边边权,求切断根和所有叶子的最小花费</p>
+<p>哦对了,所有删去边权的和&lt;m</p>
+<p>.</p>
+<h3 id="为啥DP"><a href="#为啥DP" class="headerlink" title="为啥DP"></a>为啥DP</h3><p>一开始瞄了一眼别人题解..想了很久都没明白一些人题解里面干嘛要背包……</p>
+<p>然后就直接二分强行做dfs了..WA了几发之后发现弄混淆了两个概念</p>
+<ol>
+<li>删去该节点的和</li>
+<li>删去该节点的最小边权</li>
+</ol>
+<p>于是折腾了一会后发现,只有记忆化搜索才能优化</p>
+<p>但是记忆化太麻烦了,不如开一个dp数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> mp)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e[pos].empty()) dp[pos] = inf;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e[pos].size(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[pos][i].to,ct = e[pos][i].ct;</span><br><span class="line">        dfs(nt, mp);</span><br><span class="line">        <span class="keyword">if</span> (ct &gt; mp) &#123;</span><br><span class="line">            dp[pos] += dp[nt];</span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">            dp[pos] += min(dp[nt],ct);<span class="comment">//当前边权可以与子树边权共同优化</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//dp[i]是i为根cost</span></span><br></pre></td></tr></table></figure>
+<h3 id="为啥二分"><a href="#为啥二分" class="headerlink" title="为啥二分"></a>为啥二分</h3><p>二分的原因是,这玩意是一个&lt;m存在性问题,那么符合单调性</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">         <span class="keyword">int</span> mid = l + (r-l)/<span class="number">2</span>;</span><br><span class="line">         <span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));  </span><br><span class="line">         dfs(<span class="number">1</span>, mid);</span><br><span class="line">         <span class="keyword">if</span> (dp[<span class="number">1</span>] &lt;= m) &#123;</span><br><span class="line">             ans = mid;</span><br><span class="line">             r = mid - <span class="number">1</span>;</span><br><span class="line">         &#125;<span class="keyword">else</span></span><br><span class="line">             l = mid + <span class="number">1</span>;</span><br><span class="line">     &#125;<span class="comment">//对于整数的二分模板.</span></span><br></pre></td></tr></table></figure>
+<h2 id="POJ3107-树的重心"><a href="#POJ3107-树的重心" class="headerlink" title="POJ3107 树的重心"></a>POJ3107 树的重心</h2><p>重心就是使得 (最大的子树) 最小的根</p>
+<p>O(n)的算法是假设第一个点为根<br>dfs统计每棵树的子树大小.</p>
+<p>然后那个点最大的子树就是$max(n - sub - 1,max(sub))$<br>这道题挺无聊的在于..坑vector/deque,<br>参考网上代码发现,得写邻接表才能避免TLE</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">50000</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> n,a,b,mt;</span><br><span class="line"><span class="keyword">int</span> cnt[maxn],tot[maxn];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> edge&#123;</span><br><span class="line">    <span class="keyword">int</span> to,nt;</span><br><span class="line">&#125;e[maxn * <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> size = <span class="number">0</span>,head[maxn];</span><br><span class="line"><span class="keyword">int</span> ans[maxn],pos;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">const</span> <span class="keyword">int</span> &amp;b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b &gt; a) a = b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update1</span><span class="params">(<span class="keyword">int</span> &amp;a,<span class="keyword">const</span> <span class="keyword">int</span> &amp;b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b &lt; a) a = b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    e[size].to = v;</span><br><span class="line">    e[size].nt = head[u];</span><br><span class="line">    head[u] = size++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;p,<span class="keyword">const</span> <span class="keyword">int</span> &amp;fa)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    tot[p] = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = head[p]; i != <span class="number">-1</span>; i = e[i].nt) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[i].to;</span><br><span class="line">        <span class="keyword">if</span>(nt == fa) <span class="keyword">continue</span>;</span><br><span class="line">        tot[p] += dfs(nt, p);</span><br><span class="line">    &#125;</span><br><span class="line">    cnt[p] = n - tot[p];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = head[p]; i != <span class="number">-1</span>; i = e[i].nt) &#123;</span><br><span class="line">        <span class="keyword">int</span> nt = e[i].to;</span><br><span class="line">        update(cnt[p], tot[nt]);</span><br><span class="line">    &#125;</span><br><span class="line">    update1(mt, cnt[p]);</span><br><span class="line">    <span class="keyword">return</span> tot[p];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/25/EEreview/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">EEreview</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'renld'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Renld
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+这里被临幸<span id="busuanzi_value_site_pv"></span>次啦，大神足迹<span id="busuanzi_value_site_uv"></span>人次，本文阅读量<span id="busuanzi_value_page_pv"></span>次
+
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
