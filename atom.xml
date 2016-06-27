@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-27T12:18:03.000Z</updated>
+  <updated>2016-06-27T12:50:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/27/2016-4-2/"/>
     <id>http://yoursite.com/2016/06/27/2016-4-2/</id>
     <published>2016-06-27T12:12:29.000Z</published>
-    <updated>2016-06-27T12:18:03.000Z</updated>
+    <updated>2016-06-27T12:50:31.000Z</updated>
     
     <content type="html">&lt;p&gt;2016#4+2&lt;/p&gt;
 &lt;h1 id=&quot;第一场打铁&quot;&gt;&lt;a href=&quot;#第一场打铁&quot; class=&quot;headerlink&quot; title=&quot;第一场打铁&quot;&gt;&lt;/a&gt;第一场打铁&lt;/h1&gt;&lt;p&gt;五个小时一题没有过的感觉还是很不好受的.&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;p&gt;发现是图像range是(0,10),怪自己眼瞎..居然看成了坐标range然后重新改了下枚举..就是第一个矩形统计不在圆里面的点,第二个统计不在圆而且不在第一个里面的点..过了…&lt;/p&gt;
 &lt;p&gt;赛后得知..坐标range就是(0,10),也就是说一开始的算法又写烂了..&lt;/p&gt;
 &lt;h2 id=&quot;后面两道没过的题&quot;&gt;&lt;a href=&quot;#后面两道没过的题&quot; class=&quot;headerlink&quot; title=&quot;后面两道没过的题&quot;&gt;&lt;/a&gt;后面两道没过的题&lt;/h2&gt;&lt;h3 id=&quot;第三题-求每次删回文串最少删多少次&quot;&gt;&lt;a href=&quot;#第三题-求每次删回文串最少删多少次&quot; class=&quot;headerlink&quot; title=&quot;第三题,求每次删回文串最少删多少次.&quot;&gt;&lt;/a&gt;第三题,求每次删回文串最少删多少次.&lt;/h3&gt;&lt;p&gt;记忆化搜索DP状态转移方程写崩了…&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DP(i,j) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i &amp;lt;= j&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i == j || i + 1 == j &amp;amp;&amp;amp; a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;//a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  min(DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j) , DP(i,j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) )+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// a[i] != a[j]这里错了....&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DP(i,j) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i &amp;lt;= j&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i == j || i + 1 == j &amp;amp;&amp;amp; a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;//a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  min(DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j) , DP(i,j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) )+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// a[i] != a[j]这里错了....&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dp(i,j) = min(dp(i,k)+dp(k+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(ai==aj) dp(i,j)=min(dp(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;第四题-给出四堆石子最后拿走的输&quot;&gt;&lt;a href=&quot;#第四题-给出四堆石子最后拿走的输&quot; class=&quot;headerlink&quot; title=&quot;第四题,给出四堆石子最后拿走的输&quot;&gt;&lt;/a&gt;第四题,给出四堆石子最后拿走的输&lt;/h3&gt;&lt;p&gt;最基本的NIM博弈都忘了也是迷…&lt;/p&gt;
 &lt;p&gt;题目是求最多四堆有那么多的时候,期中包含可赢情况的和&lt;/p&gt;
 &lt;ol&gt;

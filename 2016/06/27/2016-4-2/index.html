@@ -18,7 +18,7 @@
 第一场打铁五个小时一题没有过的感觉还是很不好受的.
 晚上思考了很久人生.觉得大一还是努力去见见世面吧.
 但是大二的两个队友却都没空参赛了.sigh..真的有一些莫名的绝望.">
-<meta property="og:updated_time" content="2016-06-27T12:18:03.000Z">
+<meta property="og:updated_time" content="2016-06-27T12:50:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2016_4+2">
 <meta name="twitter:description" content="2016#4+2
@@ -281,7 +281,7 @@
 <p>发现是图像range是(0,10),怪自己眼瞎..居然看成了坐标range然后重新改了下枚举..就是第一个矩形统计不在圆里面的点,第二个统计不在圆而且不在第一个里面的点..过了…</p>
 <p>赛后得知..坐标range就是(0,10),也就是说一开始的算法又写烂了..</p>
 <h2 id="后面两道没过的题"><a href="#后面两道没过的题" class="headerlink" title="后面两道没过的题"></a>后面两道没过的题</h2><h3 id="第三题-求每次删回文串最少删多少次"><a href="#第三题-求每次删回文串最少删多少次" class="headerlink" title="第三题,求每次删回文串最少删多少次."></a>第三题,求每次删回文串最少删多少次.</h3><p>记忆化搜索DP状态转移方程写崩了…</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DP(i,j) </span><br><span class="line">=  <span class="number">0</span> <span class="comment">//i &lt;= j</span></span><br><span class="line">=  <span class="number">1</span> <span class="comment">//i == j || i + 1 == j &amp;&amp; a[i] == a[j]</span></span><br><span class="line">=  DP(i+<span class="number">1</span>,j<span class="number">-1</span>)<span class="comment">//a[i] == a[j]</span></span><br><span class="line">=  min(DP(i+<span class="number">1</span>,j) , DP(i,j+<span class="number">1</span>) )+<span class="number">1</span> <span class="comment">// a[i] != a[j]这里错了....</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DP(i,j) </span><br><span class="line">=  <span class="number">0</span> <span class="comment">//i &lt;= j</span></span><br><span class="line">=  <span class="number">1</span> <span class="comment">//i == j || i + 1 == j &amp;&amp; a[i] == a[j]</span></span><br><span class="line">=  DP(i+<span class="number">1</span>,j<span class="number">-1</span>)<span class="comment">//a[i] == a[j]</span></span><br><span class="line">=  min(DP(i+<span class="number">1</span>,j) , DP(i,j+<span class="number">1</span>) )+<span class="number">1</span> <span class="comment">// a[i] != a[j]这里错了....</span></span><br><span class="line"></span><br><span class="line">dp(i,j) = min(dp(i,k)+dp(k+<span class="number">1</span>,j))</span><br><span class="line"><span class="keyword">if</span>(ai==aj) dp(i,j)=min(dp(i+<span class="number">1</span>,j<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="第四题-给出四堆石子最后拿走的输"><a href="#第四题-给出四堆石子最后拿走的输" class="headerlink" title="第四题,给出四堆石子最后拿走的输"></a>第四题,给出四堆石子最后拿走的输</h3><p>最基本的NIM博弈都忘了也是迷…</p>
 <p>题目是求最多四堆有那么多的时候,期中包含可赢情况的和</p>
 <ol>
