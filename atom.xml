@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-25T12:11:30.000Z</updated>
+  <updated>2016-06-27T12:18:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,93 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2016_4+2</title>
+    <link href="http://yoursite.com/2016/06/27/2016-4-2/"/>
+    <id>http://yoursite.com/2016/06/27/2016-4-2/</id>
+    <published>2016-06-27T12:12:29.000Z</published>
+    <updated>2016-06-27T12:18:03.000Z</updated>
+    
+    <content type="html">&lt;p&gt;2016#4+2&lt;/p&gt;
+&lt;h1 id=&quot;第一场打铁&quot;&gt;&lt;a href=&quot;#第一场打铁&quot; class=&quot;headerlink&quot; title=&quot;第一场打铁&quot;&gt;&lt;/a&gt;第一场打铁&lt;/h1&gt;&lt;p&gt;五个小时一题没有过的感觉还是很不好受的.&lt;/p&gt;
+&lt;p&gt;晚上思考了很久人生.觉得大一还是努力去见见世面吧.&lt;/p&gt;
+&lt;p&gt;但是大二的两个队友却都没空参赛了.sigh..真的有一些莫名的绝望.&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;第一题-an-2an-1-3an-2-1&quot;&gt;&lt;a href=&quot;#第一题-an-2an-1-3an-2-1&quot; class=&quot;headerlink&quot; title=&quot;第一题 an = 2an-1 - 3an-2 + 1&quot;&gt;&lt;/a&gt;第一题 an = 2an-1 - 3an-2 + 1&lt;/h2&gt;&lt;p&gt;给出a0,a1求第n个数&lt;/p&gt;
+&lt;p&gt;当时看到题就很兴奋地写起了矩阵快速幂.T了之后找公式,莫名继续T到最后.&lt;/p&gt;
+&lt;p&gt;赛后看诗源用矩阵快速幂过的,梓华用快速幂过的…….绝望- -&lt;/p&gt;
+&lt;p&gt;思路是找到高中数列公式,然后快速幂&lt;/p&gt;
+&lt;h2 id=&quot;快速幂写烂后找的歪门邪道&quot;&gt;&lt;a href=&quot;#快速幂写烂后找的歪门邪道&quot; class=&quot;headerlink&quot; title=&quot;快速幂写烂后找的歪门邪道&quot;&gt;&lt;/a&gt;快速幂写烂后找的歪门邪道&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;存前面200w的2^n,如果快速幂遇到直接查表&lt;/li&gt;
+&lt;li&gt;2的快速幂位运算&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;一段代码写烂一个小时后就得有重写的打算,不要老是”调”评测系统&lt;/li&gt;
+&lt;li&gt;一个代码超时如果尚有可回忆的方法,那么久一定要坚持复杂度.超时可能是写烂了而不是复杂度太高&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;第二题-最小哈密尔顿&quot;&gt;&lt;a href=&quot;#第二题-最小哈密尔顿&quot; class=&quot;headerlink&quot; title=&quot;第二题 最小哈密尔顿&quot;&gt;&lt;/a&gt;第二题 最小哈密尔顿&lt;/h2&gt;&lt;p&gt;给出一个Wn的圈(见离散书上的举例…)每次修改一条边,求每次修改后的最小哈密尔顿回路&lt;/p&gt;
+&lt;p&gt;这题是思路不对.&lt;/p&gt;
+&lt;p&gt;一开始map存的东西不多,后来用优先队列做,每次把修改的边和旁边两条都丢到队列里面,维护版本信息.但是这样的话旧版本可能会覆盖新版本然后就&lt;strong&gt;忘记pop&lt;/strong&gt;了…&lt;/p&gt;
+&lt;p&gt;对于一个区间的动态维护首先应该想到线段树.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线段树和优先队列的区别.&lt;/li&gt;
+&lt;li&gt;线段树是每次查询的时候更新,优先队列对于版本信息会较为混淆(不能及时剔除旧版本)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;赛后诗源说map设计好一些也能过,&lt;/p&gt;
+&lt;p&gt;梓华维护了一颗二叉树+桶排..不明觉厉XD&lt;/p&gt;
+&lt;p&gt;另外最后一题听说也能用线段树来过,就是一个动态的归并?&lt;/p&gt;
+&lt;h1 id=&quot;第二场迷之两题&quot;&gt;&lt;a href=&quot;#第二场迷之两题&quot; class=&quot;headerlink&quot; title=&quot;第二场迷之两题&quot;&gt;&lt;/a&gt;第二场迷之两题&lt;/h1&gt;&lt;p&gt;一上手看最后一题..写了半小时发现看错题了……..&lt;/p&gt;
+&lt;p&gt;但是还算是捡回了昨天的运气XD&lt;/p&gt;
+&lt;h2 id=&quot;第一题-动归-剪枝&quot;&gt;&lt;a href=&quot;#第一题-动归-剪枝&quot; class=&quot;headerlink&quot; title=&quot;第一题 动归+剪枝&quot;&gt;&lt;/a&gt;第一题 动归+剪枝&lt;/h2&gt;&lt;p&gt;给一个10w长的(0,10w)的递增序列,求一个最长子序列&lt;/p&gt;
+&lt;p&gt;要求: gcd(bn,bn-1) &amp;gt; 1&lt;/p&gt;
+&lt;p&gt;过的太迷..不过也算走了正确的道路,但还是先讲故事吧..&lt;/p&gt;
+&lt;p&gt;打张素数表后,每读入一个元素&lt;/p&gt;
+&lt;p&gt;质因数分解,更新一个,dp值,定义为到第n个数的最长子序列,然后莫名WA到第一个数据…然后开始了谜一样的对OJ测试…重复1遍过了两组数据后就来劲了..看了眼时间直接循环200遍过到第4组数据,然后跳到800遍TLE,调回500遍第五组数据T,做了一些剪枝后WA,再用list优化了”下一个数”400第六组数据TLE,然后再优化365遍第八组数据了…&lt;/p&gt;
+&lt;p&gt;突然想到了第一天的悲伤..然后放弃这样瞎搞了…观察代码结构继续剪枝&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开一个c[maxn]数组记录每个数的最大质因数位置,然后分解的时候只需要分解到那就可以了.&lt;/li&gt;
+&lt;li&gt;开一个a[maxn]数组,每读入一个数更新一次它所有质因数dp = maxdp[因数] + 1;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;两个优化后0.368秒过了&lt;/p&gt;
+&lt;p&gt;4+2第一题..兴奋的打开了第二题&lt;/p&gt;
+&lt;h2 id=&quot;第二题-撒点算面积&quot;&gt;&lt;a href=&quot;#第二题-撒点算面积&quot; class=&quot;headerlink&quot; title=&quot;第二题 撒点算面积&quot;&gt;&lt;/a&gt;第二题 撒点算面积&lt;/h2&gt;&lt;p&gt;第一遍看完题目居然懒得做…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给出两个矩形两个圆,求被矩形覆盖然而不被圆覆盖的面积&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第二遍看完题目就开始后悔…这么水…….特别发现数据范围是(0,10)….&lt;/p&gt;
+&lt;p&gt;然后就开始了撒点打发…两个for循环(double x = 0;x &amp;lt; 10;x += 0.001)枚举其中的点统计符合要求的点数/100000就理论可以了,,然而居然WA…滚去再看题&lt;/p&gt;
+&lt;p&gt;发现是图像range是(0,10),怪自己眼瞎..居然看成了坐标range然后重新改了下枚举..就是第一个矩形统计不在圆里面的点,第二个统计不在圆而且不在第一个里面的点..过了…&lt;/p&gt;
+&lt;p&gt;赛后得知..坐标range就是(0,10),也就是说一开始的算法又写烂了..&lt;/p&gt;
+&lt;h2 id=&quot;后面两道没过的题&quot;&gt;&lt;a href=&quot;#后面两道没过的题&quot; class=&quot;headerlink&quot; title=&quot;后面两道没过的题&quot;&gt;&lt;/a&gt;后面两道没过的题&lt;/h2&gt;&lt;h3 id=&quot;第三题-求每次删回文串最少删多少次&quot;&gt;&lt;a href=&quot;#第三题-求每次删回文串最少删多少次&quot; class=&quot;headerlink&quot; title=&quot;第三题,求每次删回文串最少删多少次.&quot;&gt;&lt;/a&gt;第三题,求每次删回文串最少删多少次.&lt;/h3&gt;&lt;p&gt;记忆化搜索DP状态转移方程写崩了…&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DP(i,j) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i &amp;lt;= j&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//i == j || i + 1 == j &amp;amp;&amp;amp; a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;//a[i] == a[j]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=  min(DP(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,j) , DP(i,j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) )+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// a[i] != a[j]这里错了....&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;第四题-给出四堆石子最后拿走的输&quot;&gt;&lt;a href=&quot;#第四题-给出四堆石子最后拿走的输&quot; class=&quot;headerlink&quot; title=&quot;第四题,给出四堆石子最后拿走的输&quot;&gt;&lt;/a&gt;第四题,给出四堆石子最后拿走的输&lt;/h3&gt;&lt;p&gt;最基本的NIM博弈都忘了也是迷…&lt;/p&gt;
+&lt;p&gt;题目是求最多四堆有那么多的时候,期中包含可赢情况的和&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NIM博弈赢的方式是所有异或为0&lt;/li&gt;
+&lt;li&gt;统计四堆不如统计两堆.然后枚举后面两堆和前面两堆异或一样就可以了..&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;BTW.今天晚霞挺美的.&lt;br&gt;生活还是要继续的:)&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2016#4+2&lt;/p&gt;
+&lt;h1 id=&quot;第一场打铁&quot;&gt;&lt;a href=&quot;#第一场打铁&quot; class=&quot;headerlink&quot; title=&quot;第一场打铁&quot;&gt;&lt;/a&gt;第一场打铁&lt;/h1&gt;&lt;p&gt;五个小时一题没有过的感觉还是很不好受的.&lt;/p&gt;
+&lt;p&gt;晚上思考了很久人生.觉得大一还是努力去见见世面吧.&lt;/p&gt;
+&lt;p&gt;但是大二的两个队友却都没空参赛了.sigh..真的有一些莫名的绝望.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>树形动态规划</title>
     <link href="http://yoursite.com/2016/06/25/treeDP/"/>
     <id>http://yoursite.com/2016/06/25/treeDP/</id>
     <published>2016-06-25T11:15:00.000Z</published>
-    <updated>2016-06-25T12:11:30.000Z</updated>
+    <updated>2016-06-27T12:13:29.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
