@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-27T12:50:31.000Z</updated>
+  <updated>2016-06-28T12:19:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/27/2016-4-2/"/>
     <id>http://yoursite.com/2016/06/27/2016-4-2/</id>
     <published>2016-06-27T12:12:29.000Z</published>
-    <updated>2016-06-27T12:50:31.000Z</updated>
+    <updated>2016-06-28T12:19:54.000Z</updated>
     
     <content type="html">&lt;p&gt;2016#4+2&lt;/p&gt;
 &lt;h1 id=&quot;第一场打铁&quot;&gt;&lt;a href=&quot;#第一场打铁&quot; class=&quot;headerlink&quot; title=&quot;第一场打铁&quot;&gt;&lt;/a&gt;第一场打铁&lt;/h1&gt;&lt;p&gt;五个小时一题没有过的感觉还是很不好受的.&lt;/p&gt;
@@ -81,6 +81,36 @@
 &lt;li&gt;统计四堆不如统计两堆.然后枚举后面两堆和前面两堆异或一样就可以了..&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;BTW.今天晚霞挺美的.&lt;br&gt;生活还是要继续的:)&lt;/p&gt;
+&lt;h1 id=&quot;第三场步入正轨&quot;&gt;&lt;a href=&quot;#第三场步入正轨&quot; class=&quot;headerlink&quot; title=&quot;第三场步入正轨&quot;&gt;&lt;/a&gt;第三场步入正轨&lt;/h1&gt;&lt;p&gt;今天来东校比赛..周围都是大腿光环:)&lt;/p&gt;
+&lt;p&gt;把两个实训队友落在珠海还是内心有一些愧疚的..不过下午看到做出来超级漂亮的板子.简直女神.&lt;/p&gt;
+&lt;p&gt;过了两题后学了两个小时算法..发现模板这种东西关键时刻还是比较鸡肋的.(顿时为期末模板写烂找好了借口).不过很有趣的是翻到了AC自动机的部分.然后认认真真看了一个小时(并没有看懂)恭喜少豪最后一秒钟提交通过233.&lt;/p&gt;
+&lt;p&gt;很开心的是郭老师过来说报销车费住宿费.公费旅游名不虚传233&lt;/p&gt;
+&lt;p&gt;话题步入正轨.这次比赛很难进校队了,但是从一定程度上已经扩宽了我的知识面.比如第三题AC自动机,第二题状态压缩以及第一场里面对于线段树的理解加深.也相对来说超过了最开始看4+2真题时候”可能打铁”的预期.与其说让我暑假放弃对于算法的训练,不如说方向更加明确了一些.&lt;/p&gt;
+&lt;h2 id=&quot;第一题-图像放大&quot;&gt;&lt;a href=&quot;#第一题-图像放大&quot; class=&quot;headerlink&quot; title=&quot;第一题 图像放大&quot;&gt;&lt;/a&gt;第一题 图像放大&lt;/h2&gt;&lt;p&gt;一开题就全场一阵惊呼..因为贝爷放了两张游戏截图..&lt;/p&gt;
+&lt;p&gt;初看完题后发现是模拟..居然懒得做…..于是罚时感人&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;题意&lt;/strong&gt;就是给出一个图像,中轴线把它原来一个像素放大成三个像素,外围一圈打码.&lt;/p&gt;
+&lt;p&gt;额直接调参数打表就可以了..freopen忘记关WA一次= =&lt;/p&gt;
+&lt;h2 id=&quot;第二题-生产机器&quot;&gt;&lt;a href=&quot;#第二题-生产机器&quot; class=&quot;headerlink&quot; title=&quot;第二题 生产机器&quot;&gt;&lt;/a&gt;第二题 生产机器&lt;/h2&gt;&lt;p&gt;给出一堆事情,和”做某事得先做的事”,最多做k件能获得的最大收益&lt;/p&gt;
+&lt;p&gt;N&amp;lt;=24&lt;/p&gt;
+&lt;p&gt;一开始还以为是树形..然后发现一件事可能有多件之前得做,,就确认是状压了&lt;/p&gt;
+&lt;p&gt;然而问题来了..状压不会写.= =开了个表发现太大了..于是尴尬地写起了搜索,当然还是用01串来保存状态.用位运算一定程度上加速..交的时候dfs挺虚的把set改成了人品hash..再审视一圈哪里可以剪枝后居然0.03s过了.(目瞪口呆)….&lt;/p&gt;
+&lt;p&gt;赛后听说更多人写的状压..(大概这是我搞完树形之后的方向吧x)&lt;/p&gt;
+&lt;h2 id=&quot;还有三道没过的题&quot;&gt;&lt;a href=&quot;#还有三道没过的题&quot; class=&quot;headerlink&quot; title=&quot;还有三道没过的题&quot;&gt;&lt;/a&gt;还有三道没过的题&lt;/h2&gt;&lt;h3 id=&quot;第三题-AC自动机&quot;&gt;&lt;a href=&quot;#第三题-AC自动机&quot; class=&quot;headerlink&quot; title=&quot;第三题 AC自动机&quot;&gt;&lt;/a&gt;第三题 AC自动机&lt;/h3&gt;&lt;p&gt;给出一堆模板串,在一个长串里面找最大匹配次数 两边都是2*10^6&lt;/p&gt;
+&lt;p&gt;一开始想了一个字典树,然后跳跃式寻找.不过写烂了后就去翻书(学习了),翻白书到串的那里很惊喜的发现题意和AC自动机如此一致..就开始兴奋地学起数据结构了…然而一个小时没看懂之后只好抄模板.当然挂了= =今天晚上学一下吧.&lt;/p&gt;
+&lt;h3 id=&quot;第四题-几何智力题&quot;&gt;&lt;a href=&quot;#第四题-几何智力题&quot; class=&quot;headerlink&quot; title=&quot;第四题 几何智力题&quot;&gt;&lt;/a&gt;第四题 几何智力题&lt;/h3&gt;&lt;p&gt;给出平面上三个点,求以这三个点为圆心的最小半径,&lt;/p&gt;
+&lt;p&gt;使得三个圆里面分别纯在一个点能形成等边三角形.&lt;/p&gt;
+&lt;p&gt;最值问题二分答案&lt;/p&gt;
+&lt;p&gt;固定一个点时候,第三个点的区域是围绕第二个点的区域旋转的一个圆&lt;/p&gt;
+&lt;p&gt;那么第一个点也不动的时候,就是半径为2r的一个圆&lt;/p&gt;
+&lt;p&gt;然后再二分半径,判断是否符合条件即可???&lt;/p&gt;
+&lt;p&gt;(其实这题当时就被英文卡住了看不懂..比赛结束都没人过)&lt;/p&gt;
+&lt;h3 id=&quot;第五题-1024&quot;&gt;&lt;a href=&quot;#第五题-1024&quot; class=&quot;headerlink&quot; title=&quot;第五题 1024&quot;&gt;&lt;/a&gt;第五题 1024&lt;/h3&gt;&lt;p&gt;Alice和Bob互相最开始都有M(100000)滴血&lt;/p&gt;
+&lt;p&gt;他们有N(1000000)种技能,每次打对方的时候先扣自己相等的血..&lt;/p&gt;
+&lt;p&gt;谁没血了当然就输了..问先发起攻击的Alice能不能赢&lt;/p&gt;
+&lt;p&gt;恍恍惚惚一开始看错题成为全场第一个交的233&lt;/p&gt;
+&lt;p&gt;然后过了很久都没什么人过于是贝爷修改数据有个哥们写个脚本暴力枚举..被警告了233&lt;/p&gt;
+&lt;p&gt;一个背包..但是需要birset优化(似乎我当时也是..看到O(n^2)没有继续往下做了)&lt;/p&gt;
+&lt;p&gt;今天暴雨.但心情的确挺明媚的XD&lt;/p&gt;
 </content>
     
     <summary type="html">
