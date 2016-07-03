@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-03T13:47:56.000Z</updated>
+  <updated>2016-07-03T14:01:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/07/03/Algor-Water/"/>
     <id>http://yoursite.com/2016/07/03/Algor-Water/</id>
     <published>2016-07-03T13:43:49.000Z</published>
-    <updated>2016-07-03T13:47:56.000Z</updated>
+    <updated>2016-07-03T14:01:26.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;由于被查水表..4+2的题解删去了,在文末留下当初的一些感想.&lt;/p&gt;
@@ -60,10 +60,11 @@
 &lt;p&gt;&lt;strong&gt;&amp;lt;&amp;lt;挑战程序设计&amp;gt;&amp;gt;/&amp;lt;&amp;lt;算法竞赛入门经典(第一版)&amp;gt;&amp;gt;/USACO题库&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这三个其实才算稍微入门了之后的一些选择,芮浩师兄借了我一本&amp;lt;&amp;lt;挑战程序设计&amp;gt;&amp;gt;,我翻了几页后自己买了一本,然而因为心分三用没有往后再扎实的看下去.&amp;lt;&amp;lt;入门经典&amp;gt;&amp;gt;第一版大概是我唯一看完的一本算法书吧.当时草草看完,因为看不懂的直接跳.现在看来其实也并没有那么难,只是一种莫名的畏惧或陌生吧..USACO题库我刷到最后一章暂停了下来,刷题的一些记录放在了&lt;a href=&quot;http://blog.csdn.net/qq_32209643&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSDN博客&lt;/a&gt;上面.前面三章几乎都是些水题吧.因为重排了之后,后面几章便才开始讲基础的算法模板题.&lt;a href=&quot;http://www.nocow.cn/index.php/USACO_Training&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nocow&lt;/a&gt;上题解的帮助挺大的.因为简单题可以看到更漂亮的算法,难题可以明白大神的思维方式.&lt;/p&gt;
 &lt;p&gt;建议搜索关键词有: &lt;code&gt;网络流&lt;/code&gt;, &lt;code&gt;动态规划&lt;/code&gt;, &lt;code&gt;剪枝&lt;/code&gt;    &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; &amp;lt; &amp;lt; ACM国际大学生程序设计竞赛 &amp;gt; &amp;gt; 知识与入门 / 算法与实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt; &amp;lt; ACM国际大学生程序设计竞赛 &amp;gt; &amp;gt; 知识与入门 / 算法与实现&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第二本是常用的模板,在第一学期期中机考快速幂的时候知道的.但是这本模板给我最大的体验就是如果没练过,&lt;code&gt;相对坑度&lt;/code&gt;比&amp;lt;&amp;lt;算法竞赛入门经典(训练指南)&amp;gt;&amp;gt;要大.另外缺少hash的函数处理模板.其实实际使用中若不是模板题这本书参考价值更多的是看个人,毕竟ACM允许纸质材料后,更多的考察抽象思维能力.&amp;lt;&amp;lt;知识与入门&amp;gt;&amp;gt;便是常见算法的讲解,讲的特别简明精要,优点是可以开拓眼界,缺点是没有证明部分,若没有基础看的会比较虚..相对难一些的比赛想要现学现用也是不大现实.&lt;strong&gt;另外其实安利自己从网上收集的模板,在&lt;a href=&quot;http://renld.github.io/2016/06/19/%E8%BD%AF%E8%AE%BE%E4%B8%89%E5%A5%97%E5%8D%B7%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这篇文章&lt;/a&gt;里面能找到&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;建议搜索关键词有: &lt;code&gt;数据结构&lt;/code&gt;, &lt;code&gt;图论&lt;/code&gt; , &lt;code&gt;数论&lt;/code&gt;    &lt;/p&gt;
 &lt;p&gt;大一结束,我大概也就停留在这个水平吧,之后也不好安利.或许小伙伴你愿意和我一起刷白书呢.&lt;/p&gt;
+&lt;p&gt;几近一年过去,160的车费补贴也算是实现了最初的梦想,当然离现在的理想还是有些许差距.&lt;/p&gt;
 &lt;p&gt;希望暑假加油完成专题训练.下学期算法比赛好好表现.不能再靠水题来混日子了.&lt;/p&gt;
 &lt;h2 id=&quot;4-2感想-原4-2题解感想摘录&quot;&gt;&lt;a href=&quot;#4-2感想-原4-2题解感想摘录&quot; class=&quot;headerlink&quot; title=&quot;4+2感想(原4+2题解感想摘录)&quot;&gt;&lt;/a&gt;4+2感想(原4+2题解感想摘录)&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;伙食很好&lt;/p&gt;
