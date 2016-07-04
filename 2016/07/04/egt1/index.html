@@ -17,7 +17,7 @@
 说白了,就是学会用模板.
 很不幸的是苦于找模板.忘模板…这样就还是很尴尬.">
 <meta property="og:image" content="http://i1.piimg.com/567571/23c51ba0a9247f6a.png">
-<meta property="og:updated_time" content="2016-07-04T11:59:14.000Z">
+<meta property="og:updated_time" content="2016-07-04T12:04:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初级工程实训">
 <meta name="twitter:description" content="面向硬件的编程主要是对于宏文件的套用
@@ -284,7 +284,7 @@
 <p><code>adc_channel | START_FLAG</code> 其实就是一个绑定,但是加上了一个mask(正常电压范围达不到mask)</p>
 <p><code>spi_response &amp; DONE_FLAG</code>是在探测mask位是否有值,也就是检查<code>start_flag</code></p>
 <p><code>spi_response &amp; 0xFFF</code> 取出来的时候需要提取有效部分,也就是后面12位.</p>
-<p><strong>举个例子</strong>:</p>
+<p><strong>举个例子</strong>(由于md样式<code>|</code>表示成or):</p>
 <table>
 <thead>
 <tr>
@@ -298,8 +298,7 @@
 <td><code>0000 0000 0000 0010</code></td>
 </tr>
 <tr>
-<td>`adc_channel \</td>
-<td>START_FLAG`</td>
+<td><code>adc_channel or START_FLAG</code></td>
 <td><code>1000 0000 0000 0010</code></td>
 </tr>
 <tr>
@@ -319,6 +318,7 @@
 <td><code>1000 0000 0000 0000</code></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 </tr>
 </tbody>
