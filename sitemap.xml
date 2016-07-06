@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://renld.github.io/2016/06/25/EEreview/</loc>
+    
+    <lastmod>2016-07-06T14:29:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/06/15/By-the-Year/</loc>
+    
+    <lastmod>2016-07-06T14:29:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/07/03/Algor-Water/</loc>
+    
+    <lastmod>2016-07-06T14:29:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/06/20/part_list/</loc>
+    
+    <lastmod>2016-07-06T14:29:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/06/25/treeDP/</loc>
+    
+    <lastmod>2016-07-06T14:29:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/06/13/STL-LEARN/</loc>
+    
+    <lastmod>2016-07-06T14:28:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/06/19/sdii/</loc>
+    
+    <lastmod>2016-07-06T14:28:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-07-06T14:20:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://renld.github.io/ZZPPP/index.html</loc>
     
     <lastmod>2016-07-06T11:37:31.000Z</lastmod>
@@ -19,62 +75,6 @@
     <loc>http://renld.github.io/404.html</loc>
     
     <lastmod>2016-07-06T05:30:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/07/03/Algor-Water/</loc>
-    
-    <lastmod>2016-07-03T14:01:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/15/By-the-Year/</loc>
-    
-    <lastmod>2016-07-01T11:06:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/25/EEreview/</loc>
-    
-    <lastmod>2016-07-01T11:04:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/25/treeDP/</loc>
-    
-    <lastmod>2016-06-27T12:13:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/20/part_list/</loc>
-    
-    <lastmod>2016-06-21T06:41:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/19/sdii/</loc>
-    
-    <lastmod>2016-06-20T12:23:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/06/13/STL-LEARN/</loc>
-    
-    <lastmod>2016-06-14T00:37:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/tags/index.html</loc>
-    
-    <lastmod>2016-06-11T05:19:50.000Z</lastmod>
     
   </url>
   
