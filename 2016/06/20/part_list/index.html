@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>块状链表 | Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="块状链表_未练习
+记得上个学期集训的时候子臻老师讲约瑟夫环的时候介绍过
+
+
+用途是用$O(\sqrt{n})$的方式线段计算(线段树是二分$O(logN)$)
+
+
+相当于(数组+链表)
+
+因为要准备明天近代史考试了,未对此数据结构加以及时练习.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="块状链表">
+<meta property="og:url" content="http://renld.github.io/2016/06/20/part_list/index.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="块状链表_未练习
+记得上个学期集训的时候子臻老师讲约瑟夫环的时候介绍过
+
+
+用途是用$O(\sqrt{n})$的方式线段计算(线段树是二分$O(logN)$)
+
+
+相当于(数组+链表)
+
+因为要准备明天近代史考试了,未对此数据结构加以及时练习.">
+<meta property="og:image" content="file://localhost/Users/macbook/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif">
+<meta property="og:image" content="file://localhost/Users/macbook/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.gif">
+<meta property="og:updated_time" content="2016-06-21T06:41:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="块状链表">
+<meta name="twitter:description" content="块状链表_未练习
+记得上个学期集训的时候子臻老师讲约瑟夫环的时候介绍过
+
+
+用途是用$O(\sqrt{n})$的方式线段计算(线段树是二分$O(logN)$)
+
+
+相当于(数组+链表)
+
+因为要准备明天近代史考试了,未对此数据结构加以及时练习.">
+<meta name="twitter:image" content="file://localhost/Users/macbook/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif">
+  
+    <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Renld</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>预览</li>
+						<li>标签</li>
+						
+						<li>友链</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">戳回老本营</a></li>
+				        
+							<li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+				        
+							<li><a href="/tagcloud.swf">这里有个球</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+					        
+								<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<li><a href="/tags/C/" style="font-size: 15px;">C++</a></li> <li><a href="/tags/EE/" style="font-size: 15px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 10px;">Life</a></li> <li><a href="/tags/algorithm/" style="font-size: 20px;">algorithm</a></li>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://terry.pub/">terry</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~lxm/">lxm</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://smie2.sysu.edu.cn/~zzz/">zzz</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Renld</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/fan.jpeg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Renld</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">戳回老本营</a></li>
+		        
+					<li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+		        
+					<li><a href="/tagcloud.swf">这里有个球</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+			        
+						<a class="CSDN" target="_blank" href="http://blog.csdn.net/qq_32209643" title="CSDN">CSDN</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-part_list" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/20/part_list/" class="article-date">
+  	<time datetime="2016-06-20T12:00:00.000Z" itemprop="datePublished">2016-06-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      块状链表
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <div id="toc" class="article-toc">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#块状链表-未练习"><span class="toc-number">1.</span> <span class="toc-text">块状链表_未练习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#例程-4-2-07"><span class="toc-number">1.1.</span> <span class="toc-text">例程 4+2   07</span></a></li></ol></li></ol>
+          <hr/>
+        </div>
+        
+        <h1 id="块状链表-未练习"><a href="#块状链表-未练习" class="headerlink" title="块状链表_未练习"></a>块状链表_未练习</h1><blockquote>
+<p>记得上个学期集训的时候子臻老师讲约瑟夫环的时候介绍过</p>
+</blockquote>
+<ul>
+<li>用途是用$O(\sqrt{n})$的方式线段计算(线段树是二分$O(logN)$)</li>
+</ul>
+<ul>
+<li>相当于(数组+链表)</li>
+</ul>
+<p>因为要准备明天近代史考试了,未对此数据结构加以及时练习.</p>
+<a id="more"></a>
+<ul>
+<li>网站part</li>
+</ul>
+<blockquote>
+<p><strong>基本操作</strong>：</p>
+<p>（1）定位：先定位元素所在的链表节点，然后再定位该元素在数组中的位置。</p>
+<p>（2）分裂：将某个链表节点分裂成两个节点。</p>
+<p>（3）插入：首先定位要插入的位置，然后将所在节点分裂成两个节点，并将数据放到第一个节点的末尾。 如果要插入的是一大块数据，首先要将数据切成多个block（每个block对应一个块状链表的一个节点）并将这些block链起来，然后将它们插入那两个节点之间。</p>
+<p><strong>关键点和复杂度分析</strong></p>
+<p>该算法的核心是确定链表长度和每个节点的数组长度，以及怎么保证这个长度值？设块状链表中元素总个数为X，链表长度为n，每个节点中数据长度为m，则当m=n=sqrt(X)时，可保证m和n同时最小，此时各种操作的时间复杂度最低。在实际应用时，需维持块状链表的每个节点大小在[sqrt(n)/2, 2*sqrt(n)]，否则，块状链表会退化。维护方法是，适当的时候，对节点进行合并与分裂（维护本身不会使复杂度增加）</p>
+</blockquote>
+<ul>
+<li>论文part</li>
+</ul>
+<blockquote>
+<p>而且块状链表非常好扩展，只要是序列操作，比如：统一赋值，翻转，求和，维护最小值等等，都可以使用块状链表得到<img src="file://localhost/Users/macbook/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif" alt="img">的复杂度，而如果将整个块状链表维护成有序的，它甚至可以实现平衡树的一些操作<a href="#_ftn1">[1]</a>，毕竟平衡树也可以看作是一种维护序列的方法。</p>
+<p>又因为块状链表只在每个分块记录一些额外信息，它的空间利用率很高，而同是模拟方法的Splay需要在每个节点上维护全部额外信息，虽然速度比较快，却占用大量内存<a href="#_ftn2">[2]</a>。</p>
+<p>其实，在日常生活中我们经常会用到块状链表：传统的FAT文件系统就是将磁盘扇区分簇，然后用FAT表(FileAllocation Table 文件分配表)来记录每一个簇的状态：是否损坏，是否被使用，如果被使用那么它的下一个簇是哪一个簇。可见，FAT文件系统的思想和块状链表是一致的。</p>
+<p>而且因为块状链表空间利用率很高，分块的结构又能很方便的和缓冲区结合使用，Vim<a href="#_ftn3">[3]</a>也使用了块状链表，在内存的存储和在磁盘上的缓冲都使用了类似块状链表的结构<a href="#_ftn4">[4]</a>。试想如果用Splay去写一个文本编辑器会是多么复杂而抽象，它又如何方便地利用缓冲区，一旦发生崩溃、断电等意外事件，又如何从磁盘缓冲中重构树结构、恢复数据？</p>
+<p>另外，已经有人在g++的<ext rope="">库中写了一个基本的块状链表模板：__gnu_cxx::rope<t, alloc="">，也就是说，使用C++的同学可以很方便的得到一个现成的块状链表<a href="#_ftn5">[5]</a>。</t,></ext></p>
+<hr>
+<p><a href="#_ftnref1">[1]</a> 我用块状链表做NOI2006happybirthday，略微比我写的SBT短一些，可以过8个点（第8个点接近时限）。</p>
+<p><a href="#_ftnref2">[2]</a> 利用Splay可以把模拟操作的复杂度降到<img src="file://localhost/Users/macbook/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.gif" alt="img">（其实这也是空间换时间的例子：线段树、Splay维护的额外信息多，空间占用大，但是速度也快），关于Splay的讨论可以参考2007年余江伟的集训队论文《如何解决好动态统计问题》，2004年杨思雨的集训队论文《伸展树的基本操作与应用》。</p>
+<p><a href="#_ftnref3">[3]</a> Vi IMproved，应该算是很有名了吧。</p>
+<p><a href="#_ftnref4">[4]</a> 就像BramMoolenaar所说：A texteditor is used all day by many people; it is worth investing time and effort inmaking it work well. Vim使用的数据结构很复杂，但是原理和块状链表是相似的。</p>
+<p><a href="#_ftnref5">[5]</a> <a href="http://www.sgi.com/tech/stl/Rope.html" target="_blank" rel="external">http://www.sgi.com/tech/stl/Rope.html</a>上有一份rope<t, alloc="">的文档。</t,></p>
+</blockquote>
+<h2 id="例程-4-2-07"><a href="#例程-4-2-07" class="headerlink" title="例程 4+2   07"></a>例程 <em>4+2</em>   07</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxc 1000000		<span class="comment">//数列的最大长度</span></span></span><br><span class="line"><span class="keyword">int</span> C;						<span class="comment">//数列的长度</span></span><br><span class="line"><span class="keyword">int</span> val[maxc];				<span class="comment">//数列中的每个元素</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> NODE &#123;				<span class="comment">//每个元素为链表中的一个节点</span></span><br><span class="line">	<span class="keyword">int</span> next;				<span class="comment">//链表的下一节点</span></span><br><span class="line">	<span class="keyword">int</span> jump;				<span class="comment">//链表的下sqrt(N)个节点</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> sum;			<span class="comment">//链表中以这个节点开始的连续sqrt(N)个节点的和</span></span><br><span class="line">&#125;;</span><br><span class="line">NODE <span class="built_in">list</span>[maxc];				<span class="comment">//链表的每个节点</span></span><br><span class="line"><span class="keyword">struct</span> LIST &#123;					<span class="comment">//连续段</span></span><br><span class="line">	<span class="keyword">int</span> head;					<span class="comment">//连续段的起点</span></span><br><span class="line">	<span class="keyword">int</span> len;					<span class="comment">//连续段的长度</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span> J;							<span class="comment">//保存sqrt(N)的值</span></span><br><span class="line">LIST l;							<span class="comment">//整个链表看作一个连续段</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;					<span class="comment">//初始化函数</span></span><br><span class="line">	J = <span class="built_in">sqrt</span>(C);				<span class="comment">//计算sqrt(N)的值</span></span><br><span class="line">	<span class="keyword">if</span> (J&lt;<span class="number">1</span>) J=<span class="number">1</span>;				<span class="comment">//最少为1</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;C;i++)&#123;			<span class="comment">//初始化链表</span></span><br><span class="line">		<span class="comment">//链表的下一元素指针</span></span><br><span class="line">		<span class="keyword">if</span>(i&lt;C<span class="number">-1</span>) <span class="built_in">list</span>[i].next=i+<span class="number">1</span>; <span class="keyword">else</span> <span class="built_in">list</span>[i].next=<span class="number">-1</span>;</span><br><span class="line">		<span class="comment">//链表的下J元素指针	</span></span><br><span class="line">		<span class="keyword">if</span>(i&lt;=C-J) <span class="built_in">list</span>[i].jump=i+J; <span class="keyword">else</span> <span class="built_in">list</span>[i].jump=<span class="number">-1</span>; </span><br><span class="line">		<span class="built_in">list</span>[i].sum = <span class="number">0</span>;		<span class="comment">//清空和为0</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> k;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,k=<span class="number">0</span>;i&lt;J;i++)k+=val[i];	<span class="comment">//计算前J项和</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;C-J;i++)&#123;				<span class="comment">//计算每个数之后的连续J项和</span></span><br><span class="line">		<span class="built_in">list</span>[i].sum = k;</span><br><span class="line">		<span class="comment">//从前一个连续J项和，减去第一项，加上最后一项，得到新的连续J项和</span></span><br><span class="line">		k = k - val[i] + val[i+J];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">list</span>[i].sum = k;</span><br><span class="line"></span><br><span class="line">	l.head = <span class="number">0</span>;						<span class="comment">//初始连续段的起点</span></span><br><span class="line">	l.len = C;						<span class="comment">//初始连续段的长段</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getlocate</span><span class="params">(LIST l, <span class="keyword">int</span> t)</span> 		<span class="comment">//求连续段的第t个元素的位置</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t&lt;<span class="number">0</span> || t&gt;=l.len) <span class="keyword">return</span> <span class="number">-1</span>;	<span class="comment">//输入位置不合法</span></span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	i = l.head;</span><br><span class="line">	<span class="keyword">while</span>(t&gt;=J)&#123;					<span class="comment">//还有超过J个元素</span></span><br><span class="line">		i = <span class="built_in">list</span>[i].jump;			<span class="comment">//直接跳过J个元素</span></span><br><span class="line">		t -= J;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(t)&#123;						<span class="comment">//不超过J个元素</span></span><br><span class="line">		i = <span class="built_in">list</span>[i].next;			<span class="comment">//超过1个元素</span></span><br><span class="line">		t --;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;						<span class="comment">//返加元素所在位置</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LIST <span class="title">merge</span><span class="params">(LIST a, LIST b)</span></span>&#123;			<span class="comment">//数列合并</span></span><br><span class="line">	<span class="keyword">if</span>(a.len==<span class="number">0</span>) <span class="keyword">return</span> b;			<span class="comment">//a数列为空时返回b数列</span></span><br><span class="line">	<span class="keyword">if</span>(b.len==<span class="number">0</span>) <span class="keyword">return</span> a;			<span class="comment">//b数列为空时返回a数列</span></span><br><span class="line">	<span class="keyword">int</span> ha, hb, ia, ib, i,j;</span><br><span class="line"></span><br><span class="line">	i = getlocate(a, a.len<span class="number">-1</span>);		<span class="comment">//找到a数列最后一个元素</span></span><br><span class="line">	<span class="built_in">list</span>[i].next = b.head;			<span class="comment">//指向b数列的第一个元素</span></span><br><span class="line">	LIST re;re.head=a.head, re.len=a.len+b.len;	<span class="comment">//合并后的数列</span></span><br><span class="line">	<span class="keyword">if</span>(re.len&lt;J) <span class="keyword">return</span> re;			<span class="comment">//数列长度小于J，则不需要改变指针和连续段和</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(a.len&lt;J)&#123;					<span class="comment">//a的长度小于J，则改变指针要从a的第一个元素开始</span></span><br><span class="line">		ia = <span class="number">0</span>;						<span class="comment">//a的第一个元素</span></span><br><span class="line">		ib = J-a.len;				<span class="comment">//对应的J个元素后所在的位置</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;						<span class="comment">//a的长度不小于J</span></span><br><span class="line">		ia = a.len - J;				<span class="comment">//从a的倒数第J个元素开始</span></span><br><span class="line">		ib = <span class="number">0</span>;						<span class="comment">//从b的第一个元素开始</span></span><br><span class="line">	&#125;</span><br><span class="line">	ha = getlocate(a, ia);			<span class="comment">//求出第一个元素所在位置</span></span><br><span class="line">	hb = getlocate(b, ib);			<span class="comment">//求出最后一个元素所在位置</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> k;</span><br><span class="line">									<span class="comment">//连续J个元素的和</span></span><br><span class="line">	<span class="keyword">for</span>(i=k=<span class="number">0</span>,j=ha;i&lt;J;i++,j=<span class="built_in">list</span>[j].next) k+=val[j]; </span><br><span class="line">	<span class="keyword">while</span>(ia&lt;a.len &amp;&amp; ib&lt;=b.len)&#123;	<span class="comment">//枚举所有需要改变的节点</span></span><br><span class="line">		<span class="built_in">list</span>[ha].jump = hb;			<span class="comment">//修改跳过J个元素的指针</span></span><br><span class="line">		<span class="built_in">list</span>[ha].sum = k;			<span class="comment">//修改连续J个元素的和</span></span><br><span class="line">		k -= val[ha];				<span class="comment">//减去第一个元素</span></span><br><span class="line">		<span class="keyword">if</span>(hb!=<span class="number">-1</span>) k += val[hb];	<span class="comment">//加上最后一个元素</span></span><br><span class="line">		ha = <span class="built_in">list</span>[ha].next;			<span class="comment">//第一个元素的下一节点</span></span><br><span class="line">		hb = <span class="built_in">list</span>[hb].next;			<span class="comment">//最后一个元素的下一节点</span></span><br><span class="line">		ia++, ib++;					<span class="comment">//下一个连续J个元素</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> re;						<span class="comment">//返回合并后的数列</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> sa, <span class="keyword">int</span> sb, <span class="keyword">int</span> np)</span></span>&#123;	<span class="comment">//移动一段连续数列</span></span><br><span class="line">	<span class="keyword">int</span> leftpartlen;				<span class="comment">//左边部分的元素个数</span></span><br><span class="line">	<span class="keyword">if</span>(np&lt;sa)leftpartlen=np+<span class="number">1</span>;		<span class="comment">//移动段在插入位置的右边</span></span><br><span class="line">	<span class="keyword">else</span> leftpartlen=np+<span class="number">1</span>-(sb-sa+<span class="number">1</span>);<span class="comment">//移动段在插入位置的左边</span></span><br><span class="line"></span><br><span class="line">	LIST left, mid, right;			<span class="comment">//初始段分成三段</span></span><br><span class="line">	left.head = l.head;				<span class="comment">//左段的起始位置</span></span><br><span class="line">	left.len = sa;					<span class="comment">//左段的长度</span></span><br><span class="line">	mid.head = getlocate(l, sa);	<span class="comment">//中段的起始位置</span></span><br><span class="line">	mid.len = sb-sa+<span class="number">1</span>;				<span class="comment">//中段的长度</span></span><br><span class="line">	right.head = getlocate(l, sb+<span class="number">1</span>);<span class="comment">//右段的起始位置</span></span><br><span class="line">	right.len = C-sb<span class="number">-1</span>;				<span class="comment">//右段的长度</span></span><br><span class="line">	l = merge(left, right);			<span class="comment">//合并左右段</span></span><br><span class="line">	<span class="comment">//在插入位置分成两段</span></span><br><span class="line">	left.head = l.head;				<span class="comment">//左段起始位置</span></span><br><span class="line">	left.len = leftpartlen;			<span class="comment">//左段长度</span></span><br><span class="line">	right.head = getlocate(l, leftpartlen);<span class="comment">//右段起始位置</span></span><br><span class="line">	right.len = l.len - leftpartlen;<span class="comment">//右段长度</span></span><br><span class="line">	l = merge(left, mid);			<span class="comment">//合并左段和中段</span></span><br><span class="line">	l = merge(l, right);			<span class="comment">//合并右段</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> sa, <span class="keyword">int</span> sb)</span></span>&#123;			<span class="comment">//求连续段的和</span></span><br><span class="line">	<span class="keyword">int</span> i,t;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;				<span class="comment">//初始化和为0</span></span><br><span class="line">	i = getlocate(l,sa);			<span class="comment">//起始元素位置</span></span><br><span class="line">	t = sb-sa+<span class="number">1</span>;					<span class="comment">//连续段长度</span></span><br><span class="line">	<span class="keyword">while</span>(t&gt;=J)&#123;					<span class="comment">//超过J个元素</span></span><br><span class="line">		ans += <span class="built_in">list</span>[i].sum;			<span class="comment">//一次累加连续J个元素的和</span></span><br><span class="line">		i = <span class="built_in">list</span>[i].jump;			<span class="comment">//跳过J个元素</span></span><br><span class="line">		t -= J;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(t)&#123;						<span class="comment">//不足J个元素</span></span><br><span class="line">		ans += val[i];				<span class="comment">//累加一个元素</span></span><br><span class="line">		i = <span class="built_in">list</span>[i].next;			<span class="comment">//跳过一个元素</span></span><br><span class="line">		t --;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);			<span class="comment">//输出答案</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cs;	</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;cs);				<span class="comment">//输入数据组数</span></span><br><span class="line">	<span class="keyword">while</span>(cs--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;C);				<span class="comment">//输入数列长度</span></span><br><span class="line">		<span class="keyword">int</span> i,j;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;C;i++)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;val[i]);	<span class="comment">//输入每个元素</span></span><br><span class="line">		init();						<span class="comment">//初始化</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> S, sa, sb, np;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;S);				<span class="comment">//输入操作数</span></span><br><span class="line">		<span class="keyword">char</span> st[<span class="number">30</span>];</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;S;i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%s"</span>,st);</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">strcmp</span>(st,<span class="string">"Move"</span>)==<span class="number">0</span>)&#123;<span class="comment">//如果是移动操作</span></span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;sa,&amp;sb,&amp;np);</span><br><span class="line">				sa--,sb--,np--;</span><br><span class="line">				move(sa,sb,np);		<span class="comment">//调用移动操作函数</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(st,<span class="string">"Sum"</span>)==<span class="number">0</span>)&#123;<span class="comment">//如果是求和操作</span></span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;sa,&amp;sb);</span><br><span class="line">				sa--,sb--;</span><br><span class="line">				sum(sa,sb);			<span class="comment">//调用求和操作函数</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考资料</p>
+<ul>
+<li>中山大学程序设计竞赛(中山大学内部选拔赛) 真题解(一)</li>
+</ul>
+<ul>
+<li><strong>对块状链表的一点研究</strong>  <em>苏煜</em></li>
+</ul>
+<ul>
+<li><a href="http://dongxicheng.org/structure/blocklink/" target="_blank" rel="external">网上的资料</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/25/EEreview/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          EEreview
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/19/sdii/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SDII_FUN</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'renld'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Renld
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+曾有<span id="busuanzi_value_site_pv"></span>次足迹漫步此林
+遇见<span id="busuanzi_value_page_pv"></span>次才当你临幸本文
+
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80351677-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
