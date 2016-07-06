@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <title>中珠碰碰碰</title>
+    <meta charset="utf-8">
+</head>
+
+<h3>左右控制木板移动<br>炮弹没了按空格发射炮弹哟~<br><red>(隐藏技能:花费重金发射多枚炮弹)</red></h3>
+
+<body bgcolor="#d0d0d0">
+
+<canvas id="myCanvas" width="1280" height="600" style="border:solid 1px #CCC;">
+    你的浏览器不支持canvas画布元素，请更新浏览器获得演示效果。
+</canvas>
+
+<script type="text/javascript">
+/*
+Version 2.3
+优化球的图片为png格式,去除背景
+*/
+/*
+Version 2.2
+    减少背景图片,优化程序
+    优化速度
+    调整第四关砖块图
+*/
+
+/*
+Version 2.1
+    调整木板长度,随着关卡增加木板变窄
+    优化击中木板左右反弹
+    背景音乐<<奇妙的约会>>
+*/
+
+/*
+Version 2.0
+    添加CSS元素
+*/
+
+/*Version 1.1
+    增加游戏奖励
+    增加游戏关卡
+    改变砖块构造
+    优化击中随机数生成
+*/
+
+/*
+Version 1.0
+    完成游戏实现
+*/
+/*
+    delete showText
+*/
+
+    var help = "h                 弹出帮助\nq                 加速木板移动快慢\nw                减缓木板移动快慢\n空格键         发射炮弹\n左右键         控制木板\nb                 开关背景\n\n如果白屏了按'b'或许可以恢复游戏呢~\n红红火火恍恍惚惚\n手机端点任一点可以移动木板,点击木板可以发射炮弹哟~"
+    alert(help);
+    alert("为了加快游戏进程,高能少年你花费score可以一次玩多个球\n红红火火恍恍惚惚\n\n但是球越多分就越少啦~\n相反关卡越高越容易得分嘿嘿嘿\n12345分以上送美剧资源\n前几名通关还有其它小礼品哟");
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+
+    var bg_sound=document.createElement("bgsound");
+    bg_sound.id="i_bg"//设置id属性
+    document.body.appendChild(bg_sound);//body中添加背景音乐
+    i_bg.src="YueHui.mp3";//设置一个背景音乐文件
+    function bg_stop(){
+        i_bg.src="";
+    }
+    function bg_start(){
+        i_bg.src="YueHui.mp3";
+    }
+
+    var Level = 1;
+    var blockes     = [];
+    var balls       = [];
+    var blockImg    = [];
+    var bgPic       = [];
+    
+    var background  =    new Image();
+    var platesImg   =    new Image();
+    var ballImg     =    new Image();
+    var image       =    new Image();
+
+    var plates;
+    var score       = 92.0;
+    
+    var speed       = 5;
+    var platePace   = 66;
+    
+    var maxBall     = 5;
+    var maxBlock    = 0;
+    
+    var backgroundIdx = 0;
+    
+    var ScreenRight       = 1280;
+    var ScreenBottom      = 600;
+
+    var BlockWidth  =    200;
+    var BlockHeight =    101;
+    var Ballwidth   =    40;
+
+    var IniXpos     =    200;
+    var IniYpos     =    50;
+
+    var oriSrc      =    "a.jpg";
+    var backGroundOn = true;
+    var prizeFlag   = false;
+
+    background.src  = oriSrc;
+    platesImg.src   = "Wood.png";
+    image.src       = "a.jpg";
+    ballImg.src     = "Ball.png";
+    
+    for (var i = 0; i < 10; i++) {
+        bgPic.push("bg" + Number(i).toString() + ".jpg");
+    };  
+
+    var blockx = [50,50,500,500,1000];
+    var blocky = [100,150,30,70,100];    
+
+    for (var i = 0; i <maxBlock ; i++) {
+         blockImg[i] = new Image();
+         blockImg[i].src = bgPic[i];
+    };
+    
+    var Obj = function(image,x,y,wid,hei)
+    {
+        this.image = image;
+        this.x = x;
+        this.y = y;
+        this.width = wid;
+        this.height = hei;
+    };
+    var Block = function (image, x, y) {
+        Obj.call(this,image,x,y,BlockWidth,BlockHeight);
+        this.dis = 0;
+        this.FaceRight = true;
+    };
+    /*new a block
+    i make it like a array blow~
+
+    1. src = "...";
+    2. blockes.push(new Block(image, Xpos, Ypos));*/
+        
+
+    var Ball = function(image,x,y)
+    {
+        Obj.call(this,image,x,y,40,30);
+        this.dx = speed * ( 3 * (0.5 - Math.random()));
+        this.dy = -speed * Math.random();
+    };
+
+    var Plate = function (image)
+    {
+        Obj.call(this,image,500,570,166,30);
+    };
+    plates = new Plate(platesImg)
+
+    var isClicked   = false;
+    
+    var mouseX;
+    var mouseY;
+
+    canvas.addEventListener("mousedown", onMouseDown, false);
+    canvas.addEventListener("mousemove", onMouseMove, false);
+    canvas.addEventListener("mouseup", onMouseUp, false);
+
+    canvas.addEventListener("touchstart", function (e) 
+    {
+        var x = e.touches[0].pageX;
+        var y = e.touches[0].pageY;
+        if (x >= plates.x && x <= plates.x + plates.width
+                && y >= plates.y && y <= plates.y)
+        {
+            if (score == 0 && balls.length == 0)
+                    {
+                        Level1();
+                        score = 66;
+                    };
+                    var cost = Math.pow(66,Number(balls.length));
+                    if (score >= cost) 
+                    {
+                        balls.push(new Ball(ballImg, plates.x, plates.y));
+                        score -= cost;
+                    };
+        }else
+        
+        plates.x = e.touches[0].pageX;
+    });
+    /*document.addEventListener('deviceorientation', deviceMotionHandler, false);
+    function deviceMotionHandler(eventData)
+    {
+　　// 获取含重力的加速度
+    　var acceleration = eventData.accelerationIncludingGravity; 
+
+　　　　x = acceleration.x; 
+　　　　y = acceleration.y; 
+　　　　
+　　　　if(y < last_y || x < last_x )
+        {
+            plates.x -= platePace;
+        }else if(y > last_y || x > last_x)
+        {
+            plates.x += platePace;
+        }
+
+　　　　last_x = x; 
+　　　　last_y = y;  
+　　}  */
+
+    document.addEventListener("keydown", function (e) 
+    {
+        switch(e.keyCode)
+        {
+            case 37:
+                if (plates.x > 10)
+                    plates.x -= platePace;
+            break;
+        
+            case 39:
+                if (plates.x <= ScreenRight - platePace)
+                    plates.x += platePace;
+            break;
+
+            case 72:
+                alert(help);
+            break;
+
+            case 81:
+                if (platePace < 200) 
+                    platePace += 10;//add v
+            break;
+
+            case 87:
+                if (platePace-10 > 0)
+                    platePace -= 10;
+            break;
+
+            case 66:
+                backGroundOn = !backGroundOn;
+            break;
+            case 32:
+                if (balls.length <= maxBall)
+                {
+                    if (score == 0 && balls.length == 0)
+                    {
+                        Level1();
+                        score = 66;
+                    };
+                    var cost = Math.pow(66,Number(balls.length));
+                    if (score >= cost) 
+                    {
+                        balls.push(new Ball(ballImg, plates.x, plates.y));
+                        score -= cost;
+                    };
+                }
+            break;
+
+            default:
+            break;
+        }
+        // if (e.keyCode == 37)
+        // {
+        //     if (plates.x > 10)
+        //     {
+        //         plates.x -= platePace;
+        //     };
+        // }else if (e.keyCode == 39)
+        //  {
+        //     if (plates.x <= ScreenRight - platePace)
+        //     {
+        //         plates.x += platePace;
+        //     };
+        // }
+        // else if (e.keyCode == 32 && balls.length <= maxBall)
+        // {
+        //     var cost = Math.pow(66,Number(balls.length));
+        //     balls.push(new Ball(ballImg, plates.x, plates.y));
+        // }
+        // else 
+        // if (e.keyCode == 72)
+        // {
+        //     alert(help);
+        // }
+        // else if(e.keyCode == 81)
+        // {
+        //     if (platePace < 200) 
+        //         platePace += 10;
+        // }
+        // else if(e.keyCode == 87)
+        // {
+        //     if (platePace-10 > 0)
+        //         platePace -= 10;
+        // }else if(e.keyCode == 66)
+        // {
+        //     backGroundOn = !backGroundOn;
+        // }
+    }, false);
+
+
+    function onMouseDown(e) {
+        preX = mouseX = e.pageX - canvas.clientLeft;
+        preY = mouseY = e.pageY - canvas.clientTop;
+        if(plates.testPoint(mouseX,mouseY))
+        {
+            isClicked = true;
+            return;
+        }
+        isClicked = false;
+    }
+
+    function onMouseMove(e) {
+        if (isClicked) {
+            mouseX = e.pageX - canvas.clientLeft;
+            mouseY = e.pageY - canvas.clientTop;
+            plates.move(mouseX, mouseY);
+        }
+    }
+
+    function onMouseUp(e) {
+        isClicked = false;
+        mouseX = e.pageX - canvas.clientLeft;
+        mouseY = e.pageY - canvas.clientTop;
+    }
+    
+    Block.prototype.testPoint = function (x, y) {
+        var betweenX = (x >= this.x - Ballwidth)
+                     && (x <= this.x + this.width );
+        var betweenY = (y >= this.y) && (y <= this.y + this.height);
+        return betweenX && betweenY;
+    };
+
+    Block.prototype.move = function (dx, dy) {
+        this.x += dx;
+        this.y += dy;
+    };
+
+    Block.prototype.draw = function (ctx) {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        if (this.FaceRight)
+        {
+            this.dis++;
+            if (this.dis >= 20)
+            {
+                this.FaceRight = false;
+            };
+        }
+        else
+        {
+            this.dis--;
+            if (this.dis <= 0)
+            {
+                this.FaceRight = false;
+            };
+        }
+    };
+
+    
+
+    Plate.prototype.draw = function (ctx) 
+    {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    };
+
+    Plate.prototype.testPoint = function (x, y) {
+        var betweenX = (x >= this.x- Ballwidth)
+             && (x <= this.x+1 + this.width);
+        var betweenY = (y >= this.y-1);
+        return betweenX && betweenY;
+    };
+
+    Plate.prototype.move = function (x,y)
+    {
+        this.x = x;
+        //this.y = y;
+    }
+
+    Plate.prototype.deleteBall = function(ball)
+    {
+        ball.x = ball.y = -100;
+        var index = balls.indexOf(ball);
+        balls.splice(index,1);
+        DB();
+    }
+
+    
+
+    Ball.prototype.testPoint = function (x, y) {
+        var betweenX = (x >= this.x) && (x <= this.x + this.width);
+        var betweenY = (y >= this.y) && (y <= this.y + this.height);
+        return betweenX && betweenY;
+    };
+
+    Ball.prototype.deleteBlock = function (block) {
+        block.x = -200;
+        block.y = -150;
+        var index = blockes.indexOf(block);
+        /*原来图片较多的时候的更换背景代码
+        backgroundIdx = (backgroundIdx+1);
+        background.src = bgPic[Math.floor(backgroundIdx/16)%29];
+        */
+        blockes.splice(index, 1);
+        score += 10 * Level /balls.length;
+        if (score >=12345 && prizeFlag == false)
+        {
+            alert("神秘代码:\n\nhttp://pan.baidu.com/s/1hr7rjTi");
+            prizeFlag = true;
+        };
+        
+    };
+
+    Ball.prototype.draw = function (ctx) 
+    {
+        if (Math.abs(this.dy) < 5) 
+        {
+            this.dy = 2 * this.dy;
+        };
+        if (Math.abs(this.dx) > 15)
+        {
+            this.dx *= 0.8;
+        };
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        for (var i = 0; i < blockes.length; i++) {
+            if (blockes[i] != undefined 
+                && blockes[i].testPoint(this.x, this.y))
+            {
+                this.deleteBlock(blockes[i]);
+                bD();
+                this.dy = -1.05 * this.dy;
+                this.dx *= 1.05;
+                break;
+            };
+        };
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.x > ScreenRight - this.width) 
+        {
+            this.dx = -1 * this.dx ;
+        }
+        else if(this.x <= 2)
+        {
+            this.dx = 10 * Math.random();
+        }
+
+        if (this.y >= ScreenBottom - this.height)
+        {
+            if (plates.testPoint(this.x,this.y+this.height))
+            {
+                OnPlate();
+                this.dy = -1 * this.dy;
+                if (this.x > plates.x + plates.width/2)
+                    this.dx = 20 * Math.random();
+                else
+                    this.dx = -20 * Math.random();
+                //console.log(this.dx);
+            }
+            else
+                plates.deleteBall(this);
+        }
+        else if(this.y <= 0)
+        {
+            this.dy = -1 * this.dy;
+        };
+    };
+   
+
+
+    image.onload = function () 
+    {
+        background.width  = ScreenRight;
+        background.height = ScreenBottom;
+        Level1();
+          
+        context.font = "40px Arial";
+        var i = 0;
+        setInterval(function () {
+            context.clearRect(0, 0, ScreenRight, ScreenBottom);
+            if(backGroundOn)
+                context.drawImage(background, 0, 0,ScreenRight,ScreenBottom);
+            for (var i = 0; i < blockes.length; i++) {
+                blockes[i].draw(context,blockx[i],blocky[i],BlockWidth,BlockWidth);
+            }
+            for (var i = 0; i < balls.length; i++) {
+                balls[i].draw(context);
+            }
+            plates.draw(context);
+
+            if (blockes.length <= 0 ) {
+                context.save();
+                context.font = "66px Arial";
+                var gradient = context.createLinearGradient(500, 200, 800, 200);
+                gradient.addColorStop(0, "#FF0000");
+                gradient.addColorStop(0.5, "#00FF00");
+                gradient.addColorStop(1, "#0000FF");
+                context.fillStyle=gradient;
+                context.fillText("Amazing Guy Clear All" ,200, 200);//填充
+                context.fillText("Score：" + Math.floor(score * 100)/100 ,200, 500);//填充
+                context.restore();
+                balls = [] ;  
+                if (balls.length <= 0)
+                {
+                    if (Level < 10)
+                    {
+                        plates.width -= 5;
+                        backgroundIdx = (backgroundIdx+1);
+                        background.src = bgPic[backgroundIdx];
+                        switch(Level)
+                        {
+                            case 1:
+                                Level2();
+                            break;
+
+                            case 2:
+                                Level3();
+                            break;
+
+                            case 3:
+                                Level4();
+                            break;
+
+                            case 4:
+                                Level5();
+                            break;
+
+                            case 5:
+                                Level6();
+                            break;
+
+                            case 6:
+                                Level7();
+                            break;
+
+                            case 7:
+                                Level8();
+                            break;
+
+                            case 8:
+                                Level9();
+                            break;
+
+                            case 9:
+                                Level10();
+                            break;
+                        }
+                        Level++;
+                    }
+                    else
+                    {
+                        plates.width = 173;
+                        Level = 1;
+                        alert("恭喜通关~\n联系作者邮箱领取奖品\n\nleidar100@gmail.com")
+                        Level1();
+                    };
+                };
+            }//game over
+            else if (balls.length <= 0) {
+                context.save();
+                context.font = "66px Arial";
+                var gradient = context.createLinearGradient(500, 200, 800, 200);
+                gradient.addColorStop(0, "#FF0000");
+                gradient.addColorStop(0.5, "#00FF00");
+                gradient.addColorStop(1, "#0000FF");
+                context.fillStyle=gradient;
+                context.fillText("Score：" + Math.floor(score * 100)/100 ,500, 200);//填充
+                context.restore();
+            }
+            else
+            {
+                context.fillText("Level：" + Level, 20, 50);
+                context.fillText("Score：" + Math.floor(score * 100)/100, 20, 100);            
+            }//game over
+        }, 1000 / 60);
+    };
+    function initial(wid,hei,xpos,ypos)
+    {
+        blockImg = [];
+        blockx   = [];
+        blocky   = [];
+        BlockWidth  =    wid;
+        BlockHeight =    hei;
+        IniXpos     =    xpos;
+        IniYpos     =    ypos;
+    }
+
+    function setBlockName(str,Num,xMod)
+    {
+        for (var i = 1; i <= Num; i++) {
+            blockImg.push(new Image());
+            blockImg[i-1].src = (str + Number(i).toString() + ".jpg");
+            blockx.push(IniXpos + (i-1 + xMod)%xMod * BlockWidth);
+            blocky.push(IniYpos + Math.floor((i-1)/xMod) * BlockHeight);
+        };
+    }
+
+    function setBlockNameGIF(str,Num,xMod)
+    {
+        for (var i = 1; i <= Num; i++) {
+            blockImg.push(new Image());
+            blockImg[i-1].src = (str + Number(i).toString() + ".gif");
+            blockx.push(IniXpos + (i-1 + xMod)%xMod * BlockWidth);
+            blocky.push(IniYpos + Math.floor((i-1)/xMod) * BlockHeight);
+        };
+    }
+
+    function makeBlock()
+    {
+        maxBlock = blockx.length;
+        for (var i = 0; i <maxBlock ; i++) {
+            blockes.push(new Block(blockImg[i], blockx[i], blocky[i]));
+        };
+    }
+
+
+    function Level1()
+    {
+        initial(200,50,300,0);
+        setBlockName("Bricks-1_",15,3);
+        makeBlock();
+    };
+    
+    function Level2()
+    {
+        initial(200,50,280,88);
+        setBlockName("Bricks0_",20,4);
+        makeBlock();
+    };
+
+    function Level3()
+    {
+        initial(200,30,250,85);
+        setBlockName("Bricks0.5_",33,3);
+        makeBlock();
+    };
+
+    function Level4()
+    {
+        initial(100,20,345,27)
+        //initial(180,25,200,80);
+        setBlockName("Bricks4_",60,6);
+        makeBlock();
+    };
+
+    function Level5()
+    {
+        initial(100,15,250,10);
+        setBlockName("Brick2_",132,6);
+        makeBlock();
+    };
+
+    function Level6()
+    {
+        initial(100,15,100,10);
+        setBlockName("Bricks2_",110,11);
+        makeBlock();
+    };
+    
+    function Level7()
+    {
+        initial(100,15,120,25);
+        setBlockName("bk",91,7);
+        makeBlock();
+    };
+
+    function Level8()
+    {
+        initial(100,15,120,25);
+        setBlockName("Brick8_",100,5);
+        makeBlock();
+    };
+
+    function Level9()
+    {
+        initial(100,15,120,25);
+        setBlockName("Bricks5_",135,9);
+        makeBlock();
+    }
+
+    function Level10()
+    {
+        initial(66,15,666,25);
+        setBlockNameGIF("Bricks_",180,9);
+        makeBlock();
+    }
+
+    var y, last_y, x, last_x;
+
+    function playPause() 
+    { 
+        var music = document.getElementById('bg'); 
+        var music_btn = document.getElementById('music_btn2'); 
+        if (music.paused)
+        { 
+            music.play(); 
+            music_btn.src = "coins_02.jpg";  
+        } 
+        else
+        { 
+            music.pause(); 
+            music_btn.src = "coins_03.jpg";  
+        } 
+    }
+
+    function OnPlate() 
+    { 
+        var pmusic = document.getElementById('onp'); 
+        pmusic.play();
+    }
+
+    function DB() 
+    { 
+        var bmusic = document.getElementById('bd'); 
+        bmusic.play();
+    }
+
+    function bD() 
+    { 
+        var cmusic = document.getElementById('blocker'); 
+        cmusic.play();
+    }
+</script>
+<br>
+<hr>
+
+<h2>白屏了尝试按一下<red>'b'</red>来神奇恢复吧嘿嘿嘿<br><it>(因为背景是高清图片可能加载较慢)</it><br><a href="mailto:leidar100@gmail?subject=HTML5%Block" target="_blank" rel="external">作者の邮箱</a>
+
+<!--    jQuery的音乐实现.
+<a class="mscBtn" id="audioBtn" style="cursor:pointer;"></a>
+<audio id="bgMusic" src="YueHui.mp3" autoplay="autoplay" loop="loop"></audio>
+
+
+<script type = "text/javascript">
+//need jQuery included
+    var music = document.getElementById("bgMusic");
+    $("#audioBtn").click(function()
+    {
+        if(music.paused){music.play();
+        $("#audioBtn").removeClass("pause").addClass("play");
+    }else{music.pause();
+        $("#audioBtn").removeClass("play").addClass("pause");}});
+</script>
+.pause 
+{
+    background-position: 0 bottom;
+}
+.mscBtn 
+{
+    height: 50px;
+    width: 50px;
+    background: #fff url(http://cctv2.qiniudn.com/musicBtn.gif) no-repeat;
+    display: block;
+}
+
+canvas
+ {
+    margin: 0 auto;
+    border-style: outset;
+    border-color: #DF7401;
+    border-width: 3px; 
+}
+autoplay="autoplay"
+-->
+<audio id="bg" src="YueHui.mp3" loop="loop">你的浏览器不支持audio标签。</audio> 
+<a href="javascript:playPause();" target="_blank" rel="external"><img src="coins_01.jpg" width="50" height="50" id="music_btn2" border="0"></a>
+
+<audio id="onp" src="Ao-laser.wav">
+<audio id="bd" src="BallDis.wav">
+<audio id="blocker" src="Gunfire.wav">
+
+<style>
+
+h3 {
+    text-align: center;
+}
+h3 red{
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+h2 red{
+    color: red;
+}
+
+h2 it{
+    font-style: italic;
+}
+
+canvas {
+    text-align: center;
+}
+</style>
+
+</audio></audio></audio></h2></body>
+</html>
