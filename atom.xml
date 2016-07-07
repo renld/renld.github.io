@@ -248,9 +248,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
@@ -259,7 +259,7 @@
     <link href="http://renld.github.io/2016/07/03/Algor-Water/"/>
     <id>http://renld.github.io/2016/07/03/Algor-Water/</id>
     <published>2016-07-03T13:43:49.000Z</published>
-    <updated>2016-07-06T14:29:18.000Z</updated>
+    <updated>2016-07-07T17:11:54.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;由于被查水表..4+2的题解删去了,在文末留下当初的一些感想.&lt;/p&gt;
@@ -361,6 +361,8 @@
     
     </summary>
     
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
     
@@ -560,9 +562,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
