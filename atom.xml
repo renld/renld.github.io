@@ -248,9 +248,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
@@ -516,7 +516,7 @@
     <link href="http://renld.github.io/2016/06/25/EEreview/"/>
     <id>http://renld.github.io/2016/06/25/EEreview/</id>
     <published>2016-06-24T22:42:05.000Z</published>
-    <updated>2016-07-06T14:29:54.000Z</updated>
+    <updated>2016-07-07T16:24:01.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;电工期末总结&quot;&gt;&lt;a href=&quot;#电工期末总结&quot; class=&quot;headerlink&quot; title=&quot;电工期末总结&quot;&gt;&lt;/a&gt;电工期末总结&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
@@ -562,7 +562,7 @@
     
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
-      <category term="life" scheme="http://renld.github.io/tags/life/"/>
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
