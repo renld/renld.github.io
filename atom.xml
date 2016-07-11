@@ -432,16 +432,18 @@
     <link href="http://renld.github.io/2016/06/25/treeDP/"/>
     <id>http://renld.github.io/2016/06/25/treeDP/</id>
     <published>2016-06-25T11:15:00.000Z</published>
-    <updated>2016-07-06T14:29:04.000Z</updated>
+    <updated>2016-07-11T16:32:30.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;blockquote&gt;
 &lt;p&gt;树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客&lt;a href=&quot;http://blog.csdn.net/woshi250hua/article/details/7644959&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;刷题参考&lt;/a&gt;然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没有达到一开始4+2那题的难度.&lt;/p&gt;
 &lt;p&gt;东西都写在一个文档里面typora已经处理艰难,所以先将这篇文章发出来(刚刚发现是因为CF那道题的处理上发生了bug,删去了那段之后应该能愉快地继续使用了)&lt;/p&gt;
 &lt;p&gt;相对概括一些说,它需要找到一个节点和树上其它节点(或者边)之间的关系,然后进行一遍或者两边的搜索.&lt;/p&gt;
 &lt;p&gt;明天就是4+2了,与大家共勉&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;yali-漆子超论文笔记&quot;&gt;&lt;a href=&quot;#yali-漆子超论文笔记&quot; class=&quot;headerlink&quot; title=&quot;yali_漆子超论文笔记&quot;&gt;&lt;/a&gt;yali_漆子超论文笔记&lt;/h2&gt;&lt;p&gt;ps: 这里只有第一篇的题解.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;树的重心 &lt;strong&gt;删去后结点最多的树的个数最小&lt;/strong&gt;&lt;/p&gt;
@@ -559,10 +561,6 @@
     
       &lt;blockquote&gt;
 &lt;p&gt;一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
-&lt;p&gt;树形DP就是一个dfs+DP的特例,最开始想刷这个是源自于4+2参考书上一道题的完全没有看懂,于是觉得有必要去学一下,找到了下面这篇博客&lt;a href=&quot;http://blog.csdn.net/woshi250hua/article/details/7644959&quot;&gt;刷题参考&lt;/a&gt;然后埋头开刷, 大概期末考试断断续续一个星期, 刷了其中一些比较简单的题, 完全没有达到一开始4+2那题的难度.&lt;/p&gt;
-&lt;p&gt;东西都写在一个文档里面typora已经处理艰难,所以先将这篇文章发出来(刚刚发现是因为CF那道题的处理上发生了bug,删去了那段之后应该能愉快地继续使用了)&lt;/p&gt;
-&lt;p&gt;相对概括一些说,它需要找到一个节点和树上其它节点(或者边)之间的关系,然后进行一遍或者两边的搜索.&lt;/p&gt;
-&lt;p&gt;明天就是4+2了,与大家共勉&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
