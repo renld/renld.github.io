@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-07-09T16:06:45.000Z</updated>
+  <updated>2016-07-11T03:45:40.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://renld.github.io/2016/07/09/byefresh/"/>
     <id>http://renld.github.io/2016/07/09/byefresh/</id>
     <published>2016-07-09T11:49:50.000Z</published>
-    <updated>2016-07-09T16:06:45.000Z</updated>
+    <updated>2016-07-11T03:45:40.000Z</updated>
     
     <content type="html">&lt;p&gt;据说珠海最好的景点.是澳门.&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -69,6 +69,8 @@
     
     
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="Macau" scheme="http://renld.github.io/tags/Macau/"/>
     
   </entry>
   
