@@ -198,7 +198,14 @@
 <p>今天真的挺迷的…check电路时候一拔USB之后小车断电,</p>
 <p>测了几次后FPGA漏电然后各种重新烧重新测..似乎就像搭这个博客一样…</p>
 <p>反正码农嘛..写烂了debug后丢掉就好.</p>
-<h1 id="超声波模块"><a href="#超声波模块" class="headerlink" title="超声波模块"></a>超声波模块</h1><p><a href="http://www.dzsc.com/uploadfile/company/841326/2012229155924480.pdf" target="_blank" rel="external">模块KS103S文档(感动是中文)</a></p>
+<h1 id="超声波模块"><a href="#超声波模块" class="headerlink" title="超声波模块"></a>超声波模块</h1>
+
+	<div class="row">
+	  <iframe src="http://nagland.github.io/viewer/web/viewer.html?val=/csb.pdf" style="width:100%; height:550px"></iframe>
+	</div>
+
+
+
 <p><img src="http://radar-10050281.file.myqcloud.com/img/0706.png" alt=""></p>
 <p>这次实验选用了GPIO1的一些管脚,注意是与GPIO0的方向相反</p>
 <p>VCC和地线采用JP2 的11 和12口,提供4V电压(觉得这里可以优化成3.3V)</p>
@@ -491,7 +498,7 @@
     <entry>
       <title><![CDATA[EEreview]]></title>
       <url>http://renld.github.io/2016/06/25/EEreview/</url>
-      <content type="html"><![CDATA[<h1 id="电工期末总结"><a href="#电工期末总结" class="headerlink" title="电工期末总结"></a>电工期末总结</h1><blockquote>
+      <content type="html"><![CDATA[<blockquote>
 <p>这大抵是学过第一门,让我觉得大学不那么水的课吧.</p>
 <p>​                      — 在四级作文里面这般描述</p>
 </blockquote>
@@ -759,7 +766,7 @@
     <entry>
       <title><![CDATA[By The Year]]></title>
       <url>http://renld.github.io/2016/06/15/By-the-Year/</url>
-      <content type="html"><![CDATA[<h1 id="这一年来"><a href="#这一年来" class="headerlink" title="这一年来"></a>这一年来</h1><blockquote>
+      <content type="html"><![CDATA[<blockquote>
 <p>大一的尾声.</p>
 <p>不知少年少女,你们可过的还好吗.</p>
 <p>大抵曾经那个诗歌相衬的少年,已经在这一年变了模样.</p>

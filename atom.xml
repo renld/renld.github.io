@@ -79,7 +79,7 @@
     <link href="http://renld.github.io/2016/07/04/egt1/"/>
     <id>http://renld.github.io/2016/07/04/egt1/</id>
     <published>2016-07-04T05:23:19.000Z</published>
-    <updated>2016-07-12T07:21:01.000Z</updated>
+    <updated>2016-07-12T07:49:15.000Z</updated>
     
     <content type="html">&lt;p&gt;engerineering time&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -230,7 +230,14 @@
 &lt;p&gt;今天真的挺迷的…check电路时候一拔USB之后小车断电,&lt;/p&gt;
 &lt;p&gt;测了几次后FPGA漏电然后各种重新烧重新测..似乎就像搭这个博客一样…&lt;/p&gt;
 &lt;p&gt;反正码农嘛..写烂了debug后丢掉就好.&lt;/p&gt;
-&lt;h1 id=&quot;超声波模块&quot;&gt;&lt;a href=&quot;#超声波模块&quot; class=&quot;headerlink&quot; title=&quot;超声波模块&quot;&gt;&lt;/a&gt;超声波模块&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.dzsc.com/uploadfile/company/841326/2012229155924480.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;模块KS103S文档(感动是中文)&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;超声波模块&quot;&gt;&lt;a href=&quot;#超声波模块&quot; class=&quot;headerlink&quot; title=&quot;超声波模块&quot;&gt;&lt;/a&gt;超声波模块&lt;/h1&gt;
+
+	&lt;div class=&quot;row&quot;&gt;
+	  &lt;iframe src=&quot;http://nagland.github.io/viewer/web/viewer.html?val=/csb.pdf&quot; style=&quot;width:100%; height:550px&quot;&gt;&lt;/iframe&gt;
+	&lt;/div&gt;
+
+
+
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.file.myqcloud.com/img/0706.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这次实验选用了GPIO1的一些管脚,注意是与GPIO0的方向相反&lt;/p&gt;
 &lt;p&gt;VCC和地线采用JP2 的11 和12口,提供4V电压(觉得这里可以优化成3.3V)&lt;/p&gt;
@@ -419,9 +426,9 @@
     </summary>
     
     
-      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
     
   </entry>
   
@@ -579,9 +586,9 @@
     <link href="http://renld.github.io/2016/06/25/EEreview/"/>
     <id>http://renld.github.io/2016/06/25/EEreview/</id>
     <published>2016-06-24T22:42:05.000Z</published>
-    <updated>2016-07-12T03:26:00.000Z</updated>
+    <updated>2016-07-12T07:32:48.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;电工期末总结&quot;&gt;&lt;a href=&quot;#电工期末总结&quot; class=&quot;headerlink&quot; title=&quot;电工期末总结&quot;&gt;&lt;/a&gt;电工期末总结&lt;/h1&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
 &lt;p&gt;​                      — 在四级作文里面这般描述&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -615,7 +622,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;电工期末总结&quot;&gt;&lt;a href=&quot;#电工期末总结&quot; class=&quot;headerlink&quot; title=&quot;电工期末总结&quot;&gt;&lt;/a&gt;电工期末总结&lt;/h1&gt;&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
 &lt;p&gt;​                      — 在四级作文里面这般描述&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -905,9 +912,9 @@
     <link href="http://renld.github.io/2016/06/15/By-the-Year/"/>
     <id>http://renld.github.io/2016/06/15/By-the-Year/</id>
     <published>2016-06-14T16:00:00.000Z</published>
-    <updated>2016-07-06T14:29:23.000Z</updated>
+    <updated>2016-07-12T07:32:40.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;这一年来&quot;&gt;&lt;a href=&quot;#这一年来&quot; class=&quot;headerlink&quot; title=&quot;这一年来&quot;&gt;&lt;/a&gt;这一年来&lt;/h1&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;大一的尾声.&lt;/p&gt;
 &lt;p&gt;不知少年少女,你们可过的还好吗.&lt;/p&gt;
 &lt;p&gt;大抵曾经那个诗歌相衬的少年,已经在这一年变了模样.&lt;/p&gt;
@@ -979,7 +986,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;这一年来&quot;&gt;&lt;a href=&quot;#这一年来&quot; class=&quot;headerlink&quot; title=&quot;这一年来&quot;&gt;&lt;/a&gt;这一年来&lt;/h1&gt;&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;大一的尾声.&lt;/p&gt;
 &lt;p&gt;不知少年少女,你们可过的还好吗.&lt;/p&gt;
 &lt;p&gt;大抵曾经那个诗歌相衬的少年,已经在这一年变了模样.&lt;/p&gt;
