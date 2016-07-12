@@ -2182,12 +2182,19 @@ a {
 #header .header-nav .social a.zhihu:hover {
   border: 1px solid #0663c1;
 }
+#header .header-nav .social a.wechat {
+  background: url("/img/wechat.png") center no-repeat #3b5997;
+  border: 1px solid #3b5998;
+}
+#header .header-nav .social a.wechat:hover {
+  border: 1px solid #3b5998;
+}
 #header .header-nav .social a.douban {
   background: url("/img/douban.png") center no-repeat #06c611;
-  border: 1px solid #06c611;
+  border: 1px solid #0f0;
 }
 #header .header-nav .social a.douban:hover {
-  border: 1px solid #06c611;
+  border: 1px solid #0f0;
 }
 #header .header-nav .social a.mail {
   background: url("/img/mail.png") center no-repeat #00abff;
