@@ -75,11 +75,11 @@
   </entry>
   
   <entry>
-    <title>初级工程实训</title>
+    <title>Primary Engineering Practice</title>
     <link href="http://renld.github.io/2016/07/04/egt1/"/>
     <id>http://renld.github.io/2016/07/04/egt1/</id>
     <published>2016-07-04T05:23:19.000Z</published>
-    <updated>2016-07-11T13:19:24.000Z</updated>
+    <updated>2016-07-12T07:04:37.000Z</updated>
     
     <content type="html">&lt;p&gt;engerineering time&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -132,10 +132,7 @@
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/img/sr.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;最后有一点想提的是..这几天伙食也是经历了由万象纷呈到过零丁洋再到普通中珠伙食的经历.给大家一点希望吧..中珠太美..但是暑假还是东校伙食美(每次逛食堂都能快乐地..抓一盘菜233)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/img/food.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;iframe src=&quot;http://radar-10050281.cos.myqcloud.com/QQ%E8%A7%86%E9%A2%91_C2502DE0CAD326CD3FB05D39F1BD004B.mp4&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;430&quot; height=&quot;200&quot; allowtransparency=&quot;&quot;&gt;&lt;/iframe&gt;
-
-
-
+&lt;div class=&quot;video-container&quot;&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;面向硬件的编程主要是对于宏文件的套用&lt;/p&gt;
 &lt;p&gt;说白了,就是学会用模板.&lt;/p&gt;
@@ -196,28 +193,28 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;adc_channel = 2&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;0000 0000 0000 0010&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;adc_channel = 2&lt;/td&gt;
+&lt;td&gt;0000 0000 0000 0010&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;adc_channel or START_FLAG&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1000 0000 0000 0010&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;adc_channel or START_FLAG&lt;/td&gt;
+&lt;td&gt;1000 0000 0000 0010&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;spi_response = 1000 0011 1111 1111&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1000 0011 1111 1111&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;spi_response = 1000 0011 1111 1111&lt;/td&gt;
+&lt;td&gt;1000 0011 1111 1111&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;spi_response &amp;amp; DONE_FLAG&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1000 0000 0000 0000&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;spi_response &amp;amp; DONE_FLAG&lt;/td&gt;
+&lt;td&gt;1000 0000 0000 0000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;spi_response &amp;amp; 0xFFF&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;0000 0011 1111 1111&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;spi_response &amp;amp; 0xFFF&lt;/td&gt;
+&lt;td&gt;0000 0011 1111 1111&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;START_FLAG&lt;/code&gt; 和 &lt;code&gt;DONE_FLAG&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1000 0000 0000 0000&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;START_FLAG&lt;code&gt;和&lt;/code&gt;DONE_FLAG&lt;/td&gt;
+&lt;td&gt;1000 0000 0000 0000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -706,7 +703,7 @@
     <link href="http://renld.github.io/2016/06/19/sdii/"/>
     <id>http://renld.github.io/2016/06/19/sdii/</id>
     <published>2016-06-19T10:57:51.000Z</published>
-    <updated>2016-07-12T03:25:25.000Z</updated>
+    <updated>2016-07-12T07:00:35.000Z</updated>
     
     <content type="html">&lt;ul&gt;
 &lt;li&gt;期末三套卷部分题解&lt;/li&gt;
@@ -879,10 +876,8 @@
 &lt;li&gt;前面几篇文章中三金都写下了或多或少的一些文字,很是感激&lt;/li&gt;
 &lt;li&gt;但因为整理缘故只能在renld.duoshuo.com看到.现在记录在下面&lt;/li&gt;
 &lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;因为https的原因有些资源换访问错误&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;建议吧所有连接包括http://...和https://...都改成//...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;多说居然会吞掉带有代码的评论&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;此评论用户状态为：【一般用户】；ip地址：【&lt;span class=&quot;number&quot;&gt;58.67&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.136&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.214&lt;/span&gt;】；用户uid为：【&lt;span class=&quot;number&quot;&gt;6294806818413609730&lt;/span&gt;】&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;月&lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;日 发表于 期末机考最后一题 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Mixed Content: The page at &lt;span class=&quot;string&quot;&gt;&#39;https://renld.github.io/2016/06/13/STL-LEARN/#more&#39;&lt;/span&gt; was loaded over HTTPS, but requested an insecure script &lt;span class=&quot;string&quot;&gt;&#39;http://v3.jiathis.com/code/jia.js?uid=1405949716054953&#39;&lt;/span&gt;. This request has been blocked; the content must be served over HTTPS.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;06&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;/STL-LEARN/&lt;span class=&quot;comment&quot;&gt;#more:1 Mixed Content: The page at &#39;https://renld.github.io/2016/06/13/STL-LEARN/#more&#39; was loaded over HTTPS, but requested an insecure script &#39;http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js&#39;. This request has been blocked; the content must be served over HTTPS.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;main.js:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; Uncaught ReferenceError: require &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; defined&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;06&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;/STL-LEARN/&lt;span class=&quot;comment&quot;&gt;#more:1 Mixed Content: The page at &#39;https://renld.github.io/2016/06/13/STL-LEARN/#more&#39; was loaded over HTTPS, but requested an insecure script &#39;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#39;. This request has been blocked; the content must be served over HTTPS.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;出错了，github默认支持https，的把那些资源url全都改成自动识别协议吧&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;比如&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://a.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;或者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://a.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;都改成&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//a.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;月&lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;日 发表于 期末机考最后一题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;blockquote&gt;
-&lt;p&gt;因为https的原因有些资源换访问错误&lt;br&gt;建议吧所有连接包括&lt;a href=&quot;http://...和https://...都改成//&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://...和https://...都改成//&lt;/a&gt;…&lt;br&gt;多说居然会吞掉带有代码的评论&lt;br&gt;此评论用户状态为：【一般用户】；ip地址：【58.67.136.214】；用户uid为：【6294806818413609730】&lt;br&gt;6月19日 发表于 期末机考最后一题 &lt;/p&gt;
-&lt;p&gt;Mixed Content: The page at ‘&lt;a href=&quot;https://renld.github.io/2016/06/13/STL-LEARN/#more&quot;&gt;https://renld.github.io/2016/06/13/STL-LEARN/#more&lt;/a&gt;‘ was loaded over HTTPS, but requested an insecure script ‘&lt;a href=&quot;http://v3.jiathis.com/code/jia.js?uid=1405949716054953&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://v3.jiathis.com/code/jia.js?uid=1405949716054953&lt;/a&gt;‘. This request has been blocked; the content must be served over HTTPS.&lt;br&gt;/2016/06/13/STL-LEARN/#more:1 Mixed Content: The page at ‘&lt;a href=&quot;https://renld.github.io/2016/06/13/STL-LEARN/#more&quot;&gt;https://renld.github.io/2016/06/13/STL-LEARN/#more&lt;/a&gt;‘ was loaded over HTTPS, but requested an insecure script ‘&lt;a href=&quot;http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js&lt;/a&gt;‘. This request has been blocked; the content must be served over HTTPS.&lt;br&gt;main.js:1 Uncaught ReferenceError: require is not defined&lt;br&gt;/2016/06/13/STL-LEARN/#more:1 Mixed Content: The page at ‘&lt;a href=&quot;https://renld.github.io/2016/06/13/STL-LEARN/#more&quot;&gt;https://renld.github.io/2016/06/13/STL-LEARN/#more&lt;/a&gt;‘ was loaded over HTTPS, but requested an insecure script ‘&lt;a href=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&lt;/a&gt;‘. This request has been blocked; the content must be served over HTTPS.&lt;/p&gt;
-&lt;p&gt;出错了，github默认支持https，的把那些资源url全都改成自动识别协议吧&lt;br&gt;比如&lt;br&gt;&lt;a href=&quot;http://a.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://a.com&lt;/a&gt;&lt;br&gt;或者&lt;br&gt;&lt;a href=&quot;https://a.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://a.com&lt;/a&gt;&lt;br&gt;都改成&lt;br&gt;//a.com&lt;br&gt;6月19日 发表于 期末机考最后一题 &lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
@@ -1002,7 +997,7 @@
     <link href="http://renld.github.io/2016/06/13/STL-LEARN/"/>
     <id>http://renld.github.io/2016/06/13/STL-LEARN/</id>
     <published>2016-06-12T16:53:16.000Z</published>
-    <updated>2016-07-12T03:25:13.000Z</updated>
+    <updated>2016-07-12T07:07:32.000Z</updated>
     
     <content type="html">&lt;p&gt;  C++大学教程第22章.&lt;br&gt;  算法参考&lt;code&gt;cplusplus.com&lt;/code&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1097,7 +1092,7 @@
 &lt;li&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; cmp &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; node &amp;amp;a, &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; node &amp;amp;b)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;priority_queue&amp;lt;node, &lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;node&amp;gt;, cmp&amp;gt; p;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;STL算法&quot;&gt;&lt;a href=&quot;#STL算法&quot; class=&quot;headerlink&quot; title=&quot;STL算法\&quot;&gt;&lt;/a&gt;STL算法\&lt;algorithm&gt;&lt;/algorithm&gt;&lt;/h2&gt;&lt;h3 id=&quot;变序算法&quot;&gt;&lt;a href=&quot;#变序算法&quot; class=&quot;headerlink&quot; title=&quot;变序算法&quot;&gt;&lt;/a&gt;变序算法&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;STL算法-lt-algorithm-gt&quot;&gt;&lt;a href=&quot;#STL算法-lt-algorithm-gt&quot; class=&quot;headerlink&quot; title=&quot;STL算法&amp;lt; algorithm&amp;gt;&quot;&gt;&lt;/a&gt;STL算法&amp;lt; algorithm&amp;gt;&lt;/h2&gt;&lt;h3 id=&quot;变序算法&quot;&gt;&lt;a href=&quot;#变序算法&quot; class=&quot;headerlink&quot; title=&quot;变序算法&quot;&gt;&lt;/a&gt;变序算法&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;copy&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//std::copy ( myints, myints+7, myvector.begin() );&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; InputIterator, &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; OutputIterator&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;OutputIterator &lt;span class=&quot;title&quot;&gt;copy&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(InputIterator first, InputIterator last, OutputIterator result)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (first!=last) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    *result = *first;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ++result; ++first;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;

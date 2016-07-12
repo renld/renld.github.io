@@ -47,7 +47,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[初级工程实训]]></title>
+      <title><![CDATA[Primary Engineering Practice]]></title>
       <url>http://renld.github.io/2016/07/04/egt1/</url>
       <content type="html"><![CDATA[<p>engerineering time</p>
 <a id="more"></a>
@@ -100,10 +100,7 @@
 <p><img src="http://radar-10050281.cos.myqcloud.com/img/sr.jpg" alt=""></p>
 <p>最后有一点想提的是..这几天伙食也是经历了由万象纷呈到过零丁洋再到普通中珠伙食的经历.给大家一点希望吧..中珠太美..但是暑假还是东校伙食美(每次逛食堂都能快乐地..抓一盘菜233)</p>
 <p><img src="http://radar-10050281.cos.myqcloud.com/img/food.jpg" alt=""></p>
-<iframe src="http://radar-10050281.cos.myqcloud.com/QQ%E8%A7%86%E9%A2%91_C2502DE0CAD326CD3FB05D39F1BD004B.mp4" frameborder="0" scrolling="0" width="430" height="200" allowtransparency=""></iframe>
-
-
-
+<div class="video-container"></div>
 <blockquote>
 <p>面向硬件的编程主要是对于宏文件的套用</p>
 <p>说白了,就是学会用模板.</p>
@@ -164,28 +161,28 @@
 </thead>
 <tbody>
 <tr>
-<td><code>adc_channel = 2</code></td>
-<td><code>0000 0000 0000 0010</code></td>
+<td>adc_channel = 2</td>
+<td>0000 0000 0000 0010</td>
 </tr>
 <tr>
-<td><code>adc_channel or START_FLAG</code></td>
-<td><code>1000 0000 0000 0010</code></td>
+<td>adc_channel or START_FLAG</td>
+<td>1000 0000 0000 0010</td>
 </tr>
 <tr>
-<td><code>spi_response = 1000 0011 1111 1111</code></td>
-<td><code>1000 0011 1111 1111</code></td>
+<td>spi_response = 1000 0011 1111 1111</td>
+<td>1000 0011 1111 1111</td>
 </tr>
 <tr>
-<td><code>spi_response &amp; DONE_FLAG</code></td>
-<td><code>1000 0000 0000 0000</code></td>
+<td>spi_response &amp; DONE_FLAG</td>
+<td>1000 0000 0000 0000</td>
 </tr>
 <tr>
-<td><code>spi_response &amp; 0xFFF</code></td>
-<td><code>0000 0011 1111 1111</code></td>
+<td>spi_response &amp; 0xFFF</td>
+<td>0000 0011 1111 1111</td>
 </tr>
 <tr>
-<td><code>START_FLAG</code> 和 <code>DONE_FLAG</code></td>
-<td><code>1000 0000 0000 0000</code></td>
+<td>START_FLAG<code>和</code>DONE_FLAG</td>
+<td>1000 0000 0000 0000</td>
 </tr>
 </tbody>
 </table>
@@ -753,10 +750,8 @@
 <li>前面几篇文章中三金都写下了或多或少的一些文字,很是感激</li>
 <li>但因为整理缘故只能在renld.duoshuo.com看到.现在记录在下面</li>
 </ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">因为https的原因有些资源换访问错误</span><br><span class="line"></span><br><span class="line">建议吧所有连接包括http://...和https://...都改成//...</span><br><span class="line"></span><br><span class="line">多说居然会吞掉带有代码的评论</span><br><span class="line"></span><br><span class="line">此评论用户状态为：【一般用户】；ip地址：【<span class="number">58.67</span><span class="number">.136</span><span class="number">.214</span>】；用户uid为：【<span class="number">6294806818413609730</span>】</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>月<span class="number">19</span>日 发表于 期末机考最后一题 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mixed Content: The page at <span class="string">'https://renld.github.io/2016/06/13/STL-LEARN/#more'</span> was loaded over HTTPS, but requested an insecure script <span class="string">'http://v3.jiathis.com/code/jia.js?uid=1405949716054953'</span>. This request has been blocked; the content must be served over HTTPS.</span><br><span class="line"></span><br><span class="line">/<span class="number">2016</span>/<span class="number">06</span>/<span class="number">13</span>/STL-LEARN/<span class="comment">#more:1 Mixed Content: The page at 'https://renld.github.io/2016/06/13/STL-LEARN/#more' was loaded over HTTPS, but requested an insecure script 'http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js'. This request has been blocked; the content must be served over HTTPS.</span></span><br><span class="line"></span><br><span class="line">main.js:<span class="number">1</span> Uncaught ReferenceError: require <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br><span class="line"></span><br><span class="line">/<span class="number">2016</span>/<span class="number">06</span>/<span class="number">13</span>/STL-LEARN/<span class="comment">#more:1 Mixed Content: The page at 'https://renld.github.io/2016/06/13/STL-LEARN/#more' was loaded over HTTPS, but requested an insecure script 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'. This request has been blocked; the content must be served over HTTPS.</span></span><br><span class="line"></span><br><span class="line">出错了，github默认支持https，的把那些资源url全都改成自动识别协议吧</span><br><span class="line"></span><br><span class="line">比如</span><br><span class="line"></span><br><span class="line">http://a.com</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">https://a.com</span><br><span class="line"></span><br><span class="line">都改成</span><br><span class="line"></span><br><span class="line">//a.com</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>月<span class="number">19</span>日 发表于 期末机考最后一题</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>因为https的原因有些资源换访问错误<br>建议吧所有连接包括<a href="http://...和https://...都改成//" target="_blank" rel="external">http://...和https://...都改成//</a>…<br>多说居然会吞掉带有代码的评论<br>此评论用户状态为：【一般用户】；ip地址：【58.67.136.214】；用户uid为：【6294806818413609730】<br>6月19日 发表于 期末机考最后一题 </p>
-<p>Mixed Content: The page at ‘<a href="https://renld.github.io/2016/06/13/STL-LEARN/#more">https://renld.github.io/2016/06/13/STL-LEARN/#more</a>‘ was loaded over HTTPS, but requested an insecure script ‘<a href="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" target="_blank" rel="external">http://v3.jiathis.com/code/jia.js?uid=1405949716054953</a>‘. This request has been blocked; the content must be served over HTTPS.<br>/2016/06/13/STL-LEARN/#more:1 Mixed Content: The page at ‘<a href="https://renld.github.io/2016/06/13/STL-LEARN/#more">https://renld.github.io/2016/06/13/STL-LEARN/#more</a>‘ was loaded over HTTPS, but requested an insecure script ‘<a href="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" target="_blank" rel="external">http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js</a>‘. This request has been blocked; the content must be served over HTTPS.<br>main.js:1 Uncaught ReferenceError: require is not defined<br>/2016/06/13/STL-LEARN/#more:1 Mixed Content: The page at ‘<a href="https://renld.github.io/2016/06/13/STL-LEARN/#more">https://renld.github.io/2016/06/13/STL-LEARN/#more</a>‘ was loaded over HTTPS, but requested an insecure script ‘<a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" target="_blank" rel="external">http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</a>‘. This request has been blocked; the content must be served over HTTPS.</p>
-<p>出错了，github默认支持https，的把那些资源url全都改成自动识别协议吧<br>比如<br><a href="http://a.com" target="_blank" rel="external">http://a.com</a><br>或者<br><a href="https://a.com" target="_blank" rel="external">https://a.com</a><br>都改成<br>//a.com<br>6月19日 发表于 期末机考最后一题 </p>
 </blockquote>
 ]]></content>
     </entry>
@@ -931,7 +926,7 @@
 <li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> cmp &#123;</span><br><span class="line">     <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">const</span> node &amp;a, <span class="keyword">const</span> node &amp;b)</span></span><br><span class="line">     </span>&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;node, <span class="built_in">vector</span>&lt;node&gt;, cmp&gt; p;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="STL算法"><a href="#STL算法" class="headerlink" title="STL算法\"></a>STL算法\<algorithm></algorithm></h2><h3 id="变序算法"><a href="#变序算法" class="headerlink" title="变序算法"></a>变序算法</h3><ul>
+<h2 id="STL算法-lt-algorithm-gt"><a href="#STL算法-lt-algorithm-gt" class="headerlink" title="STL算法&lt; algorithm&gt;"></a>STL算法&lt; algorithm&gt;</h2><h3 id="变序算法"><a href="#变序算法" class="headerlink" title="变序算法"></a>变序算法</h3><ul>
 <li><p><code>copy</code></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//std::copy ( myints, myints+7, myvector.begin() );</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> InputIterator, <span class="keyword">class</span> OutputIterator&gt;</span><br><span class="line">  <span class="function">OutputIterator <span class="title">copy</span> <span class="params">(InputIterator first, InputIterator last, OutputIterator result)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (first!=last) &#123;</span><br><span class="line">    *result = *first;</span><br><span class="line">    ++result; ++first;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
