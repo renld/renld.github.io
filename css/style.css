@@ -3371,6 +3371,7 @@ color
 .article-entry .highlight {
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  max-height: 500px;
 }
 .article-entry .highlight pre {
   border: none;
