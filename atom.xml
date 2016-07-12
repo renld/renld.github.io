@@ -79,7 +79,7 @@
     <link href="http://renld.github.io/2016/07/04/egt1/"/>
     <id>http://renld.github.io/2016/07/04/egt1/</id>
     <published>2016-07-04T05:23:19.000Z</published>
-    <updated>2016-07-12T07:04:37.000Z</updated>
+    <updated>2016-07-12T07:21:01.000Z</updated>
     
     <content type="html">&lt;p&gt;engerineering time&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -132,7 +132,7 @@
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/img/sr.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;最后有一点想提的是..这几天伙食也是经历了由万象纷呈到过零丁洋再到普通中珠伙食的经历.给大家一点希望吧..中珠太美..但是暑假还是东校伙食美(每次逛食堂都能快乐地..抓一盘菜233)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/img/food.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;video-container&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;owl-media owl-video owl-youku&quot;&gt;&lt;iframe src=&quot;http://player.youku.com/embed/XMTY0MDc5NTY1Mg&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;面向硬件的编程主要是对于宏文件的套用&lt;/p&gt;
 &lt;p&gt;说白了,就是学会用模板.&lt;/p&gt;
@@ -419,9 +419,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   

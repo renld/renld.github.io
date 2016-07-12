@@ -3234,21 +3234,6 @@ color
 .article-entry code {
   font-family: Menlo, Consolas, "Source Code Pro", Inconsolata, Monaco, monospace;
 }
-.article-entry blockquote {
-  background-color: #555;
-  padding: 10px 15px;
-  word-break: break-word;
-  margin: 10px 0px;
-  border-left: 4px solid #2f2f2f;
-  border-top: 1px dashed #000;
-  border-right: 1px dashed #000;
-  border-bottom: 1px dashed #000;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 .article-entry code {
   background: #eee;
   padding: 0 0.3em;
@@ -3322,12 +3307,9 @@ color
 .article-entry h3 {
   margin: 0.5em auto;
   color: #fff;
-  background: rgba(0,0,0,0.27);
   border: 1px dashed #020202;
   padding: 0.2em 0.6em;
   font-weight: normal;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
 }
 .article-entry h3:hover {
   content: " > ";
@@ -3370,47 +3352,9 @@ color
   border: 0;
   margin: 10px 0;
 }
-.article-entry ul li:before {
-  content: "\f05d";
-  font: normal normal normal 14px/1 FontAwesome;
-  display: inline-block;
-  margin: 0 10px;
-  line-height: 28px;
-}
-.article-entry ul li:before ul li {
-  margin-left: 20px;
-}
-.article-entry ul li:before ul li:before {
-  content: "\f05d";
-  font: normal normal normal 14px/1 FontAwesome;
-  display: inline-block;
-  margin: 0 10px;
-  line-height: 28px;
-}
-.article-entry ol li {
-  list-style: decimal;
-  margin: 0 10px;
-}
-.article-entry li:hover {
-  background-color: #2e2e2e;
-}
-.article-entry .highlight::before {
-  content: attr(data-lang) " code";
-  display: block;
-  background-color: #0083a0;
-  margin: 0 -16px 16px -16px;
-  padding: 8px 16px;
-  color: #efefef;
-  font-family: Lato, "Microsoft YaHei", sans-serif;
-  font-size: 1.1rem;
-  text-shadow: none;
-  border-bottom: dashed 1px #000;
-  text-transform: capitalize;
-}
 .article-entry .highlight {
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  padding: 0 10px;
 }
 .article-entry .highlight pre {
   border: none;
@@ -4273,6 +4217,7 @@ pre .css ~ * .id {
   border-bottom: none;
 }
 #viewer-box .viewer-box-l .viewer-div .switch-friends-link {
+  display: block;
   line-height: 20px;
 }
 #viewer-box .viewer-box-r {
