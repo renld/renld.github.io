@@ -429,14 +429,17 @@
   </entry>
   
   <entry>
-    <title>树形动态规划</title>
+    <title>DP in Tree</title>
     <link href="http://renld.github.io/2016/06/25/treeDP/"/>
     <id>http://renld.github.io/2016/06/25/treeDP/</id>
     <published>2016-06-25T11:15:00.000Z</published>
-    <updated>2016-07-11T16:32:30.000Z</updated>
+    <updated>2016-07-12T03:25:53.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
+&lt;p&gt;一开始学dfs的时候,觉得那就是递归了.&lt;/p&gt;
+&lt;p&gt;而后在第一学期期末机考的时候扑街在那道递归题目上,&lt;/p&gt;
+&lt;p&gt;寒假花了一个上午努力做出来,&lt;/p&gt;
+&lt;p&gt;兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;blockquote&gt;
@@ -561,7 +564,10 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;一开始学dfs的时候,觉得那就是递归了.而后在第一学期期末机考的时候扑街在那道递归题目上,寒假花了一个上午努力做出来,兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
+&lt;p&gt;一开始学dfs的时候,觉得那就是递归了.&lt;/p&gt;
+&lt;p&gt;而后在第一学期期末机考的时候扑街在那道递归题目上,&lt;/p&gt;
+&lt;p&gt;寒假花了一个上午努力做出来,&lt;/p&gt;
+&lt;p&gt;兴奋之余并没有意识到其实那道题就有记忆化搜索的意味.&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -576,7 +582,7 @@
     <link href="http://renld.github.io/2016/06/25/EEreview/"/>
     <id>http://renld.github.io/2016/06/25/EEreview/</id>
     <published>2016-06-24T22:42:05.000Z</published>
-    <updated>2016-07-07T16:24:01.000Z</updated>
+    <updated>2016-07-12T03:26:00.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;电工期末总结&quot;&gt;&lt;a href=&quot;#电工期末总结&quot; class=&quot;headerlink&quot; title=&quot;电工期末总结&quot;&gt;&lt;/a&gt;电工期末总结&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
@@ -700,13 +706,9 @@
     <link href="http://renld.github.io/2016/06/19/sdii/"/>
     <id>http://renld.github.io/2016/06/19/sdii/</id>
     <published>2016-06-19T10:57:51.000Z</published>
-    <updated>2016-07-06T14:28:47.000Z</updated>
+    <updated>2016-07-12T03:25:25.000Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt; 为了便于以后复(预)习c++&lt;/p&gt;
-&lt;p&gt; 将软件设计二的博客综合&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
+    <content type="html">&lt;ul&gt;
 &lt;li&gt;期末三套卷部分题解&lt;/li&gt;
 &lt;li&gt;sdii 模板&lt;/li&gt;
 &lt;li&gt;期末&lt;ul&gt;
@@ -886,11 +888,7 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt; 为了便于以后复(预)习c++&lt;/p&gt;
-&lt;p&gt; 将软件设计二的博客综合&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
+      &lt;ul&gt;
 &lt;li&gt;期末三套卷部分题解&lt;/li&gt;
 &lt;li&gt;sdii 模板&lt;/li&gt;
 &lt;li&gt;期末&lt;ul&gt;
@@ -1000,13 +998,13 @@
   </entry>
   
   <entry>
-    <title>简明STL学习笔记</title>
+    <title>Notes for STL</title>
     <link href="http://renld.github.io/2016/06/13/STL-LEARN/"/>
     <id>http://renld.github.io/2016/06/13/STL-LEARN/</id>
     <published>2016-06-12T16:53:16.000Z</published>
-    <updated>2016-07-06T14:28:55.000Z</updated>
+    <updated>2016-07-12T03:25:13.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;简明STL学习笔记&quot;&gt;&lt;a href=&quot;#简明STL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;简明STL学习笔记&quot;&gt;&lt;/a&gt;简明STL学习笔记&lt;/h1&gt;&lt;p&gt;  C++大学教程第22章.&lt;br&gt;  算法参考&lt;code&gt;cplusplus.com&lt;/code&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;  C++大学教程第22章.&lt;br&gt;  算法参考&lt;code&gt;cplusplus.com&lt;/code&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;标准数组可以作为容器,只要把指针当做迭代器就好&lt;/li&gt;
 &lt;/ul&gt;
@@ -1172,7 +1170,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;简明STL学习笔记&quot;&gt;&lt;a href=&quot;#简明STL学习笔记&quot; class=&quot;headerlink&quot; title=&quot;简明STL学习笔记&quot;&gt;&lt;/a&gt;简明STL学习笔记&lt;/h1&gt;&lt;p&gt;  C++大学教程第22章.&lt;br&gt;  算法参考&lt;code&gt;cplusplus.com&lt;/code&gt;&lt;br&gt;
+      &lt;p&gt;  C++大学教程第22章.&lt;br&gt;  算法参考&lt;code&gt;cplusplus.com&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
