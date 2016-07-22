@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://renld.github.io/2016/07/22/greedy/index.html">
 <meta property="og:site_name" content="Leidar's Home">
 <meta property="og:description" content="贪心可不是件简单事儿.">
-<meta property="og:updated_time" content="2016-07-22T14:36:16.000Z">
+<meta property="og:updated_time" content="2016-07-22T14:38:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Greedy & Violent">
 <meta name="twitter:description" content="贪心可不是件简单事儿.">
@@ -286,15 +286,11 @@
 </li>
 <li><p>例题1 <strong>UVA11292</strong> 勇者斗恶龙,两个指针往后扫</p>
 <p>加上这两句话(if)才能过???</p>
-<blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span>(n) sort(dg, dg + n);</span><br><span class="line">&gt; <span class="keyword">if</span>(m) sort(hero, hero + m);        </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(n) sort(dg, dg + n);</span><br><span class="line"><span class="keyword">if</span>(m) sort(hero, hero + m);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>进阶 LA3266 田忌赛马<ul>
+<li>进阶 LA3266 田忌赛马</li>
 <li>(这个我CSDN博客有详细题解==</li>
 <li>当初放弃ACM Steps题目..现在看来脸皮厚多了)</li>
-</ul>
-</li>
 </ul>
 </li>
 <li><p>UVA11100 (进阶)个数尽量少严格递增…等差(距)数列</p>
@@ -330,17 +326,14 @@
 <blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&gt; struct seg</span><br><span class="line">&gt; &#123;</span><br><span class="line">&gt;     int f,e;</span><br><span class="line">&gt;     bool operator&lt;(const seg &amp; b)const&#123;</span><br><span class="line">&gt;         return e &lt; b.e;</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; &#125;cs[500 + 5];</span><br><span class="line">&gt; /* in main</span><br><span class="line">&gt; sort(cs, cs + n);</span><br><span class="line">&gt; int ans = gao(-1,10000,n);</span><br><span class="line">&gt; for(int i = 0;i &lt; n;i++)//枚举一个任务调动</span><br><span class="line">&gt;   for(int j = 0;j &lt; n;j++)//枚举调动位置</span><br><span class="line">&gt;     ans = min(ans,gao(i,j,n));</span><br><span class="line">&gt; printf("%d\n", ans);</span><br><span class="line">&gt; */</span><br><span class="line">&gt; int gao(int cur,int to,int n)</span><br><span class="line">&gt; &#123;</span><br><span class="line">&gt;     int sum = 0, cnt = 0;</span><br><span class="line">&gt;     int max1 = 0,max2 = 0;</span><br><span class="line">&gt;     for(int i = 0; i &lt;= n; i++)</span><br><span class="line">&gt;     &#123;</span><br><span class="line">&gt;         if(cnt == to)</span><br><span class="line">&gt;         &#123;</span><br><span class="line">&gt;             sum += cs[cur].f;</span><br><span class="line">&gt;             max2 = max(max2,sum - cs[cur].e);</span><br><span class="line">&gt;             if(max2 &gt; max1) swap(max2,max1);</span><br><span class="line">&gt;         &#125;//调动位置</span><br><span class="line">&gt;       </span><br><span class="line">&gt;         if(i != cur &amp;&amp; i &lt; n)</span><br><span class="line">&gt;         &#123;</span><br><span class="line">&gt;             sum += cs[i].f;</span><br><span class="line">&gt;             max2 = max(max2,sum - cs[i].e);</span><br><span class="line">&gt;             if(max2 &gt; max1) swap(max1,max2);</span><br><span class="line">&gt;             cnt++;</span><br><span class="line">&gt;         &#125;//未调动位置</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt;     return max1 + max2;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p> ​</p>
-<p><a href="http://blog.csdn.net/l123012013048/article/details/44000965" target="_blank" rel="external">剪枝</a><br>&gt;</p>
-<blockquote>
+</li>
+</ol>
+<p>  <a href="http://blog.csdn.net/l123012013048/article/details/44000965" target="_blank" rel="external">剪枝</a></p>
 <blockquote>
 <p>牺牲的任务只能在两个最大惩罚值中的最后一个任务的前面，只有牺牲前面的任务才能使最大惩罚值的值减小，注意这里是牺牲，就表示有可能牺牲这个任务后，该任务的惩罚值变成了最大惩罚值的其中一个。</p>
 </blockquote>
-</blockquote>
-<p>​</p>
-<p>方法2 <a href="http://chieh.is-programmer.com/posts/79046.html" target="_blank" rel="external">二分套二分</a></p>
-</li>
-</ol>
+<p>   ​</p>
+<p>  方法2 <a href="http://chieh.is-programmer.com/posts/79046.html" target="_blank" rel="external">二分套二分</a></p>
 <h3 id="半边界"><a href="#半边界" class="headerlink" title="半边界"></a>半边界</h3><p>优先队列维护</p>
 <ul>
 <li><p><a href="http://acm.hust.edu.cn/vjudge/contest/source/6513475" target="_blank" rel="external">LA3507</a> 知道DDL和花费,用优先队列维护最优值</p>
@@ -554,7 +547,7 @@
         <p><span>本文标题:</span><a href="/2016/07/22/greedy/">Greedy &amp; Violent</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
         <p><span>发布时间:</span>2016年07月22日 - 17时46分</p>
-        <p><span>最后更新:</span>2016年07月22日 - 22时36分</p>
+        <p><span>最后更新:</span>2016年07月22日 - 22时38分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/22/greedy/" title="Greedy &amp; Violent">http://renld.github.io/2016/07/22/greedy/</a>
             <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/07/22/greedy/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
