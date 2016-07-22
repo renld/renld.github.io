@@ -4,6 +4,306 @@
   
     
     <entry>
+      <title><![CDATA[Greedy & Violent]]></title>
+      <url>http://renld.github.io/2016/07/22/greedy/</url>
+      <content type="html"><![CDATA[<p>贪心可不是件简单事儿.</p>
+<a id="more"></a>
+<h1 id="有趣的贪心"><a href="#有趣的贪心" class="headerlink" title="有趣的贪心"></a>有趣的贪心</h1><h2 id="依据与思想"><a href="#依据与思想" class="headerlink" title="依据与思想"></a>依据与思想</h2><ol>
+<li><p>贪心既然是一个方向的dp,往往<strong>相邻交换法</strong>可以得到优先级</p>
+</li>
+<li><p>真正不要脑洞的贪心还是很少的(比如例题11,UVA11520)</p>
+<p>​</p>
+<blockquote>
+<p>贪心法是每步选择局部最优解，然后一步一步<strong>向目标迈进</strong>。这个“目标”两字很关键，说明贪心法是<strong>目标导向</strong>的，每一步的方向一定是目标。那么我上面两种方法其实只是在模仿那个经典问题的模式，但是却没有时刻注意到这个问题最终目标是实现从1到n每一位都能放上满足条件的车，比如第二个反例最后一个格最后都无法放车了，就是因为前面没有按照对最终目标的影响效果去选择局部最优解，单纯的选最左边一个是毫无道理的，因为本题已经不是那个经典的选最少点的问题了。(UVA11134题解摘录)</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="热身训练"><a href="#热身训练" class="headerlink" title="热身训练"></a><a href="http://acm.hust.edu.cn/vjudge/contest/122013" target="_blank" rel="external">热身训练</a></h2><p>sort大法好==.</p>
+<ol>
+<li><p>HEllo World  (2 ^ ans &gt; n)</p>
+</li>
+<li><p><a href="http://www.codeforces.com/contest/699/problem/A" target="_blank" rel="external">CF363A</a>最小碰撞时间</p>
+</li>
+<li><p>Building designing sort两个指针扫</p>
+</li>
+<li><p>Ancient Cipher sort计数</p>
+</li>
+<li><p>DNA Consensus String 枚举</p>
+</li>
+<li><p>Big Chocolate 找规律==</p>
+</li>
+<li><p>All in All 两个指针扫</p>
+</li>
+<li><p>Children’s Game(UVA10905) 字符串最大==sort by a + b &gt; b + a</p>
+</li>
+<li><p>UVA11389 给出两个数组,使得搭配后所有超出S的值 超出部分和最小</p>
+</li>
+<li><p>例题1 <strong>UVA11292</strong> 勇者斗恶龙,两个指针往后扫</p>
+<p>加上这两句话(if)才能过???</p>
+<blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span>(n) sort(dg, dg + n);</span><br><span class="line">&gt; <span class="keyword">if</span>(m) sort(hero, hero + m);        </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>进阶 LA3266 田忌赛马<ul>
+<li>(这个我CSDN博客有详细题解==</li>
+<li>当初放弃ACM Steps题目..现在看来脸皮厚多了)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>UVA11100 (进阶)个数尽量少严格递增…等差(距)数列</p>
+</li>
+<li><p>LA4094(进阶) 梦之队 这道题网上题解分析很贪心hhh</p>
+</li>
+<li><p>LA4636(进阶) 给出主视图和左视图,求最小立体…(每次找max,相等加到ans,不相等舍弃大的那个)</p>
+</li>
+<li><p>LA3303 相邻交换法 a1b2 &lt; a2b1</p>
+</li>
+<li><p>LA2757 从后向前</p>
+</li>
+</ol>
+<h2 id="区间问题"><a href="#区间问题" class="headerlink" title="区间问题"></a>区间问题</h2><h3 id="最早完成"><a href="#最早完成" class="headerlink" title="最早完成"></a>最早完成</h3><ol>
+<li><p>例题2 <strong>UVA11729</strong> Bi时间交代任务,Ji时间完成. ==&gt; (交换法证明)完成时间长的先交代</p>
+</li>
+<li><p>例题10 <strong>UVA11384</strong> 用最少次数全部变成0 =&gt;&gt; <strong>保持平衡</strong> ,每次把大的一半减去(n/2)+1</p>
+<blockquote>
+<p>递归/二分(每次减大的数的一半)</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="最少区间选择"><a href="#最少区间选择" class="headerlink" title="最少区间选择"></a>最少区间选择</h3><ol>
+<li>UVA10382 sort by zuo when equal by you</li>
+</ol>
+<h3 id="最多区间选点"><a href="#最多区间选点" class="headerlink" title="最多区间选点"></a>最多区间选点</h3><ol>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/121165#problem/E" target="_blank" rel="external">UVA11134</a> 二维的..等价于两个一维,紫书P237</li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/122663#problem/I" target="_blank" rel="external">Priest John’s Busiest Day</a> 至少出席区间一半时间 因为左右等价,sort by middle</li>
+</ol>
+<h3 id="最小惩罚"><a href="#最小惩罚" class="headerlink" title="最小惩罚"></a>最小惩罚</h3><ol>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/122663#problem/A" target="_blank" rel="external">LA4850</a> 求两个最大惩罚之和,end排序贪心扫一遍后,枚举</p>
+<p>做法一: 枚举一个任务以及调动位置</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&gt; struct seg</span><br><span class="line">&gt; &#123;</span><br><span class="line">&gt;     int f,e;</span><br><span class="line">&gt;     bool operator&lt;(const seg &amp; b)const&#123;</span><br><span class="line">&gt;         return e &lt; b.e;</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; &#125;cs[500 + 5];</span><br><span class="line">&gt; /* in main</span><br><span class="line">&gt; sort(cs, cs + n);</span><br><span class="line">&gt; int ans = gao(-1,10000,n);</span><br><span class="line">&gt; for(int i = 0;i &lt; n;i++)//枚举一个任务调动</span><br><span class="line">&gt;   for(int j = 0;j &lt; n;j++)//枚举调动位置</span><br><span class="line">&gt;     ans = min(ans,gao(i,j,n));</span><br><span class="line">&gt; printf("%d\n", ans);</span><br><span class="line">&gt; */</span><br><span class="line">&gt; int gao(int cur,int to,int n)</span><br><span class="line">&gt; &#123;</span><br><span class="line">&gt;     int sum = 0, cnt = 0;</span><br><span class="line">&gt;     int max1 = 0,max2 = 0;</span><br><span class="line">&gt;     for(int i = 0; i &lt;= n; i++)</span><br><span class="line">&gt;     &#123;</span><br><span class="line">&gt;         if(cnt == to)</span><br><span class="line">&gt;         &#123;</span><br><span class="line">&gt;             sum += cs[cur].f;</span><br><span class="line">&gt;             max2 = max(max2,sum - cs[cur].e);</span><br><span class="line">&gt;             if(max2 &gt; max1) swap(max2,max1);</span><br><span class="line">&gt;         &#125;//调动位置</span><br><span class="line">&gt;       </span><br><span class="line">&gt;         if(i != cur &amp;&amp; i &lt; n)</span><br><span class="line">&gt;         &#123;</span><br><span class="line">&gt;             sum += cs[i].f;</span><br><span class="line">&gt;             max2 = max(max2,sum - cs[i].e);</span><br><span class="line">&gt;             if(max2 &gt; max1) swap(max1,max2);</span><br><span class="line">&gt;             cnt++;</span><br><span class="line">&gt;         &#125;//未调动位置</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt;     return max1 + max2;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>​</p>
+<h4 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a><a href="http://blog.csdn.net/l123012013048/article/details/44000965" target="_blank" rel="external">剪枝</a></h4><blockquote>
+<p>牺牲的任务只能在两个最大惩罚值中的最后一个任务的前面，只有牺牲前面的任务才能使最大惩罚值的值减小，注意这里是牺牲，就表示有可能牺牲这个任务后，该任务的惩罚值变成了最大惩罚值的其中一个。</p>
+</blockquote>
+</blockquote>
+<p>​</p>
+<p>方法2 二分套二分</p>
+<blockquote>
+<p><a href="http://chieh.is-programmer.com/posts/79046.html" target="_blank" rel="external">here</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="DDL和花费"><a href="#DDL和花费" class="headerlink" title="DDL和花费"></a>DDL和花费</h3><p>优先队列维护</p>
+<ul>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/source/6513475" target="_blank" rel="external">LA3507</a> 知道DDL和花费,用优先队列维护最优值</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">  ans += af[i].q;</span><br><span class="line">  dd.push(af[i].q);</span><br><span class="line">  <span class="keyword">while</span> (ans &gt; af[i].d) &#123;</span><br><span class="line">    ans -= dd.top();</span><br><span class="line">    dd.pop();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h2 id="路径最小"><a href="#路径最小" class="headerlink" title="路径最小"></a>路径最小</h2><ol>
+<li><p>例题3 <strong>UVA11300</strong> 所有人转手金币之和最小</p>
+<ol>
+<li>(少一个方程的线性方程组=&gt;)单变量极值不等式</li>
+<li><strong>数轴上一串点距离和,中位数是极小值点.</strong></li>
+</ol>
+</li>
+<li><p>例题4 <strong>LA3708</strong> 加入m个雕塑到n个等距中,求最小移动距离</p>
+<blockquote>
+<ol>
+<li>变换坐标系为len = 1;</li>
+<li>tot最小,一定移动到最接近的位置</li>
+<li>随机选一个坐标原点不动</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//坐标缩小后就可以更方便的选择</span></span><br><span class="line"><span class="keyword">double</span> pos = (<span class="keyword">double</span>)i / n * (n + m);<span class="comment">//原来雕像的位置</span></span><br><span class="line">ans += <span class="built_in">fabs</span>(pos - <span class="built_in">floor</span>(pos + <span class="number">0.5</span>))/(n + m);<span class="comment">//*n+m后就选四舍五入最近的</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="相对不变问题"><a href="#相对不变问题" class="headerlink" title="相对不变问题"></a>相对不变问题</h2><ol>
+<li><p>例题5 <strong>UVA10881</strong> 蚂蚁爬.求每个蚂蚁最后的位置和方向</p>
+<p><strong>每个蚂蚁的相对顺序不会改变</strong>=&gt;记录id,最后对应回去</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sort(before, before + n);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">  order[before[i].id] = i;</span><br><span class="line">&#125;<span class="comment">// 之后i := 0-&gt;n, a = order[i]就是从小到大的顺上去</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="树形贪心"><a href="#树形贪心" class="headerlink" title="树形贪心"></a>树形贪心</h2><ol>
+<li><p>例题15 LA3902 </p>
+<blockquote>
+<p>每个叶节点不超过k有个站</p>
+<p>求站的最小数</p>
+<p>​</p>
+<p>每次取<strong>最深的</strong></p>
+<p>通过node表flood fill.</p>
+<p>(node[dis]表示深度为dis的<strong>叶子</strong>))</p>
+</blockquote>
+<p>​</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; k;i++) v = fa[v];<span class="comment">//第k级祖先</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (e[u].size() == <span class="number">1</span> &amp;&amp; d &gt; k) node[d].push_back(u);<span class="comment">//node表构建</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://www.codeforces.com/contest/697/problem/C" target="_blank" rel="external">CF363c</a> 完全二叉树..每次找最近公共祖先还是很简单的==</p>
+</li>
+</ol>
+<h2 id="左右互搏法"><a href="#左右互搏法" class="headerlink" title="左右互搏法"></a>左右互搏法</h2><ol>
+<li>例题16 LA3177 </li>
+</ol>
+<p>围成一个圈每个人拿r[i]个礼物,相邻不相同</p>
+<ol>
+<li>n == 1,特殊情况总共r[1]个</li>
+<li>​n % 2 == 0 =&gt; max(r[i] + r[i+1])个</li>
+<li>n % 2 == 1 <ol>
+<li>二分答案</li>
+<li>以r[1]为界限循环一圈,(除了第一个)奇数尽量拿右边的,偶数尽量拿左边的,</li>
+<li>(因为第一个和最后一个都是奇数位)看最后一个是否会拿左边的.</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> p)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = a[<span class="number">1</span>], y = p - a[<span class="number">1</span>];<span class="comment">//bound</span></span><br><span class="line">    left[<span class="number">1</span>] = x,right[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &amp; <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            right[i] = min(a[i],y - right[i<span class="number">-1</span>]);<span class="comment">//奇数尽量拿右边的</span></span><br><span class="line">            left[i] = a[i] - right[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            left[i] = min(a[i], x - left[i<span class="number">-1</span>]);<span class="comment">//偶数尽量拿左边的</span></span><br><span class="line">            right[i] = a[i] - left[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left[n] == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/source/6457753" target="_blank" rel="external">UVA11627(数据有毒)</a> 过障碍维护当前最左和最右</p>
+</li>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/121165#problem/G" target="_blank" rel="external">LA4725</a> 两个飞机一个入口,问最小编码..维护当前飞机,ab能飞和tot能飞</p>
+<p> 维护当前机场的飞机数目，机场可以供起飞的数目还有可以起飞的总数。</p>
+<p> 超过数目后，判断可供起飞的数目是否为0就行了。</p>
+<p>其实也就是因为a起飞数和b起飞数不是完全相干的</p>
+<p>所以要多个变量定义.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> &amp;b,<span class="keyword">int</span> &amp;c)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &gt; c)</span><br><span class="line">            <span class="keyword">return</span> c;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; c)</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ok</span><span class="params">(<span class="keyword">int</span> m)</span></span>&#123;<span class="comment">//high cnt = m</span></span><br><span class="line">    <span class="keyword">int</span> ap = <span class="number">0</span>,bp = <span class="number">0</span>;<span class="comment">//当前飞机场数目</span></span><br><span class="line">    <span class="keyword">int</span> af = <span class="number">0</span>,bf = <span class="number">0</span>,tf = <span class="number">0</span>;<span class="comment">//a可以起飞数,b,总</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &gt; m || b[i] &gt; m) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        ap += a[i];<span class="comment">//时间i降落</span></span><br><span class="line">        bp += b[i];</span><br><span class="line">        <span class="keyword">if</span>(ap &gt; m)<span class="comment">//之前起飞</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> dec = min(ap - m, af,tf);</span><br><span class="line">            ap -= dec,af -= dec,tf -= dec;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(bp &gt; m) &#123;</span><br><span class="line">            <span class="keyword">int</span> dec = min(bp - m, bf,tf);</span><br><span class="line">            bp -= dec,bf -= dec,tf -= dec;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ap &gt; m || bp &gt; m) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(af &lt; ap) af++;<span class="comment">//主要是这个if限制了状态定义</span></span><br><span class="line">        <span class="keyword">if</span>(bf &lt; bp) bf++;</span><br><span class="line">        <span class="keyword">if</span>(tf &lt; ap + bp) tf++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/123289#problem/G" target="_blank" rel="external">LA3403</a> (紫书例题)天平难题…二进制枚举二叉树,记录左右最大值</p>
+</li>
+</ul>
+<h2 id="滑动窗口-单调队列"><a href="#滑动窗口-单调队列" class="headerlink" title="滑动窗口/单调队列"></a>滑动窗口/单调队列</h2><ol>
+<li><p>例题18 UVA11078 找Ai和Aj使得<code>Ai - Aj</code>尽量大</p>
+<blockquote>
+<p>维护小于j的最大i值 <code>MaxAi = max(Aj,MaxAi)</code></p>
+</blockquote>
+</li>
+<li><p>例题21 <a href="http://acm.hust.edu.cn/vjudge/problem/source/6392140" target="_blank" rel="external">LA2678</a> 正整数序列,求最短子序列和&gt;S</p>
+<ul>
+<li>重点在于随后加一个<code>if (ans == maxn) ans = 0</code></li>
+</ul>
+<h4 id="尺取法"><a href="#尺取法" class="headerlink" title="尺取法"></a>尺取法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (ptr1 = ptr2 = <span class="number">0</span>; ptr2 &lt; N; ptr2++) &#123;</span><br><span class="line">  sum += a[ptr2];<span class="comment">//每次后面的指针后移</span></span><br><span class="line">  <span class="keyword">while</span> (ptr1 &lt;= ptr2 &amp;&amp; sum - a[ptr1] &gt;= S)</span><br><span class="line">  &#123;</span><br><span class="line">    sum -= a[ptr1];</span><br><span class="line">    ptr1++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (sum &gt;= S)update(ans, ptr2 - ptr1 + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (ptr1 = ptr2 = <span class="number">0</span>; ptr2 &lt; N; ) &#123;</span><br><span class="line">  <span class="keyword">while</span> (sum &lt; S &amp;&amp; ptr2 &lt; N ) &#123;</span><br><span class="line">    sum += a[ptr2];</span><br><span class="line">    ptr2++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (sum &gt;= S &amp;&amp; ptr1 &lt; ptr2) &#123;</span><br><span class="line">    update(ans, ptr2 - ptr1);</span><br><span class="line">    sum -= a[ptr1];</span><br><span class="line">    ptr1++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="可怕的暴力"><a href="#可怕的暴力" class="headerlink" title="可怕的暴力"></a>可怕的暴力</h1><h2 id="三维问题"><a href="#三维问题" class="headerlink" title="三维问题"></a>三维问题</h2><ol>
+<li><p>例题6 <strong>LA2995</strong> (最大立体)三维坐标系转换</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> len, <span class="keyword">int</span> &amp;x, <span class="keyword">int</span> &amp;y, <span class="keyword">int</span> &amp;z)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; x = len; y = j; z = i; &#125; </span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">1</span>) &#123; x = n - <span class="number">1</span> - j; y = len; z = i; &#125;</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">2</span>) &#123; x = n - <span class="number">1</span> - len; y = n - <span class="number">1</span> - j; z = i; &#125;</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">3</span>) &#123; x = j; y = n - <span class="number">1</span> - len; z = i; &#125;</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">4</span>) &#123; x = n - <span class="number">1</span> - i; y = j; z = len; &#125;</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">5</span>) &#123; x = i; y = j; z = n - <span class="number">1</span> - len; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*	给出六个面</span><br><span class="line">	k: 前 左 后 右 顶 底</span><br><span class="line">	i j 枚举位置</span><br><span class="line">	len是深入的长度</span><br><span class="line">	x y z从上往下看的坐标系</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例题8 <strong>LA3401</strong> 修改最少的面使得立方体相同</p>
+<ol>
+<li>写个小程序枚举”姿态”</li>
+<li>枚举每个立方体每种姿态最少涂色数</li>
+</ol>
+</li>
+</ol>
+<h2 id="套路"><a href="#套路" class="headerlink" title="套路"></a>套路</h2><ol>
+<li><p>例题7 UVA11464 <strong>01矩阵枚举第一行</strong></p>
+</li>
+<li><p>例题11 UVA10795 汉诺塔的扩展</p>
+<blockquote>
+<p>汉诺塔变形,给出始态终态,求移动步数</p>
+<p>赋予中间态定义f(P,i,final)表示把1…i全部移动到final所需要的步数</p>
+<p>ans = f(start,k-1,6-start[k]-finish[k]) + f(finish,k-1,6-start[k]-finish[k])+1</p>
+<p>(k 是最大编号要移动的盘子)</p>
+<p>f(P,i,final) = (P[i] == final) ? f(P , i-1, final): f(P,i-1,6-P[i]-final) + (1LL&lt;&lt;(i-1));</p>
+</blockquote>
+</li>
+<li><p>例题17 计数排序</p>
+</li>
+<li><p>例题19 UVa11549 Floyd判圈法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a = k,b = k;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  a = next_num(a);</span><br><span class="line">  b = next_num(b); <span class="keyword">if</span>(b &gt; ans) ans = b;</span><br><span class="line">  b = next_num(b); <span class="keyword">if</span>(b &gt; ans) ans = b;</span><br><span class="line">&#125;<span class="keyword">while</span> (a != b);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例题24 <a href="http://acm.hust.edu.cn/vjudge/problem/source/6396193" target="_blank" rel="external">三维最大子空间</a></p>
+</li>
+</ol>
+<h3 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h3><p>二分模板= =</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//整数</span></span><br><span class="line"><span class="keyword">while</span>(l &lt; r)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">int</span> m = l + (r - l + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">if</span>(check(m)) l = m;</span><br><span class="line">  <span class="keyword">else</span> r = m - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">l is answer</span><br><span class="line">  </span><br><span class="line"><span class="comment">//浮点数</span></span><br><span class="line"><span class="keyword">while</span> (r - l &gt; <span class="number">0.000001</span>) &#123;</span><br><span class="line">  <span class="keyword">double</span> m = (r + l )/<span class="number">2</span>;</span><br><span class="line">  <span class="keyword">if</span> (check(m)) &#123;</span><br><span class="line">    l = m;</span><br><span class="line">  &#125;<span class="keyword">else</span></span><br><span class="line">    r = m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//单调时最小位置</span></span><br><span class="line">i = lower_bound(a,a + n,val) - a;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>例题12 最小品质因子最大值<strong>最小a值最大b</strong></li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/source/6454756" target="_blank" rel="external">LA4254</a> 白书手写题解==</li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/source/6527447" target="_blank" rel="external">LA4253</a> 返回值有意义的二分(判存在性,极角维护左右)  </li>
+</ol>
+<h3 id="二维降-扫描线"><a href="#二维降-扫描线" class="headerlink" title="二维降,扫描线"></a>二维降,扫描线</h3><ol>
+<li><p>例题20 <a href="http://acm.hust.edu.cn/vjudge/problem/source/6391473" target="_blank" rel="external">LA3905</a> 流星最多的时间</p>
+<blockquote>
+<ol>
+<li>扫描线计数法(碰到起点+1)</li>
+<li>抽象为起点和终点,由于是直线,二维= 一维∩一维</li>
+<li>整数计算</li>
+</ol>
+</blockquote>
+</li>
+<li><p>例题23 LA3695 找一个矩形边上包括尽量多的点</p>
+<blockquote>
+<p>求平行坐标轴的矩形边上最多点覆盖</p>
+<p>扫描线,对所有点依据x排序,对所有y排序,unique</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; m; a++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> b = a + <span class="number">1</span>; b &lt; m; b++) &#123;</span><br><span class="line">    <span class="keyword">int</span> low = y[a], high = y[b];<span class="comment">//枚举平行于x轴的两条边</span></span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>,M = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;<span class="comment">//扫描平行于y轴的边</span></span><br><span class="line">      <span class="keyword">if</span> (i == <span class="number">0</span> || p[i].x != p[i<span class="number">-1</span>].x) &#123;</span><br><span class="line">        k++;<span class="comment">//统计x坐标个数</span></span><br><span class="line">        on[k] = on2[k] = <span class="number">0</span>;</span><br><span class="line">        left[k] = k == <span class="number">0</span> ? <span class="number">0</span> : on2[k<span class="number">-1</span>] - on[k<span class="number">-1</span>] + left[k<span class="number">-1</span>];<span class="comment">//y = low (+) high 上已经有多少点</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(p[i].y &gt; low &amp;&amp; p[i].y &lt; high) on[k]++;<span class="comment">//左记录线记录low,high之间的边(不含端点)</span></span><br><span class="line">      <span class="keyword">if</span>(p[i].y &gt;= low &amp;&amp; p[i].y &lt;= high) on2[k]++;<span class="comment">//右记录线记录low,high之间的边(含端点)</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(k &lt;= <span class="number">2</span>) <span class="keyword">return</span> n;<span class="comment">//总共只有两个坐标(这里不用再对x排序- -)</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= k; j++) &#123;</span><br><span class="line">      ans = max(ans,on2[j] + M + left[j]);<span class="comment">//ans = max(on2[j] + on2[j-1] + left[j] - left[j-1])</span></span><br><span class="line">      M = max(M,on[j] - left[j]);<span class="comment">//维护on[i] - left[j]的最大值</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="悬线法"><a href="#悬线法" class="headerlink" title="悬线法"></a>悬线法</h3><ol>
+<li><p>例题22 <a href="http://acm.hust.edu.cn/vjudge/problem/source/6392400" target="_blank" rel="external">LA3029</a> 最大子矩阵.</p>
+<blockquote>
+<p><strong>把每个格子向上延伸的连续空格看成一条悬线</strong></p>
+<p>有障碍物的区域中的最大子矩阵</p>
+<p>(USACO用一个height数组过的(USACO6.1))</p>
+<p>训练指南是维护up,l,r三个数组,l,r标记以up为高度的矩形最左和最右的位置</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="01-GUY"><a href="#01-GUY" class="headerlink" title="01 GUY"></a>01 GUY</h3><ol>
+<li><p>例题25 <a href="http://acm.hust.edu.cn/vjudge/problem/source/6403147" target="_blank" rel="external">LA2965</a> 尽量多的串使得大写字母都出现偶数次</p>
+<ul>
+<li>=&gt;用二进制位表示字母</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>=&gt;xor == 0</li>
+</ul>
+<ul>
+<li>=&gt;枚举前一半,而后枚举后一半<strong>中途相遇</strong></li>
+</ul>
+<h2 id="码农题"><a href="#码农题" class="headerlink" title="码农题"></a>码农题</h2><ol>
+<li><p>例题9 <strong>UVA11210</strong> 麻将(判断”听牌”)</p>
+</li>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/122663#problem/H" target="_blank" rel="external">Ugly Windows</a> 代码量不大但是有坑</p>
+</li>
+<li><p><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1668" target="_blank" rel="external">LA3667</a> 最少刻度 二进制bfs扩展<a href="http://winterfell30.com/2015/11/21/hdoj3667/" target="_blank" rel="external">参考</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (cur.found &amp; (<span class="number">1</span>&lt;&lt;i)) <span class="keyword">continue</span>;<span class="comment">//当前存在</span></span><br><span class="line">  <span class="keyword">int</span> v = *iter + arr[i];<span class="comment">//扩展节点</span></span><br><span class="line">  <span class="keyword">if</span>(cur.st.find(v) != cur.st.end()) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">if</span>(v &gt; MAX) <span class="keyword">continue</span>;</span><br><span class="line">  next = cur;</span><br><span class="line">  next.st.insert(v);</span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator iter2 = cur.st.begin();<span class="comment">//进一步扩展</span></span><br><span class="line">       iter2 != cur.st.end(); iter2++) &#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="built_in">abs</span>(v - *iter2);</span><br><span class="line">    <span class="keyword">if</span> (idx[x] != <span class="number">-1</span>) &#123;</span><br><span class="line">      next.found |= (<span class="number">1</span>&lt;&lt;idx[x]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (next.found != cur.found) &#123;</span><br><span class="line">    q.push(next);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/123289#problem/E" target="_blank" rel="external">UVA10825</a> 乘2..m后所有位数字还是那些…..枚举最后一位生成所有位数</p>
+</li>
+<li><p><a href="http://acm.hust.edu.cn/vjudge/contest/123289#problem/I" target="_blank" rel="external">LA3621</a> 最少几次乘除得到${X}^{n}$.迭代加深搜索+剪枝</p>
+</li>
+</ol>
+<h2 id="trick"><a href="#trick" class="headerlink" title="trick"></a>trick</h2><ol>
+<li><p>writein &amp; readin</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">readint</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> c = getchar();</span><br><span class="line">  	<span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c)) c = getchar();</span><br><span class="line">  	</span><br><span class="line">  	<span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">  	<span class="keyword">while</span>(<span class="built_in">isdigit</span>(c))&#123;</span><br><span class="line">  		x = x * <span class="number">10</span> + c - <span class="string">'0'</span>;</span><br><span class="line">      	c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">  	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> buf[<span class="number">10</span>];<span class="comment">//global varible</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">writeint</span><span class="params">(<span class="keyword">int</span> i)</span></span><br><span class="line"></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(i == <span class="number">0</span>)p++;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">while</span>(i)</span><br><span class="line">  &#123;</span><br><span class="line">    buf[p++] = i % <span class="number">10</span>;</span><br><span class="line">    i /= <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> j = p - <span class="number">1</span>;j &gt;= <span class="number">0</span>;j--) <span class="built_in">putchar</span>(<span class="string">'0'</span> + j);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol>
+<li><p>例题及习题指 &lt;&lt;算法竞赛入门经典(训练指南)&gt;&gt;对应例题</p>
+</li>
+<li><p>私在vjudge中开题集(因为uva墙外服务器是在是慢啊…)</p>
+<ul>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/122013#overview" target="_blank" rel="external">1-1</a></li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/121165" target="_blank" rel="external">1-2-1</a></li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/122663#overview" target="_blank" rel="external">1-2-2</a></li>
+<li><a href="http://acm.hust.edu.cn/vjudge/contest/123289#overview" target="_blank" rel="external">1-3</a></li>
+</ul>
+</li>
+<li><p>求LA5704 Yummy Triangular Pizza传统题解,<a href="oeis.org/A006534">oeis</a>是个好地方</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[BYE Freshman]]></title>
       <url>http://renld.github.io/2016/07/09/byefresh/</url>
       <content type="html"><![CDATA[<p>据说珠海最好的景点.是澳门.</p>
