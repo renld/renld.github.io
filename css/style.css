@@ -3219,7 +3219,7 @@ color
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #272822;
+  background: #002b36;
   margin: 10px 0;
   padding: 10px 10px;
   overflow: auto;
@@ -3302,11 +3302,11 @@ color
 }
 .article-entry h1 {
   font-size: 1.5em;
-  margin-top: 3cm;
+  margin-top: 200px;
 }
 .article-entry h2 {
-  font-size: 1em;
-  margin-top: 2.5cm;
+  font-size: 1.3em;
+  margin-top: 100px;
   font-weight: 300;
   padding-bottom: 5px;
   margin: 0.5em auto;
@@ -3320,12 +3320,14 @@ color
   content: " —— ";
 }
 .article-entry h3 {
-  margin-top: 1.5cm;
   margin: 0.5em auto;
   color: #fff;
+  background: rgba(0,0,0,0.27);
   border: 1px dashed #020202;
   padding: 0.2em 0.6em;
   font-weight: normal;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 .article-entry h3:hover {
   content: " > ";
@@ -3368,10 +3370,47 @@ color
   border: 0;
   margin: 10px 0;
 }
+.article-entry ul li:before {
+  content: "\f05d";
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  margin: 0 10px;
+  line-height: 28px;
+}
+.article-entry ul li:before ul li {
+  margin-left: 20px;
+}
+.article-entry ul li:before ul li:before {
+  content: "\f05d";
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  margin: 0 10px;
+  line-height: 28px;
+}
+.article-entry ol li {
+  list-style: decimal;
+  margin: 0 10px;
+}
+.article-entry li:hover {
+  background-color: #2e2e2e;
+}
+.article-entry .highlight::before {
+  content: attr(data-lang) " code";
+  display: block;
+  background-color: #0083a0;
+  margin: 0 -16px 16px -16px;
+  padding: 8px 16px;
+  color: #efefef;
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 1.1rem;
+  text-shadow: none;
+  border-bottom: dashed 1px #000;
+  text-transform: capitalize;
+}
 .article-entry .highlight {
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  max-height: 500px;
+  padding: 0 10px;
 }
 .article-entry .highlight pre {
   border: none;
@@ -3429,7 +3468,7 @@ color
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #272822;
+  background: #002b36;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -3455,7 +3494,7 @@ color
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #272822;
+  background: #002b36;
   color: highlight-comment;
   font: 0.85em "Lucida Grande", Verdana, "Helvetica Neue", Arial, sans-serif;
   text-shadow: 0 0;
@@ -3470,46 +3509,65 @@ color
 .article-entry .gist .gist-file .gist-meta a:hover {
   text-decoration: underline;
 }
+pre .doctype {
+  color: #586e75;
+}
+pre .tag {
+  color: #839496;
+}
+pre .title {
+  color: #66d9ef;
+}
+pre .strings {
+  color: #2aa198;
+}
+pre .attribute {
+  color: #b58900;
+}
+pre .cpp,
+pre .annotation,
+pre .command {
+  color: #258fb8;
+}
 pre .comment {
   color: #75715e;
 }
-pre .keyword,
-pre .function .keyword,
+pre .keyword {
+  color: #66d9ef;
+}
+pre .function,
 pre .class .params {
   color: #66d9ef;
 }
-pre .tag,
-pre .doctype,
 pre .params,
 pre .function,
 pre .css .value {
   color: #fff;
 }
 pre .css ~ * .tag,
-pre .title,
 pre .at_rule,
-pre .at_rule .keyword,
-pre .preprocessor,
-pre .preprocessor .keyword {
+pre .preprocessor {
   color: #f92672;
 }
-pre .attribute,
 pre .built_in,
 pre .class,
 pre .css ~ * .class,
-pre .function .title {
+pre .function {
   color: #a6e22e;
 }
 pre .value,
-pre .string {
-  color: #e6db74;
-}
 pre .number {
   color: #7163d7;
 }
 pre .id,
 pre .css ~ * .id {
   color: #fd971f;
+}
+pre .link_label,
+pre .code,
+pre .operator,
+pre .link_url {
+  color: #258fb8;
 }
 #footer {
   font-size: 12px;
