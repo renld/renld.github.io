@@ -725,9 +725,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
