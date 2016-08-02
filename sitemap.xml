@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://renld.github.io/404/index.html</loc>
+    
+    <lastmod>2016-08-02T13:27:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://renld.github.io/instagram/index.html</loc>
     
-    <lastmod>2016-08-02T12:53:00.000Z</lastmod>
+    <lastmod>2016-08-02T13:00:12.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://renld.github.io/about/index.html</loc>
     
-    <lastmod>2016-08-01T10:54:57.000Z</lastmod>
+    <lastmod>2016-08-02T12:58:07.000Z</lastmod>
     
   </url>
   
@@ -124,13 +131,6 @@
     <loc>http://renld.github.io/ZZPPP/index.html</loc>
     
     <lastmod>2016-07-06T11:37:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/404.html</loc>
-    
-    <lastmod>2016-07-06T05:30:46.000Z</lastmod>
     
   </url>
   
