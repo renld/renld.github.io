@@ -3302,8 +3302,9 @@ color
 }
 .article-entry h1 {
   font-size: 3em;
-  margin-top: 3cm;
+  margin-top: 2.7cm;
   text-align: center;
+  padding-bottom: 5px;
 }
 .article-entry h2 {
   font-size: 2em;

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-05T08:40:22.000Z</updated>
+  <updated>2016-08-05T14:20:07.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python实战计划 爬取商品信息</title>
+    <link href="http://renld.github.io/2016/08/05/PL1-2/"/>
+    <id>http://renld.github.io/2016/08/05/PL1-2/</id>
+    <published>2016-08-05T14:01:36.000Z</published>
+    <updated>2016-08-05T14:20:07.000Z</updated>
+    
+    <content type="html">&lt;p&gt;静态网页爬取&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;成果&quot;&gt;&lt;a href=&quot;#成果&quot; class=&quot;headerlink&quot; title=&quot;成果&quot;&gt;&lt;/a&gt;成果&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/python/1-2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#!/usr/bin/env python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; bs4 &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; BeautifulSoup&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&#39;index.html&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;r&#39;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; f:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Soup = BeautifulSoup(f.read(), &lt;span class=&quot;string&quot;&gt;&#39;lxml&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;#有冒号的得删掉&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    images = Soup.select(&lt;span class=&quot;string&quot;&gt;&#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; img&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    titles = Soup.select(&lt;span class=&quot;string&quot;&gt;&#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; div.caption &amp;gt; h4 &amp;gt; a&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    prices = Soup.select(&lt;span class=&quot;string&quot;&gt;&#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; div.caption &amp;gt; h4.pull-right&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;#这里直接把星星和数目都统计了,然后用i*2,和i*2+1分别提取&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stars = Soup.select(&lt;span class=&quot;string&quot;&gt;&#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; div.ratings &amp;gt; p&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;优质作业答案:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	reviews = soup.select(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; div.ratings &amp;gt; p.pull-right&#39;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    grades_crawler = soup.select(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &#39;body &amp;gt; div &amp;gt; div &amp;gt; div.col-md-9 &amp;gt; div &amp;gt; div &amp;gt; div &amp;gt; div.ratings &amp;gt; p:nth-of-type(2) &amp;gt; span &#39;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # 上一行抓取所有的星星描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    grades = []  # 设置一个空列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    while len(grades_crawler) != 0:  # 循环条件长度不为0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        e = grades_crawler[0:5]  # 提取星星描述前五个元素，也就是一个商品的星级&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        grades.insert(1, e)  # 把这五个商品星级的列表作为一个元素插入grades列表中&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        del grades_crawler[0:5]  # 删除抓取到的描述列表的前五位&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这样之后就可以用zip来读取了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	另外&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c = b.replace(&#39;&amp;lt;span class=&quot;glyphicon glyphicon-star&quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, &#39;★&#39;)  # 将描述实五角星的替换为图案&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d = c.replace(&#39;&amp;lt;span class=&quot;glyphicon glyphicon-star-empty&quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, &#39;☆&#39;)  # 将描述虚五角星的替换为图案&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    star.append(d)  # 将转化完的结果逐个插入列表star中&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &#39;grade&#39;: &#39;&#39;.join(star).replace(&#39;[&#39;, &#39;&#39;).replace(&#39;]&#39;, &#39;&#39;).replace(&#39;,&#39;, &#39;&#39;).replace(&#39; &#39;, &#39;&#39;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  这个很炫.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;join用法示例 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;li = [&#39;my&#39;,&#39;name&#39;,&#39;is&#39;,&#39;bob&#39;] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&#39; &#39;.join(li) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&#39;my name is bob&#39; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&#39;_&#39;.join(li) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&#39;my_name_is_bob&#39; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;info = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(images)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    data = dict(image = images[i].get(&lt;span class=&quot;string&quot;&gt;&#39;src&#39;&lt;/span&gt;),title = titles[i].get_text(),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                price = prices[i].get_text(),starNum = stars[i*&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;].get_text(),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                star = len(stars[i*&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].find_all(&lt;span class=&quot;string&quot;&gt;&quot;span&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;glyphicon glyphicon-star&#39;&lt;/span&gt;)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    info.append(data)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;#print(data)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&quot;1-2.txt&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;w&quot;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; out:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; info:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(i,file = out)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;添加库文件&lt;code&gt;from bs4 import BeautifulSoup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开本地文档&lt;code&gt;with open(&amp;#39;index.html&amp;#39;, &amp;#39;r&amp;#39;) as f:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;beautifulSoup…&lt;code&gt;Soup = BeautifulSoup(f.read(), &amp;#39;lxml&amp;#39;)&lt;/code&gt;就像熬一碗汤吧233&lt;/li&gt;
+&lt;li&gt;然后通过select copy过来的路径select出来,&lt;strong&gt;删掉冒号后的东西&lt;/strong&gt;(我也不知道为什么…)&lt;/li&gt;
+&lt;li&gt;最后一步就是组合成一个个对象咯.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_text()&lt;/code&gt;得到标签外的文字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get(&amp;#39;name&amp;#39;)&lt;/code&gt;得到属性名对应内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;find_all( &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;name&lt;/a&gt; , &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;attrs&lt;/a&gt; , &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#recursive&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;recursive&lt;/a&gt; , &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#text&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;text&lt;/a&gt; , &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#keyword&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;**kwargs&lt;/a&gt; ) 方法搜索当前tag的所有tag子节点,并判断是否符合过滤器的条件&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#find-all&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;对应链接&lt;/a&gt;,这里用find_all(大标签名,类名),然后得到一个数组..统计一下长度用len呗.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;静态网页爬取&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://renld.github.io/tags/python/"/>
+    
+      <category term="html" scheme="http://renld.github.io/tags/html/"/>
+    
+      <category term="crawler" scheme="http://renld.github.io/tags/crawler/"/>
+    
+  </entry>
   
   <entry>
     <title>python实战计划 制作自己的网页</title>
@@ -710,9 +750,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
@@ -825,9 +865,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
@@ -1029,9 +1069,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
