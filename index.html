@@ -245,50 +245,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="HEADFIRST-PYTHON"><a href="#HEADFIRST-PYTHON" class="headerlink" title="HEADFIRST PYTHON"></a>HEADFIRST PYTHON</h1><blockquote>
-<p>因为后面涉及数据库,服务器内容,</p>
-<p>太监之后只有基础内容了QAQ</p>
+              <h2 id="HEADFIRST-PYTHON"><a href="#HEADFIRST-PYTHON" class="headerlink" title="HEADFIRST PYTHON"></a>HEADFIRST PYTHON</h2><blockquote>
+<p>因为后面涉及数据库,服务器内容,<br>太监之后只有基础内容了QAQ</p>
 </blockquote>
-<h2 id="循环与递归"><a href="#循环与递归" class="headerlink" title="循环与递归"></a>循环与递归</h2><ul>
-<li><p>python默认递归深度100</p>
-</li>
-<li><p>参考代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span><br><span class="line">递归打印多重列表</span><br><span class="line">"""</span></span><br><span class="line">movies = [<span class="string">"The Holy Grail"</span>,</span><br><span class="line">			<span class="string">"The Life of Brian"</span>,</span><br><span class="line">			<span class="string">"The Meaning of Life"</span>,</span><br><span class="line">			[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pt</span><span class="params">(List)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> a <span class="keyword">in</span> List:<span class="comment"># </span></span><br><span class="line">		<span class="keyword">if</span> isinstance(a,list):<span class="comment">#判断类型</span></span><br><span class="line">			pt(a);</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(a);</span><br><span class="line">    <span class="comment"># for a in range(0,len(List)):</span></span><br><span class="line">	<span class="comment"># 	if isinstance(List[a],list):</span></span><br><span class="line">	<span class="comment"># 		pt(List[a]);</span></span><br><span class="line">	<span class="comment"># 	else:</span></span><br><span class="line">	<span class="comment"># 		print(List[a]);</span></span><br><span class="line">pt(movies);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="封装以及命名空间"><a href="#封装以及命名空间" class="headerlink" title="封装以及命名空间"></a>封装以及命名空间</h2><ol>
-<li><p><code>nester.py</code>放到一个文件夹中,加上<code>setup.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">     name = <span class="string">'nester'</span>,</span><br><span class="line">     version = <span class="string">'1.0.0'</span>,</span><br><span class="line">     py_modules = [<span class="string">'nester'</span>],</span><br><span class="line">     author = <span class="string">'abc'</span>,</span><br><span class="line">     author_email = <span class="string">'505636638@qq.com'</span>,<span class="comment">#信息基本都是瞎写的= =</span></span><br><span class="line">     url = <span class="string">"baidu.com"</span>,</span><br><span class="line">     discription = <span class="string">'1'</span>,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在文件夹中执行</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 setup.py sdist;</span><br><span class="line">sudo python3 setup.py install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>import</code>后就可以通过命名空间执行了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nester</span><br><span class="line">nester.pt(nester.movies)</span><br><span class="line"><span class="comment">#from nester import pt   &lt;=&gt; using namespace...</span></span><br><span class="line"><span class="comment">#pt(nester.movies)</span></span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">'../p'</span>)</span><br><span class="line">os.getcwd();<span class="comment">#get file address</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#I</span></span><br><span class="line">data = open(<span class="string">'sketch.txt'</span>)</span><br><span class="line">data.seek(<span class="number">0</span>);<span class="comment">#return begin</span></span><br><span class="line"></span><br><span class="line">each_line = data.readline();</span><br><span class="line"><span class="comment"># help(each_line.split)</span></span><br><span class="line"><span class="comment"># S.split(sep=None, maxsplit=-1) -&gt; list of strings</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_line <span class="keyword">in</span> data:</span><br><span class="line">	<span class="keyword">if</span> each_line.find(<span class="string">':'</span>) != <span class="number">-1</span>:</span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">			(role,line_spoken) = each_line.split(<span class="string">':'</span>,<span class="number">1</span>)</span><br><span class="line">			print(role,end = <span class="string">''</span>);</span><br><span class="line">			print(<span class="string">' said: '</span>,end = <span class="string">''</span>);</span><br><span class="line">			print(line_spoken,end = <span class="string">''</span>);</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">		    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#O</span></span><br><span class="line">out = open(<span class="string">"data.out"</span>,<span class="string">"w"</span>) <span class="comment">#a -&gt; append,w+ read &amp; write</span></span><br><span class="line"><span class="keyword">for</span> eachS <span class="keyword">in</span> other:</span><br><span class="line"> 	print(eachS,file = out)</span><br><span class="line"></span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
-<h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">line_spoken = line_spoken.strip()<span class="comment">#去除不必要的空白</span></span><br><span class="line">locals()<span class="comment">#当前BIF中变量集合</span></span><br></pre></td></tr></table></figure>
-<h2 id="第一本编程书笔记"><a href="#第一本编程书笔记" class="headerlink" title="第一本编程书笔记"></a>第一本编程书笔记</h2><ul>
-<li><p>int(), str()对于类型的转化</p>
-</li>
-<li><p>[a:b]对于数组的分片</p>
-</li>
-<li><p>函数传入参数可以(id = 1,)不按顺序传入</p>
-</li>
-<li><p>print中sep表示分隔字符</p>
-</li>
-<li><p><code>**</code>为幂,<code>//</code>为整除</p>
-</li>
-<li><p>列表推倒:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k = [n <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>) <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">g = &#123;i:j.upper() <span class="keyword">for</span>(i,j) <span class="keyword">in</span> zip(range(<span class="number">1</span>,<span class="number">6</span>),<span class="string">'abcde'</span>)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类的继承 在括号内写父类</p>
-</li>
-</ul>
-<h3 id="exercise"><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创造1-10.txt文本,以数字命名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">creater</span><span class="params">(name)</span>:</span></span><br><span class="line">	name = name + <span class="string">'.txt'</span></span><br><span class="line">	file = open(<span class="string">'/users/macbook/desktop/'</span> + name,<span class="string">'w'</span>)</span><br><span class="line">	file.write(<span class="string">'hello'</span> + name)</span><br><span class="line">	<span class="keyword">return</span> file</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">	<span class="keyword">if</span>(x &lt; <span class="number">10</span>):</span><br><span class="line">		creater(<span class="string">'0'</span> + str(x))</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		creater(str(x))</span><br><span class="line">	<span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
+          
       
     </div>
     
@@ -301,6 +261,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/08/05/HFPy/#more">Full Text >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
