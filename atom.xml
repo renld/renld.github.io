@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-05T07:48:20.000Z</updated>
+  <updated>2016-08-05T07:49:54.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://renld.github.io/2016/08/05/HFPy/"/>
     <id>http://renld.github.io/2016/08/05/HFPy/</id>
     <published>2016-08-05T07:04:08.000Z</published>
-    <updated>2016-08-05T07:48:20.000Z</updated>
+    <updated>2016-08-05T07:49:54.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;HEADFIRST-PYTHON&quot;&gt;&lt;a href=&quot;#HEADFIRST-PYTHON&quot; class=&quot;headerlink&quot; title=&quot;HEADFIRST PYTHON&quot;&gt;&lt;/a&gt;HEADFIRST PYTHON&lt;/h2&gt;&lt;blockquote&gt;
+    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;因为后面涉及数据库,服务器内容,&lt;br&gt;太监之后只有基础内容了QAQ&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;循环与递归&quot;&gt;&lt;a href=&quot;#循环与递归&quot; class=&quot;headerlink&quot; title=&quot;循环与递归&quot;&gt;&lt;/a&gt;循环与递归&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;HEADFIRST-PYTHON&quot;&gt;&lt;a href=&quot;#HEADFIRST-PYTHON&quot; class=&quot;headerlink&quot; title=&quot;HEADFIRST PYTHON&quot;&gt;&lt;/a&gt;HEADFIRST PYTHON&lt;/h2&gt;&lt;h2 id=&quot;循环与递归&quot;&gt;&lt;a href=&quot;#循环与递归&quot; class=&quot;headerlink&quot; title=&quot;循环与递归&quot;&gt;&lt;/a&gt;循环与递归&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;python默认递归深度100&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;参考代码&lt;/p&gt;
@@ -69,7 +69,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;HEADFIRST-PYTHON&quot;&gt;&lt;a href=&quot;#HEADFIRST-PYTHON&quot; class=&quot;headerlink&quot; title=&quot;HEADFIRST PYTHON&quot;&gt;&lt;/a&gt;HEADFIRST PYTHON&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;因为后面涉及数据库,服务器内容,&lt;br&gt;太监之后只有基础内容了QAQ&lt;/p&gt;
 &lt;/blockquote&gt;
     
