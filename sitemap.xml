@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://renld.github.io/wxt/index.html</loc>
+    
+    <lastmod>2016-08-03T09:36:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/photo/index.html</loc>
+    
+    <lastmod>2016-08-02T14:16:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/photo/output.json</loc>
+    
+    <lastmod>2016-08-02T14:09:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/photo/tool.js</loc>
+    
+    <lastmod>2016-08-02T14:05:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://renld.github.io/search/index.html</loc>
     
     <lastmod>2016-08-02T13:53:40.000Z</lastmod>
@@ -33,13 +61,6 @@
     <loc>http://renld.github.io/wxt/wxt_hase.html</loc>
     
     <lastmod>2016-08-01T10:52:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/wxt/index.html</loc>
-    
-    <lastmod>2016-08-01T10:52:27.000Z</lastmod>
     
   </url>
   
