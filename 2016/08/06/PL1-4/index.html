@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python实战计划 制作自己的网页 | Leidar&#39;s Home</title>
+  <title>python实战计划 动态数据爬取 | Leidar&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="忘记领50rmb优惠卷了…那只能好好学了呗">
+  <meta name="description" content="动态加载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python实战计划 制作自己的网页">
-<meta property="og:url" content="http://renld.github.io/2016/08/05/PL1-1/index.html">
+<meta property="og:title" content="python实战计划 动态数据爬取">
+<meta property="og:url" content="http://renld.github.io/2016/08/06/PL1-4/index.html">
 <meta property="og:site_name" content="Leidar's Home">
-<meta property="og:description" content="忘记领50rmb优惠卷了…那只能好好学了呗">
-<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-1.png">
-<meta property="og:updated_time" content="2016-08-05T08:40:22.000Z">
+<meta property="og:description" content="动态加载">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-4.png">
+<meta property="og:updated_time" content="2016-08-06T15:18:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python实战计划 制作自己的网页">
-<meta name="twitter:description" content="忘记领50rmb优惠卷了…那只能好好学了呗">
-<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/python/1-1.png">
+<meta name="twitter:title" content="python实战计划 动态数据爬取">
+<meta name="twitter:description" content="动态加载">
+<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/python/1-4.png">
   
     <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
   
@@ -216,11 +216,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-PL1-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-PL1-4" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/05/PL1-1/" class="article-date">
-      <time datetime="2016-08-05T08:18:36.000Z" itemprop="datePublished">2016-08-05</time>
+      <a href="/2016/08/06/PL1-4/" class="article-date">
+      <time datetime="2016-08-06T08:44:01.000Z" itemprop="datePublished">2016-08-06</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python实战计划 制作自己的网页
+      python实战计划 动态数据爬取
     </h1>
   
 
@@ -244,7 +244,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crawler/">crawler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -254,19 +254,24 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>忘记领50rmb优惠卷了…那只能好好学了呗</p>
+        <p>动态加载</p>
 <a id="more"></a>
-<h1 id="最终成果"><a href="#最终成果" class="headerlink" title="最终成果"></a><a href="http://renld.cn/pythonLearn/1-1/" target="_blank" rel="external">最终成果</a></h1><p><img src="http://radar-10050281.cos.myqcloud.com/python/1-1.png" alt=""></p>
-<h1 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>spring blossom<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 这里一定得写rel类型啊....--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"main.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/blah.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Site<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Other<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main-content"</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 面朝大海,春暖花开 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>Spring Blossom<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/0001.jpg"</span> <span class="attr">height</span>=<span class="string">"150"</span> <span class="attr">width</span>=<span class="string">"150"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/0003.jpg"</span> <span class="attr">height</span>=<span class="string">"150"</span> <span class="attr">width</span>=<span class="string">"150"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/0004.jpg"</span> <span class="attr">height</span>=<span class="string">"150"</span> <span class="attr">width</span>=<span class="string">"150"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"article"</span>&gt;</span>From tomorrow on,<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"article"</span>&gt;</span>write to each of my dear ones<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"article"</span>&gt;</span>Telling them of my happiness<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line">        &amp;copy; Renld</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>又开始写实验报告的感觉QAQ……</li>
-<li>引入CSS文件记得加stylesheet <link rel="stylesheet" type="text/css" href="main.css"></li>
-<li>不同<code>div</code> 对于<code>class</code>不同于是CSS文件的渲染也不同,一般分成<code>header</code>, <code>main-content</code> 和<code>footer</code></li>
-<li><code>&lt;hr/&gt;</code>是大下线—对应markdowm中<code>---</code> </li>
-<li>图片后面的属性记得调height和weight,另外我似乎记得html有网格框架</li>
-<li>标签可以内嵌</li>
+<h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><ol>
+<li>异步加载数据是由JS控制 比如往下翻才显示图片</li>
+<li>inspect -&gt; network-&gt;xhr里面查看request.获取url</li>
+<li>新浪微博评论/豆瓣影评</li>
 </ol>
+<h1 id="Task-爬取美眉照片"><a href="#Task-爬取美眉照片" class="headerlink" title="Task: 爬取美眉照片"></a>Task: 爬取美眉照片</h1><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p>没成功下载下来只有一堆地址咯</p>
+<p>这种图片网一般有反爬虫机制吧..answer Code也没有成功爬下图片</p>
+<p><img src="http://radar-10050281.cos.myqcloud.com/python/1-4.png" alt=""></p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span>  BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以打开看看page = n之后是什么样的网页..</span></span><br><span class="line">url = <span class="string">'http://weheartit.com/inspirations/taylorswift?scrolling=true&amp;page='</span></span><br><span class="line"></span><br><span class="line">address = open(<span class="string">'imgAddr'</span>,<span class="string">"w"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    wb_data = requests.get(url + str(i))</span><br><span class="line">    soup = BeautifulSoup(wb_data.text, <span class="string">'lxml'</span>)</span><br><span class="line">    imgs = soup.select(<span class="string">'img.entry-thumbnail'</span>)  <span class="comment"># 这里不能用selector...得用img.className</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> imgs:</span><br><span class="line">        print(p.get(<span class="string">'src'</span>),file = address)</span><br><span class="line"></span><br><span class="line">address.close()</span><br></pre></td></tr></table></figure>
+<h2 id="DownloadImage"><a href="#DownloadImage" class="headerlink" title="DownloadImage"></a>DownloadImage</h2><p>存下来的地址没有成功下载照片QAQ…</p>
+<p>但是下了百度首页的照片玩玩…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"><span class="comment">#-*- coding utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">data = open(<span class="string">'imgAddr'</span>,<span class="string">"r"</span>)</span><br><span class="line">data.seek(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">save_Path = <span class="string">"/Users/macbook/desktop/p/"</span></span><br><span class="line">os.chdir(save_Path)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">DownloadImage</span><span class="params">(url = None,file_name = None)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">if</span>(url != <span class="keyword">None</span>):</span><br><span class="line">        print(<span class="string">'DownLoading'</span>,url)</span><br><span class="line">        urllib.request.urlretrieve(url, file_name)</span><br><span class="line"></span><br><span class="line"><span class="comment">#DownloadImage('http://www.baidu.com/img/first_9fe9815bdadfd21af47fc245f3bb0ba2.png','temp.png')</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_URL <span class="keyword">in</span> data:</span><br><span class="line">    DownloadImage(each_URL,each_URL.replace( str(<span class="string">'/'</span>) , str(<span class="string">'_'</span>) ) )</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>没有下载到图片莫名遗憾, 技术长进空间很大啊..</p>
+<p><strong>其实就是因为没看懂post…怎么搭怎么选QAQ, 去shadowsocks翻的墙并不能理解是怎么用的…</strong></p>
+<p>另外answer中对于名字的处理值得借鉴</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">download</span><span class="params">(url)</span>:</span></span><br><span class="line">    r = requests.get(url, proxies=proxies, headers=headers)</span><br><span class="line">    <span class="keyword">if</span> r.status_code != <span class="number">200</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># http://www.example.com/test.png?a=1</span></span><br><span class="line">    <span class="comment"># 第一个split，获取问号前面的字符</span></span><br><span class="line">    <span class="comment"># 第二个split，获取倒数第二个一个斜杠的后面的内容，因为最后一个斜杠后面的字符串都一样，不能用</span></span><br><span class="line">    filename = url.split(<span class="string">"?"</span>)[<span class="number">0</span>].split(<span class="string">"/"</span>)[<span class="number">-2</span>]</span><br><span class="line"></span><br><span class="line">    target = <span class="string">"./&#123;&#125;.jpg"</span>.format(filename)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> open(target, <span class="string">"wb"</span>) <span class="keyword">as</span> fs:</span><br><span class="line">        fs.write(r.content)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"%s =&gt; %s"</span> % (url, target))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -275,13 +280,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/05/PL1-1/">python实战计划 制作自己的网页</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/06/PL1-4/">python实战计划 动态数据爬取</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
-        <p><span>发布时间:</span>2016年08月05日 - 16时18分</p>
-        <p><span>最后更新:</span>2016年08月05日 - 16时40分</p>
+        <p><span>发布时间:</span>2016年08月06日 - 16时44分</p>
+        <p><span>最后更新:</span>2016年08月06日 - 23时18分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/05/PL1-1/" title="python实战计划 制作自己的网页">http://renld.github.io/2016/08/05/PL1-1/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/05/PL1-1/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/06/PL1-4/" title="python实战计划 动态数据爬取">http://renld.github.io/2016/08/06/PL1-4/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/06/PL1-4/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -294,18 +299,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/08/05/PL1-2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/06/PL1-5-md/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          python实战计划 爬取商品信息
+          PL1-5.md
         
       </div>
     </a>
   
   
-    <a href="/2016/08/05/HFPy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python &#39;First&#39; Learning</div>
+    <a href="/2016/08/06/PL1-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python实战计划 爬取小猪租房</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -316,7 +321,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#最终成果"><span class="toc-number">1.</span> <span class="toc-text">最终成果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#我的代码"><span class="toc-number">2.</span> <span class="toc-text">我的代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Notes"><span class="toc-number">1.</span> <span class="toc-text">Notes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-爬取美眉照片"><span class="toc-number">2.</span> <span class="toc-text">Task: 爬取美眉照片</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#效果展示"><span class="toc-number">2.1.</span> <span class="toc-text">效果展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">2.2.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DownloadImage"><span class="toc-number">2.3.</span> <span class="toc-text">DownloadImage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">2.4.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
 
@@ -364,7 +369,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/08/05/PL1-1/" data-title="python实战计划 制作自己的网页" data-url="http://renld.github.io/2016/08/05/PL1-1/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/06/PL1-4/" data-title="python实战计划 动态数据爬取" data-url="http://renld.github.io/2016/08/06/PL1-4/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -387,13 +392,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/05/PL1-2/" title="上一篇: python实战计划 爬取商品信息">
+            <a href="/2016/08/06/PL1-5-md/" title="上一篇: PL1-5.md">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/08/05/HFPy/" title="下一篇: Python &#39;First&#39; Learning">
+            <a href="/2016/08/06/PL1-3/" title="下一篇: python实战计划 爬取小猪租房">
                 <i class="fa fa-angle-right"></i>
             </a>
         

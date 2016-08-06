@@ -14,7 +14,8 @@
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-3-2.png">
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-3-3.png">
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-3-4.png">
-<meta property="og:updated_time" content="2016-08-06T08:33:37.000Z">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-3-5.png">
+<meta property="og:updated_time" content="2016-08-06T15:12:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python实战计划 爬取小猪租房">
 <meta name="twitter:description" content="真实静态网页爬取">
@@ -142,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <li><a href="/tags/C/" style="font-size: 12.5px;">C++</a></li> <li><a href="/tags/EE/" style="font-size: 12.5px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 20px;">Life</a></li> <li><a href="/tags/Macau/" style="font-size: 10px;">Macau</a></li> <li><a href="/tags/algorithm/" style="font-size: 17.5px;">algorithm</a></li> <li><a href="/tags/crawler/" style="font-size: 12.5px;">crawler</a></li> <li><a href="/tags/html/" style="font-size: 15px;">html</a></li> <li><a href="/tags/python/" style="font-size: 17.5px;">python</a></li>
+                        <li><a href="/tags/C/" style="font-size: 12.5px;">C++</a></li> <li><a href="/tags/EE/" style="font-size: 12.5px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 20px;">Life</a></li> <li><a href="/tags/Macau/" style="font-size: 10px;">Macau</a></li> <li><a href="/tags/algorithm/" style="font-size: 17.5px;">algorithm</a></li> <li><a href="/tags/crawler/" style="font-size: 15px;">crawler</a></li> <li><a href="/tags/html/" style="font-size: 17.5px;">html</a></li> <li><a href="/tags/python/" style="font-size: 20px;">python</a></li>
                     </div>
                 </section>
                 
@@ -273,10 +274,15 @@
 <h2 id="print-1"><a href="#print-1" class="headerlink" title="print"></a>print</h2><p><img src="http://radar-10050281.cos.myqcloud.com/python/1-3-4.png" alt=""></p>
 <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question"></a>Question</h2><ol>
 <li>爬取太慢了QAQ..怎么设延时比较好,怎么知道自己有没有被封ip……</li>
-<li>爬取的信息能不能丢到csv文件里去..txt实在太丑……</li>
+<li>(已解决)爬取的信息能不能丢到csv文件里去..txt实在太丑……</li>
 <li>cookies是不是应该加密(不直接放到博客上…)</li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>真实网页的爬取果然比静态难很多啊..开个vpn把电脑先丢到那里爬咯…300组数据orz</p>
+<p>哈哈哈爬了几十分钟爬完了,链接在评论里面</p>
+<p>晚上写了一个txtTocsv脚本转换成表格形式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line">info = [<span class="string">'title'</span>,<span class="string">'name'</span>,<span class="string">'DailyCost'</span>,<span class="string">'hosterImg'</span>,<span class="string">'Bigimg'</span>,<span class="string">'address'</span>,<span class="string">'sex'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'1_3out.txt'</span>,<span class="string">"r"</span>) <span class="keyword">as</span> txtf, open(<span class="string">'WriteCsvFile.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csvf:</span><br><span class="line">    writer = csv.writer(csvf)</span><br><span class="line">    writer.writerow(info)</span><br><span class="line">    writer = csv.DictWriter(csvf,info)<span class="comment">#字典Writer</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> txtf:</span><br><span class="line">        k = eval(i) <span class="comment">#返回成表达式</span></span><br><span class="line">        writer.writerow(k)</span><br></pre></td></tr></table></figure>
+<p>效果展示</p>
+<p><img src="http://radar-10050281.cos.myqcloud.com/python/1-3-5.png" alt=""></p>
 
       
     </div>
@@ -288,7 +294,7 @@
         <p><span>本文标题:</span><a href="/2016/08/06/PL1-3/">python实战计划 爬取小猪租房</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
         <p><span>发布时间:</span>2016年08月06日 - 15时43分</p>
-        <p><span>最后更新:</span>2016年08月06日 - 16时33分</p>
+        <p><span>最后更新:</span>2016年08月06日 - 23时12分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/08/06/PL1-3/" title="python实战计划 爬取小猪租房">http://renld.github.io/2016/08/06/PL1-3/</a>
             <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/06/PL1-3/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -303,6 +309,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2016/08/06/PL1-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          python实战计划 动态数据爬取
+        
+      </div>
+    </a>
   
   
     <a href="/2016/08/05/PL1-2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -388,7 +403,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/08/06/PL1-4/" title="上一篇: python实战计划 动态数据爬取">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -397,7 +414,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-3/">python实战计划 爬取小猪租房</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-2/">python实战计划 爬取商品信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-1/">python实战计划 制作自己的网页</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/HFPy/">Python 'First' Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/greedy/">Greedy & Violent</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/09/byefresh/">BYE Freshman</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/04/egt1/">Primary Engineering Practice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/Algor-Water/">GoodBye Big Algorithm Waterer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/treeDP/">DP in Tree</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/EEreview/">EEreview</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/part_list/">块状链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/sdii/">SDII_FUN</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/15/By-the-Year/">By The Year</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/STL-LEARN/">Notes for STL</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-5-md/">PL1-5.md</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-4/">python实战计划 动态数据爬取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-3/">python实战计划 爬取小猪租房</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-2/">python实战计划 爬取商品信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-1/">python实战计划 制作自己的网页</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/HFPy/">Python 'First' Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/greedy/">Greedy & Violent</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/09/byefresh/">BYE Freshman</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/04/egt1/">Primary Engineering Practice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/Algor-Water/">GoodBye Big Algorithm Waterer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/treeDP/">DP in Tree</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/EEreview/">EEreview</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/part_list/">块状链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/sdii/">SDII_FUN</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/15/By-the-Year/">By The Year</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/STL-LEARN/">Notes for STL</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
