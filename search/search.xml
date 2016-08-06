@@ -4,12 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[PL1-5.md]]></title>
-      <url>http://renld.github.io/2016/08/06/PL1-5-md/</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[python实战计划 动态数据爬取]]></title>
       <url>http://renld.github.io/2016/08/06/PL1-4/</url>
       <content type="html"><![CDATA[动态加载 Notes 异步加载数据是由JS控制 比如往下翻才显示图片 inspect -&gt; network-&gt;xhr里面查看request.获取url 新浪微博评论/豆瓣影评 Task: 爬取美眉照片效果展示没成功下载下来只有一堆地址咯 这种图片网一般有反爬虫机制吧..answer Code也没有成功爬下图片 Codefrom bs4 import BeautifulSoupimport requestsimport time#可以打开看看page = n之后是什么样的网页..url = 'http://weheartit.com/inspirations/taylorswift?scrolling=true&amp;page='address = open('imgAddr',"w")for i in range(1,10): time.sleep(3) wb_data = requests.get(url + str(i)) soup = BeautifulSoup(wb_data.text, 'lxml') imgs = soup.select('img.entry-thumbnail') # 这里不能用selector...得用img.className for p in imgs: print(p.get('src'),file = address)address.close() DownloadImage存下来的地址没有成功下载照片QAQ… 但是下了百度首页的照片玩玩… #! /usr/bin/env python#-*- coding utf-8 -*-import urllib.requestimport osimport timedata = open('imgAddr',"r")data.seek(0)save_Path = "/Users/macbook/desktop/p/"os.chdir(save_Path)def DownloadImage(url = None,file_name = None): time.sleep(5) if(url != None): print('DownLoading',url) urllib.request.urlretrieve(url, file_name)#DownloadImage('http://www.baidu.com/img/first_9fe9815bdadfd21af47fc245f3bb0ba2.png','temp.png')for each_URL in data: DownloadImage(each_URL,each_URL.replace( str('/') , str('_') ) ) 总结没有下载到图片莫名遗憾, 技术长进空间很大啊.. 其实就是因为没看懂post…怎么搭怎么选QAQ, 去shadowsocks翻的墙并不能理解是怎么用的… 另外answer中对于名字的处理值得借鉴 def download(url): r = requests.get(url, proxies=proxies, headers=headers) if r.status_code != 200: return # http://www.example.com/test.png?a=1 # 第一个split，获取问号前面的字符 # 第二个split，获取倒数第二个一个斜杠的后面的内容，因为最后一个斜杠后面的字符串都一样，不能用 filename = url.split("?")[0].split("/")[-2] target = "./&#123;&#125;.jpg".format(filename) with open(target, "wb") as fs: fs.write(r.content) print("%s =&gt; %s" % (url, target))]]></content>
