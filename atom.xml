@@ -78,7 +78,7 @@
     <link href="http://renld.github.io/2016/08/06/PL1-3/"/>
     <id>http://renld.github.io/2016/08/06/PL1-3/</id>
     <published>2016-08-06T07:43:36.000Z</published>
-    <updated>2016-08-06T15:12:22.000Z</updated>
+    <updated>2016-08-06T15:23:32.000Z</updated>
     
     <content type="html">&lt;p&gt;真实静态网页爬取&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -102,10 +102,16 @@
 &lt;/ol&gt;
 &lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;真实网页的爬取果然比静态难很多啊..开个vpn把电脑先丢到那里爬咯…300组数据orz&lt;/p&gt;
 &lt;p&gt;哈哈哈爬了几十分钟爬完了,链接在评论里面&lt;/p&gt;
-&lt;p&gt;晚上写了一个txtTocsv脚本转换成表格形式&lt;/p&gt;
+&lt;h2 id=&quot;CSV&quot;&gt;&lt;a href=&quot;#CSV&quot; class=&quot;headerlink&quot; title=&quot;CSV&quot;&gt;&lt;/a&gt;CSV&lt;/h2&gt;&lt;p&gt;晚上写了一个txtTocsv脚本转换成表格形式&lt;/p&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; csv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;info = [&lt;span class=&quot;string&quot;&gt;&#39;title&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;DailyCost&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;hosterImg&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;Bigimg&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;address&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;sex&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&#39;1_3out.txt&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;r&quot;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; txtf, open(&lt;span class=&quot;string&quot;&gt;&#39;WriteCsvFile.csv&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;w&#39;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; csvf:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    writer = csv.writer(csvf)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    writer.writerow(info)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    writer = csv.DictWriter(csvf,info)&lt;span class=&quot;comment&quot;&gt;#字典Writer&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; txtf:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        k = eval(i) &lt;span class=&quot;comment&quot;&gt;#返回成表达式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        writer.writerow(k)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;效果展示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/python/1-3-5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;老师答复&quot;&gt;&lt;a href=&quot;#老师答复&quot; class=&quot;headerlink&quot; title=&quot;老师答复&quot;&gt;&lt;/a&gt;老师答复&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;因为网站做了更新，所以做教程的时候可以抓取，但是现在已经不能用教程里的那种方法使用width去定位 &lt;/li&gt;
+&lt;li&gt;图片的后缀有正确吗，如果正确的话还打不开，那换种方法看看，去我们的问题集里有关于如何下载图片的方法。&lt;/li&gt;
+&lt;li&gt;cookie加密了，网站还懂得认你的身份吗？所以不加&lt;/li&gt;
+&lt;li&gt;延迟的话一般设置2，3秒差不多，只有一直出现网络被断开就是被禁了，如果还是被禁的话，再调大一点，解决这个问题的根本方法还是使用代理&lt;/li&gt;
+&lt;/ol&gt;
 </content>
     
     <summary type="html">
@@ -858,9 +864,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
@@ -973,9 +979,9 @@
     </summary>
     
     
-      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
     
   </entry>
   
@@ -1177,9 +1183,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
