@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/1-5-1-2.png">
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/finals/1-5-1-2.png">
 <meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/finals/1-5-1-3.png">
-<meta property="og:updated_time" content="2016-08-07T08:06:30.000Z">
+<meta property="og:updated_time" content="2016-08-07T08:19:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python实战计划 爬取商品数据">
 <meta name="twitter:description" content="对58同城下手">
@@ -320,13 +320,19 @@
 <h1 id="视频笔记"><a href="#视频笔记" class="headerlink" title="视频笔记"></a>视频笔记</h1><ul>
 <li>由于58同城特殊性,可以从title爬取信息<code>soup.title.text</code></li>
 <li><code>url.split(&#39;.&#39;)[-1].strip(&#39;x.shtml&#39;)</code>得到id</li>
+<li>… if (…) else none</li>
 </ul>
+<h2 id="ReadMores"><a href="#ReadMores" class="headerlink" title="ReadMores"></a>ReadMores</h2><p><a href="http://websitesetup.org/HTML5-cheat-sheet.pdf" target="_blank" rel="external">Html5</a></p>
+
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/key/CAOUxOd6xpl78e" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
 <li>一定要观察是否有两个相同标签再大量爬取……..(先爬几个生成格式文档试试)</li>
 <li>如果有唯一描述的样式,可以<code>soup.select(&#39;time&#39;)</code></li>
 <li><code>#</code>代表id, <code>.</code> 代表class</li>
 </ul>
-
+</div>
       
     </div>
     
@@ -337,7 +343,7 @@
         <p><span>本文标题:</span><a href="/2016/08/07/PL1-final/">python实战计划 爬取商品数据</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
         <p><span>发布时间:</span>2016年08月07日 - 11时29分</p>
-        <p><span>最后更新:</span>2016年08月07日 - 16时06分</p>
+        <p><span>最后更新:</span>2016年08月07日 - 16时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/08/07/PL1-final/" title="python实战计划 爬取商品数据">http://renld.github.io/2016/08/07/PL1-final/</a>
             <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/07/PL1-final/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -366,7 +372,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Task1"><span class="toc-number">1.</span> <span class="toc-text">Task1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SubTask1-58二手市场类别页面"><span class="toc-number">1.1.</span> <span class="toc-text">SubTask1 58二手市场类别页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Aim"><span class="toc-number">1.1.1.</span> <span class="toc-text">Aim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Results"><span class="toc-number">1.1.2.</span> <span class="toc-text">Results</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">1.1.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SubTask2-58二手市场类别页面"><span class="toc-number">1.2.</span> <span class="toc-text">SubTask2 58二手市场类别页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Results-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">Results</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-1"><span class="toc-number">1.3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Review"><span class="toc-number">1.4.</span> <span class="toc-text">Review</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task2-爬取JS浏览量"><span class="toc-number">2.</span> <span class="toc-text">Task2 爬取JS浏览量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#视频笔记"><span class="toc-number">3.</span> <span class="toc-text">视频笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Task1"><span class="toc-number">1.</span> <span class="toc-text">Task1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SubTask1-58二手市场类别页面"><span class="toc-number">1.1.</span> <span class="toc-text">SubTask1 58二手市场类别页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Aim"><span class="toc-number">1.1.1.</span> <span class="toc-text">Aim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Results"><span class="toc-number">1.1.2.</span> <span class="toc-text">Results</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">1.1.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SubTask2-58二手市场类别页面"><span class="toc-number">1.2.</span> <span class="toc-text">SubTask2 58二手市场类别页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Results-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">Results</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-1"><span class="toc-number">1.3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Review"><span class="toc-number">1.4.</span> <span class="toc-text">Review</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task2-爬取JS浏览量"><span class="toc-number">2.</span> <span class="toc-text">Task2 爬取JS浏览量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#视频笔记"><span class="toc-number">3.</span> <span class="toc-text">视频笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ReadMores"><span class="toc-number">3.1.</span> <span class="toc-text">ReadMores</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
 
