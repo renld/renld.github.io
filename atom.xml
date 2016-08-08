@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-08T06:34:44.000Z</updated>
+  <updated>2016-08-08T16:19:13.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux私房菜 计算机概论</title>
+    <link href="http://renld.github.io/2016/08/08/Linux-01/"/>
+    <id>http://renld.github.io/2016/08/08/Linux-01/</id>
+    <published>2016-08-08T15:32:37.000Z</published>
+    <updated>2016-08-08T16:19:13.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://radar-10050281.cos.myqcloud.com/Linux/textbook.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;textbook&lt;/a&gt; &lt;a href=&quot;http://radar-10050281.cos.myqcloud.com/Linux/answer.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;answer&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU读取的数据来自内存&lt;/li&gt;
+&lt;li&gt;Intel 北桥负责链接较快的CPU,内存,显卡等, AMD集成内存和CPU&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;外频&lt;/strong&gt; : CPU与外部组件进行数据传输/运算时的速度&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://radar-10050281.cos.myqcloud.com/Linux/textbook.pdf&quot;&gt;textbook&lt;/a&gt; &lt;a href=&quot;http://radar-10050281.cos.myqcloud.com/Linux/answer.pdf&quot;&gt;answer&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://renld.github.io/tags/Linux/"/>
+    
+      <category term="Computer" scheme="http://renld.github.io/tags/Computer/"/>
+    
+  </entry>
   
   <entry>
     <title>Python实战计划 Begining for MongoDB</title>
@@ -1028,9 +1057,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
@@ -1347,9 +1376,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
