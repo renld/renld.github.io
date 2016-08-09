@@ -1057,9 +1057,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
@@ -1172,9 +1172,9 @@
     </summary>
     
     
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
+    
+      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
@@ -1376,9 +1376,9 @@
     </summary>
     
     
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
