@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://renld.github.io/wxt/index.html</loc>
+    <loc>http://renld.github.io/2016/08/08/PL2-2/</loc>
     
-    <lastmod>2016-08-09T00:32:48.000Z</lastmod>
+    <lastmod>2016-08-09T08:06:43.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://renld.github.io/2016/08/08/Linux-01/</loc>
     
-    <lastmod>2016-08-08T16:19:13.000Z</lastmod>
+    <lastmod>2016-08-09T04:05:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/wxt/index.html</loc>
+    
+    <lastmod>2016-08-09T00:32:48.000Z</lastmod>
     
   </url>
   
