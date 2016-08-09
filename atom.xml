@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-09T14:05:39.000Z</updated>
+  <updated>2016-08-09T15:28:43.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PythonChallenge</title>
+    <link href="http://renld.github.io/2016/08/09/PythonChallenge/"/>
+    <id>http://renld.github.io/2016/08/09/PythonChallenge/</id>
+    <published>2016-08-09T14:30:48.000Z</published>
+    <updated>2016-08-09T15:28:43.000Z</updated>
+    
+    <content type="html">&lt;p&gt;真是一个有趣的游戏…..让我回忆起母语的魅力&lt;a href=&quot;http://www.pythonchallenge.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;src&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Task1&quot;&gt;&lt;a href=&quot;#Task1&quot; class=&quot;headerlink&quot; title=&quot;Task1&quot;&gt;&lt;/a&gt;Task1&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;38&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;Task2&quot;&gt;&lt;a href=&quot;#Task2&quot; class=&quot;headerlink&quot; title=&quot;Task2&quot;&gt;&lt;/a&gt;Task2&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#C++弱智题python我在干嘛...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;str = &lt;span class=&quot;string&quot;&gt;&#39;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr\&#39;q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;str.replace(&lt;span class=&quot;string&quot;&gt;&#39;k&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;m&#39;&lt;/span&gt;).replace(&lt;span class=&quot;string&quot;&gt;&#39;o&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;q&#39;&lt;/span&gt;).replace(&lt;span class=&quot;string&quot;&gt;&#39;e&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;g&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alp = &lt;span class=&quot;string&quot;&gt;&#39;abcdefghijklmnopqrstuvwxyzabc&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ch)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(alp)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(alp[i] == ch):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; i&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;addTwo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ch)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(alp)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(alp[i] == ch):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; alp[i+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; str:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ans = addTwo(i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ans != &lt;span class=&quot;keyword&quot;&gt;None&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(addTwo(i),end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(i,end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;被标准库完虐&quot;&gt;&lt;a href=&quot;#被标准库完虐&quot; class=&quot;headerlink&quot; title=&quot;被标准库完虐&quot;&gt;&lt;/a&gt;被标准库完虐&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; string&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;text = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&quot;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&#39;q&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; ... ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;lmu ynnjw ml rfc spj.&quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;table = string.maketrans(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;  string.ascii_lowercase,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;  string.ascii_lowercase[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;:]+string.ascii_lowercase[:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.join([chr(ord(x)+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; x &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;map&#39;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;Task3&quot;&gt;&lt;a href=&quot;#Task3&quot; class=&quot;headerlink&quot; title=&quot;Task3&quot;&gt;&lt;/a&gt;Task3&lt;/h1&gt;&lt;p&gt;被完虐&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&quot;hehe.html&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;r&quot;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; f:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; k,s &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; zip(f,range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1000000000000000&lt;/span&gt;)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; k:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; p:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                p[j] = p[j] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                p[j] = s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ans = sorted(p.items(),key=&lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; d:d[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],reverse = &lt;span class=&quot;keyword&quot;&gt;False&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; ps &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(ans)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ans[ps][&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;lt; &lt;span class=&quot;number&quot;&gt;2000&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(ans[ps][&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;],end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;网上解答&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;.join([line.rstrip() &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; line &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&#39;hehe.html&#39;&lt;/span&gt;)])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OCCURRENCES = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s: OCCURRENCES[c] = OCCURRENCES.get(c, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;avgOC = len(s) // len(OCCURRENCES)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;.join([c &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; OCCURRENCES[c] &amp;lt; avgOC]) )               &lt;span class=&quot;comment&quot;&gt;# equality&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;.join([char &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; char &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; mess &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; char.isalpha()]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (re.sub(&lt;span class=&quot;string&quot;&gt;r&#39;[^a-z]&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;, str))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;真是一个有趣的游戏…..让我回忆起母语的魅力&lt;a href=&quot;http://www.pythonchallenge.com&quot;&gt;src&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://renld.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>regular expression</title>
@@ -1915,98 +1944,6 @@
     
     
       <category term="C++" scheme="http://renld.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>By The Year</title>
-    <link href="http://renld.github.io/2016/06/15/By-the-Year/"/>
-    <id>http://renld.github.io/2016/06/15/By-the-Year/</id>
-    <published>2016-06-14T16:00:00.000Z</published>
-    <updated>2016-07-12T07:32:40.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;大一的尾声.&lt;/p&gt;
-&lt;p&gt;不知少年少女,你们可过的还好吗.&lt;/p&gt;
-&lt;p&gt;大抵曾经那个诗歌相衬的少年,已经在这一年变了模样.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; * argv[])&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;Hello, World!\n&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;​    大抵这是高考过后一个星期,去年这时的少年,应该是最怅然若失的吧.幸好当时还是班长,幸好当时还有很多事情要收拾.看着一摞摞书或是捐给了学弟学妹,或是当做了几十块钱卖给收废品的老妪.也没有什么怅然,选了几本看起来最值得怀念的书留在家中.然而也就留在那了.&lt;/p&gt;
-&lt;p&gt;​    高三似乎过得挺有趣的,大抵那时候开始把人生目标设为努力去变成一个有趣的人.好像买了很多很多的书,然后翻的多一些看的少一些吧.这个习惯到大一上学期依旧维持着.高三和邓合租在学校算是一个有趣的point吧.来这边后发现广东的学生都没有租房子的现象.突然想起易老板曾猜测的一句话&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;雅礼这么好的成绩,或许是补课补出来的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    或许是公立学制之外的努力,才把一所所名校变得这么强大的.然而高三的我终于结束了四年的补习班生涯,混了那么久,耳濡目染之下跟同学讲题也像要板有眼的了.似乎很有趣,也似乎很伤感.到大学之后发现大家一段段精彩的课余生活能力,有的少年会弹吉他,琴弦一拨气质就上来了.于是寒假本来准备学一点琴弦的.但是不知为何作罢.就像大一刚刚开学还跟小航学了一点舞蹈一样,不了了之.&lt;/p&gt;
-&lt;p&gt;​    想想最后可能让他失望了吧.高三第二个学期的伊始,他”严肃”地更我说.你要努力考上清华北大啊.我当时也只是笑了一笑.到最后估分&lt;code&gt;640&lt;/code&gt;是把理综估到&lt;code&gt;270&lt;/code&gt;的水准.然而因为物理的最后一题脑洞开大了一点.老师也似乎一分都没给.数学练了一年的压轴题因为考前情绪的突然激动.一道接着一道的扑街.&lt;/p&gt;
-&lt;p&gt;​    上了大学之后不知道为何和别人聊着聊着就会聊回高考.大抵还只记得那是一段&lt;code&gt;金戈岁月&lt;/code&gt;.五天前学弟学妹高考,也不知道考得怎样.但是希望他们过完这一站之后,能变得更加成熟地向前追求吧.回忆起当年考作文的时候,    拿起笔写起了高三一年未动过的文言,用时超出了自己的意料,慌张之中还用白话写了一句对仗,试后发现有些追悔莫及.但无论如何,语文救了我一把,把我捧上了中大这个舞台.&lt;/p&gt;
-&lt;p&gt;​    出分数前当时和伙伴去四川玩了一圈.那时候开始接触”冒菜”这个名词,开始知道抄手和水饺.开始呼吸一个地方的文化空气.来珠海后,吃了很多冒菜,也去过几次餐馆.味道比那儿清淡太多.就像&lt;code&gt;去国还乡&lt;/code&gt;的情怀,离开了楚地之后,才开始炫耀那儿的香辣.&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;p&gt;​    高三暑假的印象,似乎有那么一些重要的人和事.大可组织了别墅party真是辛苦她了.好像当时从高考的碌碌中爬出来,我又陷入了选专业的碌碌.水了很久知乎买了一本书.看着大家你一眼我一语的评论.当时也没有朱彦樵做的&lt;a href=&quot;http://yali.sxkdz.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;YaliUp&lt;/a&gt;于是也就大致明白了自己以后不会做什么.又或许是高考后的空虚,觉得哪门专业的事儿多哪门就有趣.似乎现在也算如愿以偿.只记得当时看果壳的时候一句话很动容我,记在这儿&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;​    总之，泼了一大堆凉水，说了一大堆生物专业如何如何悲剧，目的主要是给那些对生物专业充满了不切实际幻想的热血青年当头棒喝。但是，如果你一开始就知道这些还选了生物的话，那么我想你将和我一样永不后悔，和各种瓶瓶罐罐植物动物微生物打交道的乐趣，你试过才知道。May the force be with you，buddy.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    所以在志愿咨询会的时候,问老师,会不会被调剂到”生物专业”的志愿.当时只有中大的老师回了我一句,”中大的生物可好了”.不过这也不是当时报中大的理由吧.来中大,来移动其实更多的只是一场邂逅而已.当初甚至不知道中大有四个校区.甚至不知道有珠海.大概这个地名本随着高二的学考地理离我远去了吧.只是画画一般,在北上广各画了一所学校,画画一般,在中大随机圈定了几个专业.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;各种落榜或许是机缘巧合&lt;/p&gt;
-&lt;p&gt;或许是一阵忧伤中的另一次邂逅&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    在健身房收到父亲的短信,几天后看到自己志愿落在了中大,被移动录取,发现移动在珠海.然后就匆匆的,开始准备行程,顺便努力去做暑假作业= =毕竟,当年的中大,可是有小学期的呐.与挚友再次一聚,当做给最先去上学的少年的送别宴吧.那次也算是第一次看橘子洲头的烟花,可美了.&lt;/p&gt;
-&lt;p&gt;​    中珠,旅游景点一般.深居唐家小镇,每次进程都是半小时以上的公交.对于一些闲适的学院而言,或许倍感无聊吧.然而这一年,一个初入CS行当的少年而言.应该算是充实了罢.当时站在门外时,道听途说的可能只有”C语言”了罢.于是暑假就似乎看了几集&lt;code&gt;java&lt;/code&gt;,就像寒假看的&lt;code&gt;Python&lt;/code&gt;没有再用过,当然也就忘得比学的还快.所以现在也不急着去学那些高大上的语言.或许也是因为井底之蛙的实现,看不到更大向前的方向吧.&lt;/p&gt;
-&lt;p&gt;​    军训而后就开始专业学习的生涯.似乎大一上学期比高三还要忙碌和刻苦,似乎成了古南永口中的”想把大学当做职业技术培训学校大有人在”的人了.军训把C语言看完了之后自信满满的参加了当时的&lt;code&gt;短码之美&lt;/code&gt;,立刻被各路OIer们当头棒喝,自那开始发现了原来还有一个名词叫&lt;code&gt;算法&lt;/code&gt;.于是买了紫书白书黑书,查了知乎百度谷歌,搜了无数资料下在本地之后,踌躇满志的…刷起了水题.把紫书水题刷的差不多后.和当时的TA师兄聊天,他说&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不能老是沉迷在刷水题的快感之中.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    所以知道期末考试,都不知道自己当时其实有多水.其中和章鱼,任萌一起参加了新手赛,作为移动大一第一的罚时拿了一个二等奖后,就更加自我膨胀了,于是期末那个星期居然就没碰过代码..期末快速的水完了所有水题之后,就对剩下两道算法题一筹莫展了.于是rk也一直下掉.能留下编程之美的参赛权,大概也是一种幸运吧.&lt;/p&gt;
-&lt;p&gt;​    大一上学期的自我膨胀,真是可怕至极.觉得努力了一定要有收获,就为了&lt;code&gt;虚荣&lt;/code&gt;而去努力,甚至放下了很多有意思的东西.参加了集训队了之后.发现那些大牛们都没有赛后改题的习惯,居然自己也草草了之.就像跟很多人聊的那样&lt;code&gt;我刷UVA的时候,都是看一个小时题,懵逼一个小时&lt;/code&gt;然后再去看别人代码.当时看了别人代码又没有学习下来.跟着大牛一起装逼.以致于&lt;strong&gt;事倍功半&lt;/strong&gt;.大抵是上天眷顾了一下我的运气,最后一次&lt;code&gt;短码之美&lt;/code&gt;的月赛,拿了两本书离去,也不算太过遗憾.&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;那段日子,可真是刻苦啊&lt;/p&gt;
-&lt;p&gt;每天沉浸在图书馆中,迎接第一缕晨曦与最后一道送别铃声&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    大一上学期学院的主要目标大概是想培养我们专业的一种情怀吧.当初不知线代的重要居然一题没有刷就节课了,苏宁大大还给了一个特别漂亮的成绩.单片机玩的时候那可是装逼啊,买了锯子电焊铁各种各样的模块后,各种拍照发朋友圈,&lt;strong&gt;“好像真的变成了一个工程师”&lt;/strong&gt;一样.最后做了一个闹钟出来,似乎还是有一点点遗憾.不过TA给了满分,还是倍感荣幸.&lt;/p&gt;
-&lt;p&gt;​    寒假去sicily把lxm老师布置的编程题刷了几十道后,便开始了USACO的路途.不过到了下学期,人就似乎变得更加浮躁.也似乎变得突然有了方向.去YouTube看完了&lt;code&gt;40min学会java&lt;/code&gt;,&lt;code&gt;70min学会c++&lt;/code&gt;,&lt;code&gt;30min学会java&lt;/code&gt;,&lt;code&gt;15min学会html&lt;/code&gt;系列,发现这种一个小时学的东西,最多也就两个小时,可以忘掉一干二净.立下flag这学期好好学大英,不过这个flag也是一拖再拖.直到上个星期,聊到一半突然被鼓励了一下下,终于拿起暑假买的四级书.开始刷起了听力.&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;p&gt;​    不过大一下学期和上学期最大的不同大概就是心态了吧.&lt;/p&gt;
-&lt;p&gt;​    上学期&lt;strong&gt;像是&lt;/strong&gt;把自己全身心投入算法中区,思修课看算法,大英课看算法.其实也没学到什么真材实料,反而相对而言错过了上学期最为认真的两位老师.遗憾之余这个学期每一节近代史都特别认真的去听沈成飞讲故事,大英也尝试坐在前排,放下手机了.&lt;/p&gt;
-&lt;p&gt;​    四月初算是度过了第一个春天.真的,长沙根本体会不到春风十里的舒畅.春风拂面的怡人.&lt;/p&gt;
-&lt;p&gt;​    五月因为省赛去了几次广州,看到了回迁之后的一些展望,也和朋友浪了一圈…中大= =.&lt;/p&gt;
-&lt;p&gt;​    上学期因为自我膨胀.每节课坐着最后一排.不过大家都知道,做最后一排难免会打开手机.而这学期努力坐在第一排,尽管电工课做第一排和老师保持1/3时间眼神交流还是能走神.&lt;/p&gt;
-&lt;p&gt;​    说起电工,保老师可以说是大学到现在为止最为认真的一个老师了吧.也大概让我觉得,第一次开始觉得,或许我也还是需要那种有一点点闲适的心情.他第一节课除了自我介绍,得知他和我爸居然是一个专业毕业的之外,还记得去年师兄师姐三成及格率的难度,于是便立志学好电工&lt;/p&gt;
-&lt;p&gt;​    再而后记得他讲了一些期许.而后便是充实的电工课了.因为前半个学期一直读的英文教材,对于知识点也是磕磕碰碰的仿照例题过去.不过除了理论之外,更有趣的应该是电工实验了吧…而我应该也让TA和实验室老师留下了印象.因为总是需要下周一再来补全漏下的实验部分.而后话很大力气完成实验报告.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;同学们的实验,应该课前两个小时的预习,课中做两个小时,课后至少花两个小时整理&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    似乎很长的预期,然而对我而言总是要花两三倍,甚至四五倍的时间,才能实现保老师的实验要求.不过上个星期得知自己的实验报告,被选出来存档,也的确有一些小确幸.&lt;/p&gt;
-&lt;p&gt;​    四月校赛吧,当时被硕轩和向峰两条大腿拉去,很幸运地又拿了专业年级排名靠前的罚时.然而却因为我提交次数太多,罚时与省赛无缘.但更幸运一些的是被木洪和佳录的队伍拖去省赛开眼界.四月底第一次集训的时候发现,脑洞是有多么的重要,然而之后却和舍友开始”享受了一段人生”,把各种休闲游戏玩了一圈后,省赛也快到了,于是再次出发去广州,和两个超级棒的队友在省赛玩了一天..自那开始思念起了东校的M记&lt;/p&gt;
-&lt;p&gt;​    说起M记大概又想起了期中高数考试前和培楠通宵的夜晚,拖他去KTV唱了很晚之后,贝岗已然爆满,问了几个东校的同学告诉我&lt;strong&gt;“M记是你家”&lt;/strong&gt;…于是我们在那儿看了一集&lt;strong&gt;越策越开心&lt;/strong&gt;和几集老友记..把被KTV拒之门外的零食吃的差不多了之后..就开始在大学城中环游荡了..培楠还顺便讲了一讲孤岛上的鬼故事和抢人案.&lt;strong&gt;不过说真的,他上了大学之后,真的变帅了&lt;/strong&gt;,然后我们溜达到了华工后看了那天的日出.还因为穿着雅礼校服被十一中的妹子认出,打了好多次照面= =&lt;/p&gt;
-&lt;p&gt;​    五月中旬戒掉了&lt;strong&gt;泡泡堂&lt;/strong&gt;之类的休闲游戏吧.继续刷起了USACO,从那时候开始我大抵真正的看到了算法大门的一角,看到了所谓的网络流,剪枝.hash,才知道之前的自己是有多么幼稚.前两天放下之前,以一种谜一样的速度刷了几章之后,写题解CSDN的博客也充实了很多.访问量过万后,便开始尝试用更好的框架搭起了这个博客.&lt;/p&gt;
-&lt;p&gt;​    觉得前端的东西总是能给人很多很多的成就感,当然要在做出来的前提下.下学期选了HTML后做了一个中珠打砖块,过一阵有时间后探索一下能不能放上这个博客.那天搭了一晚上这个博客因为没备份的修改自动毁了三次后,简直成就感爆棚.(好像又开始自我膨胀了XD).觉得挺有意思,于是从图书馆借了一本游戏开发的书,摆在了书架上.&lt;/p&gt;
-&lt;p&gt;​    以前总是羡慕大学有多自由,可以学特别多的知识.其实现在像是越来越功利化了吧,也像古南永所说&lt;strong&gt;一个膨胀的灵魂&lt;/strong&gt;看太多看太快贪心不住蛇吞象,现在也对&lt;strong&gt;看起来很棒其实自己兴趣淡然&lt;/strong&gt;的学科渐渐疏远起来.也不再是高中那个看普通物理学普通化学的少年了,走上了CS这条大道之后,路还是真的很长,但是又像黑夜明灯常亮,总是有很多前行的方向,有很多值得努力的地方.&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;p&gt;​    邂逅过一些OI大神的博客,其中对这段话特别有感触.别人口中最棒的地方,也因为有了选择的余地,可以用道德与理想相较之度量.感慨太深,于是也把这篇日志的题目设为此.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;​    我是2012年5月2日入职的，到今天整整是三个月。这是我首次在产业界的公司实习，与之前在微软亚洲研究院的实习有很大不同。之前在微软做的是「研究」，听起来好像是很厉害的样子，其实有时候做的东西简直是浪费时间。因为我从一开始就清楚，在研究院做的东西只是为了在特定领域有一个突破，至于这个成果会不会造福人类，那可不好说。运气好的话会被微软产品组看中，做成产品，算是为人类做贡献了。大多数时候你的成果还是被打入冷宫，永远无人问津。更普遍的情况是进入了微软的专利库，别人想做成产品都不行，这简直是阻碍人类社会进步了。我在微软亚洲研究院长达十个月的实习给我最大的收获就是让我决定了将来一定不会去读博士。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;—&lt;a href=&quot;https://www.byvoid.com/blog/recent-one-year&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;byvoid&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​    另外大一的少年,总是会眷念刚过去不久的金戈铁马吧.骄傲的雅礼er,你们可都在自己的地方卓尔不群吧.去年年底做了&lt;a href=&quot;http://v.youku.com/v_show/id_XMTQxNDUwNjAxNg==.html?from=s1.8-1-1.2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;班节视频&lt;/a&gt;快到暑假了,大家不是约好了别墅再聚,球场峥嵘吗XD,任磊达这个学期可是学了足球呢(才不告诉你们就是因为这个就不追求体育绩点了…).&lt;/p&gt;
-&lt;p&gt;​    太久没说过话写过字了,上次还是去做那个&lt;a href=&quot;https://www.zhihu.com/question/21496088/answer/76210364?from=profile_answer_card&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;回答&lt;/a&gt;.这次留一句话给还在纠结志愿的学弟学妹们吧&lt;/p&gt;
-&lt;p&gt;​    &lt;strong&gt;长得漂亮就来中大&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;大一的尾声.&lt;/p&gt;
-&lt;p&gt;不知少年少女,你们可过的还好吗.&lt;/p&gt;
-&lt;p&gt;大抵曾经那个诗歌相衬的少年,已经在这一年变了模样.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
     
   </entry>
   
