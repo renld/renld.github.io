@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Python &#39;First&#39; Learning | Leidar&#39;s Home</title>
+  <title>regular expression | Leidar&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="因为后面涉及数据库,服务器内容,太监之后只有基础内容了QAQ">
+  <meta name="description" content="跟风学正则の笔记 测试工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 'First' Learning">
-<meta property="og:url" content="http://renld.github.io/2016/08/05/HFPy/index.html">
+<meta property="og:title" content="regular expression">
+<meta property="og:url" content="http://renld.github.io/2016/08/09/RE/index.html">
 <meta property="og:site_name" content="Leidar's Home">
-<meta property="og:description" content="因为后面涉及数据库,服务器内容,太监之后只有基础内容了QAQ">
-<meta property="og:updated_time" content="2016-08-05T07:49:54.000Z">
+<meta property="og:description" content="跟风学正则の笔记 测试工具">
+<meta property="og:updated_time" content="2016-08-09T14:05:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 'First' Learning">
-<meta name="twitter:description" content="因为后面涉及数据库,服务器内容,太监之后只有基础内容了QAQ">
+<meta name="twitter:title" content="regular expression">
+<meta name="twitter:description" content="跟风学正则の笔记 测试工具">
   
     <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
   
@@ -214,11 +214,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-HFPy" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-RE" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/05/HFPy/" class="article-date">
-      <time datetime="2016-08-05T07:04:08.000Z" itemprop="datePublished">2016-08-05</time>
+      <a href="/2016/08/09/RE/" class="article-date">
+      <time datetime="2016-08-09T12:10:53.000Z" itemprop="datePublished">2016-08-09</time>
 </a>
     </div>
   
@@ -231,7 +231,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Python &#39;First&#39; Learning
+      regular expression
     </h1>
   
 
@@ -242,7 +242,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/regular-expression/">regular expression</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -252,49 +252,147 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>因为后面涉及数据库,服务器内容,<br>太监之后只有基础内容了QAQ</p>
-</blockquote>
+        <p>跟风学正则の笔记 <a href="http://tool.oschina.net/regex" target="_blank" rel="external">测试工具</a></p>
 <a id="more"></a>
-<h2 id="HEADFIRST-PYTHON"><a href="#HEADFIRST-PYTHON" class="headerlink" title="HEADFIRST PYTHON"></a>HEADFIRST PYTHON</h2><h2 id="循环与递归"><a href="#循环与递归" class="headerlink" title="循环与递归"></a>循环与递归</h2><ul>
-<li><p>python默认递归深度100</p>
-</li>
-<li><p>参考代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span><br><span class="line">递归打印多重列表</span><br><span class="line">"""</span></span><br><span class="line">movies = [<span class="string">"The Holy Grail"</span>,</span><br><span class="line">			<span class="string">"The Life of Brian"</span>,</span><br><span class="line">			<span class="string">"The Meaning of Life"</span>,</span><br><span class="line">			[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pt</span><span class="params">(List)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> a <span class="keyword">in</span> List:<span class="comment"># </span></span><br><span class="line">		<span class="keyword">if</span> isinstance(a,list):<span class="comment">#判断类型</span></span><br><span class="line">			pt(a);</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(a);</span><br><span class="line">    <span class="comment"># for a in range(0,len(List)):</span></span><br><span class="line">	<span class="comment"># 	if isinstance(List[a],list):</span></span><br><span class="line">	<span class="comment"># 		pt(List[a]);</span></span><br><span class="line">	<span class="comment"># 	else:</span></span><br><span class="line">	<span class="comment"># 		print(List[a]);</span></span><br><span class="line">pt(movies);</span><br></pre></td></tr></table></figure>
-</li>
+<h1 id="what-is-Regular-Expression"><a href="#what-is-Regular-Expression" class="headerlink" title="what is Regular Expression"></a>what is Regular Expression</h1><blockquote>
+<p>正则表达式(regular expression)描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种子串、将匹配的子串做替换或者从某个串中取出符合某个条件的子串等。</p>
+</blockquote>
+<h1 id="How"><a href="#How" class="headerlink" title="How"></a>How</h1><p>From LiaoXueFeng</p>
+<h2 id="Simple-Introduction"><a href="#Simple-Introduction" class="headerlink" title="Simple Introduction"></a>Simple Introduction</h2><p>在正则表达式中，如果直接给出字符，就是精确匹配。</p>
+<p>用<code>\d</code>可以匹配一个数字，<code>\w</code>可以匹配一个字母或数字，所以：</p>
+<ul>
+<li><code>&#39;00\d&#39;</code>可以匹配<code>&#39;007&#39;</code>，但无法匹配<code>&#39;00A&#39;</code>；</li>
 </ul>
-<h2 id="封装以及命名空间"><a href="#封装以及命名空间" class="headerlink" title="封装以及命名空间"></a>封装以及命名空间</h2><ol>
-<li><p><code>nester.py</code>放到一个文件夹中,加上<code>setup.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> distutils.core <span class="keyword">import</span> setup</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">     name = <span class="string">'nester'</span>,</span><br><span class="line">     version = <span class="string">'1.0.0'</span>,</span><br><span class="line">     py_modules = [<span class="string">'nester'</span>],</span><br><span class="line">     author = <span class="string">'abc'</span>,</span><br><span class="line">     author_email = <span class="string">'505636638@qq.com'</span>,<span class="comment">#信息基本都是瞎写的= =</span></span><br><span class="line">     url = <span class="string">"baidu.com"</span>,</span><br><span class="line">     discription = <span class="string">'1'</span>,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p>而<code>.</code>可以匹配任意字符，所以：</p>
+<ul>
+<li><code>&#39;py.&#39;</code>可以匹配<code>&#39;pyc&#39;</code>、<code>&#39;pyo&#39;</code>、<code>&#39;py!&#39;</code></li>
+</ul>
+<p>要匹配变长的字符，在正则表达式中，</p>
+<ol>
+<li>用<code>*</code>表示任意个字符（包括0个）</li>
+<li>用<code>+</code>表示至少一个字符</li>
+<li>用<code>?</code>表示0个或1个字符</li>
+<li>用<code>{n}</code>表示n个字符，用<code>{n,m}</code>表示n-m个字符：</li>
+</ol>
+<p><code>A|B</code>可以匹配A或B，所以<code>(P|p)ython</code>可以匹配<code>&#39;Python&#39;</code>或者<code>&#39;python&#39;</code>。</p>
+<p><code>^</code>表示行的开头，<code>^\d</code>表示必须以数字开头。</p>
+<p><code>$</code>表示行的结束，<code>\d$</code>表示必须以数字结束。</p>
+<p>如果你想查找元字符本身的话，比如你查找.,或者<em>,就出现了问题：你没办法指定它们，因为它们会被解释成别的意思。这时你就得使用\来取消这些字符的特殊意义。因此，你应该使用.和\</em>。当然，要查找\本身，你也得用\.</p>
+<p>例如：<code>deerchao\.net</code>匹配deerchao.net，<code>C:\\Windows</code>匹配C:\Windows。</p>
+<h2 id="In-Python"><a href="#In-Python" class="headerlink" title="In Python"></a>In Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">r'ABC\-001'</span></span><br><span class="line"></span><br><span class="line">ans = re.match(<span class="string">r'^\d&#123;3&#125;\-\d&#123;3,8&#125;$'</span>, <span class="string">'010-12345'</span>)</span><br><span class="line"><span class="comment"># &lt;_sre.SRE_Match object; span=(0, 9), match='010-12345'&gt;</span></span><br><span class="line"><span class="comment"># print(ans.group(0)</span></span><br><span class="line"></span><br><span class="line">ans = re.match(<span class="string">r'^\d&#123;3&#125;\-\d&#123;3,8&#125;$'</span>, <span class="string">'010 12345'</span>)</span><br><span class="line"><span class="comment">#none</span></span><br><span class="line"></span><br><span class="line">re.split(<span class="string">r'\s+'</span>, <span class="string">'a b   c'</span>)</span><br><span class="line"><span class="comment"># +匹配前面的子表达式一次或多次</span></span><br><span class="line"><span class="comment"># \s匹配任何空白字符</span></span><br><span class="line"><span class="comment"># ['a', 'b', 'c']</span></span><br><span class="line"></span><br><span class="line">ans = re.split(<span class="string">r'[\s\,]+'</span>, <span class="string">'a,b, c  d'</span>)</span><br><span class="line"><span class="comment"># \将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符</span></span><br><span class="line"><span class="comment"># ['a', 'b', 'c', 'd']</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分组</span></span><br><span class="line">m = re.match(<span class="string">r'^(\d&#123;3&#125;)-(\d&#123;3,8&#125;)$'</span>, <span class="string">'010-12345'</span>)</span><br><span class="line"><span class="comment"># &lt;_sre.SRE_Match object; span=(0, 9), match='010-12345'&gt;</span></span><br><span class="line">m.group(<span class="number">0</span>)</span><br><span class="line"><span class="comment"># '010-12345'</span></span><br><span class="line">m.group(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># '010'</span></span><br><span class="line">m.group(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># '12345'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 贪婪匹配</span></span><br><span class="line">re.match(<span class="string">r'^(\d+)(0*)$'</span>, <span class="string">'102300'</span>).groups()</span><br><span class="line"><span class="comment"># + 匹配前面的子表达式一次或多次。</span></span><br><span class="line"><span class="comment"># * 匹配前面的子表达式零次或多次</span></span><br><span class="line"><span class="comment"># ('102300', '')</span></span><br><span class="line"><span class="comment"># 非贪婪匹配</span></span><br><span class="line">re.match(<span class="string">r'^(\d+?)(0*)$'</span>, <span class="string">'102300'</span>).groups()</span><br><span class="line"><span class="comment">#? 匹配前面的子表达式零次或一次。</span></span><br><span class="line"><span class="comment">#('1023', '00')</span></span><br><span class="line"></span><br><span class="line">print(ans)</span><br><span class="line"></span><br><span class="line"><span class="comment">#预编译</span></span><br><span class="line"><span class="comment"># 编译:</span></span><br><span class="line">re_telephone = re.compile(<span class="string">r'^(\d&#123;3&#125;)-(\d&#123;3,8&#125;)$'</span>)</span><br><span class="line"><span class="comment"># 使用：</span></span><br><span class="line">re_telephone.match(<span class="string">'010-12345'</span>).groups()</span><br><span class="line"><span class="comment">#('010', '12345')</span></span><br></pre></td></tr></table></figure>
+<h1 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h1><ol>
+<li><p>普通字符</p>
 </li>
-<li><p>在文件夹中执行</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 setup.py sdist;</span><br><span class="line">sudo python3 setup.py install</span><br></pre></td></tr></table></figure>
+<li><p>非打印字符</p>
+<p>| char | description                        |<br>| —- | ———————————- |<br>| \cx  | 匹配由x指明的控制字符。                       |<br>| \f   | 匹配一个换页符。等价于 \x0c 和 \cL             |<br>| \n   | 匹配一个换行符。等价于 \x0a 和 \cJ             |<br>| \r   | 匹配一个回车符。等价于 \x0d 和 \cM             |<br>| \s   | 匹配任何空白字符 空格、制表符、换页符==[\f\n\r\t\v]。 |<br>| \S   | 匹配任何非空白字符。等价于 <code>[^ \f\n\r\t\v]</code>。    |</p>
 </li>
-<li><p><code>import</code>后就可以通过命名空间执行了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nester</span><br><span class="line">nester.pt(nester.movies)</span><br><span class="line"><span class="comment">#from nester import pt   &lt;=&gt; using namespace...</span></span><br><span class="line"><span class="comment">#pt(nester.movies)</span></span><br></pre></td></tr></table></figure>
-<p>​</p>
+<li><p>控制字符</p>
+<p>| char | description                              |<br>| —- | —————————————- |<br>| $    | 匹配输入字符串的结尾位置。                            |<br>| ( )  | 标记一个子表达式的开始和结束位置。                        |<br>| <em>    | 匹配前面的子表达式零次或多次。要匹配 </em> 字符，请使用 *。          |<br>| +    | 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +。          |<br>| .    | 匹配除换行符 \n之外的任何单字符。要匹配 .，请使用 \。           |<br>| [    | 标记一个中括号表达式的开始。要匹配 [，请使用 [。              |<br>| ?    | 匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 \?。 |<br>| \   | 将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， ‘n’ 匹配字符 ‘n’。’\n’ 匹配换行符。序列 ‘\‘ 匹配 “\”，而 ‘(‘ 则匹配 “(“。 |<br>| ^    | 匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。 |<br>| {    | 标记限定符表达式的开始。要匹配 {，请使用 {。                |<br>| |   | 指明两项之间的一个选择。要匹配 |，请使用 |。               |<br>|      |                                          |</p>
+</li>
+<li><p>限定字符</p>
 </li>
 </ol>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">'../p'</span>)</span><br><span class="line">os.getcwd();<span class="comment">#get file address</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#I</span></span><br><span class="line">data = open(<span class="string">'sketch.txt'</span>)</span><br><span class="line">data.seek(<span class="number">0</span>);<span class="comment">#return begin</span></span><br><span class="line"></span><br><span class="line">each_line = data.readline();</span><br><span class="line"><span class="comment"># help(each_line.split)</span></span><br><span class="line"><span class="comment"># S.split(sep=None, maxsplit=-1) -&gt; list of strings</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_line <span class="keyword">in</span> data:</span><br><span class="line">	<span class="keyword">if</span> each_line.find(<span class="string">':'</span>) != <span class="number">-1</span>:</span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">			(role,line_spoken) = each_line.split(<span class="string">':'</span>,<span class="number">1</span>)</span><br><span class="line">			print(role,end = <span class="string">''</span>);</span><br><span class="line">			print(<span class="string">' said: '</span>,end = <span class="string">''</span>);</span><br><span class="line">			print(line_spoken,end = <span class="string">''</span>);</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">		    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#O</span></span><br><span class="line">out = open(<span class="string">"data.out"</span>,<span class="string">"w"</span>) <span class="comment">#a -&gt; append,w+ read &amp; write</span></span><br><span class="line"><span class="keyword">for</span> eachS <span class="keyword">in</span> other:</span><br><span class="line"> 	print(eachS,file = out)</span><br><span class="line"></span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
-<h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">line_spoken = line_spoken.strip()<span class="comment">#去除不必要的空白</span></span><br><span class="line">locals()<span class="comment">#当前BIF中变量集合</span></span><br></pre></td></tr></table></figure>
-<h2 id="第一本编程书笔记"><a href="#第一本编程书笔记" class="headerlink" title="第一本编程书笔记"></a>第一本编程书笔记</h2><ul>
-<li><p>int(), str()对于类型的转化</p>
-</li>
-<li><p>[a:b]对于数组的分片</p>
-</li>
-<li><p>函数传入参数可以(id = 1,)不按顺序传入</p>
-</li>
-<li><p>print中sep表示分隔字符</p>
-</li>
-<li><p><code>**</code>为幂,<code>//</code>为整除</p>
-</li>
-<li><p>列表推倒:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k = [n <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>) <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">g = &#123;i:j.upper() <span class="keyword">for</span>(i,j) <span class="keyword">in</span> zip(range(<span class="number">1</span>,<span class="number">6</span>),<span class="string">'abcde'</span>)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类的继承 在括号内写父类</p>
-</li>
-</ul>
-<h3 id="exercise"><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创造1-10.txt文本,以数字命名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">creater</span><span class="params">(name)</span>:</span></span><br><span class="line">	name = name + <span class="string">'.txt'</span></span><br><span class="line">	file = open(<span class="string">'/users/macbook/desktop/'</span> + name,<span class="string">'w'</span>)</span><br><span class="line">	file.write(<span class="string">'hello'</span> + name)</span><br><span class="line">	<span class="keyword">return</span> file</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">	<span class="keyword">if</span>(x &lt; <span class="number">10</span>):</span><br><span class="line">		creater(<span class="string">'0'</span> + str(x))</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		creater(str(x))</span><br><span class="line">	<span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>char</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>匹配前面的子表达式零次或多次。例如，zo<em> 能匹配 “z” 以及 “zoo”。</em> 等价于{0,}。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 或 “does” 中的”do” 。? 等价于 {0,1}。</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p><code>\d{3}\s+\d{3,8}</code></p>
+<ol>
+<li><code>\d{3}</code>表示匹配3个数字，例如<code>&#39;010&#39;</code>；</li>
+<li><code>\s</code>可以匹配一个空格（也包括Tab等空白符），所以<code>\s+</code>表示至少有一个空格，例如匹配<code>&#39; &#39;</code>，<code>&#39; &#39;</code>等；</li>
+<li><code>\d{3,8}</code>表示3-8个数字，例如<code>&#39;1234567&#39;</code>。</li>
+</ol>
+<p><code>\(?0\d{2}[) -]?\d{8}。</code></p>
+<p>“(”和“)”也是元字符，后面的<a href="http://deerchao.net/tutorials/regex/regex.htm#grouping" target="_blank" rel="external">分组节</a>里会提到，所以在这里需要使用<a href="http://deerchao.net/tutorials/regex/regex.htm#escape" target="_blank" rel="external">转义</a>。</p>
+<p>这个表达式可以匹配几种格式的电话号码，像(010)88886666，或022-22334455，或02912345678等。我们对它进行一些分析吧：首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。</p>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/\b([a-z]+) \1\b/gi</td>
+<td>一个单词连续出现的位置。</td>
+</tr>
+<tr>
+<td>/(\w+):\/\/([^/:]+)(:\d<em>)?([^# ]</em>)/</td>
+<td>将一个URL解析为协议、域、端口及相对路径。</td>
+</tr>
+<tr>
+<td>/^(?:Chapter\</td>
+<td>Section) [1-9][0-9]{0,1}$/</td>
+<td>定位章节的位置。</td>
+</tr>
+<tr>
+<td>/[-a-z]/</td>
+<td>A至z共26个字母再加一个-号。</td>
+</tr>
+<tr>
+<td>/ter\b/</td>
+<td>可匹配chapter，而不能匹配terminal。</td>
+</tr>
+<tr>
+<td>/\Bapt/</td>
+<td>可匹配chapter，而不能匹配aptitude。</td>
+</tr>
+<tr>
+<td>/Windows(?=95 \</td>
+<td>98 \</td>
+<td>NT )/</td>
+<td>可匹配Windows95或Windows98或WindowsNT，当找到一个匹配后，从Windows后面开始进行下一次的检索匹配。</td>
+</tr>
+<tr>
+<td>/^\s*$/</td>
+<td>匹配空行。</td>
+</tr>
+<tr>
+<td>/\d{2}-\d{5}/</td>
+<td>验证由两位数字、一个连字符再加 5 位数字组成的 ID 号。</td>
+</tr>
+<tr>
+<td>/&lt;\s<em>(\S+)(\s[^&gt;]</em>)?&gt;[\s\S]<em>&lt;\s</em>\/\1\s*&gt;/</td>
+<td>匹配 HTML 标记。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h1><h2 id="email"><a href="#email" class="headerlink" title="email"></a>email</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment"># email</span></span><br><span class="line"></span><br><span class="line">patten = <span class="string">'bill.gates@microsoft.com'</span></span><br><span class="line">r = <span class="string">r'^(\w*)\.?(\w*)@(\w+).(\w+)'</span></span><br><span class="line"></span><br><span class="line">print(re.match(r,patten).groups())</span><br><span class="line"></span><br><span class="line">r1 = <span class="string">r'(&lt;\w+\s\w+&gt;)\s*(\w*)\.?(\w*)@(\w+).(\w+)'</span></span><br><span class="line">patten1 = <span class="string">'&lt;Tom Paris&gt; tom@voyager.org'</span></span><br><span class="line">print(re.match(r1,patten).groups())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 别人的</span></span><br><span class="line">re_email = re.match(<span class="string">r'^(\w+\.\w+|\w+)(\@\w+\.com)$'</span>,<span class="string">'bill.a@microsoft.com'</span>)</span><br><span class="line">print(re_email.groups())</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="external">Runoob</a> <a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">30min</a> <a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143193331387014ccd1040c814dee8b2164bb4f064cff000" target="_blank" rel="external">廖雪峰</a> <a href="http://www.regexlab.com/zh/regref.htm" target="_blank" rel="external">官方文档</a> <a href="http://www.runoob.com/python3/python3-reg-expressions.html" target="_blank" rel="external">python正则</a> <a href="https://zhuanlan.zhihu.com/p/21341872" target="_blank" rel="external">路人甲</a></p>
 
       
     </div>
@@ -303,13 +401,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/05/HFPy/">Python &#39;First&#39; Learning</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/09/RE/">regular expression</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
-        <p><span>发布时间:</span>2016年08月05日 - 15时04分</p>
-        <p><span>最后更新:</span>2016年08月05日 - 15时49分</p>
+        <p><span>发布时间:</span>2016年08月09日 - 20时10分</p>
+        <p><span>最后更新:</span>2016年08月09日 - 22时05分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/05/HFPy/" title="Python &#39;First&#39; Learning">http://renld.github.io/2016/08/05/HFPy/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/05/HFPy/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/09/RE/" title="regular expression">http://renld.github.io/2016/08/09/RE/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/09/RE/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -322,18 +420,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/08/05/PL1-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          python实战计划 制作自己网页
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/22/greedy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Greedy &amp; Violent</div>
+    <a href="/2016/08/09/PL2-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python实战计划 多进程抓取</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -344,7 +433,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HEADFIRST-PYTHON"><span class="toc-number">1.</span> <span class="toc-text">HEADFIRST PYTHON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环与递归"><span class="toc-number">2.</span> <span class="toc-text">循环与递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装以及命名空间"><span class="toc-number">3.</span> <span class="toc-text">封装以及命名空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件操作"><span class="toc-number">4.</span> <span class="toc-text">文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据处理"><span class="toc-number">4.1.</span> <span class="toc-text">数据处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一本编程书笔记"><span class="toc-number">5.</span> <span class="toc-text">第一本编程书笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise"><span class="toc-number">5.1.</span> <span class="toc-text">exercise</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#what-is-Regular-Expression"><span class="toc-number">1.</span> <span class="toc-text">what is Regular Expression</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How"><span class="toc-number">2.</span> <span class="toc-text">How</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Simple-Introduction"><span class="toc-number">2.1.</span> <span class="toc-text">Simple Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#In-Python"><span class="toc-number">2.2.</span> <span class="toc-text">In Python</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符类型"><span class="toc-number">3.</span> <span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#示例"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exercise"><span class="toc-number">5.</span> <span class="toc-text">Exercise</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#email"><span class="toc-number">5.1.</span> <span class="toc-text">email</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">6.</span> <span class="toc-text">参考资料</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
 
@@ -392,7 +481,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/08/05/HFPy/" data-title="Python &#39;First&#39; Learning" data-url="http://renld.github.io/2016/08/05/HFPy/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/09/RE/" data-title="regular expression" data-url="http://renld.github.io/2016/08/09/RE/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -415,13 +504,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/05/PL1-1/" title="上一篇: python实战计划 制作自己网页">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/07/22/greedy/" title="下一篇: Greedy &amp; Violent">
+            <a href="/2016/08/09/PL2-3/" title="下一篇: Python实战计划 多进程抓取">
                 <i class="fa fa-angle-right"></i>
             </a>
         
