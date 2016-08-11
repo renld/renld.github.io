@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python实战计划 如何让数据说话 | Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="提出优秀问题
+通过数据论证,找到答案
+得出结论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python实战计划 如何让数据说话">
+<meta property="og:url" content="http://renld.github.io/2016/08/11/PL3-1/index.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="提出优秀问题
+通过数据论证,找到答案
+得出结论">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2016.07.12.png">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.11.29.png">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.26.16.png">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.29.34.png">
+<meta property="og:updated_time" content="2016-08-11T12:46:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python实战计划 如何让数据说话">
+<meta name="twitter:description" content="提出优秀问题
+通过数据论证,找到答案
+得出结论">
+<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2016.07.12.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/fan.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Renld</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>毛遂自荐</li>
+                        <li>按图索骥</li>
+                        
+                        <li>抛砖引玉</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">戳回老本营</a></li>
+                        
+                            <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                        
+                            <li><a href="/tagcloud.swf">这里有个球</a></li>
+                        
+                            <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                        
+                            <li><a href="/about">自述与留言</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                            
+                                <a class="fl mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                            
+                                <a class="fl wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <li><a href="/tags/C/" style="font-size: 11.43px;">C++</a></li> <li><a href="/tags/Computer/" style="font-size: 10px;">Computer</a></li> <li><a href="/tags/EE/" style="font-size: 11.43px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 15.71px;">Life</a></li> <li><a href="/tags/Linux/" style="font-size: 10px;">Linux</a></li> <li><a href="/tags/Macau/" style="font-size: 10px;">Macau</a></li> <li><a href="/tags/MongoDB/" style="font-size: 12.86px;">MongoDB</a></li> <li><a href="/tags/algorithm/" style="font-size: 14.29px;">algorithm</a></li> <li><a href="/tags/crawler/" style="font-size: 17.14px;">crawler</a></li> <li><a href="/tags/dataAnalysis/" style="font-size: 10px;">dataAnalysis</a></li> <li><a href="/tags/html/" style="font-size: 18.57px;">html</a></li> <li><a href="/tags/python/" style="font-size: 20px;">python</a></li> <li><a href="/tags/regular-expression/" style="font-size: 10px;">regular expression</a></li>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://terry.pub/">terry</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Renld</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/fan.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Renld</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">戳回老本营</a></li>
+                
+                    <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                
+                    <li><a href="/tagcloud.swf">这里有个球</a></li>
+                
+                    <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                
+                    <li><a href="/about">自述与留言</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                    
+                        <a class="wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-PL3-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/11/PL3-1/" class="article-date">
+      <time datetime="2016-08-11T06:40:56.000Z" itemprop="datePublished">2016-08-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python实战计划 如何让数据说话
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dataAnalysis/">dataAnalysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>提出优秀问题</li>
+<li>通过数据论证,找到答案</li>
+<li>得出结论</li>
+</ol>
+<a id="more"></a>
+<h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="提出正确的问题"><a href="#提出正确的问题" class="headerlink" title="提出正确的问题"></a>提出正确的问题</h2><blockquote>
+<p>正确的提问能解释现象</p>
+<p>错误的提问能强行关联无关的事物</p>
+<p>正确的提问能验证假设</p>
+<p>错误的提问是为了证明自己是对的</p>
+<p>正确的提问能探索方向</p>
+<p>错误的提问会不知道自己干什么</p>
+</blockquote>
+<ul>
+<li>ABTask方法</li>
+</ul>
+<h2 id="通过数据论证-找到答案"><a href="#通过数据论证-找到答案" class="headerlink" title="通过数据论证,找到答案"></a>通过数据论证,找到答案</h2><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>横向对比,纵向对比</p>
+<h3 id="细分"><a href="#细分" class="headerlink" title="细分"></a>细分</h3><p>把大的目标分成小的领域</p>
+<p>Mindnode划分…</p>
+<h2 id="解读数据"><a href="#解读数据" class="headerlink" title="解读数据"></a>解读数据</h2><p>样本问题 =&gt; 沉默的大多数</p>
+<p>因果关联错误</p>
+<p>忽略前提 =&gt; 有些数据是由前提的</p>
+<h1 id="对上一周大作业分析"><a href="#对上一周大作业分析" class="headerlink" title="对上一周大作业分析"></a>对上一周大作业分析</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mongoexport -d dataBase -c Info --csv -f title,type,time,price,new,place -o information.csv</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T15:<span class="number">27</span>:<span class="number">12.130</span>+<span class="number">0800</span>	csv flag <span class="keyword">is</span> deprecated; please use --type=csv instead</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T15:<span class="number">27</span>:<span class="number">12.143</span>+<span class="number">0800</span>	connected to: localhost</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T15:<span class="number">27</span>:<span class="number">12.488</span>+<span class="number">0800</span>	exported <span class="number">17438</span> records</span><br></pre></td></tr></table></figure>
+<p><a href="http://radar-10050281.cos.myqcloud.com/python/3/information.csv" target="_blank" rel="external">file</a> 注意..因为奇怪的原因..每条信息重复了一遍</p>
+<h2 id="提出优秀问题"><a href="#提出优秀问题" class="headerlink" title="提出优秀问题"></a>提出优秀问题</h2><p><strong>信息齐全度的影响因素</strong></p>
+<h2 id="通过数据论证-找到答案-1"><a href="#通过数据论证-找到答案-1" class="headerlink" title="通过数据论证,找到答案"></a>通过数据论证,找到答案</h2><h2 id="细分问题"><a href="#细分问题" class="headerlink" title="细分问题"></a>细分问题</h2><p><img src="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2016.07.12.png" alt=""></p>
+<h2 id="横向对比-amp-amp-纵向对比"><a href="#横向对比-amp-amp-纵向对比" class="headerlink" title="横向对比&amp;&amp;纵向对比"></a>横向对比&amp;&amp;纵向对比</h2><p>本来想用numbers,死机无数次放弃了…好好敲代码</p>
+<h3 id="价格"><a href="#价格" class="headerlink" title="价格"></a>价格</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line">cnts = dict()</span><br><span class="line"></span><br><span class="line">op = open(<span class="string">'out.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> price <span class="keyword">in</span> analy.find():</span><br><span class="line">    <span class="keyword">if</span> price[<span class="string">'price'</span>] <span class="keyword">in</span> cnts:</span><br><span class="line">        cnts[price[<span class="string">'price'</span>]] = cnts[price[<span class="string">'price'</span>]]+<span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        cnts[price[<span class="string">'price'</span>]] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> cnts:</span><br><span class="line">    print(item,cnts[item],file=op,sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure>
+<p>numbers 生成的统计表</p>
+<p><img src="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.11.29.png" alt=""></p>
+<p>然后发现…自己统计错东西了….</p>
+<p>重新写一个呗~</p>
+<p>除了个1k看数据,似乎不是很明显</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line">cnts = dict()</span><br><span class="line">tot = dict()</span><br><span class="line">op = open(<span class="string">'out.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> price <span class="keyword">in</span> analy.find():</span><br><span class="line">    ps = int(price[<span class="string">'price'</span>]) // <span class="number">100</span></span><br><span class="line">    <span class="keyword">if</span> ps <span class="keyword">in</span> cnts:</span><br><span class="line">        cnts[ps] = cnts[ps] + <span class="number">1</span></span><br><span class="line">        tot[ps] = tot[ps] + price[<span class="string">'inforNum'</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        cnts[ps] = <span class="number">1</span></span><br><span class="line">        tot[ps] = price[<span class="string">'inforNum'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> sorted(cnts):</span><br><span class="line">    <span class="keyword">if</span> cnts[item] &gt; <span class="number">1</span> : <span class="comment">#clear special information</span></span><br><span class="line">        print(item ,tot[item]/cnts[item],file=op,sep=<span class="string">'\t'</span>)</span><br><span class="line">        print(<span class="string">'from'</span>, item * <span class="number">100</span>, <span class="string">'to'</span>, (item + <span class="number">1</span>) * <span class="number">100</span>, <span class="string">'counts'</span>, tot[item] / cnts[item],  sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.26.16.png" alt=""></p>
+<p>由于第一张图可以知道,大部分数据集中在3k以下,所以重新绘制..</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line">cnts = dict()</span><br><span class="line">tot = dict()</span><br><span class="line">op = open(<span class="string">'out.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> price <span class="keyword">in</span> analy.find():</span><br><span class="line">    ps = int(price[<span class="string">'price'</span>])</span><br><span class="line">    <span class="keyword">if</span> ps &lt; <span class="number">3000</span>:<span class="comment">#选择精准数据</span></span><br><span class="line">        <span class="keyword">if</span> ps <span class="keyword">in</span> cnts:</span><br><span class="line">            cnts[ps] = cnts[ps] + <span class="number">1</span></span><br><span class="line">            tot[ps] = tot[ps] + price[<span class="string">'inforNum'</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnts[ps] = <span class="number">1</span></span><br><span class="line">            tot[ps] = price[<span class="string">'inforNum'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> sorted(cnts):</span><br><span class="line">    <span class="keyword">if</span> cnts[item] &gt; <span class="number">1</span> : <span class="comment">#clear special information</span></span><br><span class="line">        print(item ,tot[item]/cnts[item],file=op,sep=<span class="string">'\t'</span>)</span><br><span class="line">        print(item , tot[item] / cnts[item],  sep=<span class="string">'\t'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://radar-10050281.cos.myqcloud.com/python/3/Screen%20Shot%202016-08-11%20at%2020.29.34.png" alt=""></p>
+<p>看来我是小看了小商品价格填写的认真程度了2333</p>
+<h3 id="月份"><a href="#月份" class="headerlink" title="月份"></a>月份</h3><p>因为不知道python对于C++pair有什么东西,就自己编写了一个key</p>
+<p>但是这样结果似乎意义不大..</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line"></span><br><span class="line">types = dict()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> month <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">13</span>):</span><br><span class="line">    cnts = dict()</span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> analy.find():</span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'month'</span>] == <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        m = data[<span class="string">'month'</span>] + str(<span class="string">'#'</span>) + str(data[<span class="string">'inforNum'</span>])</span><br><span class="line">        <span class="keyword">if</span> m <span class="keyword">in</span> cnts:</span><br><span class="line">            cnts[m] = cnts[m] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnts[m] = <span class="number">1</span></span><br><span class="line">    months = sorted(cnts.keys())</span><br><span class="line">    print(months)</span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> months:</span><br><span class="line">    print(<span class="string">'in month'</span>, m, <span class="string">'info get'</span>, cnts[m])</span><br><span class="line"><span class="string">'''</span><br><span class="line">in month #2 info get 3</span><br><span class="line">in month #3 info get 3</span><br><span class="line">in month 01#2 info get 12</span><br><span class="line">in month 01#3 info get 14</span><br><span class="line">in month 02#2 info get 189</span><br><span class="line">in month 02#3 info get 165</span><br><span class="line">in month 02#4 info get 9</span><br><span class="line">in month 03#2 info get 442</span><br><span class="line">in month 03#3 info get 360</span><br><span class="line">in month 03#4 info get 69</span><br><span class="line">in month 04#2 info get 480</span><br><span class="line">in month 04#3 info get 348</span><br><span class="line">in month 04#4 info get 100</span><br><span class="line">in month 05#2 info get 754</span><br><span class="line">in month 05#3 info get 454</span><br><span class="line">in month 05#4 info get 106</span><br><span class="line">in month 06#2 info get 1206</span><br><span class="line">in month 06#3 info get 724</span><br><span class="line">in month 06#4 info get 247</span><br><span class="line">in month 07#2 info get 992</span><br><span class="line">in month 07#3 info get 1059</span><br><span class="line">in month 07#4 info get 270</span><br><span class="line">in month 08#2 info get 249</span><br><span class="line">in month 08#3 info get 325</span><br><span class="line">in month 08#4 info get 105</span><br><span class="line">in month 09#2 info get 1</span><br><span class="line">in month 09#3 info get 3</span><br><span class="line">in month 10#3 info get 1</span><br><span class="line">in month 11#2 info get 2</span><br><span class="line">in month 11#3 info get 4</span><br><span class="line">in month 12#2 info get 11</span><br><span class="line">in month 12#3 info get 11</span><br><span class="line">in month 12#4 info get 1</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+<p>于是重新求平均值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line"></span><br><span class="line">types = dict()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> month <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">13</span>):</span><br><span class="line">    cnts = dict()</span><br><span class="line">    tot = dict()</span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> analy.find():</span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'month'</span>] == <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        m = data[<span class="string">'month'</span>]</span><br><span class="line">        <span class="keyword">if</span> m <span class="keyword">in</span> cnts:</span><br><span class="line">            cnts[m] = cnts[m] + <span class="number">1</span></span><br><span class="line">            tot[m] = tot[m] + data[<span class="string">'inforNum'</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnts[m] = <span class="number">1</span></span><br><span class="line">            tot[m] = data[<span class="string">'inforNum'</span>]</span><br><span class="line">    months = sorted(cnts.keys())</span><br><span class="line">    <span class="comment">#print(months)</span></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> months:</span><br><span class="line">    print(<span class="string">'in month'</span>, m, <span class="string">'tot ='</span>,cnts[m],<span class="string">'\t'</span>,<span class="string">'average info get'</span>,tot[m]/ cnts[m])</span><br><span class="line"><span class="string">'''</span><br><span class="line">in month  tot = 6        average info get 2.5</span><br><span class="line">in month 01 tot = 26     average info get 2.5384615384615383</span><br><span class="line">in month 02 tot = 363    average info get 2.5041322314049586</span><br><span class="line">in month 03 tot = 871    average info get 2.571756601607348</span><br><span class="line">in month 04 tot = 928    average info get 2.5905172413793105</span><br><span class="line">in month 05 tot = 1314   average info get 2.506849315068493</span><br><span class="line">in month 06 tot = 2177   average info get 2.559485530546624</span><br><span class="line">in month 07 tot = 2321   average info get 2.6889271865575184</span><br><span class="line">in month 08 tot = 679    average info get 2.787923416789396</span><br><span class="line">in month 09 tot = 4      average info get 2.75</span><br><span class="line">in month 10 tot = 1      average info get 3.0</span><br><span class="line">in month 11 tot = 6      average info get 2.6666666666666665</span><br><span class="line">in month 12 tot = 23     average info get 2.5652173913043477</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+<p>这样就明显多了</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><ol>
+<li>10月份平均值最高是因为数据组数太少</li>
+<li>3~8月数据量多,期中信息平均最多的是7月,或许是因为7月放假了大家比较闲..</li>
+</ol>
+<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><p>类似的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line"></span><br><span class="line">types = dict()</span><br><span class="line">tot = dict()</span><br><span class="line">op = open(<span class="string">'out.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> analy.find():</span><br><span class="line">    tp = t[<span class="string">'type'</span>]</span><br><span class="line">    <span class="keyword">if</span> tp <span class="keyword">in</span> types:</span><br><span class="line">        types[tp] = types[tp] + t[<span class="string">'inforNum'</span>]</span><br><span class="line">        tot[tp] = tot[tp] + <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        types[tp] = t[<span class="string">'inforNum'</span>]</span><br><span class="line">        tot[tp] = <span class="number">1</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> type <span class="keyword">in</span> types.keys():</span><br><span class="line">    <span class="keyword">if</span> tot[type] == <span class="number">1</span>:<span class="keyword">continue</span></span><br><span class="line">    i = i + <span class="number">1</span></span><br><span class="line">    st = str(types[type]/tot[type])[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">5</span> == <span class="number">0</span>:</span><br><span class="line">        print(type,<span class="string">'ave'</span>,st,file = op)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(type, <span class="string">'ave'</span>, st, file=op,end=<span class="string">'\t\t'</span>)</span><br><span class="line">    <span class="keyword">if</span> i &gt; <span class="number">100</span>:</span><br><span class="line">        <span class="keyword">break</span><span class="comment">#only show some data</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">手套 ave <span class="number">2.3</span>		婴儿浴盆/婴儿浴床 ave <span class="number">3.0</span>		其他礼品 ave <span class="number">2.6</span>		陶瓷/景泰蓝 ave <span class="number">2.2</span>		麦克风 ave <span class="number">2.5</span></span><br><span class="line">数码产品 ave <span class="number">2.2</span>		粮油 ave <span class="number">2.7</span>		帐篷 ave <span class="number">3.2</span>		其他电器 ave <span class="number">2.6</span>		戒指 ave <span class="number">2.3</span></span><br><span class="line">奶瓶/奶嘴 ave <span class="number">3.0</span>		空气净化器 ave <span class="number">2.6</span>		电脑一体机 ave <span class="number">2.6</span>		门窗 ave <span class="number">3.0</span>		血压计/血糖仪 ave <span class="number">3.0</span></span><br><span class="line">空调扇 ave <span class="number">3.0</span>		佛珠 ave <span class="number">2.1</span>		酸奶机 ave <span class="number">2.5</span>		电子琴 ave <span class="number">3.0</span>		家畜/家禽 ave <span class="number">2.0</span></span><br><span class="line">蔬菜水果 ave <span class="number">2.0</span>		农用品/农产品 ave <span class="number">2.0</span>		冰箱 ave <span class="number">3.3</span>		电磁炉 ave <span class="number">2.6</span>		收音机/录音机 ave <span class="number">3.0</span></span><br><span class="line">饮水机 ave <span class="number">2.5</span>		电脑外设 ave <span class="number">2.0</span>		手链/手串 ave <span class="number">2.0</span>		架子 ave <span class="number">2.0</span>		考试/教辅 ave <span class="number">2.4</span></span><br><span class="line">灭火器/消防 ave <span class="number">2.0</span>		Xbox ave <span class="number">2.5</span>		牛仔裤 ave <span class="number">2.2</span>		其他锅 ave <span class="number">2.6</span>		字画 ave <span class="number">2.0</span></span><br><span class="line">配饰 ave <span class="number">2.0</span>		无线网卡 ave <span class="number">2.0</span>		美甲 ave <span class="number">3.0</span>		保健美容设备 ave <span class="number">3.3</span>		冰淇淋机 ave <span class="number">2.8</span></span><br><span class="line">无线路由器 ave <span class="number">2.9</span>		葫芦 ave <span class="number">2.0</span>		摇摇车 ave <span class="number">2.7</span>		咖啡 ave <span class="number">2.5</span>		台球桌 ave <span class="number">2.9</span></span><br><span class="line">安全护栏 ave <span class="number">3.0</span>		项链 ave <span class="number">2.1</span>		摇椅 ave <span class="number">4.0</span>		充电器 ave <span class="number">2.6</span>		燃气灶 ave <span class="number">2.7</span></span><br><span class="line">书桌 ave <span class="number">4.0</span>		设备机械 ave <span class="number">2.0</span>		其他保健品 ave <span class="number">2.3</span>		茶几 ave <span class="number">3.4</span>		美容器材 ave <span class="number">2.2</span></span><br><span class="line">饭盒 ave <span class="number">3.0</span>		其他商用电脑 ave <span class="number">3.0</span>		苗木 ave <span class="number">2.2</span>		其他工艺品 ave <span class="number">2.7</span>		地毯 ave <span class="number">3.5</span></span><br><span class="line">大家电 ave <span class="number">2.0</span>		沙发 ave <span class="number">3.6</span>		展柜货架 ave <span class="number">2.0</span>		其他装饰摆设 ave <span class="number">2.3</span>		前台桌 ave <span class="number">3.4</span></span><br><span class="line">其他耳机 ave <span class="number">2.8</span>		维生素/营养品 ave <span class="number">2.4</span>		封口机 ave <span class="number">3.0</span>		烤面包机/面包机 ave <span class="number">3.0</span>		护肤品 ave <span class="number">2.0</span></span><br><span class="line">十字绣 ave <span class="number">2.2</span>		其他农用品 ave <span class="number">2.0</span>		电脑椅 ave <span class="number">3.0</span>		办公桌 ave <span class="number">3.5</span>		键鼠 ave <span class="number">2.7</span></span><br><span class="line">钢琴 ave <span class="number">2.8</span>		折叠床 ave <span class="number">3.6</span>		干衣机 ave <span class="number">3.0</span>		培训课程 ave <span class="number">2.3</span>		五金工具 ave <span class="number">2.5</span></span><br><span class="line">相机/相机配件 ave <span class="number">2.0</span>		皮鞋/皮靴 ave <span class="number">2.6</span>		服饰/箱包 ave <span class="number">2.0</span>		茶叶 ave <span class="number">2.3</span>		相框 ave <span class="number">2.5</span></span><br><span class="line">台式电脑整机 ave <span class="number">2.7</span>		运动健身 ave <span class="number">2.0</span>		其他设备/办公用品 ave <span class="number">2.0</span>		复印传真 ave <span class="number">2.0</span>		葡萄酒/红酒 ave <span class="number">3.0</span></span><br><span class="line">其他桌子 ave <span class="number">3.5</span>		奶粉 ave <span class="number">2.9</span>		跑步机 ave <span class="number">2.1</span>		吸奶器 ave <span class="number">3.0</span>		空调 ave <span class="number">3.6</span></span><br><span class="line">电水壶/热水瓶 ave <span class="number">2.3</span>		其他家电 ave <span class="number">2.0</span>		海参 ave <span class="number">2.5</span>		<span class="number">400</span>电话 ave <span class="number">2.5</span>		晾衣架 ave <span class="number">3.6</span></span><br><span class="line">分裤/短裤 ave <span class="number">2.0</span></span><br></pre></td></tr></table></figure>
+<p>会有不同啦..但很难分析QAQ</p>
+<h2 id="生成数据库Code"><a href="#生成数据库Code" class="headerlink" title="生成数据库Code"></a>生成数据库Code</h2><p>想想不如重建一个数据……</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'dataBase'</span>]</span><br><span class="line">Info = db[<span class="string">'Info'</span>]</span><br><span class="line">analy = db[<span class="string">'analy'</span>]</span><br><span class="line">i = <span class="number">0</span></span><br><span class="line">types = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> Info.find():</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">        infor = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'new'</span>] != <span class="keyword">None</span>:</span><br><span class="line">            infor = infor + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'place'</span>] != <span class="keyword">None</span>:</span><br><span class="line">            infor = infor + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'time'</span>] != <span class="keyword">None</span>:</span><br><span class="line">            infor = infor + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">'title'</span>] != <span class="keyword">None</span>:</span><br><span class="line">            infor = infor + <span class="number">1</span></span><br><span class="line">        AnalysisInfo = dict(type=data[<span class="string">'type'</span>],inforNum=infor,month=data[<span class="string">'time'</span>][<span class="number">0</span>:<span class="number">2</span>],price=data[<span class="string">'price'</span>])</span><br><span class="line">        analy.insert_one(AnalysisInfo)</span><br><span class="line">    i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mongoexport -d dataBase -c analy --csv -f type,month,inforNum,price -o analy.csv</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T16:<span class="number">01</span>:<span class="number">44.909</span>+<span class="number">0800</span>	csv flag <span class="keyword">is</span> deprecated; please use --type=csv instead</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T16:<span class="number">01</span>:<span class="number">44.915</span>+<span class="number">0800</span>	connected to: localhost</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-11</span>T16:<span class="number">01</span>:<span class="number">45.004</span>+<span class="number">0800</span>	exported <span class="number">8719</span> records</span><br></pre></td></tr></table></figure>
+<p>这里本来想直接用numbers搞的结果数据量太大死机play</p>
+<h2 id="得出结论"><a href="#得出结论" class="headerlink" title="得出结论"></a>得出结论</h2><p>出人意料的是,信息齐全度和月份的关联最大</p>
+<p>因为很多人标价1元(假标价)所以坑害了一些数据真实性</p>
+<p>类别爬取大类的话想对好分析一些</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/11/PL3-1/">Python实战计划 如何让数据说话</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
+        <p><span>发布时间:</span>2016年08月11日 - 14时40分</p>
+        <p><span>最后更新:</span>2016年08月11日 - 20时46分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/11/PL3-1/" title="Python实战计划 如何让数据说话">http://renld.github.io/2016/08/11/PL3-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/11/PL3-1/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/10/PL2-final/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第二周实战作业：爬取一万商品数据</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#笔记"><span class="toc-number">1.</span> <span class="toc-text">笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#提出正确的问题"><span class="toc-number">1.1.</span> <span class="toc-text">提出正确的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过数据论证-找到答案"><span class="toc-number">1.2.</span> <span class="toc-text">通过数据论证,找到答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对比"><span class="toc-number">1.2.1.</span> <span class="toc-text">对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#细分"><span class="toc-number">1.2.2.</span> <span class="toc-text">细分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解读数据"><span class="toc-number">1.3.</span> <span class="toc-text">解读数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#对上一周大作业分析"><span class="toc-number">2.</span> <span class="toc-text">对上一周大作业分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#提出优秀问题"><span class="toc-number">2.1.</span> <span class="toc-text">提出优秀问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过数据论证-找到答案-1"><span class="toc-number">2.2.</span> <span class="toc-text">通过数据论证,找到答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#细分问题"><span class="toc-number">2.3.</span> <span class="toc-text">细分问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#横向对比-amp-amp-纵向对比"><span class="toc-number">2.4.</span> <span class="toc-text">横向对比&&纵向对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#价格"><span class="toc-number">2.4.1.</span> <span class="toc-text">价格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#月份"><span class="toc-number">2.4.2.</span> <span class="toc-text">月份</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#分析"><span class="toc-number">2.4.2.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类别"><span class="toc-number">2.4.3.</span> <span class="toc-text">类别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成数据库Code"><span class="toc-number">2.5.</span> <span class="toc-text">生成数据库Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#得出结论"><span class="toc-number">2.6.</span> <span class="toc-text">得出结论</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "Hide It";
+    var valueShow = "Show It";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/08/11/PL3-1/" data-title="Python实战计划 如何让数据说话" data-url="http://renld.github.io/2016/08/11/PL3-1/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"renld"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/08/10/PL2-final/" title="下一篇: 第二周实战作业：爬取一万商品数据">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/PL3-1/">Python实战计划 如何让数据说话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PL2-final/">第二周实战作业：爬取一万商品数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/PythonChallenge/">PythonChallenge</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/RE/">regular expression</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/PL2-3/">Python实战计划 多进程抓取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/08/Linux-01/">Linux私房菜 计算机概论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/08/PL2-2/">Python实战计划 爬取大规模数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/PL2-1/">Python实战计划 Begining for MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/PL1-final/">python实战计划 爬取商品数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-4/">python实战计划 动态数据爬取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-3/">python实战计划 静态网页爬取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-2/">python实战计划 爬取商品信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-1/">python实战计划 制作自己网页</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/HFPy/">Python 'First' Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/greedy/">Greedy & Violent</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/09/byefresh/">BYE Freshman</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/04/egt1/">Primary Engineering Practice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/Algor-Water/">GoodBye Big Algorithm Waterer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/treeDP/">DP in Tree</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/EEreview/">EEreview</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/part_list/">块状链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/sdii/">SDII_FUN</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/15/By-the-Year/">By The Year</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/STL-LEARN/">Notes for STL</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Renld
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >Site_visited: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">Page_visited: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 8;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80351677-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
