@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-11T12:46:25.000Z</updated>
+  <updated>2016-08-12T09:04:25.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第二节课程：开始做简单的数据图表</title>
+    <link href="http://renld.github.io/2016/08/11/PL3-2/"/>
+    <id>http://renld.github.io/2016/08/11/PL3-2/</id>
+    <published>2016-08-11T13:22:42.000Z</published>
+    <updated>2016-08-12T09:04:25.000Z</updated>
+    
+    <content type="html">&lt;p&gt;第一步: 整理清洗数据&lt;/p&gt;
+&lt;p&gt;第二步: 更新数据库&lt;/p&gt;
+&lt;p&gt;第三步: 数据的可视化&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;code&gt;jupyter notebook&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;update(&amp;#123;id:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;,&amp;#123;$set:&amp;#123;name:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.createCollection(&lt;span class=&quot;string&quot;&gt;&#39;Ita&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.Ita.copyTo(&lt;span class=&quot;string&quot;&gt;&#39;Info&#39;&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;#反了...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data,type,name&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;charts.plot(series,show=&lt;span class=&quot;string&quot;&gt;&#39;inline&#39;&lt;/span&gt;,options=dict(title=dict(text=&lt;span class=&quot;string&quot;&gt;&#39;xxx&#39;&lt;/span&gt;)))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#sample&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;series = [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;OS X&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;Ubuntu&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;color&#39;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;#ff0066&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;Windows&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;Others&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;29&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;series2 = [&amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;John&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;],&lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;&amp;#125;,&amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;name&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;John&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;data&#39;&lt;/span&gt;: [&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;],&lt;span class=&quot;string&quot;&gt;&#39;type&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;column&#39;&lt;/span&gt;&amp;#125;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;charts.plot(series, show=&lt;span class=&quot;string&quot;&gt;&#39;inline&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# options=dict(title=dict(text=&#39;Charts are AWESOME!!!&#39;))&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;Aim&quot;&gt;&lt;a href=&quot;#Aim&quot; class=&quot;headerlink&quot; title=&quot;Aim&quot;&gt;&lt;/a&gt;Aim&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/python/Aim.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;由于当时只爬了8k条数据。。所以直接用给的json&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mongoimport -d ceshi -c item_info &lt;span class=&quot;string&quot;&gt;&quot;../data_sample.json&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;Code&quot;&gt;&lt;a href=&quot;#Code&quot; class=&quot;headerlink&quot; title=&quot;Code&quot;&gt;&lt;/a&gt;Code&lt;/h1&gt;&lt;p&gt;update  不要写成 updata…&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://renld.cn/cp/3-2.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;成果&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/python/效果.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;感想&quot;&gt;&lt;a href=&quot;#感想&quot; class=&quot;headerlink&quot; title=&quot;感想&quot;&gt;&lt;/a&gt;感想&lt;/h1&gt;&lt;p&gt;基本也是逃模板啦..详情模板戳到上面那个页面就好&lt;/p&gt;
+&lt;p&gt;本来想把那个页面直接copy内嵌进来的..&lt;/p&gt;
+&lt;p&gt;发现根本加载不出就算了&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一步: 整理清洗数据&lt;/p&gt;
+&lt;p&gt;第二步: 更新数据库&lt;/p&gt;
+&lt;p&gt;第三步: 数据的可视化&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://renld.github.io/tags/python/"/>
+    
+      <category term="dataAnalysis" scheme="http://renld.github.io/tags/dataAnalysis/"/>
+    
+  </entry>
   
   <entry>
     <title>Python实战计划 如何让数据说话</title>
@@ -1632,9 +1672,9 @@
     </summary>
     
     
-      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
-    
       <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
+    
+      <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
     
   </entry>
   
@@ -1784,61 +1824,6 @@
     
     
       <category term="algorithm" scheme="http://renld.github.io/tags/algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EEreview</title>
-    <link href="http://renld.github.io/2016/06/25/EEreview/"/>
-    <id>http://renld.github.io/2016/06/25/EEreview/</id>
-    <published>2016-06-24T22:42:05.000Z</published>
-    <updated>2016-07-12T07:32:48.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
-&lt;p&gt;​                      — 在四级作文里面这般描述&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;来移动的第一个学期,最直观的感觉是绩点特别容易刷高(第二学期专业4.6),而后课相对较”水”,于是开始盘算转院的想法.因为对于IT人而言,最难受的,莫过于发现自己没有学到很扎实的东西吧.相比软工的模拟卷,我们的卷子总会简单一个层次,相比他们的教学内容,我们也总会显得”现代化”一些,但也相对似乎学到的东西少了那么一些.只能以”反正这些基础知识抓牢最重要”的想法,认可我们院的培养方案.&lt;/p&gt;
-&lt;p&gt;然而这一想法,是在遇见&amp;lt;&amp;lt;电子与电路技术&amp;gt;&amp;gt;这门课之前.&lt;/p&gt;
-&lt;p&gt;第一节课保老师就跟我们说,上一届师兄师姐很不争气的在期末考试没有得到漂亮的成绩,问师姐也是”TA努力找分然而还是无可奈何”,直到考试前我也觉得我们院的卷子应该比考前刷过的那几套软院的卷子简单的不可置否心理,然而考卷出来后发现并不如之前所想.这大概是电工带来的一些惊喜吧.毕竟总要有一些东西来拿来”炫耀”XD.&lt;/p&gt;
-&lt;p&gt;说实在的,这学期电工学的很努力,却显得很费力.周四电工课在一节外教课之后,难免犯困,周五也临近周末,难免有所轻松情绪.每节课与老师有很长时间的眼神交流,依旧会走神.而在电工课上走神的效果,大概可以类比那个”为什么学不好数学,是因为小学上数学课橡皮掉了”的笑话.最重要的是发现,前面几章扫了一遍PPT后,课上走神的那几分钟能补回来.但是最后几章做作业的时候,都是在套公式,”照葫芦画瓢”,终于在最后一章里面的作业上把作业”挂”了.&lt;/p&gt;
-&lt;p&gt;当时TA特别恳切地写下了这样一段话,我拍照留了下来&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;平时都很不错,怎么这次这样,是不是自己没有理解清楚?&lt;/p&gt;
-&lt;p&gt;回去参考同学或PPT的吧.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;当时真的面色绯红地对自己有些沮丧.因为真的很努力去学了,却只有事倍功半的结果.(后来检查这章作业是因为莫名其妙的分析错误.)于是时间也快到考试周了,于是开始查漏补缺,但对套了一个月公式的我而言更像是开天辟地.不愿意在死坑在英文里面于是翻开了中文教材,尽管里面有很多细节错误,但是瑕不掩瑜的为我展开了一个新的世界.期末复习的时候每一章中文对应着记录英文笔记,相对”高效”的得到了其中的”奥义”.于是在考试周开始前整理完试卷,准备好了迎接.尽管周四前发现笔记又经历了一遍忘却,但是对于电工的重新学习是功不可没的,想起保老师曾经说的一句话:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;电工还是很重要的,不要因为英文而学不好电工.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;电子技术的另一方面是电工实验,因为对于高中物理实验”对实验结果与预期符合”的苛求,曾有一些心理阴影.这个学期跟电工实验也算是较上了劲.保老师曾经一句”课前两小时,课中两小时,课后两小时”曾把我们一惊,但是实际我一个学期的电工实验却是基本每次都要重新再来一次实验室完成实验,课后的总结也至少四五个小时.以致于把它称作了”电工project”.当然这样也得到了TA的肯定,期末将我报告收去.也算是一些惊喜.如此”费力”的电工实验中,当仁不让地学会了proteus对电路的模拟,而后对实际实验进行对比分析,学会了matlab/excel对于数据的处理,做出相对漂亮的图像和拟合分析.这是高中顽固的理论所不能及的.&lt;/p&gt;
-&lt;p&gt;开学写的电工预期文藻很漂亮,而这篇报告是在凌晨四点一个嘈杂环境下写下.但是还想在最后反思一下为什么学的那么”吃力”.(希望能因此收获别人所不能收获的收获吧).尽管我们没有师弟师妹了,但是对于自己的大二的硬件方面学习应该有参考意义.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;课前缺乏预习,导致课上”难免的”走神打击是致命性的.而后就”两眼懵逼”地上过一节课.其实大多数时候都是在上课弄清楚了老师到底讲了一些什么,但是不消半个星期忘却的结局,还是挺令人郁闷的.归根结底其实是因为自己没有理解,或者说没有弄清关系式是怎么来的,跟着老师走了一遍,自己&lt;strong&gt;就像&lt;/strong&gt;会推了一般.&lt;/li&gt;
-&lt;li&gt;仍然习惯于凭借自己智商和搜索引擎解决问题的思维习惯,然而在电子技术上,教材才是王道.教材所对知识点的讲解归纳是搜索引擎所无法媲美的.而这样思维习惯最直接的后果是,看起来学会了,但是并没有构架起真正对于思维的理解.这也是软工和电工之间的区别,软工的直接目的便是直接使用,很多时候搜索引擎能直接高效的解决问题,但是电工是一门专业性极强的学科,很多时候难以凭借”民科”解决问题.&lt;/li&gt;
-&lt;li&gt;没有正确的使用教材.因为这学期分配给算法的时间较多,于是电工的英文教材看看停停,但是对于外文教材看看停停大抵是大忌.因为很多单词一开始看了后面就忘了,而对于阅读中的”似曾相识”的单词往往会糊弄过去.以致于期末复习前对于整本教材是一知半解.&lt;/li&gt;
-&lt;li&gt;电工毕竟是一门理工科,而不是通过”套公式”糊弄过去的学科.所以电工其实培养的是一种理性思维,一个较为有逻辑的思维体系.做期末考试题的时候,觉得有一些像高中物理的竞赛题,但是只要”强行” 用KCL, KVL推理,还是可以解决的问题.毕竟理科更多的是对于扎实逻辑思维掌握运用的考察,而不是对于”跳跃思维”,也就是”套公式”记忆力的评判.&lt;/li&gt;
-&lt;li&gt;这一点不算教训吧.就是对于电工实验以及以后很多的实验课,还是要踏实而且”创新”地去尝试,去做好,就像保老师所说,万一那异常数据,成了以后重大的实验发现呢.其实另一方面我觉得更重要的是,这样的学习下,大概能成为一个理工男,扎实诚恳的精神面貌,或许就是这些扎实科目的练习下,能培养的能力吧.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;最后一节实验课,保老师指出”两个10kΩ不一样,你是可以用下面的100Ω的滑动变阻器补偿成一样”的思维方式,毕竟我们上大学,不应该只是走一套套模板,过一场场考试,毕竟我们的方向,不仅是把实验做成功,更是用自己的力量,努力把事情做得更加漂亮.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/ee.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;这大抵是学过第一门,让我觉得大学不那么水的课吧.&lt;/p&gt;
-&lt;p&gt;​                      — 在四级作文里面这般描述&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Life" scheme="http://renld.github.io/tags/Life/"/>
-    
-      <category term="EE" scheme="http://renld.github.io/tags/EE/"/>
     
   </entry>
   
