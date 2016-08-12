@@ -4,7 +4,13 @@
   
     
     <entry>
-      <title><![CDATA[第二节课程：开始做简单的数据图表]]></title>
+      <title><![CDATA[python实战计划 使用 find 函数]]></title>
+      <url>http://renld.github.io/2016/08/12/PL3-3/</url>
+      <content type="html"><![CDATA[今天才发现sublime可以直接编译我我我…… highcharts find({needName:needValue},{showType:showValue}) 上次作业的清洗可以简化为for i in item_info.find(&#123;'pub_date':&#123;'$in':['2016.01.12','2016.01.14']&#125;),&#123;'area':&#123;'$slice':2&#125;,'_id':0&#125;:#id:notshow print(i) datefrom datetime import date,timedeltadate(2016,02,02)days = timedelta(days=1)while the_date &lt;= end_date: yield (the_date.strftime('%Y.%m.%d')) the_date = the_date + days 模板 options = &#123; 'chart' : &#123;'zoomType':'xy'&#125;, 'title' : &#123;'text': 'Monthly Average Temperature'&#125;, 'subtitle': &#123;'text': 'Source: WorldClimate.com'&#125;, 'xAxis' : &#123;'categories': ['周一', '周二', '周三', '周四']&#125;, 'yAxis' : &#123;'title': &#123;'text': '数量'&#125;&#125; &#125;series = [ &#123; 'name': 'OS X', 'data': [11,2,3,4], 'type': 'line', 'y':5&#125;, &#123; 'name': 'Ubuntu', 'data': [8,5,6,7], 'type': 'line', 'color':'#ff0066'&#125;, &#123; 'name': 'Windows', 'data': [12,6,7,2], 'type': 'line'&#125;, &#123; 'name': 'Others', 'data': [29,24,68,23], 'type': 'line'&#125; ]charts.plot(series, options=options,show='inline')# options=dict(title=dict(text='Charts are AWESOME!!!')) #AIM 依旧用现成数据库数据吧.. Results结果 Conclusionyield 是一个类似 return 的关键字，只是这个函数返回的是个生成器。 datetime]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python实战计划 简单的数据图表]]></title>
       <url>http://renld.github.io/2016/08/11/PL3-2/</url>
       <content type="html"><![CDATA[第一步: 整理清洗数据 第二步: 更新数据库 第三步: 数据的可视化 jupyter notebook update(&#123;id:1&#125;,&#123;$set:&#123;name:2&#125;&#125;)db.createCollection('Ita')db.Ita.copyTo('Info')#反了...data,type,namecharts.plot(series,show='inline',options=dict(title=dict(text='xxx'))) #sampleseries = [ &#123; 'name': 'OS X', 'data': [11], 'type': 'column'&#125;, &#123; 'name': 'Ubuntu', 'data': [8], 'type': 'column', 'color':'#ff0066'&#125;, &#123; 'name': 'Windows', 'data': [12], 'type': 'column'&#125;, &#123; 'name': 'Others', 'data': [29], 'type': 'column'&#125; ]series2 = [&#123;'name': 'John','data': [5],'type': 'column'&#125;,&#123;'name': 'John','data': [5],'type': 'column'&#125;]charts.plot(series, show='inline')# options=dict(title=dict(text='Charts are AWESOME!!!')) Aim 由于当时只爬了8k条数据。。所以直接用给的json mongoimport -d ceshi -c item_info "../data_sample.json" Codeupdate 不要写成 updata… 成果 感想基本也是逃模板啦..详情模板戳到上面那个页面就好 本来想把那个页面直接copy内嵌进来的.. 发现根本加载不出就算了]]></content>
     </entry>
