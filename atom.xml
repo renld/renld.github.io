@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-08-12T14:41:01.000Z</updated>
+  <updated>2016-08-12T15:27:34.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -20,16 +20,19 @@
     <link href="http://renld.github.io/2016/08/12/vim/"/>
     <id>http://renld.github.io/2016/08/12/vim/</id>
     <published>2016-08-12T14:32:12.000Z</published>
-    <updated>2016-08-12T14:41:01.000Z</updated>
+    <updated>2016-08-12T15:27:34.000Z</updated>
     
-    <content type="html">&lt;p&gt;转载学习~~~&lt;/p&gt;
+    <content type="html">&lt;p&gt;转载学习~~~(挖个坑在这里)&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;http://renld.github.io/chvim/&quot;&gt;陈皓&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://renld.github.io/chvim/&quot;&gt;陈皓&lt;/a&gt; &lt;a href=&quot;https://wiki.archlinux.org/index.php/Vim_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中文文档&lt;/a&gt;) &lt;a href=&quot;http://linux.vbird.org/linux_basic/0310vi.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;鸟哥&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://radar-10050281.cos.myqcloud.com/python/3/vim.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;鸟哥教程(包含练习)&lt;/p&gt;
+&lt;p&gt;vim分为一般模式,编辑模式和命令行模式&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;转载学习~~~&lt;/p&gt;
+      &lt;p&gt;转载学习~~~(挖个坑在这里)&lt;/p&gt;
     
     </summary>
     
