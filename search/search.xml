@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[python实战计划 聚合管道高效查找数据]]></title>
       <url>http://renld.github.io/2016/08/14/PL3-4/</url>
-      <content type="html"><![CDATA[collection.aggregate(pipeline) 笔记$match可以用’$and’, [‘match’:{‘$and’:[{‘pub_date’:’2222’},{‘dc’:’dwd’}]}] $group {‘_id’: {‘\$slice’ : [‘\$cates’ , 2, 1]}’count’ : {‘$sum’ : 1}} $sort{‘$sort’ : { ‘counts’ : 2 }} $limit输出个数 Aim统计一天内交易成功商品各城区的饼图 Resultlink 感想这个任务还是在套模板…复习的时候记得回顾代码就行.. 相关文档 1 因为没理解怎么用python生成这样的图觉得plotly库更加优秀?]]></content>
+      <content type="html"><![CDATA[collection.aggregate(pipeline) 笔记$match可以用’$and’, [‘match’:{‘$and’:[{‘pub_date’:’2222’},{‘dc’:’dwd’}]}] $group {‘_id’: {‘\$slice’ : [‘\$cates’ , 2, 1]}’count’ : {‘$sum’ : 1}} $sort{‘$sort’ : { ‘counts’ : 2 }} $limit输出个数 Aim统计一天内交易成功商品各城区的饼图 Resultcode link 感想这个任务还是在套模板…复习的时候记得回顾代码就行.. 相关文档 1 因为没理解怎么用python生成这样的图觉得plotly库更加优秀?]]></content>
     </entry>
     
     <entry>
