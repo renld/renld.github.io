@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python实战计划 分析二手商品行情 | Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="北京各个城区发帖量最多的三大类目
+各大类目成色对应的平均价格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python实战计划 分析二手商品行情">
+<meta property="og:url" content="http://renld.github.io/2016/08/15/PL3-final/index.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="北京各个城区发帖量最多的三大类目
+各大类目成色对应的平均价格">
+<meta property="og:updated_time" content="2016-08-15T14:25:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python实战计划 分析二手商品行情">
+<meta name="twitter:description" content="北京各个城区发帖量最多的三大类目
+各大类目成色对应的平均价格">
+  
+    <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/fan.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Renld</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>毛遂自荐</li>
+                        <li>按图索骥</li>
+                        
+                        <li>抛砖引玉</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">戳回老本营</a></li>
+                        
+                            <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                        
+                            <li><a href="/tagcloud.swf">这里有个球</a></li>
+                        
+                            <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                        
+                            <li><a href="/about">自述与留言</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                            
+                                <a class="fl mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                            
+                                <a class="fl wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <li><a href="/tags/C/" style="font-size: 11.43px;">C++</a></li> <li><a href="/tags/Computer/" style="font-size: 10px;">Computer</a></li> <li><a href="/tags/EE/" style="font-size: 11.43px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 15.71px;">Life</a></li> <li><a href="/tags/Linux/" style="font-size: 10px;">Linux</a></li> <li><a href="/tags/Macau/" style="font-size: 10px;">Macau</a></li> <li><a href="/tags/MongoDB/" style="font-size: 12.86px;">MongoDB</a></li> <li><a href="/tags/algorithm/" style="font-size: 14.29px;">algorithm</a></li> <li><a href="/tags/crawler/" style="font-size: 17.14px;">crawler</a></li> <li><a href="/tags/dataAnalysis/" style="font-size: 15.71px;">dataAnalysis</a></li> <li><a href="/tags/html/" style="font-size: 18.57px;">html</a></li> <li><a href="/tags/python/" style="font-size: 20px;">python</a></li> <li><a href="/tags/regular-expression/" style="font-size: 10px;">regular expression</a></li> <li><a href="/tags/vim/" style="font-size: 10px;">vim</a></li>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://terry.pub/">terry</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Renld</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/fan.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Renld</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">戳回老本营</a></li>
+                
+                    <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                
+                    <li><a href="/tagcloud.swf">这里有个球</a></li>
+                
+                    <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                
+                    <li><a href="/about">自述与留言</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                    
+                        <a class="wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-PL3-final" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/15/PL3-final/" class="article-date">
+      <time datetime="2016-08-15T08:17:42.000Z" itemprop="datePublished">2016-08-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python实战计划 分析二手商品行情
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dataAnalysis/">dataAnalysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>北京各个城区发帖量最多的三大类目</li>
+<li>各大类目成色对应的平均价格<a id="more"></a>
+</li>
+</ol>
+<p>#分析</p>
+<ol>
+<li>引入数据库等预处理</li>
+<li>得到城区,依照<a href="http://renld.cn/pc/3-4/" target="_blank" rel="external">3-4</a>内容得到最多三大类目以及数目<ul>
+<li>因为area是个数组,得依照<a href="http://renld.cn/pc/3-2/" target="_blank" rel="external">3-2</a>数据清洗一下..才能用match方法</li>
+<li>输出csv文件参考<a href="http://renld.cn/2016/08/07/PL1-final/" target="_blank" rel="external">第一章实战</a>, 然后发现jupyter不能直接生成文件..</li>
+<li>那还是调用数据库吧<a href="http://renld.cn/2016/08/10/PL2-final/" target="_blank" rel="external">第二章实战</a></li>
+</ul>
+</li>
+<li>得到类目,依照<a href="http://renld.cn/pc/3-3/" target="_blank" rel="external">3-3</a>分别对每个类目分析价格</li>
+</ol>
+<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><p><a href="http://renld.cn/pc/3-final/" target="_blank" rel="external">code页面</a> <a href="http://renld.cn/pc/3-5/" target="_blank" rel="external">第一个任务</a>  <a href="http://renld.cn/pc/3-52/" target="_blank" rel="external">第二个任务</a></p>
+<h2 id="放到函数中的plot"><a href="#放到函数中的plot" class="headerlink" title="放到函数中的plot"></a>放到函数中的plot</h2><p>但这样打开的网页不能展示出来,于是<a href="http://renld.cn/pc/3-5/" target="_blank" rel="external">第一个任务</a> <a href="http://renld.cn/pc/3-52/" target="_blank" rel="external">第二个任务</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">charts.plot(top3, options=opt) <span class="comment"># 居然输出不了.. show = 'inline'</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://renld.cn/2016/08/07/PL2-1/" target="_blank" rel="external">导出csv</a> <a href="http://radar-10050281.cos.myqcloud.com/output1.csv" target="_blank" rel="external">任务1下载</a> <a href="http://radar-10050281.cos.myqcloud.com/output2.csv" target="_blank" rel="external">任务2下载</a> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongoexport -d ceshi -c Top --csv -f area,name,data -o output1.csv</span><br><span class="line">mongoexport -d ceshi -c ave --csv -f type,new,avePrice,number -o output2.csv</span><br></pre></td></tr></table></figure>
+<h2 id="完整code"><a href="#完整code" class="headerlink" title="完整code"></a>完整code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In[179]:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"><span class="keyword">import</span> charts</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta,date</span><br><span class="line">client = pymongo.MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">db = client[<span class="string">'ceshi'</span>]</span><br><span class="line">info = db[<span class="string">'ganji'</span>]</span><br><span class="line">Top = db[<span class="string">'Top'</span>] <span class="comment"># adding!!!</span></span><br><span class="line">ave = db[<span class="string">'ave'</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># #分析</span></span><br><span class="line"><span class="comment"># 1. 引入数据库等预处理</span></span><br><span class="line"><span class="comment"># 2. 得到城区,依照[3-4](http://renld.cn/pc/3-4/)内容得到最多三大类目以及数目</span></span><br><span class="line"><span class="comment">#    - 因为area是个数组,得依照[3-2](http://renld.cn/pc/3-2/)数据清洗一下..才能用match方法</span></span><br><span class="line"><span class="comment">#    - 输出csv文件参考[第一章实战](http://renld.cn/2016/08/07/PL1-final/), 然后发现jupyter不能直接生成文件..</span></span><br><span class="line"><span class="comment">#    - 那还是调用数据库吧[第二章实战](http://renld.cn/2016/08/10/PL2-final/)</span></span><br><span class="line"><span class="comment"># 3. 得到类目,依照[3-3](http://renld.cn/pc/3-3/)分别对每个类目分析价格</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In[106]:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#数据清洗,得到地区和类目</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> info.find():</span><br><span class="line">    area_update = i[<span class="string">'area'</span>][<span class="number">0</span>]</span><br><span class="line">    typer_update = i[<span class="string">'cates'</span>][<span class="number">2</span>]</span><br><span class="line">    info.update_one(&#123;<span class="string">'_id'</span> : i[<span class="string">'_id'</span>]&#125; , &#123;<span class="string">'$set'</span> : &#123;<span class="string">'area_update'</span> : area_update&#125;&#125;)</span><br><span class="line">    info.update_one(&#123;<span class="string">'_id'</span> : i[<span class="string">'_id'</span>]&#125; , &#123;<span class="string">'$set'</span> : &#123;<span class="string">'type_update'</span> : typer_update&#125;&#125;)</span><br><span class="line">    </span><br><span class="line">area = []</span><br><span class="line">place = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> info.find():</span><br><span class="line">    area.append(i[<span class="string">'area_update'</span>])</span><br><span class="line">    place.append(i[<span class="string">'type_update'</span>])</span><br><span class="line">arr = list(set(area))</span><br><span class="line">brr = list(set(place))</span><br><span class="line">print(arr,brr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 得到城区,依照[3-4](http://renld.cn/pc/3-4/)内容得到最多三大类目以及数目</span></span><br><span class="line"><span class="comment">#    - 因为area是个数组,得依照[3-2](http://renld.cn/pc/3-2/)数据清洗一下..才能用match方法</span></span><br><span class="line"><span class="comment">#    - 输出csv文件参考[第一章实战](http://renld.cn/2016/08/07/PL1-final/), 然后发现jupyter不能直接生成文件..</span></span><br><span class="line"><span class="comment">#    - 那还是调用数据库吧[第二章实战](http://renld.cn/2016/08/10/PL2-final/)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In[122]:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> info.find().limit(<span class="number">300</span>):</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">'title'</span>] == <span class="string">'【'</span>:</span><br><span class="line">        i[<span class="string">'title'</span>] = t[<span class="string">'title'</span>][<span class="number">3</span>:]</span><br><span class="line">    tt = i[<span class="string">'title'</span>]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> tt[<span class="number">1</span>] == <span class="string">'新'</span>:</span><br><span class="line">        newT = tt[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        newT = <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">if</span> newT != <span class="keyword">None</span>:</span><br><span class="line">        print(newT)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(i[<span class="string">'title'</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># In[95]:</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Get_Top_Three</span><span class="params">(arear)</span>:</span></span><br><span class="line">    pipeline = [</span><br><span class="line">        &#123;<span class="string">'$match'</span> : &#123;<span class="string">'area_update'</span> : arear &#125;&#125;,</span><br><span class="line">    <span class="comment">#    &#123;'$match':&#123;'$and':[&#123;'pub_date':&#123;'$gte':date1,'$lte':date2&#125;&#125;,&#123;'area':&#123;'$all':area&#125;&#125;]&#125;&#125;, 标程是这样处理的</span></span><br><span class="line">        &#123;<span class="string">'$group'</span> : &#123;<span class="string">'_id'</span>: &#123;<span class="string">'$slice'</span> : [<span class="string">'$cates'</span>,<span class="number">2</span>,<span class="number">1</span>]&#125;, <span class="string">'counts'</span>: &#123;<span class="string">'$sum'</span> : <span class="number">1</span>&#125;&#125;&#125;,</span><br><span class="line">        &#123;<span class="string">'$sort'</span>  : &#123;<span class="string">'counts'</span> : <span class="number">-1</span>&#125;&#125;,</span><br><span class="line">        &#123;<span class="string">'$limit'</span> : <span class="number">3</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">    top3 = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> info.aggregate(pipeline):</span><br><span class="line">        num = dict(name=i[<span class="string">'_id'</span>],data=[i[<span class="string">'counts'</span>]],area=arear)</span><br><span class="line">        top3.append(num)</span><br><span class="line">        Top.insert_one(num)</span><br><span class="line">    <span class="keyword">for</span> tp <span class="keyword">in</span> top3:</span><br><span class="line">        <span class="keyword">del</span> tp[<span class="string">'_id'</span>]</span><br><span class="line">        <span class="keyword">del</span> tp[<span class="string">'area'</span>] <span class="comment">#能否合并..</span></span><br><span class="line">        tp[<span class="string">'type'</span>] = <span class="string">'column'</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># print(num)</span></span><br><span class="line">    <span class="comment"># print(top3) 忘了python直接修改变量了</span></span><br><span class="line">    opt = dict(chart=&#123;<span class="string">'zoomType'</span>:<span class="string">'xy'</span>&#125;,</span><br><span class="line">                   title=&#123;<span class="string">'text'</span>: str(<span class="string">'在北京'</span> + arear + <span class="string">'发帖数量最大的类目'</span>)&#125;,</span><br><span class="line">                   yAxis   = &#123;<span class="string">'title'</span>: &#123;<span class="string">'text'</span>: <span class="string">'数量'</span>&#125;&#125;)</span><br><span class="line">    charts.plot(top3, options=opt) <span class="comment"># 居然输出不了.. show = 'inline'</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># test </span></span><br><span class="line"><span class="comment"># Get_Top_Three(arr[3])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这样打开的网页不能展示出来,于是[存了一个](http://renld.cn/pc/3-5/)</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># ```python</span></span><br><span class="line"><span class="comment"># charts.plot(top3, options=opt) # 居然输出不了.. show = 'inline'</span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p># </p>
+<h1 id="导出csv-下载"><a href="#导出csv-下载" class="headerlink" title="导出csv 下载"></a><a href="http://renld.cn/2016/08/07/PL2-1/" target="_blank" rel="external">导出csv</a> <a href="http://radar-10050281.cos.myqcloud.com/output1.csv" target="_blank" rel="external">下载</a></h1><h1 id="In-98"><a href="#In-98" class="headerlink" title="In[98]:"></a>In[98]:</h1><p>for p in arr:<br>    Get_Top_Three(p)</p>
+<h1 id="这里还是得用管道处理更方便"><a href="#这里还是得用管道处理更方便" class="headerlink" title="这里还是得用管道处理更方便"></a>这里还是得用管道处理更方便</h1><h1 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipeline2 = [</span></span><br><span class="line"><span class="comment">#     &#123;'$match':&#123;'$and':[&#123;'pub_date':&#123;'$gte':'2015.12.25','$lte':'2015.12.27'&#125;&#125;,</span></span><br><span class="line"><span class="comment">#                        &#123;'cates':&#123;'$all':['北京二手手机']&#125;&#125;,</span></span><br><span class="line"><span class="comment">#                        &#123;'look':&#123;'$nin':['-']&#125;&#125;</span></span><br><span class="line"><span class="comment">#                       ]&#125;&#125;,</span></span><br><span class="line"><span class="comment">#     &#123;'$group':&#123;'_id':'$look','avg_price':&#123;'$avg':'$price'&#125;&#125;&#125;,</span></span><br><span class="line"><span class="comment">#     &#123;'$sort':&#123;'avg_price':-1&#125;&#125;</span></span><br><span class="line"><span class="comment"># ]</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># for i in item_info.aggregate(pipeline2):</span></span><br><span class="line"><span class="comment">#     print(i)</span></span><br><span class="line"><span class="comment">#     </span></span><br><span class="line"><span class="comment"># def data_gen2(date1,date2,cates):</span></span><br><span class="line"><span class="comment">#     pipeline = [</span></span><br><span class="line"><span class="comment">#     &#123;'$match':&#123;'$and':[&#123;'pub_date':&#123;'$gte':date1,'$lte':date2&#125;&#125;,</span></span><br><span class="line"><span class="comment">#                        &#123;'cates':&#123;'$all':cates&#125;&#125;,</span></span><br><span class="line"><span class="comment">#                        &#123;'look':&#123;'$nin':['-']&#125;&#125;</span></span><br><span class="line"><span class="comment">#                       ]&#125;&#125;,</span></span><br><span class="line"><span class="comment">#     &#123;'$group':&#123;'_id':'$look','avg_price':&#123;'$avg':'$price'&#125;&#125;&#125;,</span></span><br><span class="line"><span class="comment">#     &#123;'$sort':&#123;'avg_price':1&#125;&#125;</span></span><br><span class="line"><span class="comment"># ]</span></span><br><span class="line"><span class="comment">#     for i in item_info.aggregate(pipeline):</span></span><br><span class="line"><span class="comment">#         yield i['avg_price']</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure></h1><h1 id="In-182"><a href="#In-182" class="headerlink" title="In[182]:"></a>In[182]:</h1><p>def Get_Ave(typer):<br>    newT = []<br>    priceT = []<br>    for i in info.find({},{‘_id’:0,’look’:1,’price’:1}):<br>        newTime = i[‘look’]<br>        priceTime = int(i[‘price’])<br>        if len(newTime) &gt; 2:<br>            if newTime[1] == ‘成’:<br>                newT.append(int(newTime[0]))<br>                priceT.append(priceTime)<br>            elif newTime[2] == ‘成’:<br>                tp = int(newTime[0]) + int(newTime[1])/10<br>                newT.append(tp)<br>                priceT.append(priceTime)<br>            elif newTime[0] == ‘报’:<br>                newT.append(0)<br>                priceT.append(priceTime)<br>            else:<br>                pass# python 注意写pass<br>        else:<br>            pass<br>    tp = sorted(list(set(newT)))<br>    pc = []<br>    kfc = []<br>    tot = dict()# count average price<br>    cnt = dict()<br>    for i in range(len(newT)):<br>        n = newT[i]<br>        p = priceT[i]<br>        if n in tot:<br>            tot[n] = tot[n] + p<br>            cnt[n] = cnt[n] + 1<br>        else:<br>            tot[n] = p<br>            cnt[n] = 1<br>    for i in tp:<br>        pc.append(tot[i]/cnt[i])<br>        kfc.append(cnt[i])</p>
+<pre><code>data = [dict(name=&apos;average&apos;,data=pc,type=&apos;line&apos;),dict(name=&apos;sellNum&apos;,data=kfc,type=&apos;line&apos;)]
+options = {
+    &apos;title&apos;   : {&apos;text&apos;: (typer + &apos;新旧-价格&apos;)},
+    &apos;xAxis&apos;   : {&apos;categories&apos;: tp},
+    &apos;yAxis&apos;   : {&apos;title&apos;: {&apos;text&apos;: &apos;价格&apos;}},
+}
+
+charts.plot(data, options=options, show = &apos;inline&apos;)
+for i in range(len(pc)):
+    ave.insert_one(dict(type=typer,new=tp[i],avePrice=pc[i],number=kfc[i]))
+</code></pre><h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h1 id="Get-Ave-brr-3"><a href="#Get-Ave-brr-3" class="headerlink" title="Get_Ave(brr[3])"></a>Get_Ave(brr[3])</h1><h1 id="In-183"><a href="#In-183" class="headerlink" title="In[183]:"></a>In[183]:</h1><p>for data in brr:<br>    Get_Ave(data)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Learn</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">&#123;&apos;$match&apos;:&#123;&apos;$and&apos;:[&#123;&apos;pub_date&apos;:&#123;&apos;$gte&apos;:date1,&apos;$lte&apos;:date2&#125;&#125;,&#123;&apos;area&apos;:&#123;&apos;$all&apos;:area&#125;&#125;]&#125;&#125;, 标程是这样处理的</span><br></pre></td></tr></table></figure>
+<ul>
+<li>python注意写 else: pass</li>
+<li>‘all’ 寻找数组内元素, ‘nin’排除某种元素(pipeline其实是mongoDB的东西..)</li>
+<li>sorted(d.items(), key=lambda x: x[1])</li>
+<li>忽略了全新…..所以还是得好好分析数据</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/15/PL3-final/">python实战计划 分析二手商品行情</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
+        <p><span>发布时间:</span>2016年08月15日 - 16时17分</p>
+        <p><span>最后更新:</span>2016年08月15日 - 22时25分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/15/PL3-final/" title="python实战计划 分析二手商品行情">http://renld.github.io/2016/08/15/PL3-final/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/15/PL3-final/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/14/PL3-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python实战计划 聚合管道高效查找数据</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#code"><span class="toc-number">1.</span> <span class="toc-text">code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#放到函数中的plot"><span class="toc-number">1.1.</span> <span class="toc-text">放到函数中的plot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整code"><span class="toc-number">1.2.</span> <span class="toc-text">完整code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#导出csv-下载"><span class="toc-number">2.</span> <span class="toc-text">导出csv 下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#In-98"><span class="toc-number">3.</span> <span class="toc-text">In[98]:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这里还是得用管道处理更方便"><span class="toc-number">4.</span> <span class="toc-text">这里还是得用管道处理更方便</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">1234567891011121314151617181920212223242526# pipeline2 = [#     {'$match':{'$and':[{'pub_date':{'$gte':'2015.12.25','$lte':'2015.12.27'}},#                        {'cates':{'$all':['北京二手手机']}},#                        {'look':{'$nin':['-']}}#                       ]}},#     {'$group':{'_id':'$look','avg_price':{'$avg':'$price'}}},#     {'$sort':{'avg_price':-1}}# ]# # for i in item_info.aggregate(pipeline2):#     print(i)#     # def data_gen2(date1,date2,cates):#     pipeline = [#     {'$match':{'$and':[{'pub_date':{'$gte':date1,'$lte':date2}},#                        {'cates':{'$all':cates}},#                        {'look':{'$nin':['-']}}#                       ]}},#     {'$group':{'_id':'$look','avg_price':{'$avg':'$price'}}},#     {'$sort':{'avg_price':1}}# ]#     for i in item_info.aggregate(pipeline):#         yield i['avg_price']# # #</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#In-182"><span class="toc-number">6.</span> <span class="toc-text">In[182]:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#test"><span class="toc-number">7.</span> <span class="toc-text">test</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Get-Ave-brr-3"><span class="toc-number">8.</span> <span class="toc-text">Get_Ave(brr[3])</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#In-183"><span class="toc-number">9.</span> <span class="toc-text">In[183]:</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "Hide It";
+    var valueShow = "Show It";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/08/15/PL3-final/" data-title="python实战计划 分析二手商品行情" data-url="http://renld.github.io/2016/08/15/PL3-final/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"renld"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/08/14/PL3-4/" title="下一篇: python实战计划 聚合管道高效查找数据">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/PL3-final/">python实战计划 分析二手商品行情</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/14/PL3-4/">python实战计划 聚合管道高效查找数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/vim/">vim Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/PL3-3/">python实战计划 使用 find 函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/PL3-2/">python实战计划 简单的数据图表</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/PL3-1/">Python实战计划 如何让数据说话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/PL2-final/">第二周实战作业：爬取一万商品数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/PythonChallenge/">PythonChallenge</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/RE/">regular expression</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/PL2-3/">Python实战计划 多进程抓取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/08/Linux-01/">Linux私房菜 计算机概论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/08/PL2-2/">Python实战计划 爬取大规模数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/PL2-1/">Python实战计划 Begining for MongoDB</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/PL1-final/">python实战计划 爬取商品数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-4/">python实战计划 动态数据爬取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/06/PL1-3/">python实战计划 静态网页爬取</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-2/">python实战计划 爬取商品信息</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/PL1-1/">python实战计划 制作自己网页</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/HFPy/">Python 'First' Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/greedy/">Greedy & Violent</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/09/byefresh/">BYE Freshman</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/04/egt1/">Primary Engineering Practice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/Algor-Water/">GoodBye Big Algorithm Waterer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/treeDP/">DP in Tree</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/EEreview/">EEreview</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/part_list/">块状链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/sdii/">SDII_FUN</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/15/By-the-Year/">By The Year</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/13/STL-LEARN/">Notes for STL</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Renld
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >Site_visited: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">Page_visited: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 8;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80351677-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
