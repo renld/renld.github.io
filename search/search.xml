@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[python实战计划 用 Django 搭建简单网页]]></title>
+      <url>http://renld.github.io/2016/08/15/PL5-1/</url>
+      <content type="html"><![CDATA[MTV模式 python3 manage.py startapp django_webpython3 manage.py runserver 改一个配置 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),) html加一个static &#123;% load static %&#125;&lt;link rel="stylesheet" href=&#123;% static "css/layouts/blog-old-ie.css" %&#125; &gt; views.py from django.shortcuts import render# Create your views here.def index(request): return render(request,'index.html urls.py from django.shortcuts import render# Create your views here.def index(request): return render(request,'index.html]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[python实战计划 分析二手商品行情]]></title>
       <url>http://renld.github.io/2016/08/15/PL3-final/</url>
       <content type="html"><![CDATA[北京各个城区发帖量最多的三大类目 各大类目成色对应的平均价格 #分析 引入数据库等预处理 得到城区,依照3-4内容得到最多三大类目以及数目 因为area是个数组,得依照3-2数据清洗一下..才能用match方法 输出csv文件参考第一章实战, 然后发现jupyter不能直接生成文件.. 那还是调用数据库吧第二章实战 得到类目,依照3-3分别对每个类目分析价格 codecode页面 第一个任务 第二个任务 放到函数中的plot但这样打开的网页不能展示出来,于是第一个任务 第二个任务 charts.plot(top3, options=opt) # 居然输出不了.. show = 'inline' 导出csv 任务1下载 任务2下载 mongoexport -d ceshi -c Top --csv -f area,name,data -o output1.csvmongoexport -d ceshi -c ave --csv -f type,new,avePrice,number -o output2.csv 完整code戳这里)Learn&#123;'$match':&#123;'$and':[&#123;'pub_date':&#123;'$gte':date1,'$lte':date2&#125;&#125;,&#123;'area':&#123;'$all':area&#125;&#125;]&#125;&#125;, 标程是这样处理的 python注意写 else: pass ‘all’ 寻找数组内元素, ‘nin’排除某种元素(pipeline其实是mongoDB的东西..) sorted(d.items(), key=lambda x: x[1]) 忽略了全新…..所以还是得好好分析数据]]></content>
