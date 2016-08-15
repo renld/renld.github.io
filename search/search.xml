@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[python实战计划 聚合管道高效查找数据]]></title>
+      <url>http://renld.github.io/2016/08/14/PL3-4/</url>
+      <content type="html"><![CDATA[collection.aggregate(pipeline) 笔记$match可以用’$and’, [‘match’:{‘$and’:[{‘pub_date’:’2222’},{‘dc’:’dwd’}]}] $group {‘_id’: {‘\$slice’ : [‘\$cates’ , 2, 1]}’count’ : {‘$sum’ : 1}} $sort{‘$sort’ : { ‘counts’ : 2 }} $limit输出个数 Aim统计一天内交易成功商品各城区的饼图 Resultlink 感想这个任务还是在套模板…复习的时候记得回顾代码就行..]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[vim Learning]]></title>
       <url>http://renld.github.io/2016/08/12/vim/</url>
       <content type="html"><![CDATA[转载学习~~~(挖个坑在这里) 陈皓 中文文档) 鸟哥 鸟哥教程(包含练习) vim分为一般模式,编辑模式和命令行模式]]></content>

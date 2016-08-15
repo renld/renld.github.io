@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Leidar&#39;s Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345import chartsfrom pymongo import MongoClientclient = MongoClient(&apos;localhost&apos;,27017)cli = client[&apos;ceshi&apos;]db = cli[&apos;ganji&apos;]
+12345options = &amp;#123;    &apos;chart&apos;   : &amp;#123;&apos;zoomType&apos;:&apos;xy&apos;&amp;#125;,    &apos;tit">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leidar's Home">
+<meta property="og:url" content="http://renld.github.io/pc/aim.html">
+<meta property="og:site_name" content="Leidar's Home">
+<meta property="og:description" content="12345import chartsfrom pymongo import MongoClientclient = MongoClient(&apos;localhost&apos;,27017)cli = client[&apos;ceshi&apos;]db = cli[&apos;ganji&apos;]
+12345options = &amp;#123;    &apos;chart&apos;   : &amp;#123;&apos;zoomType&apos;:&apos;xy&apos;&amp;#125;,    &apos;tit">
+<meta property="og:updated_time" content="2016-08-15T07:42:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leidar's Home">
+<meta name="twitter:description" content="12345import chartsfrom pymongo import MongoClientclient = MongoClient(&apos;localhost&apos;,27017)cli = client[&apos;ceshi&apos;]db = cli[&apos;ganji&apos;]
+12345options = &amp;#123;    &apos;chart&apos;   : &amp;#123;&apos;zoomType&apos;:&apos;xy&apos;&amp;#125;,    &apos;tit">
+  
+    <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/images.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/fan.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">Renld</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>毛遂自荐</li>
+                        <li>按图索骥</li>
+                        
+                        <li>抛砖引玉</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">戳回老本营</a></li>
+                        
+                            <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                        
+                            <li><a href="/tagcloud.swf">这里有个球</a></li>
+                        
+                            <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                        
+                            <li><a href="/about">自述与留言</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                            
+                                <a class="fl mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                            
+                                <a class="fl wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <li><a href="/tags/C/" style="font-size: 11.43px;">C++</a></li> <li><a href="/tags/Computer/" style="font-size: 10px;">Computer</a></li> <li><a href="/tags/EE/" style="font-size: 11.43px;">EE</a></li> <li><a href="/tags/Life/" style="font-size: 15.71px;">Life</a></li> <li><a href="/tags/Linux/" style="font-size: 10px;">Linux</a></li> <li><a href="/tags/Macau/" style="font-size: 10px;">Macau</a></li> <li><a href="/tags/MongoDB/" style="font-size: 12.86px;">MongoDB</a></li> <li><a href="/tags/algorithm/" style="font-size: 14.29px;">algorithm</a></li> <li><a href="/tags/crawler/" style="font-size: 17.14px;">crawler</a></li> <li><a href="/tags/dataAnalysis/" style="font-size: 14.29px;">dataAnalysis</a></li> <li><a href="/tags/html/" style="font-size: 18.57px;">html</a></li> <li><a href="/tags/python/" style="font-size: 20px;">python</a></li> <li><a href="/tags/regular-expression/" style="font-size: 10px;">regular expression</a></li> <li><a href="/tags/vim/" style="font-size: 10px;">vim</a></li>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://alau.top">三金</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://terry.pub/">terry</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://sxkdz.org">sxkdz</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Renld</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/fan.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Renld</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">戳回老本营</a></li>
+                
+                    <li><a href="/ZZPPP/index.html">中珠碰碰碰</a></li>
+                
+                    <li><a href="/tagcloud.swf">这里有个球</a></li>
+                
+                    <li><a href="http://blog.csdn.net/qq_32209643">曾经的回忆</a></li>
+                
+                    <li><a href="/about">自述与留言</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/renld" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/renld" title="zhihu">zhihu</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:leidar100@gmail?subject=GithubBlog" title="mail">mail</a>
+                    
+                        <a class="wechat" target="_blank" href="/renld.github.io/wechat" title="wechat">wechat</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/pc/aim.html" class="article-date">
+      <time datetime="2016-08-15T07:43:02.000Z" itemprop="datePublished">2016-08-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <style>
+    .article-meta {
+        display: none;
+    }
+    #container .article .article-title {
+        padding-right: 0;
+    }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover {
+        border-left: none;
+    }
+    .article-title {
+        font-size: 1.6em
+    }
+    .article-meta {
+        display: none;
+    }
+    .article-entry hr {
+        margin: 0;
+    }
+    #container .article-info-post.article-info {
+      display: none;
+      }
+    #container .article .article-title {
+    padding: 0;
+    }
+</style>
+
+
+          
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> charts</span><br><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line">client = MongoClient(<span class="string">'localhost'</span>,<span class="number">27017</span>)</span><br><span class="line">cli = client[<span class="string">'ceshi'</span>]</span><br><span class="line">db = cli[<span class="string">'ganji'</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">options = &#123;</span><br><span class="line">    <span class="string">'chart'</span>   : &#123;<span class="string">'zoomType'</span>:<span class="string">'xy'</span>&#125;,</span><br><span class="line">    <span class="string">'title'</span>   : &#123;<span class="string">'text'</span>: <span class="string">'交易成功'</span>&#125;,</span><br><span class="line">    <span class="string">'subtitle'</span>: &#123;<span class="string">'text'</span>: <span class="string">'北京各城区'</span>&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pipeline = [</span><br><span class="line">    &#123;<span class="string">'$match'</span> : &#123;<span class="string">'time'</span> : <span class="number">1</span>&#125;&#125;,</span><br><span class="line">    &#123;<span class="string">'$group'</span> : &#123;<span class="string">'_id'</span>: &#123;<span class="string">'$slice'</span> : [<span class="string">'$area'</span>,<span class="number">0</span>,<span class="number">1</span>]&#125;, <span class="string">'counts'</span>: &#123;<span class="string">'$sum'</span> : <span class="number">1</span>&#125;&#125;&#125;,</span><br><span class="line">    &#123;<span class="string">'$sort'</span> : &#123;<span class="string">'counts'</span> : <span class="number">1</span>&#125;&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> db.aggregate(pipeline):</span><br><span class="line">    data.append([i[<span class="string">'_id'</span>][<span class="number">0</span>],i[<span class="string">'counts'</span>]])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">series = &#123;</span><br><span class="line">    <span class="string">'type'</span> : <span class="string">'pie'</span>,</span><br><span class="line">    <span class="string">'name'</span> : <span class="string">'Broswer share'</span>,</span><br><span class="line">    <span class="string">'data'</span> : data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">charts.plot(series,options = options,show = <span class="string">'inline'</span>)</span><br></pre></td></tr></table></figure>
+<p><style>body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#555;font-family:sans-serif}<br>small{font-weight:400;display:block;font-size:14px}<br>code{background-color:#d3d3d3;border-radius:3px;font-family:monospace;padding:0 .5em}<br>.icon.-facebook:before,.icon.-linkedin:before,.icon.-pinterest:before,.icon.-twitter:before{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:Post-Creator-Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:1;speak:none;text-transform:none}<br>@font-face{font-family:Post-Creator-Icons;src:url(fonts/Post-Creator-Icons.eot);src:url(fonts/Post-Creator-Icons.eot?#iefix) format(‘embedded-opentype’),url(fonts/Post-Creator-Icons.woff) format(‘woff’),url(fonts/Post-Creator-Icons.ttf) format(‘truetype’),url(fonts/Post-Creator-Icons.svg#Post-Creator-Icons) format(‘svg’);font-weight:400;font-style:normal}<br>.icon.-facebook:before{content:”\e001”}<br>.icon.-linkedin:before{content:”\e002”}<br>.icon.-pinterest:before{content:”\e003”}<br>.icon.-twitter:before{content:”\e004”}<br>.social-icons h4{display:inline-block;margin:20px 10px 0 0}<br>.social-icons .icon{display:inline-block;margin:0 5px}<br>body.modal-open{overflow:hidden}<br>.jsoneditor table,.jsoneditor td,.jsoneditor td.tree,.jsoneditor tr{border:none;margin:0}</style></p>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.default.min.css"></p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/4.2.0/jsoneditor.min.css">
+
+<div class="container-fluid"><br>    <div class="row"><br>        <div class="col-sm-10"><br>            <input type="text" id="variable-selector"><br>        </div><br>        <div class="col-sm-2"><br>            <button class="btn btn-default pull-right" type="submit" id="settings-button">Settings</button><br>        </div><br>    </div>
+
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;collapse col-xs-12&quot; id=&quot;settings-collapse&quot;&gt;
+        &lt;div class=&quot;panel panel-default&quot; style=&quot;margin-top: 20px&quot;&gt;
+            &lt;div class=&quot;panel-heading&quot;&gt;&lt;h3 class=&quot;panel-title&quot;&gt;Adjust chart settings&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div id=&quot;jsoneditor&quot; class=&quot;col-md-12&quot; style=&quot;height: 350px&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;row&quot; style=&quot;margin-top: 10px&quot;&gt;
+                    &lt;div class=&quot;col-sm-4&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;save-settings&quot;&gt;
+                            Apply changes
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-sm-8 text-right &quot;&gt;
+                        &lt;form class=&quot;form-inline&quot;&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;div class=&quot;input-group&quot;&gt;
+                                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;options-input&quot;
+                                           placeholder=&quot;settings&quot; style=&quot;text-align: right&quot;&gt;
+                                    &lt;div class=&quot;input-group-addon&quot;&gt;&lt;strong&gt;.json&lt;/strong&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; id=&quot;options-button&quot;&gt;Save&lt;/button&gt;
+                        &lt;/form&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div id=&quot;chart-container&quot; style=&quot;min-width: 310px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p></p></div><p></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js"></script>
+
+
+
+
+
+
+<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+//findIndex polyfill
+if (!Array.prototype.findIndex) {
+    Array.prototype.findIndex = function(predicate) {
+        if (this == null) {
+            throw new TypeError('Array.prototype.findIndex called on null or undefined');
+        }
+        if (typeof predicate !== 'function') {
+            throw new TypeError('predicate must be a function');
+        }
+        var list = Object(this);
+        var length = list.length >>> 0;
+        var thisArg = arguments[1];
+        var value;
+
+        for (var i = 0; i < length; i++) {
+            value = list[i];
+            if (predicate.call(thisArg, value, i, list)) {
+                return i;
+            }
+        }
+        return -1;
+    };
+}
+
+if (!Array.prototype.filter) {
+    Array.prototype.filter = function(fun/*, thisArg*/) {
+        'use strict';
+
+        if (this === void 0 || this === null) {
+            throw new TypeError();
+        }
+
+        var t = Object(this);
+        var len = t.length >>> 0;
+        if (typeof fun !== 'function') {
+            throw new TypeError();
+        }
+
+        var res = [];
+        var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+        for (var i = 0; i < len; i++) {
+            if (i in t) {
+                var val = t[i];
+
+                // NOTE: Technically this should Object.defineProperty at
+                //       the next index, as push can be affected by
+                //       properties on Object.prototype and Array.prototype.
+                //       But that method's new, and collisions should be
+                //       rare, so use the more-compatible alternative.
+                if (fun.call(thisArg, val, i, t)) {
+                    res.push(val);
+                }
+            }
+        }
+
+        return res;
+    };
+}
+
+function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+}
+
+Array.prototype.equals = function (array) {
+    // if the other array is a false value, return
+    if (!array)
+        return false;
+
+    // compare lengths - can save a lot of time
+    if (this.length != array.length)
+        return false;
+
+    for (var i = 0, l = this.length; i < l; i++) {
+        // Check if we have nested arrays
+        if (this[i] instanceof Array && array[i] instanceof Array) {
+            // recurse into the nested arrays
+            if (!this[i].equals(array[i]))
+                return false;
+        }
+        else if (this[i] != array[i]) {
+            // Warning - two different object instances will never be equal: {x:20} != {x:20}
+            return false;
+        }
+    }
+    return true;
+};
+
+},{}]},{},[1]);
+</script>
+<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+
+requirejs.config({
+    "paths": {
+        "highstock": "https://cdnjs.cloudflare.com/ajax/libs/highstock/2.1.5/highstock",
+        "export": "https://cdnjs.cloudflare.com/ajax/libs/highstock/2.1.5/modules/exporting",
+        "more": "https://cdnjs.cloudflare.com/ajax/libs/highstock/2.1.7/highcharts-more",
+        "jsoneditor": "https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/4.2.0/jsoneditor.min",
+        "selectize": "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min",
+        "jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min"
+    },
+    "shim": {
+        "export": ["highstock"],
+        "more": ["highstock"]
+    }
+});
+
+//Define jquery here to use the pre-loaded version
+define('jquery', [], function() {
+    return jQuery;
+});
+
+},{}]},{},[1]);
+</script>
+<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+//Count the number of charts on the page
+if (window.counter == undefined) {
+    window.counter = 0;
+} else {
+    window.counter++;
+}
+
+requirejs([
+    'jquery',
+    'selectize',
+    'jsoneditor',
+    'highstock',
+    'export',
+    'more'
+], function ($, selectize, JSONEditor) {
+
+    function guid() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+        }
+
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+            s4() + '-' + s4() + s4() + s4();
+    }
+
+    var id = guid();
+    plot(id);
+
+    function plot(id) {
+        var series = [
+            {data: [1, 2, 4, 9], name: "temperature 1", display: true, color: '#2b908f'},
+            {data: [9, 4, 2, 1], name: "temperature 2", display: true},
+            {data: [0, 3, 5, 6], name: "temperature 3", display: false}
+        ];
+        var series = [{"data": [["\u5ef6\u5e86", 18], ["\u5e73\u8c37", 31], ["\u5bc6\u4e91", 38], ["\u71d5\u90ca", 52], ["\u95e8\u5934\u6c9f", 52], ["\u6000\u67d4", 55], ["\u5317\u4eac\u5468\u8fb9", 57], ["\u5d07\u6587", 140], ["\u623f\u5c71", 164], ["\u77f3\u666f\u5c71", 186], ["\u5ba3\u6b66", 193], ["\u987a\u4e49", 219], ["\u4e1c\u57ce", 352], ["\u897f\u57ce", 368], ["\u901a\u5dde", 511], ["\u5927\u5174", 540], ["\u660c\u5e73", 545], ["\u4e30\u53f0", 892], ["\u6d77\u6dc0", 1291], ["\u4e0d\u660e", 1712], ["\u671d\u9633", 2179]], "display": true, "name": "Broswer share", "type": "pie"}]
+        var options = {};
+        var options = {"chart": {"zoomType": "xy", "type": "line"}, "subtitle": {"text": "\u5317\u4eac\u5404\u57ce\u533a"}, "type": "line", "title": {"text": "\u4ea4\u6613\u6210\u529f"}, "scale": 2, "height": 400, "width": "auto"}
+        var useHighStock = false;
+        var useHighStock = false
+        var save = 'app/chart.svg';
+        var save = false
+        var url = 'http://127.0.0.1:65079';
+        var url = "http://127.0.0.1:54716/"
+        var settingsFile = 'settings';
+        var settingsFile = "settings"
+        var scale = options.scale;
+
+        //Create different containers for the charts
+        var chartContainer = document.getElementById("chart-container");
+        chartContainer.id = "chart-container" + id;
+        chartContainer.style.height = options.height.toString() + 'px';
+
+        if (options.width != 'auto') {
+            chartContainer.style.width = options.width.toString() + 'px';
+        }
+
+        var selector = $("#variable-selector");
+        selector.attr('id', "variable-selector" + id);
+
+        var settings = $("#settings-collapse");
+        settings.attr('id', "settings-collapse" + id);
+
+        var button = $("#settings-button");
+        button.attr('id', "settings-button" + id);
+
+        var saveButton = $("#save-settings");
+        saveButton.attr('id', "save-settings" + id);
+
+        var optionsInput = $("#options-input");
+        optionsInput.attr('id', "options-input" + id);
+        optionsInput.val(settingsFile);
+
+        var optionsButton = $("#options-button");
+        optionsButton.attr('id', "options-button" + id);
+
+        // create the editor
+        var editorContainer = document.getElementById("jsoneditor");
+        editorContainer.id = "jsoneditor" + id;
+        var editor = new JSONEditor(editorContainer);
+
+        button.on('click', showSettings);
+        saveButton.on('click', applyOptions);
+        optionsButton.on('click', saveOptions);
+
+        function applyOptions() {
+            var newOptions = editor.get();
+            setOptions(newOptions);
+            settings.collapse('hide');
+        }
+
+        function saveOptions(event) {
+            event.preventDefault();
+
+            applyOptions();
+
+            var options = chart.options;
+            delete options.exporting;
+
+            var name = optionsInput.val() ? optionsInput.val() + '.json' : 'settings.json';
+
+            options['settingsFile'] = name;
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: JSON.stringify({
+                    options: options,
+                    name: name
+                })
+            });
+        }
+
+        function showSettings() {
+            settings.collapse('toggle');
+        }
+
+        //Choose a chart type
+        var ChartType = useHighStock ? Highcharts.StockChart : Highcharts.Chart;
+
+        //Default highchart colors
+        var colors = ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9',
+            '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'];
+
+        series.map(function (serie, index) {
+            if (!serie.color) {
+                serie['color'] = colors[index % 10];
+            }
+
+            return serie;
+        });
+
+        //Get all the keys
+        var keys = [];
+        var initialKeys = [];
+        $.each(series, function (index, serie) {
+            keys.push({
+                display: serie.display,
+                value: serie.name,
+                text: serie.name
+            });
+
+            if (serie.display) {
+                initialKeys.push(serie.name)
+            }
+        });
+
+        selector.selectize({
+            plugins: ['remove_button', 'restore_on_backspace'],
+            delimiter: ',',
+            options: keys,
+            items: initialKeys,
+            onItemAdd: function (key) {
+                console.log('series added');
+                addSeries(key);
+                newChart(chart.options, renderedSeries);
+            },
+            onItemRemove: function (key) {
+                console.log('series removed');
+                deleteSeries(key);
+                newChart(chart.options, renderedSeries);
+            }
+        });
+
+        //Set initial chart options
+        var chartOptions;
+        if (typeof options.chart === "undefined") {
+            chartOptions = {renderTo: chartContainer.id};
+        } else {
+            chartOptions = $.extend(options["chart"], {renderTo: chartContainer.id});
+        }
+
+        //Initial rendered series
+        var renderedSeries = [];
+        options = $.extend(options, {chart: chartOptions}, {series: renderedSeries});
+        var chart = new ChartType(options);
+
+        $.each(initialKeys, function (index, key) {
+            addSeries(key);
+        });
+
+        newChart(chart.options, renderedSeries);
+        editor.set(chart.options);
+
+        if (save) {
+            saveSVG(url, save)
+        }
+
+        function setOptions(options) {
+            //Prevent export from breaking
+            delete options.exporting;
+            options['exporting'] = {scale: options.scale};
+
+            chartContainer.style.height = options.height.toString() + 'px';
+
+            if (options.width != 'auto') {
+                chartContainer.style.width = options.width.toString() + 'px';
+            }
+
+            newChart(options, renderedSeries);
+
+        }
+
+        function findSeries(series, key) {
+            return series.findIndex(function (obj) {
+                return obj.name == key;
+            })
+        }
+
+        function newChart(options, series) {
+            //Disable animation
+            var newOptions = $.extend(options, {series: series});
+            newOptions.plotOptions['series'] = {animation: false};
+
+            //Get zoom
+            var xExtremes = chart.xAxis[0].getExtremes();
+
+            //Re-plot the chart
+            chart.destroy();
+            chart = new ChartType(newOptions);
+
+            //Reset the zoom
+            chart.xAxis[0].setExtremes(xExtremes.min, xExtremes.max, false, false);
+
+            //Re-draw chart
+            chart.redraw();
+        }
+
+        function addSeries(key) {
+            var index = findSeries(series, key);
+            var newSeries = series[index];
+            renderedSeries.push(newSeries)
+        }
+
+        function deleteSeries(key) {
+            var index = findSeries(renderedSeries, key);
+            renderedSeries.splice(index, 1)
+        }
+
+        function saveSVG(url, name) {
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: JSON.stringify({
+                    svg: chart.getSVG(),
+                    name: name
+                })
+            });
+        }
+
+        console.log('loaded!', Date());
+    }
+
+});
+
+},{}]},{},[1]);
+</script>
+
+
+
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+  
+</article>
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="pc/aim.html" data-title="" data-url="http://renld.github.io/pc/aim.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"renld"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Renld
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >Site_visited: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">Page_visited: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 8;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80351677-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
