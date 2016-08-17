@@ -3,26 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python实战计划 Django 的模板语言 | Leidar&#39;s Home</title>
+  <title>python实战计划 用 Django 搭建简单网页 | Leidar&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="理解上下文
-使用模板语言
-制作分页器">
+  <meta name="description" content="MTV模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python实战计划 Django 的模板语言">
-<meta property="og:url" content="http://renld.github.io/2016/08/16/PL4-2/index.html">
+<meta property="og:title" content="python实战计划 用 Django 搭建简单网页">
+<meta property="og:url" content="http://renld.github.io/2016/08/15/PL4-1/index.html">
 <meta property="og:site_name" content="Leidar's Home">
-<meta property="og:description" content="理解上下文
-使用模板语言
-制作分页器">
-<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png">
-<meta property="og:updated_time" content="2016-08-17T01:32:34.000Z">
+<meta property="og:description" content="MTV模式">
+<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-15%20at%2023.29.28.png">
+<meta property="og:updated_time" content="2016-08-15T15:33:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python实战计划 Django 的模板语言">
-<meta name="twitter:description" content="理解上下文
-使用模板语言
-制作分页器">
-<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png">
+<meta name="twitter:title" content="python实战计划 用 Django 搭建简单网页">
+<meta name="twitter:description" content="MTV模式">
+<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-15%20at%2023.29.28.png">
   
     <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
   
@@ -222,11 +216,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-PL4-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-PL4-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/16/PL4-2/" class="article-date">
-      <time datetime="2016-08-16T01:27:47.000Z" itemprop="datePublished">2016-08-16</time>
+      <a href="/2016/08/15/PL4-1/" class="article-date">
+      <time datetime="2016-08-15T14:55:02.000Z" itemprop="datePublished">2016-08-15</time>
 </a>
     </div>
   
@@ -239,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python实战计划 Django 的模板语言
+      python实战计划 用 Django 搭建简单网页
     </h1>
   
 
@@ -260,48 +254,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ol>
-<li>理解上下文</li>
-<li>使用模板语言</li>
-<li>制作分页器</li>
-</ol>
-<a id="more"></a>
-<p>#Note</p>
-<p>##理解上下文</p>
-<p>###views.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">render(request,x.html,context) 传入三个函数</span><br><span class="line">&#123; &#123; id &#125; &#125; , context = &#123; id1=<span class="string">''</span>,id2=<span class="string">''</span>, &#125;</span><br></pre></td></tr></table></figure>
-<p>###models.py</p>
-<p><code>from mongoengine import *</code></p>
-<p>##模板语言</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; % for i in Artinfo%&#125;</span><br><span class="line"></span><br><span class="line">&#123; % endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p>##分页器</p>
-<p>from django.core.paginator import Paginator</p>
-<p>#Aim</p>
-<p>用58的数据库和昨天的模板生成一个博客</p>
-<p>#Result</p>
-<p><img src="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png" alt=""></p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="external">html格式化</a> <a href="http://radar-10050281.cos.myqcloud.com/Mysite.zip" target="_blank" rel="external">项目下载</a></p>
-<h2 id="models-py"><a href="#models-py" class="headerlink" title="models.py"></a>models.py</h2><ol>
-<li>链接数据库</li>
-<li>写个类,里面所有属性和数据库条目名字同名</li>
-<li><code>meta = &#39;collection&#39; : &#39;sheet_out&#39;</code>链接对于collection</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> mongoengine <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> mongoengine <span class="keyword">import</span> connect</span><br><span class="line"></span><br><span class="line">connect(<span class="string">'ilw'</span>,host=<span class="string">'localhost'</span>,port = <span class="number">27017</span>) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArtiInfo</span><span class="params">(Document)</span>:</span></span><br><span class="line">    price = StringField() <span class="comment"># 注意和数据库中的名字一样</span></span><br><span class="line">    place = StringField()</span><br><span class="line">    title = StringField()</span><br><span class="line">    comment = StringField()</span><br><span class="line">    url = StringField()</span><br><span class="line">    meta = &#123;<span class="string">'collection'</span>:<span class="string">'sheet_out'</span>&#125;</span><br><span class="line"><span class="comment"># if use list</span></span><br><span class="line"><span class="comment"># tags = ListField(StringField())</span></span><br></pre></td></tr></table></figure>
-<h2 id="views-py"><a href="#views-py" class="headerlink" title="views.py"></a>views.py</h2><ol>
-<li>设置每页上限</li>
-<li>生成一个翻页对象</li>
-<li>加载当前页</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.core.paginator <span class="keyword">import</span> Paginator</span><br><span class="line"><span class="keyword">from</span> django_web.models <span class="keyword">import</span> ArtiInfo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    limit = <span class="number">3</span></span><br><span class="line">    paginator = Paginator(ArtiInfo.objects,limit)</span><br><span class="line">    page = request.GET.get(<span class="string">'page'</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    loaded = paginator.page(page) <span class="comment"># 注意这里是小写的</span></span><br><span class="line">    content = &#123;<span class="string">'ArtiInfo'</span> : loaded&#125; <span class="comment"># 注意这里不能直接写字典</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'index.html'</span>,content)</span><br></pre></td></tr></table></figure>
-<h2 id="index-html-生成条目"><a href="#index-html-生成条目" class="headerlink" title="index.html__生成条目"></a>index.html__生成条目</h2><ol>
-<li>for &amp;&amp; endear</li>
-<li>{ {代替id} }代替</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for it in ArtiInfo %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"posts"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"content-subhead"</span>&gt;</span>Recent Posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"post-header"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"post-avatar"</span> <span class="attr">alt</span>=<span class="string">"Eric Ferraiuolo&amp;#x27;s avatar"</span> <span class="attr">height</span>=<span class="string">"48"</span> <span class="attr">width</span>=<span class="string">"48"</span> <span class="attr">src</span>=<span class="string">&#123;%</span> <span class="attr">static</span> "<span class="attr">img</span>/<span class="attr">common</span>/<span class="attr">ericf-avatar.png</span>" %&#125;&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span>&#123;&#123; it.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></span><br><span class="line">        By <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-author"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>&#123;&#123; it.place &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span> under <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-category post-category-js"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>&#123;&#123; it.comment &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-description"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; it.url &#125;&#125;"</span>&gt;</span> &#123;&#123; it.price &#125;&#125; <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p>如果用到list</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for tag in item.tags %&#125;</span><br><span class="line">	&lt;span class="meta-cate"&gt;&#123;&#123; tag &#125;&#125;&lt;/span&gt;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="index-html-生成页码"><a href="#index-html-生成页码" class="headerlink" title="index.html__生成页码"></a>index.html__生成页码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">div</span> <span class="attr">class</span> = <span class="string">"main-content-pagitor"</span>&gt;</span></span><br><span class="line">&#123;% if ArtiInfo.has_previous %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"?page=&#123;&#123; ArtiInfo.previous_page_number &#125;&#125;"</span>&gt;</span>Pre<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; ArtiInfo.number &#125;&#125; of &#123;&#123; ArtiInfo.paginator.num_pages &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&#123;% if ArtiInfo.has_next %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"?page=&#123;&#123; ArtiInfo.next_page_number &#125;&#125;"</span>&gt;</span>Next<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这一章模板内容相对较多…不过对于自己博客理解加深了一层还是很开心啦~~</p>
+        <p><a href="http://djangobook.py3k.cn/chapter05/" target="_blank" rel="external">MTV模式</a><br><a id="more"></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py startapp django_web</span><br><span class="line">python3 manage.py runserver</span><br></pre></td></tr></table></figure>
+<p>改一个配置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATICFILES_DIRS = (os.path.join(BASE_DIR,<span class="string">'static'</span>),)</span><br></pre></td></tr></table></figure>
+<p>html加一个static</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load static %&#125;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=&#123;% static <span class="string">"css/layouts/blog-old-ie.css"</span> %&#125; &gt;</span><br></pre></td></tr></table></figure>
+<p>views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'index.html</span></span><br></pre></td></tr></table></figure>
+<p>urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'index.html</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-15%20at%2023.29.28.png" alt=""></p>
 
       
     </div>
@@ -310,13 +273,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/16/PL4-2/">python实战计划 Django 的模板语言</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/15/PL4-1/">python实战计划 用 Django 搭建简单网页</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
-        <p><span>发布时间:</span>2016年08月16日 - 09时27分</p>
-        <p><span>最后更新:</span>2016年08月17日 - 09时32分</p>
+        <p><span>发布时间:</span>2016年08月15日 - 22时55分</p>
+        <p><span>最后更新:</span>2016年08月15日 - 23时33分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/16/PL4-2/" title="python实战计划 Django 的模板语言">http://renld.github.io/2016/08/16/PL4-2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/16/PL4-2/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/15/PL4-1/" title="python实战计划 用 Django 搭建简单网页">http://renld.github.io/2016/08/15/PL4-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/15/PL4-1/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -329,18 +292,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/08/17/GitLearn/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/16/PL4-2/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          GitLearn
+          python实战计划 Django 的模板语言
         
       </div>
     </a>
   
   
-    <a href="/2016/08/15/PL4-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python实战计划 用 Django 搭建简单网页</div>
+    <a href="/2016/08/15/PL3-final/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python实战计划 分析二手商品行情</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -351,7 +314,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Code"><span class="toc-number">1.</span> <span class="toc-text">Code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#models-py"><span class="toc-number">1.1.</span> <span class="toc-text">models.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#views-py"><span class="toc-number">1.2.</span> <span class="toc-text">views.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#index-html-生成条目"><span class="toc-number">1.3.</span> <span class="toc-text">index.html__生成条目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#index-html-生成页码"><span class="toc-number">1.4.</span> <span class="toc-text">index.html__生成页码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
 
@@ -406,13 +369,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/17/GitLearn/" title="上一篇: GitLearn">
+            <a href="/2016/08/16/PL4-2/" title="上一篇: python实战计划 Django 的模板语言">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/08/15/PL4-1/" title="下一篇: python实战计划 用 Django 搭建简单网页">
+            <a href="/2016/08/15/PL3-final/" title="下一篇: python实战计划 分析二手商品行情">
                 <i class="fa fa-angle-right"></i>
             </a>
         

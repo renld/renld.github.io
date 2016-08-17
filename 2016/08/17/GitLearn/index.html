@@ -3,26 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python实战计划 Django 的模板语言 | Leidar&#39;s Home</title>
+  <title>GitLearn | Leidar&#39;s Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="理解上下文
-使用模板语言
-制作分页器">
+  <meta name="description" content="因为hexo deploy bug得手动更新博客….
+所以不得不反过头来复习git …但似乎并没解决问题…
+from Liaoxuefeng git-cheatsheet.pdf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python实战计划 Django 的模板语言">
-<meta property="og:url" content="http://renld.github.io/2016/08/16/PL4-2/index.html">
+<meta property="og:title" content="GitLearn">
+<meta property="og:url" content="http://renld.github.io/2016/08/17/GitLearn/index.html">
 <meta property="og:site_name" content="Leidar's Home">
-<meta property="og:description" content="理解上下文
-使用模板语言
-制作分页器">
-<meta property="og:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png">
-<meta property="og:updated_time" content="2016-08-17T01:32:34.000Z">
+<meta property="og:description" content="因为hexo deploy bug得手动更新博客….
+所以不得不反过头来复习git …但似乎并没解决问题…
+from Liaoxuefeng git-cheatsheet.pdf">
+<meta property="og:updated_time" content="2016-08-17T04:44:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python实战计划 Django 的模板语言">
-<meta name="twitter:description" content="理解上下文
-使用模板语言
-制作分页器">
-<meta name="twitter:image" content="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png">
+<meta name="twitter:title" content="GitLearn">
+<meta name="twitter:description" content="因为hexo deploy bug得手动更新博客….
+所以不得不反过头来复习git …但似乎并没解决问题…
+from Liaoxuefeng git-cheatsheet.pdf">
   
     <link rel="alternative" href="/atom.xml" title="Leidar&#39;s Home" type="application/atom+xml">
   
@@ -222,11 +220,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-PL4-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-GitLearn" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/16/PL4-2/" class="article-date">
-      <time datetime="2016-08-16T01:27:47.000Z" itemprop="datePublished">2016-08-16</time>
+      <a href="/2016/08/17/GitLearn/" class="article-date">
+      <time datetime="2016-08-17T02:14:28.000Z" itemprop="datePublished">2016-08-17</time>
 </a>
     </div>
   
@@ -239,7 +237,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python实战计划 Django 的模板语言
+      GitLearn
     </h1>
   
 
@@ -250,7 +248,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django/">django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -260,48 +258,55 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ol>
-<li>理解上下文</li>
-<li>使用模板语言</li>
-<li>制作分页器</li>
-</ol>
+        <p>因为hexo deploy bug得手动更新博客….</p>
+<p>所以不得不反过头来复习git …但似乎并没解决问题…</p>
+<p>from <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Liaoxuefeng</a> <a href="http://radar-10050281.cos.myqcloud.com/git-cheatsheet.pdf" target="_blank" rel="external">git-cheatsheet.pdf</a></p>
 <a id="more"></a>
-<p>#Note</p>
-<p>##理解上下文</p>
-<p>###views.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">render(request,x.html,context) 传入三个函数</span><br><span class="line">&#123; &#123; id &#125; &#125; , context = &#123; id1=<span class="string">''</span>,id2=<span class="string">''</span>, &#125;</span><br></pre></td></tr></table></figure>
-<p>###models.py</p>
-<p><code>from mongoengine import *</code></p>
-<p>##模板语言</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; % for i in Artinfo%&#125;</span><br><span class="line"></span><br><span class="line">&#123; % endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p>##分页器</p>
-<p>from django.core.paginator import Paginator</p>
-<p>#Aim</p>
-<p>用58的数据库和昨天的模板生成一个博客</p>
-<p>#Result</p>
-<p><img src="http://radar-10050281.cos.myqcloud.com/Screen%20Shot%202016-08-16%20at%2014.28.27.png" alt=""></p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="external">html格式化</a> <a href="http://radar-10050281.cos.myqcloud.com/Mysite.zip" target="_blank" rel="external">项目下载</a></p>
-<h2 id="models-py"><a href="#models-py" class="headerlink" title="models.py"></a>models.py</h2><ol>
-<li>链接数据库</li>
-<li>写个类,里面所有属性和数据库条目名字同名</li>
-<li><code>meta = &#39;collection&#39; : &#39;sheet_out&#39;</code>链接对于collection</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> mongoengine <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> mongoengine <span class="keyword">import</span> connect</span><br><span class="line"></span><br><span class="line">connect(<span class="string">'ilw'</span>,host=<span class="string">'localhost'</span>,port = <span class="number">27017</span>) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArtiInfo</span><span class="params">(Document)</span>:</span></span><br><span class="line">    price = StringField() <span class="comment"># 注意和数据库中的名字一样</span></span><br><span class="line">    place = StringField()</span><br><span class="line">    title = StringField()</span><br><span class="line">    comment = StringField()</span><br><span class="line">    url = StringField()</span><br><span class="line">    meta = &#123;<span class="string">'collection'</span>:<span class="string">'sheet_out'</span>&#125;</span><br><span class="line"><span class="comment"># if use list</span></span><br><span class="line"><span class="comment"># tags = ListField(StringField())</span></span><br></pre></td></tr></table></figure>
-<h2 id="views-py"><a href="#views-py" class="headerlink" title="views.py"></a>views.py</h2><ol>
-<li>设置每页上限</li>
-<li>生成一个翻页对象</li>
-<li>加载当前页</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.core.paginator <span class="keyword">import</span> Paginator</span><br><span class="line"><span class="keyword">from</span> django_web.models <span class="keyword">import</span> ArtiInfo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    limit = <span class="number">3</span></span><br><span class="line">    paginator = Paginator(ArtiInfo.objects,limit)</span><br><span class="line">    page = request.GET.get(<span class="string">'page'</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    loaded = paginator.page(page) <span class="comment"># 注意这里是小写的</span></span><br><span class="line">    content = &#123;<span class="string">'ArtiInfo'</span> : loaded&#125; <span class="comment"># 注意这里不能直接写字典</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'index.html'</span>,content)</span><br></pre></td></tr></table></figure>
-<h2 id="index-html-生成条目"><a href="#index-html-生成条目" class="headerlink" title="index.html__生成条目"></a>index.html__生成条目</h2><ol>
-<li>for &amp;&amp; endear</li>
-<li>{ {代替id} }代替</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for it in ArtiInfo %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"posts"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"content-subhead"</span>&gt;</span>Recent Posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"post-header"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"post-avatar"</span> <span class="attr">alt</span>=<span class="string">"Eric Ferraiuolo&amp;#x27;s avatar"</span> <span class="attr">height</span>=<span class="string">"48"</span> <span class="attr">width</span>=<span class="string">"48"</span> <span class="attr">src</span>=<span class="string">&#123;%</span> <span class="attr">static</span> "<span class="attr">img</span>/<span class="attr">common</span>/<span class="attr">ericf-avatar.png</span>" %&#125;&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span>&#123;&#123; it.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></span><br><span class="line">        By <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-author"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>&#123;&#123; it.place &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span> under <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-category post-category-js"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>&#123;&#123; it.comment &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-description"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; it.url &#125;&#125;"</span>&gt;</span> &#123;&#123; it.price &#125;&#125; <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p>如果用到list</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for tag in item.tags %&#125;</span><br><span class="line">	&lt;span class="meta-cate"&gt;&#123;&#123; tag &#125;&#125;&lt;/span&gt;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="index-html-生成页码"><a href="#index-html-生成页码" class="headerlink" title="index.html__生成页码"></a>index.html__生成页码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">div</span> <span class="attr">class</span> = <span class="string">"main-content-pagitor"</span>&gt;</span></span><br><span class="line">&#123;% if ArtiInfo.has_previous %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"?page=&#123;&#123; ArtiInfo.previous_page_number &#125;&#125;"</span>&gt;</span>Pre<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; ArtiInfo.number &#125;&#125; of &#123;&#123; ArtiInfo.paginator.num_pages &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&#123;% if ArtiInfo.has_next %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"?page=&#123;&#123; ArtiInfo.next_page_number &#125;&#125;"</span>&gt;</span>Next<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这一章模板内容相对较多…不过对于自己博客理解加深了一层还是很开心啦~~</p>
+<blockquote>
+<p>集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
+<p>分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+</blockquote>
+<p>版本库又名仓库，英文名<strong>repository</strong>，你可以简单理解成一个目录</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir learngit</span><br><span class="line">$ cd learngit</span><br><span class="line">$ pwd</span><br><span class="line">$ git init</span><br><span class="line">$ ls -ah</span><br></pre></td></tr></table></figure>
+<p>Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，前面我们举的例子只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件。</p>
+<h1 id="add-amp-change"><a href="#add-amp-change" class="headerlink" title="add &amp; change"></a>add &amp; change</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt <span class="comment"># 放到工作区</span></span><br><span class="line">$ git commit -m <span class="string">"wrote a readme file"</span> <span class="comment"># 放到暂存区</span></span><br></pre></td></tr></table></figure>
+<p>为什么Git添加文件需要<code>add</code>，<code>commit</code>一共两步呢？因为<code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status <span class="comment">#当前提交状况(有无改动)</span></span><br><span class="line">On branch master</span><br><span class="line">Changes <span class="keyword">not</span> staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">	modified:   readme.md</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> <span class="keyword">and</span>/<span class="keyword">or</span> <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git diff (后面可以加文件名)</span><br><span class="line">diff --git a/readme.md b/readme.md</span><br><span class="line">index d8036c1..a20531f <span class="number">100644</span></span><br><span class="line">--- a/readme.md</span><br><span class="line">+++ b/readme.md</span><br><span class="line"><span class="meta">@@ -1,2 +1,3 @@</span></span><br><span class="line">-Git <span class="keyword">is</span> a version control system.</span><br><span class="line">+Git <span class="keyword">is</span> a distributed version control system.</span><br><span class="line">+</span><br><span class="line"> Git <span class="keyword">is</span> free software.</span><br><span class="line">\ No newline at end of file</span><br></pre></td></tr></table></figure>
+<h1 id="版本-lt-gt"><a href="#版本-lt-gt" class="headerlink" title="版本&lt;= =&gt;"></a>版本&lt;= =&gt;</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">commit <span class="number">9</span>ff8bb698d56d50a5d8db561391854e4f85f3265</span><br><span class="line">Author: Renld &lt;leidar100@gmail.com&gt;</span><br><span class="line">Date:   Wed Aug <span class="number">17</span> <span class="number">10</span>:<span class="number">30</span>:<span class="number">34</span> <span class="number">2016</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">    update</span><br><span class="line"></span><br><span class="line">commit e174d0bbb2adac29d41bf9dca93d64d1b04e74b8</span><br><span class="line">Author: Renld &lt;leidar100@gmail.com&gt;</span><br><span class="line">Date:   Wed Aug <span class="number">17</span> <span class="number">10</span>:<span class="number">26</span>:<span class="number">51</span> <span class="number">2016</span> +<span class="number">0800</span></span><br><span class="line"></span><br><span class="line">    wrote readme</span><br><span class="line"><span class="keyword">or</span></span><br><span class="line">$ git log --pretty=oneline</span><br><span class="line"><span class="number">9</span>ff8bb698d56d50a5d8db561391854e4f85f3265 update</span><br><span class="line">e174d0bbb2adac29d41bf9dca93d64d1b04e74b8 wrote readme</span><br></pre></td></tr></table></figure>
+<p>上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">HEAD <span class="keyword">is</span> now at e174d0b wrote readme</span><br></pre></td></tr></table></figure>
+<p>版本前进(得找到commit时候的id)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line"><span class="number">9</span>ff8bb6 HEAD@&#123;<span class="number">0</span>&#125;: reset: moving to <span class="number">9</span>ff8bb6</span><br><span class="line">e174d0b HEAD@&#123;<span class="number">1</span>&#125;: reset: moving to HEAD^</span><br><span class="line"><span class="number">9</span>ff8bb6 HEAD@&#123;<span class="number">2</span>&#125;: commit: update</span><br><span class="line">e174d0b HEAD@&#123;<span class="number">3</span>&#125;: commit (initial): wrote readme</span><br><span class="line"></span><br><span class="line">$ git reset --hard <span class="number">9</span>ff8bb6</span><br><span class="line">HEAD <span class="keyword">is</span> now at <span class="number">9</span>ff8bb6 update</span><br></pre></td></tr></table></figure>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>，就回到了场景1，第二步按场景1操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- readme.md <span class="comment"># 工作区返回最近一次修改</span></span><br><span class="line"></span><br><span class="line">$ git reset HEAD readme.txt <span class="comment"># 把暂存区的修改撤销掉</span></span><br></pre></td></tr></table></figure>
+<h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h1><blockquote>
+<p>要关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git</code>；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+</blockquote>
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="external">添加ssh key</a></p>
+<p>github增加一个learngit仓库后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:renld/learngit.git</span><br></pre></td></tr></table></figure>
+<p>添加后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master <span class="comment"># 这样就可以把本地masterpush</span></span><br></pre></td></tr></table></figure>
+<h2 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h2><p>GitHub给出的地址不止一个，还可以用<code>https://github.com/michaelliao/gitskills.git</code>这样的地址。实际上，Git支持多种协议，默认的<code>git://</code>使用ssh，但也可以使用<code>https</code>等其他协议。</p>
+<p>使用<code>https</code>除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用<code>ssh</code>协议而只能用<code>https</code>。</p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>查看分支：<code>git branch</code></p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout</code> \<name> </name></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<p><code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev </span><br><span class="line"><span class="comment"># git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：</span></span><br><span class="line"><span class="comment"># $ git branch dev</span></span><br><span class="line"><span class="comment"># $ git checkout dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> $ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">do something...</span><br><span class="line">$ git merge dev</span><br><span class="line">$ git branch -d dev</span><br></pre></td></tr></table></figure>
+<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br></pre></td></tr></table></figure>
+<h2 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> git tag</span><br><span class="line"> git show v0<span class="number">.9</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> git tag v1<span class="number">.0</span></span><br><span class="line"> git tag v0<span class="number">.9</span> <span class="number">6224937</span></span><br><span class="line"></span><br><span class="line">git tag -d v0<span class="number">.1</span></span><br><span class="line">git push origin :refs/tags/v0<span class="number">.9</span></span><br><span class="line">    </span><br><span class="line">git push origin v1<span class="number">.0</span></span><br><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -310,13 +315,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/16/PL4-2/">python实战计划 Django 的模板语言</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/17/GitLearn/">GitLearn</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Renld 的个人博客">Renld</a></p>
-        <p><span>发布时间:</span>2016年08月16日 - 09时27分</p>
-        <p><span>最后更新:</span>2016年08月17日 - 09时32分</p>
+        <p><span>发布时间:</span>2016年08月17日 - 10时14分</p>
+        <p><span>最后更新:</span>2016年08月17日 - 12时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/16/PL4-2/" title="python实战计划 Django 的模板语言">http://renld.github.io/2016/08/16/PL4-2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/16/PL4-2/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/17/GitLearn/" title="GitLearn">http://renld.github.io/2016/08/17/GitLearn/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://renld.github.io/2016/08/17/GitLearn/　　作者: Renld" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -329,18 +334,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/08/17/GitLearn/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          GitLearn
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/08/15/PL4-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python实战计划 用 Django 搭建简单网页</div>
+    <a href="/2016/08/16/PL4-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python实战计划 Django 的模板语言</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -351,7 +347,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Code"><span class="toc-number">1.</span> <span class="toc-text">Code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#models-py"><span class="toc-number">1.1.</span> <span class="toc-text">models.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#views-py"><span class="toc-number">1.2.</span> <span class="toc-text">views.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#index-html-生成条目"><span class="toc-number">1.3.</span> <span class="toc-text">index.html__生成条目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#index-html-生成页码"><span class="toc-number">1.4.</span> <span class="toc-text">index.html__生成页码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#add-amp-change"><span class="toc-number">1.</span> <span class="toc-text">add & change</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#版本-lt-gt"><span class="toc-number">2.</span> <span class="toc-text">版本<= =></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSH"><span class="toc-number">3.</span> <span class="toc-text">SSH</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#clone"><span class="toc-number">3.1.</span> <span class="toc-text">clone</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支"><span class="toc-number">3.2.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#冲突"><span class="toc-number">3.2.1.</span> <span class="toc-text">冲突</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag"><span class="toc-number">3.3.</span> <span class="toc-text">Tag</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="Hide It"  title="点击按钮隐藏或者显示文章目录">
 
@@ -406,13 +402,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/17/GitLearn/" title="上一篇: GitLearn">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/08/15/PL4-1/" title="下一篇: python实战计划 用 Django 搭建简单网页">
+            <a href="/2016/08/16/PL4-2/" title="下一篇: python实战计划 Django 的模板语言">
                 <i class="fa fa-angle-right"></i>
             </a>
         
