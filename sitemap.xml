@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://renld.github.io/2016/08/15/PL5-1/</loc>
+    <loc>http://renld.github.io/2016/08/16/PL4-2/</loc>
+    
+    <lastmod>2016-08-17T01:32:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/08/15/PL4-1/</loc>
     
     <lastmod>2016-08-15T15:33:58.000Z</lastmod>
     
@@ -19,13 +26,6 @@
     <loc>http://renld.github.io/2016/08/14/PL3-4/</loc>
     
     <lastmod>2016-08-15T08:08:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/pc/aim.html</loc>
-    
-    <lastmod>2016-08-15T07:42:18.000Z</lastmod>
     
   </url>
   
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://renld.github.io/wxt/index.html</loc>
-    
-    <lastmod>2016-08-09T00:32:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://renld.github.io/2016/08/07/PL1-final/</loc>
     
     <lastmod>2016-08-07T08:56:21.000Z</lastmod>
@@ -156,62 +149,6 @@
   </url>
   
   <url>
-    <loc>http://renld.github.io/photo/index.html</loc>
-    
-    <lastmod>2016-08-02T14:16:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/photo/output.json</loc>
-    
-    <lastmod>2016-08-02T14:09:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/photo/tool.js</loc>
-    
-    <lastmod>2016-08-02T14:05:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/search/index.html</loc>
-    
-    <lastmod>2016-08-02T13:53:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/404/index.html</loc>
-    
-    <lastmod>2016-08-02T13:27:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/instagram/index.html</loc>
-    
-    <lastmod>2016-08-02T13:00:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/about/index.html</loc>
-    
-    <lastmod>2016-08-02T12:58:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/wxt/wxt_hase.html</loc>
-    
-    <lastmod>2016-08-01T10:52:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://renld.github.io/2016/07/04/egt1/</loc>
     
     <lastmod>2016-07-25T14:38:19.000Z</lastmod>
@@ -222,6 +159,13 @@
     <loc>http://renld.github.io/2016/07/22/greedy/</loc>
     
     <lastmod>2016-07-22T14:41:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/about/index.html</loc>
+    
+    <lastmod>2016-07-21T04:26:11.000Z</lastmod>
     
   </url>
   
@@ -306,6 +250,13 @@
     <loc>http://renld.github.io/ZZPPP/index.html</loc>
     
     <lastmod>2016-07-06T11:37:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/404.html</loc>
+    
+    <lastmod>2016-07-06T05:30:46.000Z</lastmod>
     
   </url>
   
