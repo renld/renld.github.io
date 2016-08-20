@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>各个城区中最热销TOP3</title>
+    <link rel="stylesheet" href="waiter_files/semantic.css">
+    <link rel="stylesheet" href="waiter_files/semantic_002.css">
+    <script src="waiter_files/jquery.js"></script>
+    <script src="waiter_files/semantic.js"></script>
+    <script src="waiter_files/highcharts-more.js"></script>
+    <script src="waiter_files/highcharts.js"></script>
+    <script src="waiter_files/exporting.js"></script>
+
+</head>
+<body>
+    <div class="ui thin left sidebar inverted vertical menu">
+      <div class="header item">
+        <img src="waiter_files/logo2.png">
+      </div>
+      <div class="item">
+        <a href="http://127.0.0.1:8000/post">Post Num</a>
+        <i class="browser icon"></i>
+      </div>
+      <div class="item">
+        <a href="http://127.0.0.1:8000/Oneday">One Day</a>
+        <i class="bar chart icon"></i>
+      </div>
+      <div class="item">
+        <a href="http://127.0.0.1:8000/waiter"> Hottest </a>
+        <i class="idea icon"></i>
+      </div>
+    </div>
+
+    <div class="ui segment">
+        <div class="header item" id="menu">
+            Menu
+        </div>
+        <div class="ui massive breadcrumb">
+          <a class="section" href="http://127.0.0.1:8000/index">Home</a>
+          <i class="right chevron icon divider"></i>
+          <a class="section">各个城区中最热销</a>
+        </div>
+      <div class="ui clearing divider"></div>
+      <p></p>
+    </div>
+    
+<div class="pusher">
+
+
+    <div class="row">
+      <div class="column">
+        <div class="ui container segment">
+          <div class="ui compact menu">
+            <div class="ui simple dropdown item">
+              Area
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                    <div class="item" id="Slider0">朝阳</div>
+                    <div class="item" id="Slider1">怀柔</div>
+                    <div class="item" id="Slider2">海淀</div>
+                    <div class="item" id="Slider3">不明</div>
+                    <div class="item" id="Slider4">大兴</div>
+                    <div class="item" id="Slider5">丰台</div>
+                    <div class="item" id="Slider6">昌平</div>
+                    <div class="item" id="Slider7">西城</div>
+                    <div class="item" id="Slider8">东城</div>
+                    <div class="item" id="Slider9">通州</div>
+                    <div class="item" id="Slider10">门头沟</div>
+                    <div class="item" id="Slider11">顺义</div>
+                    <div class="item" id="Slider12">石景山</div>
+                    <div class="item" id="Slider13">宣武</div>
+                    <div class="item" id="Slider14">房山</div>
+                    <div class="item" id="Slider15">延庆</div>
+                    <div class="item" id="Slider16">密云</div>
+                    <div class="item" id="Slider17">北京周边</div>
+                    <div class="item" id="Slider18">燕郊</div>
+                    <div class="item" id="Slider19">崇文</div>
+                    <div class="item" id="Slider20">平谷</div>
+              </div>
+            </div>
+          </div>
+          <div data-highcharts-chart="3" class="ui container" id="chart1"><div style="position: relative; overflow: hidden; width: 903px; height: 400px; text-align: left; line-height: normal; z-index: 0; left: 0.5px; top: 0px;" id="highcharts-12" class="highcharts-container"><svg height="400" width="903" xmlns="http://www.w3.org/2000/svg" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" version="1.1"><desc>Created with Highcharts 4.2.1</desc><defs><clipPath id="highcharts-13"><rect height="270" width="820" y="0" x="0"></rect></clipPath></defs><rect class=" highcharts-background" fill="#FFFFFF" strokeWidth="0" height="400" width="903" y="0" x="0"></rect><g transform="translate(869,10)" stroke-linecap="round" style="cursor:default;" class="highcharts-button"><title>Chart context menu</title><rect ry="2" rx="2" stroke-width="1" stroke="none" fill="white" strokeWidth="1" height="22" width="24" y="0.5" x="0.5"></rect><path zIndex="1" stroke-width="3" stroke="#666" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" fill="#E0E0E0"></path><text y="12" style="color:black;fill:black;" zIndex="1" x="0"></text></g><g zIndex="1" class="highcharts-grid"></g><g zIndex="1" class="highcharts-grid"><path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 73 322.5 L 893 322.5" fill="none"></path><path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 73 232.5 L 893 232.5" fill="none"></path><path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 73 142.5 L 893 142.5" fill="none"></path><path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 73 51.5 L 893 51.5" fill="none"></path></g><g zIndex="2" class="highcharts-axis"><path opacity="1" stroke-width="1" stroke="#C0D0E0" d="M 482.5 322 L 482.5 332" fill="none"></path><path zIndex="7" stroke-width="1" stroke="#C0D0E0" d="M 73 322.5 L 893 322.5" fill="none"></path></g><g zIndex="2" class="highcharts-axis"><text y="187" style="color:#707070;fill:#707070;" class=" highcharts-yaxis-title" transform="translate(0,0) rotate(270 25.149999618530273 187)" text-anchor="middle" zIndex="7" x="25.149999618530273"><tspan>TOP 3</tspan></text></g><g zIndex="3" class="highcharts-series-group"><g clip-path="url(#highcharts-13)" style="" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-series highcharts-series-0 highcharts-tracker"><rect ry="0" rx="0" fill="#7cb5ec" stroke-width="1" stroke="#FFFFFF" height="248" width="132" y="22.5" x="179.5"></rect></g><g clip-path="none" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-markers highcharts-series-0"></g><g clip-path="url(#highcharts-13)" style="" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-series highcharts-series-1 highcharts-tracker"><rect ry="0" rx="0" fill="#434348" stroke-width="1" stroke="#FFFFFF" height="110" width="132" y="160.5" x="343.5"></rect></g><g clip-path="none" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-markers highcharts-series-1"></g><g clip-path="url(#highcharts-13)" style="" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-series highcharts-series-2 highcharts-tracker"><rect ry="0" rx="0" fill="#90ed7d" stroke-width="1" stroke="#FFFFFF" height="97" width="132" y="173.5" x="507.5"></rect></g><g clip-path="none" transform="translate(73,52) scale(1 1)" zIndex="0.1" class="highcharts-markers highcharts-series-2"></g></g><text y="24" style="color:#333333;font-size:18px;fill:#333333;width:839px;" zIndex="4" class="highcharts-title" text-anchor="middle" x="452">门头沟二手交易TOP3</text><g transform="translate(238,356)" zIndex="7" class="highcharts-legend"><g zIndex="1"><g><g transform="translate(8,3)" zIndex="1" class="highcharts-legend-item"><text y="15" zIndex="2" text-anchor="start" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" x="21">北京二手家电</text><rect fill="#7cb5ec" zIndex="3" height="12" width="16" y="4" x="0"></rect></g><g transform="translate(123,3)" zIndex="1" class="highcharts-legend-item"><text zIndex="2" text-anchor="start" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" y="15" x="21">北京二手数码产品</text><rect fill="#434348" zIndex="3" height="12" width="16" y="4" x="0"></rect></g><g transform="translate(262,3)" zIndex="1" class="highcharts-legend-item"><text zIndex="2" text-anchor="start" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" y="15" x="21">北京二手文体/户外/乐器</text><rect fill="#90ed7d" zIndex="3" height="12" width="16" y="4" x="0"></rect></g></g></g></g><g zIndex="7" class="highcharts-axis-labels highcharts-xaxis-labels"><text opacity="1" y="341" transform="translate(0,0)" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:Infinitypx;text-overflow:clip;" x="483">0</text></g><g zIndex="7" class="highcharts-axis-labels highcharts-yaxis-labels"><text opacity="1" y="326" transform="translate(0,0)" text-anchor="end" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:288px;text-overflow:clip;" x="58">0</text><text opacity="1" y="236" transform="translate(0,0)" text-anchor="end" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:288px;text-overflow:clip;" x="58">50</text><text opacity="1" y="146" transform="translate(0,0)" text-anchor="end" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:288px;text-overflow:clip;" x="58">100</text><text opacity="1" y="56" transform="translate(0,0)" text-anchor="end" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:288px;text-overflow:clip;" x="58">150</text></g><g visibility="visible" opacity="0" transform="translate(253,-9999)" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" zIndex="8" class="highcharts-tooltip"><path height="46" width="132" transform="translate(1, 1)" stroke-width="5" stroke-opacity="0.049999999999999996" stroke="black" isShadow="true" d="M 3.5 0.5 L 129.5 0.5 C 132.5 0.5 132.5 0.5 132.5 3.5 L 132.5 43.5 C 132.5 46.5 132.5 46.5 129.5 46.5 L 71.5 46.5 65.5 52.5 59.5 46.5 3.5 46.5 C 0.5 46.5 0.5 46.5 0.5 43.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" fill="none"></path><path height="46" width="132" transform="translate(1, 1)" stroke-width="3" stroke-opacity="0.09999999999999999" stroke="black" isShadow="true" d="M 3.5 0.5 L 129.5 0.5 C 132.5 0.5 132.5 0.5 132.5 3.5 L 132.5 43.5 C 132.5 46.5 132.5 46.5 129.5 46.5 L 71.5 46.5 65.5 52.5 59.5 46.5 3.5 46.5 C 0.5 46.5 0.5 46.5 0.5 43.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" fill="none"></path><path height="46" width="132" transform="translate(1, 1)" stroke-width="1" stroke-opacity="0.15" stroke="black" isShadow="true" d="M 3.5 0.5 L 129.5 0.5 C 132.5 0.5 132.5 0.5 132.5 3.5 L 132.5 43.5 C 132.5 46.5 132.5 46.5 129.5 46.5 L 71.5 46.5 65.5 52.5 59.5 46.5 3.5 46.5 C 0.5 46.5 0.5 46.5 0.5 43.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" fill="none"></path><path stroke-width="1" stroke="#7cb5ec" d="M 3.5 0.5 L 129.5 0.5 C 132.5 0.5 132.5 0.5 132.5 3.5 L 132.5 43.5 C 132.5 46.5 132.5 46.5 129.5 46.5 L 71.5 46.5 65.5 52.5 59.5 46.5 3.5 46.5 C 0.5 46.5 0.5 46.5 0.5 43.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" fill="rgba(249, 249, 249, .85)"></path><text y="20" style="font-size:12px;color:#333333;fill:#333333;" zIndex="1" x="8"><tspan style="font-size: 10px">0</tspan><tspan dy="15" x="8" style="fill:#7cb5ec">●</tspan><tspan dx="0"> 北京二手家电: </tspan><tspan dx="0" style="font-weight:bold">138</tspan></text></g><text y="395" style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;" zIndex="8" text-anchor="end" x="893">Highcharts.com</text></svg></div></div>
+        </div>
+      </div>
+    </div>
+
+<div id="chart1"></div>
+</div>
+
+
+
+<script>
+    $('#menu').click(function () {
+        $('.ui.sidebar').sidebar('toggle');
+    });
+
+</script>
+
+
+
+<script>
+$('#Slider0').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '朝阳二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [4153]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [2290]}, {'name': '北京二手文体/户外/乐器', 'data': [2222]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider1').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '怀柔二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手文体/户外/乐器', 'data': [114]}, {'name': '北京二手家电', 'data': [79]}, {'name': '北京二手数码产品', 'data': [45]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider2').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '海淀二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [2452]}, {'name': '北京二手数码产品', 'data': [1690]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [1206]}]
+	});
+});
+</script>
+<script>
+$('#Slider3').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '不明二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手服装/鞋帽/箱包', 'data': [2415]}, {'name': '北京二手图书/音像/软件', 'data': [2185]}, {'name': '北京二手数码产品', 'data': [1664]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider4').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '大兴二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [1815]}, {'name': '北京二手文体/户外/乐器', 'data': [471]}, {'name': '北京二手家具', 'data': [455]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider5').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '丰台二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [2547]}, {'name': '北京二手文体/户外/乐器', 'data': [1010]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [717]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider6').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '昌平二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [1247]}, {'name': '北京二手母婴/儿童用品', 'data': [546]}, {'name': '北京二手文体/户外/乐器', 'data': [523]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider7').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '西城二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手服装/鞋帽/箱包', 'data': [726]}, {'name': '北京二手家电', 'data': [619]}, {'name': '北京二手文体/户外/乐器', 'data': [417]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider8').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '东城二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [559]}, {'name': '北京二手文体/户外/乐器', 'data': [428]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [421]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider9').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '通州二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [1235]}, {'name': '北京二手文体/户外/乐器', 'data': [711]}, {'name': '北京二手母婴/儿童用品', 'data': [502]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider10').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '门头沟二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [138]}, {'name': '北京二手数码产品', 'data': [61]}, {'name': '北京二手文体/户外/乐器', 'data': [54]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider11').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '顺义二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [416]}, {'name': '北京二手文体/户外/乐器', 'data': [388]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [178]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider12').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '石景山二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [604]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [203]}, {'name': '北京二手文体/户外/乐器', 'data': [202]}]
+	});
+});
+</script>
+<script>
+$('#Slider13').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '宣武二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [421]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [244]}, {'name': '北京二手文体/户外/乐器', 'data': [202]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider14').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '房山二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [489]}, {'name': '北京二手文体/户外/乐器', 'data': [203]}, {'name': '北京二手母婴/儿童用品', 'data': [173]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider15').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '延庆二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手数码产品', 'data': [41]}, {'name': '北京二手文体/户外/乐器', 'data': [34]}, {'name': '北京二手母婴/儿童用品', 'data': [22]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider16').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '密云二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手文体/户外/乐器', 'data': [115]}, {'name': '北京二手数码产品', 'data': [57]}, {'name': '北京二手家电', 'data': [51]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider17').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '北京周边二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手服装/鞋帽/箱包', 'data': [98]}, {'name': '北京二手文体/户外/乐器', 'data': [74]}, {'name': '北京二手设备', 'data': [66]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider18').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '燕郊二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [176]}, {'name': '北京二手文体/户外/乐器', 'data': [65]}, {'name': '北京二手数码产品', 'data': [54]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider19').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '崇文二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手家电', 'data': [205]}, {'name': '北京二手文体/户外/乐器', 'data': [153]}, {'name': '北京二手服装/鞋帽/箱包', 'data': [150]}]
+	});
+});
+</script>
+
+<script>
+$('#Slider20').click(function () {
+	$('#chart1').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: '平谷二手交易TOP3'
+		},
+		yAxis: {
+			title: {
+				text:  'TOP 3'
+		}
+		},
+		series: [{'name': '北京二手文体/户外/乐器', 'data': [76]}, {'name': '北京二手数码产品', 'data': [41]}, {'name': '北京二手母婴/儿童用品', 'data': [27]}]
+	});
+});
+</script>
+
+
+
+
+</body></html>
