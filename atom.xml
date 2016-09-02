@@ -270,9 +270,9 @@
     
       <category term="python" scheme="http://renld.github.io/tags/python/"/>
     
-      <category term="django" scheme="http://renld.github.io/tags/django/"/>
-    
       <category term="Semantic" scheme="http://renld.github.io/tags/Semantic/"/>
+    
+      <category term="django" scheme="http://renld.github.io/tags/django/"/>
     
       <category term="Highchart" scheme="http://renld.github.io/tags/Highchart/"/>
     
