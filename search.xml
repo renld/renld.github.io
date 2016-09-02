@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title><![CDATA[机器学习(周志华) 01 绪论]]></title>
+      <url>http://renld.github.io/2016/09/02/ML-01/</url>
+      <content type="html"><![CDATA[<p>大二充实的生活开始噜<br><a id="more"></a></p>
+<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
+<li>让电脑基于数据产生<strong>模型</strong> — 从数据中学到的结果</li>
+<li>利用经验获得关于任务评估的改善 称为对经验进行了学习</li>
+<li>模型 : 从数据中学到的结果</li>
+</ul>
+<h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><ul>
+<li>数据集, 示例, 维数</li>
+<li>学习, 训练, 假设, 真实, 学习器</li>
+<li>标记信息 (类似于样例结果) 监督学习 无监督学习</li>
+<li>分布 独立同分布</li>
+</ul>
+<h2 id="假设空间"><a href="#假设空间" class="headerlink" title="假设空间"></a>假设空间</h2><ul>
+<li>最基本的是布尔概念学习,本章假定训练样本不含噪音</li>
+<li>学习的目的是”泛化”,过程是在所有假设组成空间中进行搜索的过程,寻求匹配的假设</li>
+<li>通配符 * (与python中import相似)</li>
+<li>多个假设与训练集一致 : 版本空间</li>
+</ul>
+<h2 id="归纳偏好"><a href="#归纳偏好" class="headerlink" title="归纳偏好"></a>归纳偏好</h2><ul>
+<li>对于一个具体学习算法而言,它必须产生一个模型</li>
+<li>偏好会起到关键作用 (觉得选择哪种/具体与否的) 结论<ul>
+<li>任何一个有效的机器学习算法必有其归纳偏好</li>
+<li>“什么样的的模型更好的” 假设</li>
+<li>特征选择</li>
+<li>泛化能力更强</li>
+</ul>
+</li>
+<li>奥卡姆剃刀原则 : 选最简单的那个</li>
+<li>没有免费午餐定理 NFL : 所有学习算法的期望性能相同<ul>
+<li>脱离具体问题空泛而谈毫无意义</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[编程珠玑 笔记]]></title>
       <url>http://renld.github.io/2016/09/02/programming-pearls/</url>
       <content type="html"><![CDATA[<blockquote>

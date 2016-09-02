@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-09-02T03:52:25.000Z</updated>
+  <updated>2016-09-02T23:46:06.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习(周志华) 01 绪论</title>
+    <link href="http://renld.github.io/2016/09/02/ML-01/"/>
+    <id>http://renld.github.io/2016/09/02/ML-01/</id>
+    <published>2016-09-02T12:09:44.000Z</published>
+    <updated>2016-09-02T23:46:06.000Z</updated>
+    
+    <content type="html">&lt;p&gt;大二充实的生活开始噜&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot; title=&quot;绪论&quot;&gt;&lt;/a&gt;绪论&lt;/h1&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;让电脑基于数据产生&lt;strong&gt;模型&lt;/strong&gt; — 从数据中学到的结果&lt;/li&gt;
+&lt;li&gt;利用经验获得关于任务评估的改善 称为对经验进行了学习&lt;/li&gt;
+&lt;li&gt;模型 : 从数据中学到的结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;基本术语&quot;&gt;&lt;a href=&quot;#基本术语&quot; class=&quot;headerlink&quot; title=&quot;基本术语&quot;&gt;&lt;/a&gt;基本术语&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;数据集, 示例, 维数&lt;/li&gt;
+&lt;li&gt;学习, 训练, 假设, 真实, 学习器&lt;/li&gt;
+&lt;li&gt;标记信息 (类似于样例结果) 监督学习 无监督学习&lt;/li&gt;
+&lt;li&gt;分布 独立同分布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;假设空间&quot;&gt;&lt;a href=&quot;#假设空间&quot; class=&quot;headerlink&quot; title=&quot;假设空间&quot;&gt;&lt;/a&gt;假设空间&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;最基本的是布尔概念学习,本章假定训练样本不含噪音&lt;/li&gt;
+&lt;li&gt;学习的目的是”泛化”,过程是在所有假设组成空间中进行搜索的过程,寻求匹配的假设&lt;/li&gt;
+&lt;li&gt;通配符 * (与python中import相似)&lt;/li&gt;
+&lt;li&gt;多个假设与训练集一致 : 版本空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;归纳偏好&quot;&gt;&lt;a href=&quot;#归纳偏好&quot; class=&quot;headerlink&quot; title=&quot;归纳偏好&quot;&gt;&lt;/a&gt;归纳偏好&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;对于一个具体学习算法而言,它必须产生一个模型&lt;/li&gt;
+&lt;li&gt;偏好会起到关键作用 (觉得选择哪种/具体与否的) 结论&lt;ul&gt;
+&lt;li&gt;任何一个有效的机器学习算法必有其归纳偏好&lt;/li&gt;
+&lt;li&gt;“什么样的的模型更好的” 假设&lt;/li&gt;
+&lt;li&gt;特征选择&lt;/li&gt;
+&lt;li&gt;泛化能力更强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;奥卡姆剃刀原则 : 选最简单的那个&lt;/li&gt;
+&lt;li&gt;没有免费午餐定理 NFL : 所有学习算法的期望性能相同&lt;ul&gt;
+&lt;li&gt;脱离具体问题空泛而谈毫无意义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大二充实的生活开始噜&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://renld.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>编程珠玑 笔记</title>
@@ -192,7 +245,7 @@
     <link href="http://renld.github.io/2016/08/21/jpg/"/>
     <id>http://renld.github.io/2016/08/21/jpg/</id>
     <published>2016-08-21T06:33:45.000Z</published>
-    <updated>2016-08-21T06:36:32.000Z</updated>
+    <updated>2016-09-02T05:37:26.000Z</updated>
     
     <content type="html">&lt;p&gt;好喜欢这些书签…捐了两块钱给作者:)&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -213,7 +266,7 @@
     
       <category term="python" scheme="http://renld.github.io/tags/python/"/>
     
-      <category term="clawer" scheme="http://renld.github.io/tags/clawer/"/>
+      <category term="crawler" scheme="http://renld.github.io/tags/crawler/"/>
     
   </entry>
   
@@ -270,9 +323,9 @@
     
       <category term="python" scheme="http://renld.github.io/tags/python/"/>
     
-      <category term="Semantic" scheme="http://renld.github.io/tags/Semantic/"/>
-    
       <category term="django" scheme="http://renld.github.io/tags/django/"/>
+    
+      <category term="Semantic" scheme="http://renld.github.io/tags/Semantic/"/>
     
       <category term="Highchart" scheme="http://renld.github.io/tags/Highchart/"/>
     
@@ -1056,43 +1109,6 @@
       <category term="python" scheme="http://renld.github.io/tags/python/"/>
     
       <category term="regular expression" scheme="http://renld.github.io/tags/regular-expression/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python实战计划 多进程抓取</title>
-    <link href="http://renld.github.io/2016/08/09/PL2-3/"/>
-    <id>http://renld.github.io/2016/08/09/PL2-3/</id>
-    <published>2016-08-09T11:00:38.000Z</published>
-    <updated>2016-08-09T12:06:12.000Z</updated>
-    
-    <content type="html">&lt;p&gt;单进程多线程: 一张桌子多个人吃饭,&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;from-multiprocessing-import-pool&quot;&gt;&lt;a href=&quot;#from-multiprocessing-import-pool&quot; class=&quot;headerlink&quot; title=&quot;from multiprocessing import pool&quot;&gt;&lt;/a&gt;from multiprocessing import pool&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;创建进程池&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pool = Pool( process = &lt;span class=&quot;number&quot;&gt;60&lt;/span&gt; )						  &lt;span class=&quot;comment&quot;&gt;# 默认可能更好&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pool.map(get_all_links_from,channel_list.split()) &lt;span class=&quot;comment&quot;&gt;# 依次对第二个参数指向第一个函数指针&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用命令行运行程序&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一边运行count, 一边运行主程序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;Aim&quot;&gt;&lt;a href=&quot;#Aim&quot; class=&quot;headerlink&quot; title=&quot;Aim&quot;&gt;&lt;/a&gt;Aim&lt;/h1&gt;&lt;p&gt;抓取过程中遇到网络问题,设计一个功能保证数据开始抓取的信息不回重复&lt;/p&gt;
-&lt;h1 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h1&gt;&lt;p&gt;这一章任务似乎与主题无关…….&lt;/p&gt;
-&lt;p&gt;放上标程先&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; multiprocessing &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Pool&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; page_parsing &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; get_item_info_from,url_list,item_info,get_links_from&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; channel_extracing &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; channel_list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ================================================= &amp;lt; &amp;lt;链接去重 &amp;gt; &amp;gt; =====================================================&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设计思路：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 1.分两个数据库，第一个用于只用于存放抓取下来的 url (ulr_list)；第二个则储存 url 对应的物品详情信息(item_info)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 2.在抓取过程中在第二个数据库中写入数据的同时，新增一个字段(key) &#39;index_url&#39; 即该详情对应的链接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 3.若抓取中断，在第二个存放详情页信息的数据库中的 url 字段应该是第一个数据库中 url 集合的子集&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 4.两个集合的 url 相减得出圣贤应该抓取的 url 还有哪些&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db_urls = [item[&lt;span class=&quot;string&quot;&gt;&#39;url&#39;&lt;/span&gt;] &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; item &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; url_list.find()]     &lt;span class=&quot;comment&quot;&gt;# 用列表解析式装入所有要爬取的链接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;index_urls = [item[&lt;span class=&quot;string&quot;&gt;&#39;url&#39;&lt;/span&gt;] &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; item &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; item_info.find()] &lt;span class=&quot;comment&quot;&gt;# 所引出详情信息数据库中所有的现存的 url 字段&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;x = set(db_urls)                                        &lt;span class=&quot;comment&quot;&gt;# 转换成集合的数据结构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y = set(index_urls)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rest_of_urls = x-y                                      &lt;span class=&quot;comment&quot;&gt;# 相减&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ======================================================================================================================&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单进程多线程: 一张桌子多个人吃饭,&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://renld.github.io/tags/python/"/>
     
   </entry>
   
