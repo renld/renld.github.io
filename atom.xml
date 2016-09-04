@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://renld.github.io/"/>
-  <updated>2016-09-02T23:46:06.000Z</updated>
+  <updated>2016-09-04T03:26:16.000Z</updated>
   <id>http://renld.github.io/</id>
   
   <author>
@@ -14,6 +14,146 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习(周志华) 03线性模型</title>
+    <link href="http://renld.github.io/2016/09/04/ML-03/"/>
+    <id>http://renld.github.io/2016/09/04/ML-03/</id>
+    <published>2016-09-04T01:26:31.000Z</published>
+    <updated>2016-09-04T03:26:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;f(&lt;strong&gt;x&lt;/strong&gt;) = $w^T(\mathbf{x})$ + b&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;$w^T$ 直观为x向量加权 表示重要性&lt;/li&gt;
+&lt;li&gt;线性回归&lt;ul&gt;
+&lt;li&gt;均方误差最小化&lt;/li&gt;
+&lt;li&gt;最小二乘法&lt;/li&gt;
+&lt;li&gt;多元线性回归&lt;/li&gt;
+&lt;li&gt;对数线性回归&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对数几率回归&lt;ul&gt;
+&lt;li&gt;单位阶跃函数&lt;/li&gt;
+&lt;li&gt;对数几率函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;线性判别分析(LDA)&lt;ul&gt;
+&lt;li&gt;同类投影点尽可能近,异类尽可能远&lt;/li&gt;
+&lt;li&gt;两类数据同先验,满足高斯分布且协方差相等时, LDA可达到最优分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;多分类学习&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;拆解法 化为若干个二分类任务求解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;OvO OvR MvM&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ECOC&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;类别不平衡问题&lt;ul&gt;
+&lt;li&gt;训练中不同类别训练样例差别很大&lt;/li&gt;
+&lt;li&gt;预测几率 &amp;gt; 观测几率&lt;/li&gt;
+&lt;li&gt;再缩放, 欠采样, 过采样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;f(&lt;strong&gt;x&lt;/strong&gt;) = $w^T(\mathbf{x})$ + b&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://renld.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习(周志华) 02模型评估与选择</title>
+    <link href="http://renld.github.io/2016/09/03/ML-02/"/>
+    <id>http://renld.github.io/2016/09/03/ML-02/</id>
+    <published>2016-09-02T23:49:13.000Z</published>
+    <updated>2016-09-04T02:02:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Math Analysis&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;经验误差与过拟合&quot;&gt;&lt;a href=&quot;#经验误差与过拟合&quot; class=&quot;headerlink&quot; title=&quot;经验误差与过拟合&quot;&gt;&lt;/a&gt;经验误差与过拟合&lt;/h2&gt;&lt;p&gt;若能通过最小经验误差避免过拟合,那么P == NP&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过拟合不可避免&lt;/li&gt;
+&lt;li&gt;通过泛化误差进行模型选择&lt;/li&gt;
+&lt;li&gt;通过测试集得到的测试误差,作为泛化误差的近似&lt;ul&gt;
+&lt;li&gt;同样从真实样本中取得&lt;/li&gt;
+&lt;li&gt;与训练集互斥&lt;ul&gt;
+&lt;li&gt;留出法&lt;ul&gt;
+&lt;li&gt;(划分保持一致性,分层抽样)&lt;/li&gt;
+&lt;li&gt;随机多次试验得到实验评估&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交叉验证法&lt;ul&gt;
+&lt;li&gt;对每个子集保持一致性(分层)&lt;/li&gt;
+&lt;li&gt;k折交叉验证&lt;/li&gt;
+&lt;li&gt;留一法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自助法(避免因数据规模导致的误差)&lt;ul&gt;
+&lt;li&gt;自助采样法为基础&lt;/li&gt;
+&lt;li&gt;包外估计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;调参与最终模型 (步长)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;性能度量&quot;&gt;&lt;a href=&quot;#性能度量&quot; class=&quot;headerlink&quot; title=&quot;性能度量&quot;&gt;&lt;/a&gt;性能度量&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;均方误差&lt;/li&gt;
+&lt;li&gt;错误率与精度&lt;/li&gt;
+&lt;li&gt;曲线图&lt;ul&gt;
+&lt;li&gt;查准率, 查全率  &lt;ul&gt;
+&lt;li&gt;PR图 &lt;ul&gt;
+&lt;li&gt;平衡点&lt;/li&gt;
+&lt;li&gt;“包住”则更优&lt;/li&gt;
+&lt;li&gt;F1度量(调和平均), Fβ度量(加权调和平均)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ROC曲线 &lt;ul&gt;
+&lt;li&gt;TPR(真正) FPR(假正)&lt;/li&gt;
+&lt;li&gt;AUC曲线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代价错误敏感率和代价曲线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;比较检验&lt;ul&gt;
+&lt;li&gt;假设检验 二项检验 t检验&lt;/li&gt;
+&lt;li&gt;交叉验证t检验&lt;/li&gt;
+&lt;li&gt;McNemar(卡方)检验&lt;/li&gt;
+&lt;li&gt;Fridman(算法性能)检验 检验是否相同&lt;/li&gt;
+&lt;li&gt;Nemenyi后续检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;偏差 - 方差分解&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Math Analysis&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://renld.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习(周志华) 01 绪论</title>
@@ -916,199 +1056,6 @@
       <category term="crawler" scheme="http://renld.github.io/tags/crawler/"/>
     
       <category term="MongoDB" scheme="http://renld.github.io/tags/MongoDB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PythonChallenge</title>
-    <link href="http://renld.github.io/2016/08/09/PythonChallenge/"/>
-    <id>http://renld.github.io/2016/08/09/PythonChallenge/</id>
-    <published>2016-08-09T14:30:48.000Z</published>
-    <updated>2016-08-09T15:28:43.000Z</updated>
-    
-    <content type="html">&lt;p&gt;真是一个有趣的游戏…..让我回忆起母语的魅力&lt;a href=&quot;http://www.pythonchallenge.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;src&lt;/a&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;Task1&quot;&gt;&lt;a href=&quot;#Task1&quot; class=&quot;headerlink&quot; title=&quot;Task1&quot;&gt;&lt;/a&gt;Task1&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;38&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;Task2&quot;&gt;&lt;a href=&quot;#Task2&quot; class=&quot;headerlink&quot; title=&quot;Task2&quot;&gt;&lt;/a&gt;Task2&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#C++弱智题python我在干嘛...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;str = &lt;span class=&quot;string&quot;&gt;&#39;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr\&#39;q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;str.replace(&lt;span class=&quot;string&quot;&gt;&#39;k&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;m&#39;&lt;/span&gt;).replace(&lt;span class=&quot;string&quot;&gt;&#39;o&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;q&#39;&lt;/span&gt;).replace(&lt;span class=&quot;string&quot;&gt;&#39;e&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;g&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alp = &lt;span class=&quot;string&quot;&gt;&#39;abcdefghijklmnopqrstuvwxyzabc&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;toInt&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ch)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(alp)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(alp[i] == ch):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; i&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;addTwo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ch)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(alp)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(alp[i] == ch):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; alp[i+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; str:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ans = addTwo(i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ans != &lt;span class=&quot;keyword&quot;&gt;None&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(addTwo(i),end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(i,end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;被标准库完虐&quot;&gt;&lt;a href=&quot;#被标准库完虐&quot; class=&quot;headerlink&quot; title=&quot;被标准库完虐&quot;&gt;&lt;/a&gt;被标准库完虐&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; string&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;text = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&quot;g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr&#39;q&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; ... ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;lmu ynnjw ml rfc spj.&quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;table = string.maketrans(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;  string.ascii_lowercase,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;... &lt;/span&gt;  string.ascii_lowercase[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;:]+string.ascii_lowercase[:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.join([chr(ord(x)+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; x &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;map&#39;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;Task3&quot;&gt;&lt;a href=&quot;#Task3&quot; class=&quot;headerlink&quot; title=&quot;Task3&quot;&gt;&lt;/a&gt;Task3&lt;/h1&gt;&lt;p&gt;被完虐&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&quot;hehe.html&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;r&quot;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; f:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; k,s &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; zip(f,range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1000000000000000&lt;/span&gt;)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; k:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; p:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                p[j] = p[j] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                p[j] = s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ans = sorted(p.items(),key=&lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; d:d[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],reverse = &lt;span class=&quot;keyword&quot;&gt;False&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; ps &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,len(ans)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ans[ps][&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;lt; &lt;span class=&quot;number&quot;&gt;2000&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print(ans[ps][&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;],end=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;网上解答&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;.join([line.rstrip() &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; line &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; open(&lt;span class=&quot;string&quot;&gt;&#39;hehe.html&#39;&lt;/span&gt;)])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OCCURRENCES = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s: OCCURRENCES[c] = OCCURRENCES.get(c, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;avgOC = len(s) // len(OCCURRENCES)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;.join([c &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; c &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; OCCURRENCES[c] &amp;lt; avgOC]) )               &lt;span class=&quot;comment&quot;&gt;# equality&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;.join([char &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; char &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; mess &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; char.isalpha()]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (re.sub(&lt;span class=&quot;string&quot;&gt;r&#39;[^a-z]&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;, str))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;真是一个有趣的游戏…..让我回忆起母语的魅力&lt;a href=&quot;http://www.pythonchallenge.com&quot;&gt;src&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://renld.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>regular expression</title>
-    <link href="http://renld.github.io/2016/08/09/RE/"/>
-    <id>http://renld.github.io/2016/08/09/RE/</id>
-    <published>2016-08-09T12:10:53.000Z</published>
-    <updated>2016-08-30T01:22:17.000Z</updated>
-    
-    <content type="html">&lt;p&gt;跟风学正则の笔记 &lt;a href=&quot;http://tool.oschina.net/regex&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;测试工具&lt;/a&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;what-is-Regular-Expression&quot;&gt;&lt;a href=&quot;#what-is-Regular-Expression&quot; class=&quot;headerlink&quot; title=&quot;what is Regular Expression&quot;&gt;&lt;/a&gt;what is Regular Expression&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;正则表达式(regular expression)描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种子串、将匹配的子串做替换或者从某个串中取出符合某个条件的子串等。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;How&quot;&gt;&lt;a href=&quot;#How&quot; class=&quot;headerlink&quot; title=&quot;How&quot;&gt;&lt;/a&gt;How&lt;/h1&gt;&lt;p&gt;From LiaoXueFeng&lt;/p&gt;
-&lt;h2 id=&quot;Simple-Introduction&quot;&gt;&lt;a href=&quot;#Simple-Introduction&quot; class=&quot;headerlink&quot; title=&quot;Simple Introduction&quot;&gt;&lt;/a&gt;Simple Introduction&lt;/h2&gt;&lt;p&gt;在正则表达式中，如果直接给出字符，就是精确匹配。&lt;/p&gt;
-&lt;p&gt;用&lt;code&gt;\d&lt;/code&gt;可以匹配一个数字，&lt;code&gt;\w&lt;/code&gt;可以匹配一个字母或数字，所以：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;#39;00\d&amp;#39;&lt;/code&gt;可以匹配&lt;code&gt;&amp;#39;007&amp;#39;&lt;/code&gt;，但无法匹配&lt;code&gt;&amp;#39;00A&amp;#39;&lt;/code&gt;；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而&lt;code&gt;.&lt;/code&gt;可以匹配任意字符，所以：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;#39;py.&amp;#39;&lt;/code&gt;可以匹配&lt;code&gt;&amp;#39;pyc&amp;#39;&lt;/code&gt;、&lt;code&gt;&amp;#39;pyo&amp;#39;&lt;/code&gt;、&lt;code&gt;&amp;#39;py!&amp;#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;要匹配变长的字符，在正则表达式中，&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;用&lt;code&gt;*&lt;/code&gt;表示任意个字符（包括0个）&lt;/li&gt;
-&lt;li&gt;用&lt;code&gt;+&lt;/code&gt;表示至少一个字符&lt;/li&gt;
-&lt;li&gt;用&lt;code&gt;?&lt;/code&gt;表示0个或1个字符&lt;/li&gt;
-&lt;li&gt;用&lt;code&gt;{n}&lt;/code&gt;表示n个字符，用&lt;code&gt;{n,m}&lt;/code&gt;表示n-m个字符：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;A|B&lt;/code&gt;可以匹配A或B，所以&lt;code&gt;(P|p)ython&lt;/code&gt;可以匹配&lt;code&gt;&amp;#39;Python&amp;#39;&lt;/code&gt;或者&lt;code&gt;&amp;#39;python&amp;#39;&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;^&lt;/code&gt;表示行的开头，&lt;code&gt;^\d&lt;/code&gt;表示必须以数字开头。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$&lt;/code&gt;表示行的结束，&lt;code&gt;\d$&lt;/code&gt;表示必须以数字结束。&lt;/p&gt;
-&lt;p&gt;如果你想查找元字符本身的话，比如你查找.,或者&lt;em&gt;,就出现了问题：你没办法指定它们，因为它们会被解释成别的意思。这时你就得使用\来取消这些字符的特殊意义。因此，你应该使用.和\&lt;/em&gt;。当然，要查找\本身，你也得用\.&lt;/p&gt;
-&lt;p&gt;例如：&lt;code&gt;deerchao\.net&lt;/code&gt;匹配deerchao.net，&lt;code&gt;C:\\Windows&lt;/code&gt;匹配C:\Windows。&lt;/p&gt;
-&lt;h2 id=&quot;In-Python&quot;&gt;&lt;a href=&quot;#In-Python&quot; class=&quot;headerlink&quot; title=&quot;In Python&quot;&gt;&lt;/a&gt;In Python&lt;/h2&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 从头找,找到了返回对象,找不到返回none&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.match(p,text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 不是从第一个字符开始找&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj = re.search(p,text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.start(),obj.end(),obj.group()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 找到多个对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.findall(p,text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 找到后把字符串分隔开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.split(p,text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# p替换成s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.sub(p,s,text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;^ 字符串开头&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\b 单词开头\末尾&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\w 数字字母&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\S 不是空格&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ == &amp;#123;1,&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;? 非贪婪模式&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;r&#39;ABC\-001&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ans = re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^\d&amp;#123;3&amp;#125;\-\d&amp;#123;3,8&amp;#125;$&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;010-12345&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;lt;_sre.SRE_Match object; span=(0, 9), match=&#39;010-12345&#39;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# print(ans.group(0)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ans = re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^\d&amp;#123;3&amp;#125;\-\d&amp;#123;3,8&amp;#125;$&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;010 12345&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#none&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.split(&lt;span class=&quot;string&quot;&gt;r&#39;\s+&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;a b   c&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# +匹配前面的子表达式一次或多次&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# \s匹配任何空白字符&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ans = re.split(&lt;span class=&quot;string&quot;&gt;r&#39;[\s\,]+&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;a,b, c  d&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# \将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 分组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;m = re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^(\d&amp;#123;3&amp;#125;)-(\d&amp;#123;3,8&amp;#125;)$&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;010-12345&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &amp;lt;_sre.SRE_Match object; span=(0, 9), match=&#39;010-12345&#39;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;m.group(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &#39;010-12345&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;m.group(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &#39;010&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;m.group(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# &#39;12345&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 贪婪匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^(\d+)(0*)$&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;102300&#39;&lt;/span&gt;).groups()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# + 匹配前面的子表达式一次或多次。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# * 匹配前面的子表达式零次或多次&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# (&#39;102300&#39;, &#39;&#39;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 非贪婪匹配&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^(\d+?)(0*)$&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;102300&#39;&lt;/span&gt;).groups()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#? 匹配前面的子表达式零次或一次。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#(&#39;1023&#39;, &#39;00&#39;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(ans)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#预编译&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 编译:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re_telephone = re.compile(&lt;span class=&quot;string&quot;&gt;r&#39;^(\d&amp;#123;3&amp;#125;)-(\d&amp;#123;3,8&amp;#125;)$&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 使用：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re_telephone.match(&lt;span class=&quot;string&quot;&gt;&#39;010-12345&#39;&lt;/span&gt;).groups()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#(&#39;010&#39;, &#39;12345&#39;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;字符类型&quot;&gt;&lt;a href=&quot;#字符类型&quot; class=&quot;headerlink&quot; title=&quot;字符类型&quot;&gt;&lt;/a&gt;字符类型&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;普通字符&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;非打印字符&lt;/p&gt;
-&lt;p&gt;| char | description                        |&lt;br&gt;| —- | ———————————- |&lt;br&gt;| \cx  | 匹配由x指明的控制字符。                       |&lt;br&gt;| \f   | 匹配一个换页符。等价于 \x0c 和 \cL             |&lt;br&gt;| \n   | 匹配一个换行符。等价于 \x0a 和 \cJ             |&lt;br&gt;| \r   | 匹配一个回车符。等价于 \x0d 和 \cM             |&lt;br&gt;| \s   | 匹配任何空白字符 空格、制表符、换页符==[\f\n\r\t\v]。 |&lt;br&gt;| \S   | 匹配任何非空白字符。等价于 &lt;code&gt;[^ \f\n\r\t\v]&lt;/code&gt;。    |&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;控制字符&lt;/p&gt;
-&lt;p&gt;| char | description                              |&lt;br&gt;| —- | —————————————- |&lt;br&gt;| $    | 匹配输入字符串的结尾位置。                            |&lt;br&gt;| ( )  | 标记一个子表达式的开始和结束位置。                        |&lt;br&gt;| &lt;em&gt;    | 匹配前面的子表达式零次或多次。要匹配 &lt;/em&gt; 字符，请使用 *。          |&lt;br&gt;| +    | 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +。          |&lt;br&gt;| .    | 匹配除换行符 \n之外的任何单字符。要匹配 .，请使用 \。           |&lt;br&gt;| [    | 标记一个中括号表达式的开始。要匹配 [，请使用 [。              |&lt;br&gt;| ?    | 匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 \?。 |&lt;br&gt;|    | 将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， ‘n’ 匹配字符 ‘n’。’\n’ 匹配换行符。序列 ‘\‘ 匹配 “\”，而 ‘(‘ 则匹配 “(“。 |&lt;br&gt;| ^    | 匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。 |&lt;br&gt;| {    | 标记限定符表达式的开始。要匹配 {，请使用 {。                |&lt;br&gt;| |   | 指明两项之间的一个选择。要匹配 |，请使用 |。               |&lt;br&gt;|      |                                          |&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;限定字符&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;char&lt;/th&gt;
-&lt;th&gt;description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;*&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式零次或多次。例如，zo&lt;em&gt; 能匹配 “z” 以及 “zoo”。&lt;/em&gt; 等价于{0,}。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;+&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;?&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 或 “does” 中的”do” 。? 等价于 {0,1}。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;{n}&lt;/td&gt;
-&lt;td&gt;n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;{n,}&lt;/td&gt;
-&lt;td&gt;n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;{n,m}&lt;/td&gt;
-&lt;td&gt;m 和 n 均为非负整数，其中n &amp;lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;code&gt;\d{3}\s+\d{3,8}&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;\d{3}&lt;/code&gt;表示匹配3个数字，例如&lt;code&gt;&amp;#39;010&amp;#39;&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\s&lt;/code&gt;可以匹配一个空格（也包括Tab等空白符），所以&lt;code&gt;\s+&lt;/code&gt;表示至少有一个空格，例如匹配&lt;code&gt;&amp;#39; &amp;#39;&lt;/code&gt;，&lt;code&gt;&amp;#39; &amp;#39;&lt;/code&gt;等；&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\d{3,8}&lt;/code&gt;表示3-8个数字，例如&lt;code&gt;&amp;#39;1234567&amp;#39;&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;\(?0\d{2}[) -]?\d{8}。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;“(”和“)”也是元字符，后面的&lt;a href=&quot;http://deerchao.net/tutorials/regex/regex.htm#grouping&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;分组节&lt;/a&gt;里会提到，所以在这里需要使用&lt;a href=&quot;http://deerchao.net/tutorials/regex/regex.htm#escape&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;转义&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;这个表达式可以匹配几种格式的电话号码，像(010)88886666，或022-22334455，或02912345678等。我们对它进行一些分析吧：首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;正则表达式&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;/\b([a-z]+) \1\b/gi&lt;/td&gt;
-&lt;td&gt;一个单词连续出现的位置。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/(\w+):\/\/([^/:]+)(:\d&lt;em&gt;)?([^# ]&lt;/em&gt;)/&lt;/td&gt;
-&lt;td&gt;将一个URL解析为协议、域、端口及相对路径。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/^(?:Chapter\&lt;/td&gt;
-&lt;td&gt;Section) [1-9][0-9]{0,1}$/&lt;/td&gt;
-&lt;td&gt;定位章节的位置。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/[-a-z]/&lt;/td&gt;
-&lt;td&gt;A至z共26个字母再加一个-号。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/ter\b/&lt;/td&gt;
-&lt;td&gt;可匹配chapter，而不能匹配terminal。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/\Bapt/&lt;/td&gt;
-&lt;td&gt;可匹配chapter，而不能匹配aptitude。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/Windows(?=95 \&lt;/td&gt;
-&lt;td&gt;98 \&lt;/td&gt;
-&lt;td&gt;NT )/&lt;/td&gt;
-&lt;td&gt;可匹配Windows95或Windows98或WindowsNT，当找到一个匹配后，从Windows后面开始进行下一次的检索匹配。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/^\s*$/&lt;/td&gt;
-&lt;td&gt;匹配空行。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/\d{2}-\d{5}/&lt;/td&gt;
-&lt;td&gt;验证由两位数字、一个连字符再加 5 位数字组成的 ID 号。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/&amp;lt;\s&lt;em&gt;(\S+)(\s[^&amp;gt;]&lt;/em&gt;)?&amp;gt;[\s\S]&lt;em&gt;&amp;lt;\s&lt;/em&gt;\/\1\s*&amp;gt;/&lt;/td&gt;
-&lt;td&gt;匹配 HTML 标记。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&quot;Exercise&quot;&gt;&lt;a href=&quot;#Exercise&quot; class=&quot;headerlink&quot; title=&quot;Exercise&quot;&gt;&lt;/a&gt;Exercise&lt;/h1&gt;&lt;h2 id=&quot;email&quot;&gt;&lt;a href=&quot;#email&quot; class=&quot;headerlink&quot; title=&quot;email&quot;&gt;&lt;/a&gt;email&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# email&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;patten = &lt;span class=&quot;string&quot;&gt;&#39;bill.gates@microsoft.com&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;r = &lt;span class=&quot;string&quot;&gt;r&#39;^(\w*)\.?(\w*)@(\w+).(\w+)&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(re.match(r,patten).groups())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;r1 = &lt;span class=&quot;string&quot;&gt;r&#39;(&amp;lt;\w+\s\w+&amp;gt;)\s*(\w*)\.?(\w*)@(\w+).(\w+)&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;patten1 = &lt;span class=&quot;string&quot;&gt;&#39;&amp;lt;Tom Paris&amp;gt; tom@voyager.org&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(re.match(r1,patten).groups())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 别人的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;re_email = re.match(&lt;span class=&quot;string&quot;&gt;r&#39;^(\w+\.\w+|\w+)(\@\w+\.com)$&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;bill.a@microsoft.com&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(re_email.groups())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.runoob.com/regexp/regexp-syntax.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Runoob&lt;/a&gt; &lt;a href=&quot;http://deerchao.net/tutorials/regex/regex.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;30min&lt;/a&gt; &lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143193331387014ccd1040c814dee8b2164bb4f064cff000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;廖雪峰&lt;/a&gt; &lt;a href=&quot;http://www.regexlab.com/zh/regref.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt; &lt;a href=&quot;http://www.runoob.com/python3/python3-reg-expressions.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;python正则&lt;/a&gt; &lt;a href=&quot;https://zhuanlan.zhihu.com/p/21341872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;路人甲&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;跟风学正则の笔记 &lt;a href=&quot;http://tool.oschina.net/regex&quot;&gt;测试工具&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://renld.github.io/tags/python/"/>
-    
-      <category term="regular expression" scheme="http://renld.github.io/tags/regular-expression/"/>
     
   </entry>
   

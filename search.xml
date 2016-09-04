@@ -4,6 +4,118 @@
   
     
     <entry>
+      <title><![CDATA[机器学习(周志华) 03线性模型]]></title>
+      <url>http://renld.github.io/2016/09/04/ML-03/</url>
+      <content type="html"><![CDATA[<p>f(<strong>x</strong>) = $w^T(\mathbf{x})$ + b</p>
+<a id="more"></a>
+<ul>
+<li>$w^T$ 直观为x向量加权 表示重要性</li>
+<li>线性回归<ul>
+<li>均方误差最小化</li>
+<li>最小二乘法</li>
+<li>多元线性回归</li>
+<li>对数线性回归</li>
+</ul>
+</li>
+<li>对数几率回归<ul>
+<li>单位阶跃函数</li>
+<li>对数几率函数</li>
+</ul>
+</li>
+<li>线性判别分析(LDA)<ul>
+<li>同类投影点尽可能近,异类尽可能远</li>
+<li>两类数据同先验,满足高斯分布且协方差相等时, LDA可达到最优分类</li>
+</ul>
+</li>
+<li><p>多分类学习</p>
+<ul>
+<li><p>拆解法 化为若干个二分类任务求解</p>
+</li>
+<li><p>OvO OvR MvM</p>
+</li>
+<li><p>ECOC</p>
+</li>
+</ul>
+</li>
+<li>类别不平衡问题<ul>
+<li>训练中不同类别训练样例差别很大</li>
+<li>预测几率 &gt; 观测几率</li>
+<li>再缩放, 欠采样, 过采样</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习(周志华) 02模型评估与选择]]></title>
+      <url>http://renld.github.io/2016/09/03/ML-02/</url>
+      <content type="html"><![CDATA[<p>Math Analysis</p>
+<a id="more"></a>
+<h2 id="经验误差与过拟合"><a href="#经验误差与过拟合" class="headerlink" title="经验误差与过拟合"></a>经验误差与过拟合</h2><p>若能通过最小经验误差避免过拟合,那么P == NP</p>
+<ul>
+<li>过拟合不可避免</li>
+<li>通过泛化误差进行模型选择</li>
+<li>通过测试集得到的测试误差,作为泛化误差的近似<ul>
+<li>同样从真实样本中取得</li>
+<li>与训练集互斥<ul>
+<li>留出法<ul>
+<li>(划分保持一致性,分层抽样)</li>
+<li>随机多次试验得到实验评估</li>
+</ul>
+</li>
+<li>交叉验证法<ul>
+<li>对每个子集保持一致性(分层)</li>
+<li>k折交叉验证</li>
+<li>留一法</li>
+</ul>
+</li>
+<li>自助法(避免因数据规模导致的误差)<ul>
+<li>自助采样法为基础</li>
+<li>包外估计</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>调参与最终模型 (步长)</li>
+</ul>
+<h2 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h2><ul>
+<li>均方误差</li>
+<li>错误率与精度</li>
+<li>曲线图<ul>
+<li>查准率, 查全率  <ul>
+<li>PR图 <ul>
+<li>平衡点</li>
+<li>“包住”则更优</li>
+<li>F1度量(调和平均), Fβ度量(加权调和平均)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ROC曲线 <ul>
+<li>TPR(真正) FPR(假正)</li>
+<li>AUC曲线</li>
+</ul>
+</li>
+<li>代价错误敏感率和代价曲线</li>
+</ul>
+</li>
+<li>比较检验<ul>
+<li>假设检验 二项检验 t检验</li>
+<li>交叉验证t检验</li>
+<li>McNemar(卡方)检验</li>
+<li>Fridman(算法性能)检验 检验是否相同</li>
+<li>Nemenyi后续检验</li>
+</ul>
+</li>
+<li>偏差 - 方差分解</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习(周志华) 01 绪论]]></title>
       <url>http://renld.github.io/2016/09/02/ML-01/</url>
       <content type="html"><![CDATA[<p>大二充实的生活开始噜<br><a id="more"></a></p>
