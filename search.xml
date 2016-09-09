@@ -4,6 +4,129 @@
   
     
     <entry>
+      <title><![CDATA[python2 passwords]]></title>
+      <url>http://renld.github.io/2016/09/07/python-passwords/</url>
+      <content type="html"><![CDATA[<p>源自黑板课作业</p>
+<ol>
+<li>随机函数产生用户名密码, 并用文件保存下来</li>
+<li>md5加密</li>
+</ol>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line">hashlib.md5(password).hexdigest()</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python2(HBK) 基本数据结构]]></title>
+      <url>http://renld.github.io/2016/09/07/python-list/</url>
+      <content type="html"><![CDATA[<p>python 没有引用,不能直接用 = copy(这样是copy reference)</p>
+<p>所以需要深拷贝  b = a[:]<br><a id="more"></a></p>
+<h1 id="列表和元组"><a href="#列表和元组" class="headerlink" title="列表和元组"></a>列表和元组</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">print</span> <span class="string">"----------- index and slice ----------"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">-1</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>:<span class="number">5</span>:<span class="number">2</span>] <span class="comment">#从0开始到第五个元素 step = 2 == [1,3,5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ ref and copy -----------"</span></span><br><span class="line"></span><br><span class="line">a_ref=a</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>]=<span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a="</span>+str(a)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_ref="</span>+str(a_ref)</span><br><span class="line"></span><br><span class="line">a_copy = a[:] <span class="comment">#深拷贝</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_copy="</span>+str(a_copy)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ list methods ----------"</span></span><br><span class="line">a.append(<span class="number">300</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After append: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.insert(<span class="number">1</span>,<span class="number">50</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After insert: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.pop()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After pop: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.sort()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After sort: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.reverse()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After reverse: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.count(num) <span class="comment">#a含num的个数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> a[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After del: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ ref and copy ------------"</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a="</span>+str(a)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_ref="</span>+str(a_ref)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_copy="</span>+str(a_copy)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=[a,a_ref,a_copy] <span class="comment">#第一个和第二个列表指向相同地址...</span></span><br><span class="line">c=[<span class="number">1</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">'abc'</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------用dict直接生成, </span></span><br><span class="line">name_age=((<span class="string">'xiaoli'</span>,<span class="number">33</span>),(<span class="string">'xiaowang'</span>,<span class="number">20</span>),(<span class="string">'xiaozhang'</span>,<span class="number">40</span>))</span><br><span class="line">a=dict(name_age)</span><br><span class="line">b=dict(xiaoli=<span class="number">33</span>,xiaowang=<span class="number">20</span>,xiaozhang=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------如何将两个等长度的list合并成dict</span></span><br><span class="line">text = <span class="string">'c++ python shell ruby java javascript c'</span></span><br><span class="line">code_num = [<span class="number">38599</span>, <span class="number">100931</span>, <span class="number">26153</span>, <span class="number">93142</span>, <span class="number">84275</span>, <span class="number">184220</span>, <span class="number">46843</span>]</span><br><span class="line"></span><br><span class="line">text_list=text.split(<span class="string">' '</span>)</span><br><span class="line">code_dict = dict(zip(text_list,code_num))<span class="comment"># zip将两个list生成字典</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------key, keys, items, values</span></span><br><span class="line">code_dict[<span class="string">'python'</span>]</span><br><span class="line">code_dict.keys()</span><br><span class="line">code_dict.values()</span><br><span class="line">code_dict.items()</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------get</span></span><br><span class="line">a=code_dict.get(<span class="string">'fortran'</span>,<span class="keyword">None</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#------- ref and copy</span></span><br><span class="line">a_ref = code_dict</span><br><span class="line">a_copy = code_dict.copy() <span class="keyword">or</span> = copy.copy(code_dict)<span class="comment">#浅拷贝</span></span><br><span class="line">a_copy = copy.deepcopy(code_dict) <span class="comment">#浅拷贝</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------update, del, copy, clear</span></span><br><span class="line">other_code = &#123;<span class="string">'php'</span>:<span class="number">78014</span>,<span class="string">'objective-c'</span>:<span class="number">34444</span>&#125;</span><br><span class="line">code_dict.update(other_code)</span><br><span class="line"><span class="keyword">del</span> code_dict[<span class="string">'c++'</span>]</span><br><span class="line">a_ref</span><br><span class="line">a_copy</span><br><span class="line">a_ref.clear()</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------sort key and value</span></span><br><span class="line">[(k,a_copy[k]) <span class="keyword">for</span> k <span class="keyword">in</span> sorted(a_copy.keys())]</span><br><span class="line">sorted(dict.iteritems(), key = <span class="keyword">lambda</span> d:d[<span class="number">1</span>], reverse = <span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h1>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习 计算机视觉(黑板课)]]></title>
+      <url>http://renld.github.io/2016/09/04/ML-HBK/</url>
+      <content type="html"><![CDATA[<p>what why how<br><a id="more"></a></p>
+<h1 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h1><p>#### </p>
+<p>计算机科学X统计学<br>模式识别,计算机视觉,语言识别,数据挖掘,统计学习,自然语言处理<br>数据处理-确定模型-算法训练</p>
+<h4 id="模型分类"><a href="#模型分类" class="headerlink" title="模型分类"></a>模型分类</h4><p>回归, 分类</p>
+<h4 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h4><p>overfitting 过拟合</p>
+<p>regularization 正则化</p>
+<h4 id="KNN-监督学习"><a href="#KNN-监督学习" class="headerlink" title="KNN(监督学习)"></a>KNN(监督学习)</h4><p>从训练集中找到最接近的k条记录</p>
+<p>根据他们的主要分类来觉得新数据的类别</p>
+<h4 id="K-Means-非监督学习-聚类"><a href="#K-Means-非监督学习-聚类" class="headerlink" title="K-Means(非监督学习[聚类])"></a>K-Means(非监督学习[聚类])</h4><p><a href="https://github.com/ZeevG/python-dominant-image-colour" target="_blank" rel="external">样例</a></p>
+<ol>
+<li>选择k个点作为初始中心 (canopy, 模拟退火, 贝叶斯准则)</li>
+<li>每个点指派到最近的中心,形成k个簇</li>
+<li>重新计算每个簇的中心</li>
+<li>到中心发生明显变化/未达到最大迭代次数</li>
+</ol>
+<h1 id="计算机视觉"><a href="#计算机视觉" class="headerlink" title="计算机视觉"></a>计算机视觉</h1><p>大脑/眼睛</p>
+<p>无人驾驶汽车/人脸识别/肿瘤识别/手势识别</p>
+<p>OpenCV, PIL</p>
+<ul>
+<li>数据输入 - 图像处理 - 数据输出</li>
+</ul>
+<p>AdaBoost</p>
+<ol>
+<li>初始化权值, i=1,wij=0.1</li>
+<li>训练学习,选择弱分类器</li>
+<li>计算分类误差 误分类率 弱分类器系数</li>
+<li>判断是否满足要求</li>
+<li>计算影响因子</li>
+<li>更新权值</li>
+<li>归一化</li>
+</ol>
+<h2 id="静态图像输入"><a href="#静态图像输入" class="headerlink" title="静态图像输入"></a>静态图像输入</h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习(周志华) 05神经网络]]></title>
+      <url>http://renld.github.io/2016/09/04/ML-05/</url>
+      <content type="html"><![CDATA[<p>神经网络是由具有适应性的简单单元组成的广泛并行互联的网络,<br>它的组织能够模拟生物神经系统对真实世界物体所作出的交互反应.</p>
+<a id="more"></a>
+<ul>
+<li>神经元模型<ul>
+<li>M-P神经元模型 : 神经元接受n个其他神经元传递过来的输入信号,通过带权重的链接进行传递</li>
+<li>总输入值和阈值进行比较, 通过激活函数处理以产生神经元的输出</li>
+</ul>
+</li>
+<li>感知机与多层网络<ul>
+<li>感知机由两层神经元组成,能实现与或非简单逻辑</li>
+<li>解决<em>线性可分问题*</em></li>
+<li>学习率 简单感知机学习规则 wi<em> = wi + △$\eta$(yi</em>-yi)xi</li>
+<li>多层前馈神经网络 (类似于二分图的拓展…)</li>
+</ul>
+</li>
+<li>误差逆传播算法(error BackPropagation)<ul>
+<li>早停 正则化</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习(周志华) 04决策树]]></title>
+      <url>http://renld.github.io/2016/09/04/ML-04/</url>
+      <content type="html"><![CDATA[<p>基于树结构进行判定</p>
+<p><a href="https://github.com/ujjwalkarn/Machine-Learning-Tutorials" target="_blank" rel="external">machine learning tutorials</a><br><a id="more"></a></p>
+<ul>
+<li>有三种情形会导致递归返回<ol>
+<li>当前节点样本属于同一类别,无需划分</li>
+<li>当前属性为空,或所有样本取值相同,无法划分</li>
+<li>当前节点包含集合为空</li>
+</ol>
+</li>
+<li>划分选择(最优划分属性)<ul>
+<li>信息熵Ent(D)越小, 纯度越高</li>
+<li>信息增益越大,纯度提升越大</li>
+<li>CART采用基尼指数来选择划分属性 : 随机抽取两个样本,标志不一致的概率</li>
+<li>剪枝处理减小过拟合</li>
+</ul>
+</li>
+<li>预剪枝<ul>
+<li>比较划分前后验证集精度是否优化</li>
+<li>后剪枝(相对更优 但时间开销大)</li>
+</ul>
+</li>
+<li>连续与缺失值<ul>
+<li>连续值 : 二分法</li>
+<li>缺失值 : 观察没有缺失属性a的样本子集</li>
+</ul>
+</li>
+<li>多变量决策树<ul>
+<li>斜划分</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习(周志华) 03线性模型]]></title>
       <url>http://renld.github.io/2016/09/04/ML-03/</url>
       <content type="html"><![CDATA[<p>f(<strong>x</strong>) = $w^T(\mathbf{x})$ + b</p>
@@ -1188,13 +1311,17 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Python 'First' Learning]]></title>
+      <title><![CDATA[python file]]></title>
       <url>http://renld.github.io/2016/08/05/HFPy/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>因为后面涉及数据库,服务器内容,<br>太监之后只有基础内容了QAQ</p>
+<p>以及循环递归..封装及笔记</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="HEADFIRST-PYTHON"><a href="#HEADFIRST-PYTHON" class="headerlink" title="HEADFIRST PYTHON"></a>HEADFIRST PYTHON</h2><h2 id="循环与递归"><a href="#循环与递归" class="headerlink" title="循环与递归"></a>循环与递归</h2><ul>
+<h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h1><h2 id="文件操作-1"><a href="#文件操作-1" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">'../p'</span>)</span><br><span class="line">os.getcwd();<span class="comment">#get file address</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#I</span></span><br><span class="line">data = open(<span class="string">'sketch.txt'</span>)</span><br><span class="line">data.seek(<span class="number">0</span>);<span class="comment">#return begin</span></span><br><span class="line"></span><br><span class="line">each_line = data.readline();</span><br><span class="line"><span class="comment"># help(each_line.split)</span></span><br><span class="line"><span class="comment"># S.split(sep=None, maxsplit=-1) -&gt; list of strings</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_line <span class="keyword">in</span> data:</span><br><span class="line">	<span class="keyword">if</span> each_line.find(<span class="string">':'</span>) != <span class="number">-1</span>:</span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">			(role,line_spoken) = each_line.split(<span class="string">':'</span>,<span class="number">1</span>)</span><br><span class="line">			print(role,end = <span class="string">''</span>);</span><br><span class="line">			print(<span class="string">' said: '</span>,end = <span class="string">''</span>);</span><br><span class="line">			print(line_spoken,end = <span class="string">''</span>);</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">		    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#O</span></span><br><span class="line">out = open(<span class="string">"data.out"</span>,<span class="string">"w"</span>) <span class="comment">#a -&gt; append,w+ read &amp; write</span></span><br><span class="line"><span class="keyword">for</span> eachS <span class="keyword">in</span> other:</span><br><span class="line"> 	print(eachS,file = out)</span><br><span class="line"></span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
+<p>##python2(HBK)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="comment">########################## file ################</span></span><br><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line">f=codecs.open(<span class="string">'file_ch.txt'</span>,<span class="string">'w'</span>,<span class="string">'utf-8'</span>) <span class="comment"># 支持中文的打开</span></span><br><span class="line"></span><br><span class="line">f.write(<span class="string">u'用python做些事\n'</span>)</span><br><span class="line">f.write(<span class="string">u'黑板客\n'</span>)</span><br><span class="line">f.write(<span class="string">u'网易云课堂\n'</span>)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#read file</span></span><br><span class="line">f=codecs.open(<span class="string">'file_ch.txt'</span>,<span class="string">'r'</span>,<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="keyword">print</span> f.readline() <span class="comment">#read()是读取一个字符</span></span><br><span class="line"><span class="keyword">print</span> f.readline()</span><br><span class="line"><span class="keyword">print</span> f.readline()</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment">########################## os ################</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.path.exists(<span class="string">'file_ch.txt'</span>)</span><br><span class="line">os.rename(<span class="string">'file_ch.txt'</span>, <span class="string">'file_test.txt'</span>)</span><br><span class="line"><span class="keyword">print</span> os.path.exists(<span class="string">'file_ch.txt'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="shelve-amp-pickle"><a href="#shelve-amp-pickle" class="headerlink" title="shelve &amp; pickle"></a>shelve &amp; pickle</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="comment">########################## shelve ################</span></span><br><span class="line"><span class="keyword">import</span> shelve <span class="comment"># 类似于字典,但是存在本地...</span></span><br><span class="line">f = shelve.open(<span class="string">'file_test.shelve'</span>)</span><br><span class="line">f[<span class="string">'baidu'</span>] = <span class="string">'www.baidu.com'</span></span><br><span class="line">f[<span class="string">'qq'</span>] = <span class="string">'www.qq.com'</span></span><br><span class="line">f[<span class="string">'163'</span>] = <span class="string">'www.163.com'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> f</span><br><span class="line">f.close()</span><br><span class="line">g = shelve.open(<span class="string">'file_test.shelve'</span>)</span><br><span class="line"><span class="keyword">print</span> g</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">########################## pickle ################</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"--------------------------------------"</span></span><br><span class="line"><span class="keyword">import</span> cPickle</span><br><span class="line">f=open(<span class="string">'file_test.pkl'</span>,<span class="string">'w'</span>)</span><br><span class="line"></span><br><span class="line">obj1 = <span class="number">2015</span>,<span class="string">"heibanke"</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],&#123;<span class="string">"python"</span>:<span class="number">1990</span>,<span class="string">"java"</span>:<span class="number">1992</span>&#125;</span><br><span class="line">obj2 = [<span class="string">'heibanke'</span>,<span class="string">'junmin11'</span>,<span class="string">'chutianshu1981'</span>,<span class="string">'sjtujoe'</span>,<span class="string">'ygkkv'</span>,</span><br><span class="line"><span class="string">'liuyanping_0904'</span>,<span class="string">'zhkmxx930'</span>]</span><br><span class="line"></span><br><span class="line">cPickle.dump(obj1,f)</span><br><span class="line">cPickle.dump(obj2,f)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#read file</span></span><br><span class="line">f=open(<span class="string">'file_test.pkl'</span>,<span class="string">'r'</span>)</span><br><span class="line">obj1_r = cPickle.load(f)</span><br><span class="line"><span class="keyword">print</span> obj1_r</span><br><span class="line"></span><br><span class="line">obj2_r = cPickle.load(f)</span><br><span class="line"><span class="keyword">print</span> obj2_r</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><h2 id="HEADFIRST-PYTHON"><a href="#HEADFIRST-PYTHON" class="headerlink" title="HEADFIRST PYTHON"></a>HEADFIRST PYTHON</h2><h2 id="循环与递归"><a href="#循环与递归" class="headerlink" title="循环与递归"></a>循环与递归</h2><ul>
 <li><p>python默认递归深度100</p>
 </li>
 <li><p>参考代码</p>
@@ -1213,7 +1340,6 @@
 <p>​</p>
 </li>
 </ol>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">'../p'</span>)</span><br><span class="line">os.getcwd();<span class="comment">#get file address</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#I</span></span><br><span class="line">data = open(<span class="string">'sketch.txt'</span>)</span><br><span class="line">data.seek(<span class="number">0</span>);<span class="comment">#return begin</span></span><br><span class="line"></span><br><span class="line">each_line = data.readline();</span><br><span class="line"><span class="comment"># help(each_line.split)</span></span><br><span class="line"><span class="comment"># S.split(sep=None, maxsplit=-1) -&gt; list of strings</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_line <span class="keyword">in</span> data:</span><br><span class="line">	<span class="keyword">if</span> each_line.find(<span class="string">':'</span>) != <span class="number">-1</span>:</span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">			(role,line_spoken) = each_line.split(<span class="string">':'</span>,<span class="number">1</span>)</span><br><span class="line">			print(role,end = <span class="string">''</span>);</span><br><span class="line">			print(<span class="string">' said: '</span>,end = <span class="string">''</span>);</span><br><span class="line">			print(line_spoken,end = <span class="string">''</span>);</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">		    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#O</span></span><br><span class="line">out = open(<span class="string">"data.out"</span>,<span class="string">"w"</span>) <span class="comment">#a -&gt; append,w+ read &amp; write</span></span><br><span class="line"><span class="keyword">for</span> eachS <span class="keyword">in</span> other:</span><br><span class="line"> 	print(eachS,file = out)</span><br><span class="line"></span><br><span class="line">out.close();</span><br></pre></td></tr></table></figure>
 <h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">line_spoken = line_spoken.strip()<span class="comment">#去除不必要的空白</span></span><br><span class="line">locals()<span class="comment">#当前BIF中变量集合</span></span><br></pre></td></tr></table></figure>
 <h2 id="第一本编程书笔记"><a href="#第一本编程书笔记" class="headerlink" title="第一本编程书笔记"></a>第一本编程书笔记</h2><ul>
 <li><p>int(), str()对于类型的转化</p>
