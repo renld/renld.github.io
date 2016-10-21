@@ -2,9 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://renld.github.io/lxm/index.html</loc>
+    <loc>http://renld.github.io/2016/10/21/la/</loc>
     
-    <lastmod>2016-09-09T06:33:39.000Z</lastmod>
+    <lastmod>2016-10-21T03:57:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/07/04/egt1/</loc>
+    
+    <lastmod>2016-10-19T08:20:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/11/possibility/</loc>
+    
+    <lastmod>2016-10-19T08:19:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/15/gupiao/</loc>
+    
+    <lastmod>2016-10-16T02:07:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/13/calcu/</loc>
+    
+    <lastmod>2016-10-15T01:26:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/22/net/</loc>
+    
+    <lastmod>2016-10-12T01:56:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/10/CSAPP/</loc>
+    
+    <lastmod>2016-10-10T05:15:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/05/HeiBanKe_Numpy/</loc>
+    
+    <lastmod>2016-10-05T07:43:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/23/matplotlib/</loc>
+    
+    <lastmod>2016-10-05T05:38:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/10/02/qt/</loc>
+    
+    <lastmod>2016-10-04T08:18:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/21/wxpython/</loc>
+    
+    <lastmod>2016-09-21T11:54:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/18/metaprogramming/</loc>
+    
+    <lastmod>2016-09-18T13:17:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/12/class/</loc>
+    
+    <lastmod>2016-09-18T11:44:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/11/function/</loc>
+    
+    <lastmod>2016-09-12T13:05:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://renld.github.io/2016/09/07/python-list/</loc>
+    
+    <lastmod>2016-09-11T07:39:28.000Z</lastmod>
     
   </url>
   
@@ -19,13 +117,6 @@
     <loc>http://renld.github.io/2016/08/05/HFPy/</loc>
     
     <lastmod>2016-09-07T09:15:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/09/07/python-list/</loc>
-    
-    <lastmod>2016-09-07T08:33:52.000Z</lastmod>
     
   </url>
   
@@ -264,13 +355,6 @@
     <loc>http://renld.github.io/2016/08/05/PL1-2/</loc>
     
     <lastmod>2016-08-05T14:20:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://renld.github.io/2016/07/04/egt1/</loc>
-    
-    <lastmod>2016-07-25T14:38:19.000Z</lastmod>
     
   </url>
   

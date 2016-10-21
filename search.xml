@@ -4,6 +4,722 @@
   
     
     <entry>
+      <title><![CDATA[线性代数回顾笔记]]></title>
+      <url>http://renld.github.io/2016/10/21/la/</url>
+      <content type="html"><![CDATA[<p><a href="http://renld.cn/LA.html" target="_blank" rel="external">笔记网址</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[股票]]></title>
+      <url>http://renld.github.io/2016/10/15/gupiao/</url>
+      <content type="html"><![CDATA[<p>for 银河杯</p>
+<a id="more"></a>
+<ul>
+<li>T+1交易:当日买入隔日才能卖出</li>
+<li>A股,B股,H股 人民币…</li>
+<li>多头空头,利多利空,套牢</li>
+<li>不受10%限制的<ul>
+<li>ST股:连续两年亏损,被进行特别处理<ul>
+<li>新ST股票: 三年,可能被退市</li>
+</ul>
+</li>
+<li>新股/复牌股</li>
+</ul>
+</li>
+<li>集合竞价: 9:15~9:25 找到基准价格(开盘价)</li>
+<li>收盘价: 最后一分钟所有交易的平均价格</li>
+<li>内盘: 卖, 外盘: 买 和为总手数</li>
+<li>委比: 买盘和卖盘强弱技术指标</li>
+<li>​</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[微积分复习笔记]]></title>
+      <url>http://renld.github.io/2016/10/13/calcu/</url>
+      <content type="html"><![CDATA[<p>from HBK<br><a id="more"></a></p>
+<p>微积分基本定理, 积分中值定理, 泰勒展开式<br>偏导数, 链式法则<br>方向导数 $f_x(x,y)cos\theta + f_y(x,y)sin\theta = |grad|cos\theta$</p>
+<p>梯度下降法: 最小二乘 </p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[概率论笔记]]></title>
+      <url>http://renld.github.io/2016/10/11/possibility/</url>
+      <content type="html"><![CDATA[<p>&lt;&lt;计算机应用与可靠性工程中的概率统计&gt;&gt;</p>
+<a id="more"></a>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="样本空间"><a href="#样本空间" class="headerlink" title="样本空间"></a>样本空间</h2><p>样本空间: 一个随机试验的全部可能结果,S</p>
+<p>可列无穷: 与自然数一一对应 + 有限 == 可数/离散样本空间</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>事件是某些样本点的集合, 单独进行的随机试验称为试验</p>
+<ul>
+<li>普通事件: {样本空间}</li>
+<li>不可能事件, 互斥事件</li>
+<li>基本事件 : {一个元素}</li>
+<li>基数, 补集, Venn图, 树图, 坐标系</li>
+</ul>
+<h2 id="概率公理"><a href="#概率公理" class="headerlink" title="概率公理"></a>概率公理</h2><p>Kolmogorov公理</p>
+<ol>
+<li>$P(A) \ge 0$</li>
+<li>P(S) = 1</li>
+<li>A,B互斥, P(AUB) = P(A) + P(B)<ul>
+<li>容斥:  P(AUB) = P(A) + P(B) - P(A∩B)</li>
+<li>SDP 不交积和法</li>
+</ul>
+</li>
+</ol>
+<p>概率空间(S,F,P) : 可测的</p>
+<h2 id="解决问题基本步骤"><a href="#解决问题基本步骤" class="headerlink" title="解决问题基本步骤"></a>解决问题基本步骤</h2><ol>
+<li>定义样本空间S : 互斥,完全穷尽</li>
+<li>概率分配</li>
+<li>确定所感兴趣的事件(图示法简化)</li>
+<li>计算所需概率</li>
+</ol>
+<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>$$P(s|B) = \begin{cases}\frac{P(s)}{P(B)},  &amp; \text{if s $\in$ B } \0, &amp; \text{if $s$ $\notin$ B}\end{cases}$$</p>
+<p>$$P(A|B) = \begin{cases} P(B)P(A|B) &amp;\text{if P(B) $\neq$ 0}\ P(A)P(B|A)&amp;\text{if P(A) $\neq$ 0}\0&amp;else\end{cases}$$</p>
+<h3 id="独立事件"><a href="#独立事件" class="headerlink" title="独立事件"></a>独立事件</h3><p>$P(A|B) = P(A)$ or $$P(A \cap B) = P(A) \cap P(B)$$ </p>
+<ol>
+<li>如果AB互斥, 那么P(A) = 0 or P(B) = 0</li>
+<li>如果与自己相互独立: P(A) = 0 or P(A) = 1</li>
+<li>不具有传递性</li>
+<li>$\overline{A}$ 继承A的独立集..</li>
+<li>两两独立$\subseteq$ 相互独立</li>
+</ol>
+<h2 id="可靠度"><a href="#可靠度" class="headerlink" title="可靠度"></a>可靠度</h2><p>可靠度乘积法则, 并联冗余, 可靠性框图(RBD), 故障树(顶事件)</p>
+<ul>
+<li>容斥公式</li>
+<li>SDP公式</li>
+<li>二元决策图</li>
+<li>因子调节</li>
+</ul>
+<h2 id="Bayes法则"><a href="#Bayes法则" class="headerlink" title="Bayes法则"></a>Bayes法则</h2><p><strong>事件空间</strong>: 实验结果与S’元素之间关系在于多对一</p>
+<p><strong>全概率定理:</strong> $P(A) = \sum P(A|B_{i})P(B_i)$</p>
+<p><strong>Bayes法则:</strong> $$P(B_j|A) = \frac {P(B_j\cap A)}{P(A)} =\frac{P(A|B_j)P(B_j)}{\sum P(A|B_i)P(B_i)}$$</p>
+<ul>
+<li>A已经发生,但是不知道互斥,完全穷尽$B_j$哪个发生时候</li>
+<li>后验概率: 交换了A先发生和B先发生的顺序,也就是当知道P(A or $\overline{A}$|B),P(A or $\overline{A}$|$\overline{B}$) 求P(B|A)</li>
+</ul>
+<h2 id="Bernoulli试验"><a href="#Bernoulli试验" class="headerlink" title="Bernoulli试验"></a>Bernoulli试验</h2><p>恰好k个 $p(k) =C(n,k) p^kq^{n-k}$</p>
+<p>至多k个$P_w = \sum C(n,k)(1-p)^ip^{n-i}$</p>
+<p>至少k个 $P_{k|n} = \sum p(i)$</p>
+<p>非齐次Bernouli实验(每次成功概率不同): $P<em>{k|n} = 1 - \sum</em>{|i|&gt;k}(\prod_{i in I} R<em>i)(\prod</em>{i\notin I} R_i)$</p>
+<p>广义Bernouli实验(不止两种可能): $p(n_1,n_2…n_k) = \frac{n!}{n_1!n_2!…n_k!}p_1^{n_1}p_2^{n_2}…p_k^{n_k}$</p>
+<h1 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h1><ul>
+<li><strong>随机变量</strong>指的是一种可能结果对应某一数值的映射法则</li>
+<li><strong>逆像</strong> $A_x = {s \in S|X(s) = x}$ 随机变量样本点的集合</li>
+<li>PMF质量概率函数/离散密度函数$P_X(x) =P<em>X(X=x) \sum</em>{X(s)=x}P(s)$</li>
+<li>分布函数$P<em>X(X\in x) = \sum</em>{x_i\in A}P_X(x_i)$</li>
+<li><ul>
+<li>CDF累计分布函数/改路分布函数 $F_X(t) = P(-\infty &lt; X \leq t)$</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Bernoulli分布</li>
+</ol>
+<p>X只能取0/1 </p>
+<p>$p_X(0) = p_0 = P(X = 0) = q$</p>
+<p>$p_X(1) = p_1 = P(X = 1) = p$</p>
+<ol>
+<li><p>二项分布</p>
+<p>$b(k;n,p) = C(n,k)p^k(1-p)^{n-k} \simeq \frac 1{\sqrt{2\pi npq}}e^-\frac{(k-np)^2}{2npq}$ (PMF正态近似)</p>
+<p>$B(t;n,p) = \sum_{i=0}^{\lfloor t  \rfloor}C(n,k)p^k(1-p)^{n-k}$</p>
+</li>
+<li><p>几何分布: 第一次成功已完成的实验次数</p>
+<p>无记忆性</p>
+<p>PMF: $F<em>z(t) = \sum</em>{i=1}^{\lfloor t \rfloor}p(1-p)^{i-1} = 1-(1-p)^{\lfloor t\rfloor}$</p>
+<p>修正几何分布PMF $P_X(i) = p(1-p)^i$</p>
+</li>
+<li><p>负二项分布: 第T次实验为第r次成功</p>
+</li>
+<li><p>泊松分布: 在时间段t内到达k个任务的概率</p>
+<ul>
+<li>(当p非常小n非常大可以用来估计二项分布的PMW)</li>
+<li><p>$e^{-\alpha}\frac{\alpha^k}{k!} \approxeq C(n,k) p^kq^{n-k} , \alpha = np $</p>
+<ol>
+<li>超几何分布: 无放回抽样</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>离散均匀分布, 常值分布, 示性随机变量</li>
+</ol>
+<h2 id="概率生成函数"><a href="#概率生成函数" class="headerlink" title="概率生成函数"></a>概率生成函数</h2><p>$$<br>G_x(z) = \sum p_iz^i<br>$$</p>
+<ol>
+<li>Bernoulli分布 $G(z) = 1-p-pz$</li>
+</ol>
+<ol>
+<li><p>二项分布 $G(z) = (pz+1-p)^n$</p>
+</li>
+<li><p>几何分布: 第一次成功已完成的实验次数</p>
+<p>修正几何分布PMF $G(z) = \frac{p}{1-z(1-p)}$</p>
+</li>
+<li><p>泊松分布: 在时间段t内到达k个任务的概率 $G(z) = e^{-\alpha(1-z)}$</p>
+</li>
+<li><p>常值分布: $G(z) = z^i$</p>
+</li>
+<li><p>示性随机分布$G(z) = p(A’) + P(A)_z$</p>
+<p>​</p>
+</li>
+</ol>
+<h2 id="随机变量的独立性"><a href="#随机变量的独立性" class="headerlink" title="随机变量的独立性"></a>随机变量的独立性</h2><p>边缘PMF $P_x(x) = \sum P(U_j {X=x,Y=y_j})$</p>
+<p>独立: $P_{x,y} = P_xP_y$</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[深入理解计算机系统读书笔记]]></title>
+      <url>http://renld.github.io/2016/10/10/CSAPP/</url>
+      <content type="html"><![CDATA[<p>程序员如何能够利用系统知识编写出更好的程序</p>
+<a id="more"></a>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[(转载)numpy基础入门 ——by 黑板客]]></title>
+      <url>http://renld.github.io/2016/10/05/HeiBanKe_Numpy/</url>
+      <content type="html"><![CDATA[<p>转载19课时课件(用作自学笔记用途)</p>
+<p>如果侵权请联系我email : leidar100@gmail.com</p>
+<p>文章底部”作者”不知道如何修改QAQ<br><a id="more"></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h3 id="1-矩阵的创建"><a href="#1-矩阵的创建" class="headerlink" title="1. 矩阵的创建"></a>1. 矩阵的创建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(<span class="number">1</span>,<span class="number">5</span>)</span><br><span class="line">a=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="keyword">print</span> a, a.dtype, a.shape, a.size, a.ndim</span><br></pre></td></tr></table></figure>
+<pre><code>[1 2 3 4 5] int64 (5,) 5 1
+
+
+np.arange类似range函数
+np.array用来生成矩阵
+dtype是数据类型，有int64, complex, uint16等
+shape是个元组属性，表示每一维的宽度
+size是所有元素个数
+ndim是维数
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],dtype=<span class="string">'float16'</span>) <span class="comment"># int64, complex, uint16......</span></span><br><span class="line"><span class="keyword">print</span> b, b.dtype</span><br></pre></td></tr></table></figure>
+<pre><code>[ 1.  2.  3.] float16
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m=np.array([np.arange(<span class="number">6</span>),np.arange(<span class="number">6</span>)])</span><br><span class="line"><span class="keyword">print</span> m, m.shape, m.size</span><br></pre></td></tr></table></figure>
+<pre><code>[[0 1 2 3 4 5]
+ [0 1 2 3 4 5]] (2, 6) 12
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每一个[]代表一维，比如</span></span><br><span class="line"><span class="comment"># [[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]], 代表矩阵的维度是(2,2,3)</span></span><br><span class="line"><span class="comment"># 其中第一个2，代表最外层的两个[]，第二个2代表第二层[]，第三个3代表最里层的维度。</span></span><br><span class="line">n=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]])</span><br><span class="line"><span class="keyword">print</span> n, n[<span class="number">0</span>,<span class="number">2</span>], n[<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">m=np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]],[[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]]])</span><br><span class="line"><span class="keyword">print</span> m.shape</span><br></pre></td></tr></table></figure>
+<pre><code>[[1 2 3 4]
+ [5 6 7 8]] 3 6
+(2, 2, 3)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x=m.ravel()</span><br><span class="line">y=n.flatten()</span><br><span class="line"><span class="keyword">print</span> x</span><br><span class="line"><span class="keyword">print</span> y</span><br></pre></td></tr></table></figure>
+<pre><code>[ 1  2  3  4  5  6  7  8  9 10 11 12]
+[1 2 3 4 5 6 7 8]
+
+ravel()和flatten()看起来效果一样，都是把矩阵展平了。它们的区别在于
+ravel()返回的是原有数据的一个映射(view)，没有分配新的存储
+flatten()返回的是新的数据
+因此如果我们改变它们的值，就可以看出区别
+
+numpy还有一些函数有这样的区别，关键在于判断函数返回是原数据的映射还是返回新的数据。
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">3</span>]=<span class="number">10</span>;y[<span class="number">3</span>]=<span class="number">10</span></span><br><span class="line"><span class="keyword">print</span> m</span><br><span class="line"><span class="keyword">print</span> n</span><br><span class="line"><span class="comment"># 看看m，n哪个的值改变了</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[[ 1  2  3]
+  [10  5  6]]
+
+ [[ 7  8  9]
+  [10 11 12]]]
+[[1 2 3 4]
+ [5 6 7 8]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reshape返回一个view</span></span><br><span class="line">x=m.reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="comment"># resize直接在当前数据上更改，返回空</span></span><br><span class="line">y=n.resize(<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line"><span class="keyword">print</span> x,y,<span class="string">'\n'</span>,n</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 1  2  3 10]
+ [ 5  6  7  8]
+ [ 9 10 11 12]] None 
+[[1 2 3 4]
+ [0 0 0 0]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">2</span>]=<span class="number">10</span>;<span class="keyword">print</span> x;<span class="keyword">print</span> m</span><br><span class="line"><span class="comment"># 看看m和n哪个改变了，有什么区别</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 1  2  3 10]
+ [ 5  6  7  8]
+ [10 10 10 10]]
+[[[ 1  2  3]
+  [10  5  6]]
+
+ [[ 7  8 10]
+  [10 10 10]]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">m=np.array([np.arange(<span class="number">6</span>),np.arange(<span class="number">6</span>)])</span><br><span class="line"><span class="comment"># copy()可以强制返回一个新的数据</span></span><br><span class="line">x=m.reshape(<span class="number">3</span>,<span class="number">4</span>).copy()</span><br><span class="line">x[<span class="number">2</span>]=<span class="number">10</span>;<span class="keyword">print</span> x;<span class="keyword">print</span> m</span><br><span class="line"><span class="comment">#看看这次m的值随x改变而改变吗</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  0  1]
+ [10 10 10 10]]
+[[0 1 2 3 4 5]
+ [0 1 2 3 4 5]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># linspace返回0,1之间的10个数据，它们之间的间隔自动计算</span></span><br><span class="line">x=np.linspace(<span class="number">0</span>,<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> x</span><br></pre></td></tr></table></figure>
+<pre><code>[ 0.          0.11111111  0.22222222  0.33333333  0.44444444  0.55555556 0.66666667  0.77777778  0.88888889  1.        ]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">10</span>)</span><br><span class="line">np.random.shuffle(a)  <span class="comment"># 随机排第一维</span></span><br><span class="line"><span class="keyword">print</span> a</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>, <span class="number">3</span>)) <span class="comment"># 随机排第一维，想一想结果是什么</span></span><br><span class="line">np.random.shuffle(a)</span><br><span class="line"><span class="keyword">print</span> a</span><br></pre></td></tr></table></figure>
+<pre><code>[4 3 6 0 2 8 5 1 9 7]
+[[0 1 2]
+ [6 7 8]
+ [3 4 5]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全0矩阵</span></span><br><span class="line">a=np.zeros((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line"><span class="comment"># 全1矩阵</span></span><br><span class="line">b=np.ones((<span class="number">5</span>,<span class="number">4</span>))</span><br><span class="line"><span class="comment"># 单位矩阵</span></span><br><span class="line">c=np.eye(<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 取对角元素</span></span><br><span class="line">np.diag(a)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0.,  0.,  0.])
+</code></pre><h3 id="2-矩阵的加法"><a href="#2-矩阵的加法" class="headerlink" title="2. 矩阵的加法"></a>2. 矩阵的加法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">## 每个元素的broadcast</span></span><br><span class="line"><span class="keyword">print</span> a</span><br><span class="line"><span class="keyword">print</span> a+<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 行broadcast</span></span><br><span class="line"><span class="keyword">print</span> a+np.arange(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 列broadcast</span></span><br><span class="line"><span class="keyword">print</span> a+np.arange(<span class="number">3</span>).reshape(<span class="number">3</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+[[ 3  4  5]
+ [ 6  7  8]
+ [ 9 10 11]]
+[[ 0  2  4]
+ [ 3  5  7]
+ [ 6  8 10]]
+[[ 0  1  2]
+ [ 4  5  6]
+ [ 8  9 10]]
+
+
+broadcast广播操作
+运算不仅仅作用在某个元素，而是作用在整个矩阵，或者整行，或者整列。
+比如
+n*m + 1*1 就是将1*1的元素作用在n*m的整个矩阵
+n*m + n*1 就是将n*1的元素作用在n*m的每一列
+n*m + 1*m 就是将1*m的元素作用在n*m的每一行
+乘法类似
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"><span class="keyword">print</span> np.sum(a,axis=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">print</span> np.sum(a,axis=<span class="number">1</span>)</span><br><span class="line"><span class="keyword">print</span> np.mean(a,axis=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">print</span> np.mean(a,axis=<span class="number">1</span>)</span><br><span class="line"><span class="keyword">print</span> np.std(a,axis=<span class="number">0</span>) <span class="comment">#标准差</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#axis=0，就是按第一个维度进行计算，行向量[1,2], [3,4]</span></span><br><span class="line"><span class="comment">#axis=1，就是按第二个维度进行计算，列向量[1,3], [2,4]</span></span><br></pre></td></tr></table></figure>
+<pre><code>[4 6]
+[3 7]
+[ 2.  3.]
+[ 1.5  3.5]
+[ 1.  1.]
+[[ 6  8 10]
+ [12 14 16]]
+[[ 3  5  7]
+ [15 17 19]]
+[[ 3 12]
+ [21 30]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#再拓展到3维</span></span><br><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line"><span class="keyword">print</span> np.sum(a,axis=<span class="number">0</span>) <span class="comment">#按第一维度加，结果为2*3矩阵, 可以理解为1*2*3</span></span><br><span class="line"><span class="keyword">print</span> np.sum(a,axis=<span class="number">1</span>) <span class="comment">#按第二维度加，结果为2*3矩阵, 可以理解为2*1*3</span></span><br><span class="line"><span class="keyword">print</span> np.sum(a,axis=<span class="number">2</span>) <span class="comment">#按第三维度加，结果为2*2矩阵, 可以理解为2*2*1</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ 6  8 10]
+ [12 14 16]]
+[[ 3  5  7]
+ [15 17 19]]
+[[ 3 12]
+ [21 30]]
+</code></pre><h3 id="3-矩阵的转置"><a href="#3-矩阵的转置" class="headerlink" title="3. 矩阵的转置"></a>3. 矩阵的转置</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> m.transpose()</span><br><span class="line"><span class="keyword">print</span> m.T</span><br></pre></td></tr></table></figure>
+<pre><code>[[0 0]
+ [1 1]
+ [2 2]
+ [3 3]
+ [4 4]
+ [5 5]]
+[[0 0]
+ [1 1]
+ [2 2]
+ [3 3]
+ [4 4]
+ [5 5]]
+</code></pre><h3 id="4-矩阵的乘法"><a href="#4-矩阵的乘法" class="headerlink" title="4. 矩阵的乘法"></a>4. 矩阵的乘法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">6</span>, <span class="number">2</span>))</span><br><span class="line">b = np.arange(<span class="number">10</span>).reshape((<span class="number">2</span>,<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 两种矩阵乘法形式</span></span><br><span class="line"><span class="keyword">print</span> a.dot(b)</span><br><span class="line"><span class="keyword">print</span> np.dot(a,b)</span><br></pre></td></tr></table></figure>
+<pre><code>[[  5   6   7   8   9]
+ [ 15  20  25  30  35]
+ [ 25  34  43  52  61]
+ [ 35  48  61  74  87]
+ [ 45  62  79  96 113]
+ [ 55  76  97 118 139]]
+[[  5   6   7   8   9]
+ [ 15  20  25  30  35]
+ [ 25  34  43  52  61]
+ [ 35  48  61  74  87]
+ [ 45  62  79  96 113]
+ [ 55  76  97 118 139]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 每个元素broadcast</span></span><br><span class="line"><span class="keyword">print</span> a*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 行broadcast</span></span><br><span class="line"><span class="keyword">print</span> a*[<span class="number">1</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列broadcast</span></span><br><span class="line"><span class="keyword">print</span> a*np.arange(<span class="number">6</span>).reshape(<span class="number">6</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="5-矩阵的拼接"><a href="#5-矩阵的拼接" class="headerlink" title="5.矩阵的拼接"></a>5.矩阵的拼接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">9</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line">b = <span class="number">2</span> * a</span><br><span class="line">c = np.hstack((a, b))</span><br><span class="line"><span class="keyword">print</span> a,b</span><br><span class="line"><span class="keyword">print</span> c</span><br></pre></td></tr></table></figure>
+<pre><code>[[0 1 2]
+ [3 4 5]
+ [6 7 8]] [[ 0  2  4]
+ [ 6  8 10]
+ [12 14 16]]
+[[ 0  1  2  0  2  4]
+ [ 3  4  5  6  8 10]
+ [ 6  7  8 12 14 16]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> np.concatenate((a, b), axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  0  2  4]
+ [ 3  4  5  6  8 10]
+ [ 6  7  8 12 14 16]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c=np.vstack((a, b))</span><br><span class="line">c=np.concatenate((a, b), axis=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> np.hsplit(a, <span class="number">3</span>)</span><br><span class="line"><span class="keyword">print</span> np.vsplit(a,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>[array([[0],
+       [3],
+       [6]]), array([[1],
+       [4],
+       [7]]), array([[2],
+       [5],
+       [8]])]
+[array([[0, 1, 2]]), array([[3, 4, 5]]), array([[6, 7, 8]])]
+</code></pre><h3 id="6-矩阵的查找"><a href="#6-矩阵的查找" class="headerlink" title="6. 矩阵的查找"></a>6. 矩阵的查找</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">b = a%<span class="number">2</span>==<span class="number">0</span></span><br><span class="line">c = a&gt;<span class="number">4</span></span><br><span class="line"><span class="keyword">print</span> b</span><br><span class="line"><span class="keyword">print</span> c</span><br><span class="line"><span class="comment"># 这里也用到了broadcast</span></span><br></pre></td></tr></table></figure>
+<pre><code>[[ True False  True False]
+ [ True False  True False]
+ [ True False  True False]]
+[[False False False False]
+ [False  True  True  True]
+ [ True  True  True  True]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line"><span class="keyword">print</span> a</span><br><span class="line"><span class="keyword">print</span> np.argmax(a)</span><br><span class="line"><span class="comment"># 其实是列broadcast，返回每列最大值的idx</span></span><br><span class="line"><span class="keyword">print</span> np.argmax(a, axis=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 行broadcast，返回每行最大值的idx</span></span><br><span class="line"><span class="keyword">print</span> np.argmax(a, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+11
+[2 2 2 2]
+[3 3 3]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># np.where支持多个逻辑组合, 得到满足条件的index</span></span><br><span class="line">idx=np.where((a&gt;<span class="number">3</span>))</span><br><span class="line"><span class="keyword">print</span> a[idx]</span><br><span class="line"></span><br><span class="line">idx=np.where((a&gt;<span class="number">3</span>)&amp;(a&lt;<span class="number">7</span>))</span><br><span class="line"><span class="keyword">print</span> a[idx]</span><br></pre></td></tr></table></figure>
+<pre><code>[ 4  5  6  7  8  9 10 11]
+[4 5 6]
+</code></pre><h3 id="7-homework"><a href="#7-homework" class="headerlink" title="7. homework"></a>7. homework</h3><ol>
+<li><a href="http://www.labri.fr/perso/nrougier/teaching/numpy.100/" target="_blank" rel="external">http://www.labri.fr/perso/nrougier/teaching/numpy.100/</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello Qt! 卡诺图开发]]></title>
+      <url>http://renld.github.io/2016/10/02/qt/</url>
+      <content type="html"><![CDATA[<p><img src="http://kar-10050281.cos.myqcloud.com/demo.gif" alt="windows版本"></p>
+<a id="more"></a>
+<h1 id="QT-GUI-界面"><a href="#QT-GUI-界面" class="headerlink" title="QT GUI 界面"></a>QT GUI 界面</h1><p><a href="http://kar-10050281.cos.myqcloud.com/Kar1.1.zip" target="_blank" rel="external">windows版本下载</a></p>
+<p>根目录下有四个执行文件:</p>
+<ul>
+<li>卡诺图.exe 完整程序 (可能由于编码乱码,而且似乎暂时只能在开发电脑上运行)</li>
+<li>karnaugh /karnaugh22/ karnaugh24/ 单独界面</li>
+</ul>
+<p>可能出现问题(在Mac虚拟机上发现的):</p>
+<ol>
+<li><p>缺少120ddl配置文件: </p>
+<p>将110配置文件复制粘贴一遍,改名为120即可(有两个文件)</p>
+<p><strong>这样之后就可以打开单独程序了</strong></p>
+</li>
+<li><p>缺少Qt5Cored.dll, Qt5Guid.dll, QT5Widgetsd.dll文件:(QT库文件)</p>
+<p>缺少MSVCP120D.dll : VS2013开发库文件,</p>
+<ul>
+<li><strong>建议尝试单独界面版本</strong>, 暂时加载了所有ddl文件集合之后会出现0x7c打开错误</li>
+<li><a href="http://kar-10050281.cos.myqcloud.com/add2.rar" target="_blank" rel="external">ddl文件集合</a></li>
+</ul>
+</li>
+</ol>
+<p>其它问题请邮件联系我~(右边栏有mail快捷方式) </p>
+<p>想体验完整版本…也可以约我要远程协助玩~</p>
+<h2 id="主界面"><a href="#主界面" class="headerlink" title="主界面"></a>主界面</h2><p>菜单栏</p>
+<ul>
+<li>说明: 项目主页, 程序简介</li>
+<li>联系作者: 个人主页, 微信, 邮箱</li>
+<li>退出程序: 退出</li>
+</ul>
+<p><img src="http://kar-10050281.cos.myqcloud.com/main.png" alt=""></p>
+<h2 id="四变量卡诺图演示"><a href="#四变量卡诺图演示" class="headerlink" title="四变量卡诺图演示"></a>四变量卡诺图演示</h2><h3 id="初始状态"><a href="#初始状态" class="headerlink" title="初始状态"></a>初始状态</h3><ol>
+<li>点击”T”, 可以更改真值</li>
+<li>点击”A” , “B”, “C”, “D” 可更改真值</li>
+<li>点击”计算” 可模拟卡诺图计算</li>
+<li>注意”计算” 之后当前真值表不会保留,需要点”重置”重新输入</li>
+<li>点击”退出” 退出四变量演示</li>
+</ol>
+<p><img src="http://kar-10050281.cos.myqcloud.com/main1.png" alt=""></p>
+<p><img src="http://kar-10050281.cos.myqcloud.com/main2.png" alt=""></p>
+<h2 id="其它卡诺图"><a href="#其它卡诺图" class="headerlink" title="其它卡诺图"></a>其它卡诺图</h2><p><img src="http://kar-10050281.cos.myqcloud.com/main22.png" alt=""></p>
+<p><img src="http://kar-10050281.cos.myqcloud.com/main24.png" alt=""></p>
+<h1 id="Terminal-界面"><a href="#Terminal-界面" class="headerlink" title="Terminal 界面"></a>Terminal 界面</h1><p>从大到小设置步长,然后bfs,调节输出即可</p>
+<p>由于一开始没写类,后来改动没有尽善尽美,于是分了三个文件</p>
+<p><a href="http://kar-10050281.cos.myqcloud.com/mac.zip" target="_blank" rel="external">mac版本下载</a></p>
+<p><a href="http://kar-10050281.cos.myqcloud.com/Windows.zip" target="_blank" rel="external">windows版本下载</a></p>
+<h2 id="Mac版本预览"><a href="#Mac版本预览" class="headerlink" title="Mac版本预览"></a>Mac版本预览</h2><p><a href="http://kar-10050281.cos.myqcloud.com/mac.zip" target="_blank" rel="external">mac版本下载</a></p>
+<p><img src="http://kar-10050281.cos.myqcloud.com/macT.png" alt=""></p>
+<h2 id="windows版本预览"><a href="#windows版本预览" class="headerlink" title="windows版本预览"></a>windows版本预览</h2><p><a href="http://kar-10050281.cos.myqcloud.com/Windows.zip" target="_blank" rel="external">windows版本下载</a></p>
+<p><img src="http://kar-10050281.cos.myqcloud.com/winT.png" alt=""></p>
+<h1 id="辅助作图成果"><a href="#辅助作图成果" class="headerlink" title="辅助作图成果"></a>辅助作图成果</h1><p>使用proteus8作图.(二位十六进制计时器)</p>
+<p><img src="http://kar-10050281.cos.myqcloud.com/hw02_16ADD.BMP" alt=""></p>
+<h1 id="课程学习笔记"><a href="#课程学习笔记" class="headerlink" title="课程学习笔记"></a>课程学习笔记</h1><p>study from <a href="afanihao.cn">this</a> lesson,相关程序请勿用作商业用途</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
+<li><p>顶级窗口,次级窗口</p>
+</li>
+<li><p>移动窗口</p>
+</li>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setGeometry(xpos,ypos,xlen,ylen) <span class="comment">// 设置长宽位置,不含标题栏</span></span><br><span class="line">move(xpos, ypos) <span class="comment">// 带外边框的坐标</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>my_text-&gt;setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);</code></p>
+</li>
+<li><p>sizehint, sizepolicy 觉得布局分配多少空间</p>
+</li>
+<li><p>stretch factor管理拉伸变化的多少.</p>
+</li>
+<li><p>maximum 和 minimum来管理最大拉伸的大小</p>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. signal</span><br><span class="line">  ui.pushbutton-&gt;clicked(1);</span><br><span class="line">2. slot</span><br><span class="line">  private slots:</span><br><span class="line">	int slotfun(bool)</span><br><span class="line">3. connect</span><br><span class="line"> constructor:&#123;</span><br><span class="line">   connect(obj,	//sender</span><br><span class="line">          SIGNAL(sigfun(bool)),//signal</span><br><span class="line">           this, //reveiver</span><br><span class="line">           SLOT(slotfun(bool)));//slot</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调试<code>qDebug(&quot;like printf&quot;);</code></li>
+</ul>
+<h2 id="QLabel"><a href="#QLabel" class="headerlink" title="QLabel"></a>QLabel</h2><p>stylesheet-&gt; 背景色/前景色</p>
+<p>font/alignment</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value-&gt;setStyleSheet(QLatin1String(<span class="string">"color: rgb(0, 0, 127);\n"</span><span class="string">"background-color: rgb(255, 255, 255);\n"</span><span class="string">"font: 75 18pt \"Arial\";\n"</span><span class="string">"border-color: rgb(0, 0, 0);"</span>));</span><br></pre></td></tr></table></figure>
+<h2 id="移动窗口"><a href="#移动窗口" class="headerlink" title="移动窗口"></a>移动窗口</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">bool</span> isDragged;</span><br><span class="line">	QPoint StartPosition; </span><br><span class="line">	QPoint FramePosition;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> karnaugh22::mouseMoveEvent(QMouseEvent * event)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (event-&gt;buttons() &amp; Qt::LeftButton)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (isDragged)</span><br><span class="line">		&#123;</span><br><span class="line">			QPoint delta = event-&gt;globalPos() - StartPosition;</span><br><span class="line">			move(FramePosition + delta);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> karnaugh22::mouseReleaseEvent(QMouseEvent * event)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (event-&gt;buttons() &amp; Qt::LeftButton)</span><br><span class="line">	&#123;</span><br><span class="line">		isDragged = <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> karnaugh22::mousePressEvent(QMouseEvent * event)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (event-&gt;button() == Qt::LeftButton)</span><br><span class="line">	&#123;</span><br><span class="line">		isDragged = <span class="literal">true</span>;</span><br><span class="line">		StartPosition = event-&gt;globalPos();</span><br><span class="line">		FramePosition = frameGeometry().topLeft();</span><br><span class="line">	&#125;</span><br><span class="line">	QWidget::mousePressEvent(event);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="隐藏标题栏-amp-白底"><a href="#隐藏标题栏-amp-白底" class="headerlink" title="隐藏标题栏&amp;白底"></a>隐藏标题栏&amp;白底</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">setWindowFlags(Qt::Window | Qt::FramelessWindowHint);</span><br><span class="line">setAttribute(Qt::WA_TranslucentBackground);</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> karnaugh22::paintEvent(QPaintEvent *event)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line">	QRect frameRect = rect();</span><br><span class="line">	frameRect.adjust(<span class="number">1</span>, <span class="number">1</span>, <span class="number">-1</span>, <span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">	painter.setPen(QColor(<span class="number">0x66</span>, <span class="number">0x66</span>, <span class="number">0x66</span>));</span><br><span class="line">	painter.setBrush(QColor(<span class="number">0xFF</span>, <span class="number">0xFF</span>, <span class="number">0xFF</span>));</span><br><span class="line">	painter.drawRoundRect(frameRect, <span class="number">2</span>, <span class="number">2</span>);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="选择不同类型卡诺图"><a href="#选择不同类型卡诺图" class="headerlink" title="选择不同类型卡诺图"></a>选择不同类型卡诺图</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">connect(ui.rb, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(btnC()));</span><br><span class="line">connect(ui.rb_2, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(btnC()));</span><br><span class="line">connect(ui.rb_3, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(btnC()));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Kar::btnC()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">switch</span> (btn-&gt;checkedId())</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		s = <span class="keyword">new</span> karnaugh22();</span><br><span class="line">		s-&gt;show();</span><br><span class="line">		qDebug(<span class="string">"2 var"</span>) ;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		t = <span class="keyword">new</span> karnaugh24();</span><br><span class="line">		t-&gt;show();</span><br><span class="line">		qDebug(<span class="string">"3 var"</span>)  ;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		k = <span class="keyword">new</span> karnaugh();</span><br><span class="line">		k-&gt;show();</span><br><span class="line">		qDebug(<span class="string">"4 var"</span>)  ;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="打开链接"><a href="#打开链接" class="headerlink" title="打开链接"></a>打开链接</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Kar::mexit()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Kar::openMyPage()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//qDebug()&lt;&lt;QString("Open Page");</span></span><br><span class="line">	QDesktopServices::openUrl(QUrl(QString(<span class="string">"http://renld.cn/"</span>)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Kar::mailTo()</span><br><span class="line">&#123;</span><br><span class="line">	QDesktopServices::openUrl(QUrl(QString(<span class="string">"mailto:leidar100@gmail ? subject = karnaugh"</span>)));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Kar::wechat()</span><br><span class="line">&#123;</span><br><span class="line">	QDesktopServices::openUrl(QUrl(QString(<span class="string">"http://renld.cn/wechat/"</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="开发疑难与解决方案"><a href="#开发疑难与解决方案" class="headerlink" title="开发疑难与解决方案"></a>开发疑难与解决方案</h1><ol>
+<li><p>封装疑难, Xcode无法编译: 暂时用三个文件代替</p>
+</li>
+<li><p>缺少<code>xxxxx120dll</code>: 将<code>xxxxx110dll</code>同名文件改名</p>
+</li>
+<li><p>腾讯云同名文件更新问题: 改名</p>
+</li>
+<li><p>Qt(VS)中文类编译问题: 好端端用啥中文类…..</p>
+</li>
+<li><p>合并时候想转为QWidget子类: 环境变量问题(因为菜单条) 好好用mainwindow类就行</p>
+</li>
+<li><p>upload Github更新博客遇上Github崩溃…: 在disqus评论更新(需要翻墙)</p>
+<p>​</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[matplotlib]]></title>
+      <url>http://renld.github.io/2016/09/23/matplotlib/</url>
+      <content type="html"><![CDATA[<ol>
+<li>matplotlib 类似 面向对象的 matlab (有点时候似乎没有<a href="http://renld.cn/pc/3-2/" target="_blank" rel="external">charts</a>类漂亮….)</li>
+<li>工具: ipython notebook</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+<ol>
+<li>中文显示</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://renld.cn/matplotlib_0.html" target="_blank" rel="external">HBK普通图</a> <a href="http://renld.cn/matplotlib_1.html" target="_blank" rel="external">HBK高级图</a> <a href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/#line-properties" target="_blank" rel="external">英文参考</a></p>
+<a id="more"></a>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p><img src="http://ml-10050281.cos.myqcloud.com/20161005-101121.gif" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># ref: http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> animation</span><br><span class="line"></span><br><span class="line"><span class="comment"># First set up the figure, the axis, and the plot element we want to animate</span></span><br><span class="line">fig = plt.figure()</span><br><span class="line">fig.suptitle(<span class="string">"BubbleSort"</span>)</span><br><span class="line">ax = plt.axes(xlim=(<span class="number">0</span>, <span class="number">30</span>), ylim=(<span class="number">0</span>, <span class="number">100</span>))</span><br><span class="line">X = np.arange(<span class="number">30</span>)</span><br><span class="line">Y = np.random.rand(<span class="number">30</span>) * <span class="number">100</span></span><br><span class="line"><span class="keyword">print</span> Y</span><br><span class="line">fun = plt.bar(X, Y, width = <span class="number">0.2</span>, facecolor = <span class="string">'#9999ff'</span>, edgecolor = <span class="string">'white'</span>);</span><br><span class="line"></span><br><span class="line">line, = ax.plot([], [], lw=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># initialization function: plot the background of each frame</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init</span><span class="params">()</span>:</span></span><br><span class="line">    fun = plt.bar(X, Y, width=<span class="number">0.2</span>, facecolor=<span class="string">'#9999ff'</span>, edgecolor=<span class="string">'white'</span>);</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># animation function.  This is called sequentially</span></span><br><span class="line"><span class="comment"># note: i is framenumber</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(i)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">30</span> - i - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> Y[y] &lt; Y[y + <span class="number">1</span>]:</span><br><span class="line">            Y[y], Y[y + <span class="number">1</span>] = Y[y + <span class="number">1</span>],Y[y]</span><br><span class="line">    plt.clf()</span><br><span class="line">    fig.suptitle(<span class="string">"BubbleSort_FAST"</span>)</span><br><span class="line">    fun = plt.bar(X, Y, width=<span class="number">0.2</span>, facecolor=<span class="string">'#9999ff'</span>, edgecolor=<span class="string">'white'</span>);</span><br><span class="line">    <span class="keyword">return</span> fun</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># call the animator.  blit=True means only re-draw the parts that have changed.</span></span><br><span class="line">anim = animation.FuncAnimation(fig, update, init_func=init,</span><br><span class="line">                               frames=<span class="number">30</span>, interval=<span class="number">20</span>, blit=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>可以创建多个子图像,多个(坐标轴, 标题, 标签, 刻度, 刻度label)</p>
+<p>可以加上legend(图例)</p>
+<h1 id="连点"><a href="#连点" class="headerlink" title="连点"></a>连点</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.grid(<span class="keyword">True</span>, color = <span class="string">'r'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="样式图例"><a href="#样式图例" class="headerlink" title="样式图例"></a><a href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/#line-properties" target="_blank" rel="external">样式图例</a></h1><h2 id="画图——样式"><a href="#画图——样式" class="headerlink" title="画图——样式"></a>画图——样式</h2><p>数据线的样式设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">颜色缩写    全称</span><br><span class="line">b          blue</span><br><span class="line">c          cyan</span><br><span class="line">g          gree</span><br><span class="line">k          black</span><br><span class="line">m          magenta</span><br><span class="line">r          red</span><br><span class="line">w          white</span><br><span class="line">y          yellow</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">线型缩写    含义</span><br><span class="line">--         --虚线</span><br><span class="line">-.         -.虚线</span><br><span class="line">:          .虚线</span><br><span class="line">-          实线</span><br><span class="line"></span><br><span class="line">marker类型参考 </span><br><span class="line">http://www.labri.fr/perso/nrougier/teaching/matplotlib/#line-properties</span><br></pre></td></tr></table></figure>
+<h2 id="HBK代码"><a href="#HBK代码" class="headerlink" title="HBK代码"></a>HBK代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># np.array将列表转换成numpy的数组后可以支持广播broadcast运算</span></span><br><span class="line">plt.plot(x,y,color=<span class="string">'r'</span>,linewidth=<span class="string">'2'</span>,linestyle=<span class="string">'--'</span>,marker=<span class="string">'D'</span>, label=<span class="string">'one'</span>)</span><br><span class="line">plt.plot(np.array(x)+<span class="number">1</span>,np.array(y)+<span class="number">1</span>,color=<span class="string">'g'</span>,linewidth=<span class="string">'3'</span>,linestyle=<span class="string">':'</span>,marker=<span class="string">'o'</span>, label=<span class="string">'two'</span>)</span><br><span class="line">plt.plot(np.array(x)+<span class="number">2</span>,np.array(y)+<span class="number">3</span>,color=<span class="string">'k'</span>,linewidth=<span class="string">'1'</span>,linestyle=<span class="string">'-.'</span>,marker=<span class="string">'&gt;'</span>, label=<span class="string">'three'</span>)</span><br><span class="line"></span><br><span class="line">plt.grid(<span class="keyword">True</span>)</span><br><span class="line">plt.legend()</span><br><span class="line"><span class="comment">#plt.legend(loc='upper left')</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h1 id="公式TeX-文本和标注"><a href="#公式TeX-文本和标注" class="headerlink" title="公式TeX, 文本和标注"></a>公式TeX, 文本和标注</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure() <span class="comment">#figsize=(10,6)</span></span><br><span class="line">ax= fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax.set_xlim([<span class="number">1</span>, <span class="number">6</span>]);</span><br><span class="line">ax.set_ylim([<span class="number">1</span>, <span class="number">9</span>]);</span><br><span class="line">ax.text(<span class="number">2</span>, <span class="number">8</span>,  <span class="string">r"$ \mu \alpha \tau \pi \lambda \omega \tau \</span><br><span class="line">    lambda \iota \beta $"</span>,color=<span class="string">'r'</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">2</span>, <span class="number">6</span>, <span class="string">r"$ \lim_&#123;x \rightarrow 0&#125; \frac&#123;1&#125;&#123;x&#125; $"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">2</span>, <span class="number">4</span>, <span class="string">r"$ a \ \leq \ b \ \leq \ c \ \Rightarrow \ a \</span><br><span class="line">    \leq \ c$"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">2</span>, <span class="number">2</span>, <span class="string">r"$ \sum_&#123;i=1&#125;^&#123;\infty&#125;\ x_i^2$"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">4</span>, <span class="number">8</span>, <span class="string">r"$ \sin(0) = \cos(\frac&#123;\pi&#125;&#123;2&#125;)$"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">4</span>, <span class="number">6</span>, <span class="string">r"$ \sqrt[3]&#123;x&#125; = \sqrt&#123;y&#125;$"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">ax.text(<span class="number">4</span>, <span class="number">4</span>, <span class="string">r"$ \neg (a \wedge b) \Leftrightarrow \neg a \</span><br><span class="line">    \vee \neg b$"</span>);</span><br><span class="line">ax.text(<span class="number">4</span>, <span class="number">2</span>, <span class="string">r"$ \int_a^b f(x)dx$"</span>,fontsize=<span class="number">20</span>);</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h1 id="pie"><a href="#pie" class="headerlink" title="pie"></a>pie</h1><p><img src="http://ml-10050281.cos.myqcloud.com/pie.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span></span><br><span class="line">plt.figure(figsize=(<span class="number">9</span>,<span class="number">6</span>))</span><br><span class="line"></span><br><span class="line">labels = [<span class="string">u'直接访问'</span>, <span class="string">u'外部链接'</span>, <span class="string">u'搜索引擎'</span>]</span><br><span class="line">sizes = [<span class="number">12</span>,<span class="number">15</span>,<span class="number">30</span>]</span><br><span class="line">colors = [<span class="string">'yellowgreen'</span>, <span class="string">'gold'</span>, <span class="string">'lightskyblue'</span>]</span><br><span class="line"></span><br><span class="line">explode = (<span class="number">0.05</span>, <span class="number">0.0</span>, <span class="number">0.0</span>)</span><br><span class="line">patches, l_texts, p_texts = plt.pie(sizes, explode=explode, labels=labels, colors=colors, labeldistance=<span class="number">0.8</span>,autopct=<span class="string">'%3.lf%%'</span>, shadow=<span class="keyword">True</span>, startangle= <span class="number">90</span>, pctdistance=<span class="number">0.6</span>)</span><br><span class="line">plt.axis(<span class="string">'equal'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h1 id="Bar"><a href="#Bar" class="headerlink" title="Bar"></a>Bar</h1><p><img src="http://ml-10050281.cos.myqcloud.com/bar.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt.figure(figsize=(<span class="number">9</span>,<span class="number">6</span>))</span><br><span class="line"></span><br><span class="line">n = <span class="number">12</span></span><br><span class="line">X = np.arange(n) + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">Y1 = (<span class="number">1</span>- X/float(n+<span class="number">1</span>)) * np.random.uniform(<span class="number">0.5</span>,<span class="number">1.0</span>,n)</span><br><span class="line">Y2 = (<span class="number">1</span>- X/float(n+<span class="number">1</span>)) * np.random.uniform(<span class="number">0.5</span>,<span class="number">1.0</span>,n)</span><br><span class="line"></span><br><span class="line">width = <span class="number">0.5</span></span><br><span class="line"><span class="comment">#plt.barh(X, Y1,  facecolor = '#9999ff', edgecolor = 'white')</span></span><br><span class="line"></span><br><span class="line">plt.bar(X, Y1, width=width, facecolor = <span class="string">'#9999ff'</span>, edgecolor = <span class="string">'white'</span>)</span><br><span class="line">plt.bar(X+width, Y2, width=width, facecolor = <span class="string">'#ff9999'</span>, edgecolor = <span class="string">'white'</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python </span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*- </span></span><br><span class="line"><span class="comment"># CopyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.animation <span class="keyword">as</span> animation</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_point</span><span class="params">(num)</span>:</span></span><br><span class="line">    fig_points.set_data(data[:, <span class="number">0</span>:num])</span><br><span class="line">    <span class="keyword">return</span> fig_points,</span><br><span class="line"></span><br><span class="line">fig1 = plt.figure()</span><br><span class="line"></span><br><span class="line">num_point = <span class="number">50</span></span><br><span class="line">data = np.random.rand(<span class="number">2</span>, num_point)</span><br><span class="line">fig_points, = plt.plot([], [], <span class="string">'ro'</span>)</span><br><span class="line"></span><br><span class="line">plt.xlim(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">plt.ylim(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">plt.xlabel(<span class="string">'x'</span>)</span><br><span class="line">plt.title(<span class="string">'Scatter Point'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># interval</span></span><br><span class="line"><span class="comment"># repeat</span></span><br><span class="line"><span class="comment"># frames</span></span><br><span class="line"><span class="comment"># fargs</span></span><br><span class="line"><span class="comment"># init_func</span></span><br><span class="line">anim = animation.FuncAnimation(fig1, update_point,num_point)</span><br><span class="line"></span><br><span class="line"><span class="comment">#anim = animation.FuncAnimation(fig1, update_point,frames=num_point, interval=50, blit=False, repeat=False)</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span><br><span class="line">def init():</span><br><span class="line">    fig_points.set_data([],[])</span><br><span class="line">    return fig_points,</span><br><span class="line"></span><br><span class="line">anim = animation.FuncAnimation(fig1, update_point,frames=num_point, init_func=init, interval=50, blit=False, repeat=False)</span><br><span class="line"></span><br><span class="line">anim.save("anim1.mp4")</span><br><span class="line">anim.save('anim1.gif', writer='imagemagick')</span><br><span class="line">"""</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[网络与信息安全综合实践]]></title>
+      <url>http://renld.github.io/2016/09/22/net/</url>
+      <content type="html"><![CDATA[<p>netter~<br><a id="more"></a></p>
+<h1 id="常用网络命令"><a href="#常用网络命令" class="headerlink" title="常用网络命令"></a>常用网络命令</h1><h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><p>Packet Internet Group</p>
+<ul>
+<li>检测网络连通性</li>
+<li>检测数据包丢失赋值或重传,损坏</li>
+<li>检测时间戳和往返时间</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping renld.cn -t <span class="comment">#持续</span></span><br><span class="line">ping <span class="number">151.101</span><span class="number">.100</span><span class="number">.133</span> -l <span class="number">1560</span> <span class="comment"># 设置长度</span></span><br></pre></td></tr></table></figure>
+<h2 id="tracert"><a href="#tracert" class="headerlink" title="tracert"></a>tracert</h2><p>路由跟踪 获得IP数据从本地到目标主机的数据</p>
+<p>某些路由器出于安全不可见,显示<code>* * *</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tracert renld.cn</span><br><span class="line"></span><br><span class="line">trecert renld.cn -d <span class="comment"># 不必解析成主机名</span></span><br></pre></td></tr></table></figure>
+<h2 id="ipconfig"><a href="#ipconfig" class="headerlink" title="ipconfig"></a>ipconfig</h2><p>检查TCP/IP网络配置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipconfig <span class="comment"># basic</span></span><br><span class="line">ipconfig /all</span><br></pre></td></tr></table></figure>
+<h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><p>显示当前活动TCP,端口,路由表信息</p>
+<p>端口占用查询, 发现本机开放的端口是否被植入木马或者其它黑客程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -n -o</span><br></pre></td></tr></table></figure>
+<h2 id="arp"><a href="#arp" class="headerlink" title="arp"></a>arp</h2><p>把ip地址解析为mac地址</p>
+<p>IPVA采用NDP代替arp</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arp -a <span class="comment"># 所有接口的ARP缓存表</span></span><br><span class="line">arp -a <span class="number">192.168</span><span class="number">.1</span><span class="number">.100</span> <span class="comment">#显示ip地址为的接口的</span></span><br><span class="line">arp -s ipAddr phiAddr <span class="comment">#绑定</span></span><br><span class="line">arp -d <span class="comment">#删除所有</span></span><br></pre></td></tr></table></figure>
+<h2 id="net"><a href="#net" class="headerlink" title="net"></a>net</h2><p>管理网络环境,服务,用户,登录</p>
+<h2 id="netsh"><a href="#netsh" class="headerlink" title="netsh"></a>netsh</h2><p>网络配置</p>
+<h1 id="网络监听-windows"><a href="#网络监听-windows" class="headerlink" title="网络监听(windows)"></a>网络监听(windows)</h1><p>Wireshark</p>
+<h2 id="工作机制"><a href="#工作机制" class="headerlink" title="工作机制"></a>工作机制</h2><p>驱动程序支持: 将网卡设置成混杂模式</p>
+<p>分组捕获过滤机制</p>
+<p>sniffer进行IP资料统计分析,显示内部及外部IP地址,Port端口号,主机名称</p>
+<h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><ol>
+<li>网络开关: 能接受发来的信息帧,加以展示存储然后发到另一端的网络部件</li>
+<li>分割每个端口网络 使之独立</li>
+<li>维护各个端口对于的地址表(动态映射)</li>
+<li>相关开发库:<ul>
+<li>Unix: libpcap</li>
+<li>Windows: WinPcap</li>
+</ul>
+</li>
+<li>​</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[wxpython]]></title>
+      <url>http://renld.github.io/2016/09/21/wxpython/</url>
+      <content type="html"><![CDATA[<p>最近过的太闲适了233</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> wx</span><br><span class="line"></span><br><span class="line">app = wx.App()</span><br><span class="line">frame = wx.Frame(<span class="keyword">None</span>, <span class="number">-1</span>, title = <span class="string">'Hello WOrld'</span>)</span><br><span class="line">pos = (<span class="number">300</span>,<span class="number">400</span>), size = (<span class="number">200</span>,<span class="number">150</span>)</span><br><span class="line">frame.show()</span><br><span class="line">app.MainLoop()</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python 元编程]]></title>
+      <url>http://renld.github.io/2016/09/18/metaprogramming/</url>
+      <content type="html"><![CDATA[<p>看别人代码时候可以用</p>
+<a id="more"></a>
+<h1 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h1><p>用元类进行编程的方法</p>
+<p>元(Meta, 抽象)</p>
+<p>面向过程 - 面向函数 - 面向对象</p>
+<p>语法 - 语句</p>
+<p>类 - 对象</p>
+<h1 id="元类-类"><a href="#元类-类" class="headerlink" title="元类 - 类"></a>元类 - 类</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type(name, bases, attrs)</span><br><span class="line">Name : 类名字符串</span><br><span class="line">bases: 父类元组</span><br><span class="line">Attrs: 属性字典</span><br><span class="line">    </span><br><span class="line">    example:</span><br><span class="line">        A = type(<span class="string">'A'</span>, (object,), &#123;<span class="string">'b'</span>: <span class="number">1</span>&#125;)</span><br><span class="line">        a = A()</span><br></pre></td></tr></table></figure>
+<h2 id="拿type做父类"><a href="#拿type做父类" class="headerlink" title="拿type做父类"></a>拿type做父类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sip</span><span class="params">(type)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(cls, name, bases, nmspc)</span>:</span></span><br><span class="line">        super(Sip, cls).__init__(name,bases,nmspc)</span><br><span class="line">        cls.uses_metaclass = <span class="keyword">lambda</span> self: <span class="string">"Yes!"</span></span><br><span class="line"></span><br><span class="line">A = Sip(<span class="string">'A'</span>, (), &#123;&#125;)</span><br><span class="line"><span class="string">'''</span><br><span class="line">==</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">	__metaclass__ = Sip</span><br><span class="line"><span class="comment"># class A 是通过元类产生的新的类</span></span><br></pre></td></tr></table></figure>
+<p>元类定义的都是类的方法,(父类主要定义类的行为)</p>
+<p>第一个参数不是self,而是cls</p>
+<h2 id="不可继承的类"><a href="#不可继承的类" class="headerlink" title="不可继承的类"></a>不可继承的类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">final</span><span class="params">(type)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(cls,name,bases,namespaces)</span>:</span></span><br><span class="line">        super(final, cls).__init__(name, bases, atts)</span><br><span class="line">        <span class="keyword">for</span> klass <span class="keyword">in</span> bases:</span><br><span class="line">            <span class="keyword">assert</span> <span class="keyword">not</span> isinstance(klass, final)</span><br></pre></td></tr></table></figure>
+<p><code>__metaclass__ = type</code></p>
+<h2 id="new"><a href="#new" class="headerlink" title="__new__"></a><code>__new__</code></h2><ol>
+<li>对于直接分配空间类的继承,比如int, str, tuple得用new代替init</li>
+<li>单例模式 hasattr(cls,’instance’)</li>
+</ol>
+<h2 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h2><p>不一定需要实例化抽象方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">father</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Mymethod</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">'... not realize'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>再继承MyAbstractClass1之后需要实例化抽象方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> abc <span class="keyword">import</span> ABCMeta, abstractmethod</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyAbstractClass1</span><span class="params">(object)</span>:</span></span><br><span class="line">    __metaclass__ = ABCMeta</span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method1</span><span class="params">(self)</span>:</span> <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<h1 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h1><p>object relational mapping</p>
+<p>把数据库操作用面向对象的方法来实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(Model)</span>:</span></span><br><span class="line">    id = IntergerField(<span class="string">'uid'</span>)</span><br><span class="line">    name = StringField(<span class="string">'username'</span>)</span><br><span class="line">    email = StringField(<span class="string">'email'</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python class]]></title>
+      <url>http://renld.github.io/2016/09/12/class/</url>
+      <content type="html"><![CDATA[<p>基本语法//属性与封装//方法//继承和组合//多态//特殊方法//wxpython</p>
+<p>当时想用static变量想到类的..</p>
+<a id="more"></a>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">class_name</span><span class="params">(base_class)</span>:</span></span><br><span class="line">    class_var</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">methods</span><span class="params">(self, args)</span>:</span></span><br><span class="line">        do something</span><br><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="comment">#classic class 没有父类</span></span><br><span class="line">    <span class="string">"""this is class A"""</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">    __slots__=(<span class="string">'x'</span>,<span class="string">'y'</span>)  <span class="comment"># 可访问"槽"内外的属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># classic class test</span></span><br><span class="line">        <span class="string">"""this is A.test()"""</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"A class"</span></span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#new class 有父类,python3 都是这种,引入了super的概念</span></span><br><span class="line">    <span class="string">"""this is class B"""</span></span><br><span class="line">    __slots__=(<span class="string">'x'</span>,<span class="string">'y'</span>)  <span class="comment"># 只能访问"槽"里面的属性</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># new class test</span></span><br><span class="line">        <span class="string">"""this is B.test()"""</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"B class"</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    a=A()</span><br><span class="line">    b=B()</span><br></pre></td></tr></table></figure>
+<p>python是动态语言..可以直接任意的添加属性(槽..封死去路)</p>
+<h2 id="构造函数-init"><a href="#构造函数-init" class="headerlink" title="构造函数__init__"></a>构造函数<code>__init__</code></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">u'中国'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length, width, height, owner=None)</span>:</span></span><br><span class="line">        self.owner = owner</span><br><span class="line">        self.length = length</span><br><span class="line">        self.width = width</span><br><span class="line">        self.height = height</span><br><span class="line">        self.country = <span class="string">"china"</span></span><br></pre></td></tr></table></figure>
+<h1 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h1><h3 id="共有"><a href="#共有" class="headerlink" title="共有"></a>共有</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 公有属性</span></span><br><span class="line"><span class="keyword">del</span> a.country</span><br><span class="line">a.__class__.country</span><br></pre></td></tr></table></figure>
+<h3 id="私有属性"><a href="#私有属性" class="headerlink" title="私有属性"></a>私有属性</h3><ol>
+<li><p>加两个下划线 不能直接访问到</p>
+<p><code>_className__property</code></p>
+</li>
+<li><p>只加一个下划线 从自己约束不直接访问</p>
+</li>
+<li><p>前后都加两个下划线 系统自带属性</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">u'中国'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length, width, height, owner=None)</span>:</span></span><br><span class="line">        self.__owner = owner</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">assert</span> length&gt;<span class="number">0</span>,<span class="string">"length must larger than 0"</span></span><br><span class="line">        self._length = length</span><br><span class="line">        self._width = width</span><br><span class="line">        self._height = height</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getOwner</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__owner</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setOwner</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.__owner = value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getLength</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._length</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setLength</span><span class="params">(self,value)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> value&gt;<span class="number">0</span>,<span class="string">"length must larger than 0"</span></span><br><span class="line">        self._length = value</span><br></pre></td></tr></table></figure>
+<h3 id="描述符"><a href="#描述符" class="headerlink" title="@描述符"></a>@描述符</h3><p>加上<code>@property</code>变成有getter的对象</p>
+<p>然后就可以像用<strong>属性</strong> 使用 <strong>方法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">u'中国'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length, width, height, owner=None)</span>:</span></span><br><span class="line">        self._owner = owner</span><br><span class="line">        self._length = length</span><br><span class="line">        self._width = width</span><br><span class="line">        self._height = height</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">owner</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._owner</span><br><span class="line"><span class="meta">    @owner.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">owner</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self._owner = value</span><br><span class="line"><span class="meta">    @owner.deleter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">owner</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._owner = <span class="keyword">None</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">length</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._length</span><br><span class="line"><span class="meta">    @length.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">length</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> value&gt;<span class="number">0</span>,<span class="string">"length must larger than 0"</span></span><br><span class="line">        self._length = value</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    a = Car(<span class="number">1.2</span>,<span class="number">1.4</span>,<span class="number">1.5</span>,<span class="string">u'黑板客'</span>)</span><br><span class="line">    <span class="keyword">print</span> a.owner</span><br><span class="line">    <span class="keyword">del</span> a.owner</span><br><span class="line">    <span class="keyword">print</span> a.owner</span><br><span class="line">    a.length=<span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<h3 id="attr继续优化…"><a href="#attr继续优化…" class="headerlink" title="..attr继续优化…"></a><code>..attr</code>继续优化…</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">u'中国'</span></span><br><span class="line">    __slots__=(<span class="string">'length'</span>,<span class="string">'width'</span>,<span class="string">'height'</span>,<span class="string">'owner'</span>,<span class="string">'__dict__'</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length, width, height, owner=None)</span>:</span></span><br><span class="line">        self.owner = owner</span><br><span class="line">        self.length = length</span><br><span class="line">        self.width = width</span><br><span class="line">        self.height = height</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self,name)</span>:</span> <span class="comment"># 没找到的时候调用</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__getattr__"</span>,name</span><br><span class="line">        <span class="keyword">return</span> self.__dict__.get(name,<span class="keyword">None</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self,name,value)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__setattr__"</span>,name</span><br><span class="line">        <span class="keyword">if</span> name!=<span class="string">'owner'</span>:</span><br><span class="line">            <span class="keyword">assert</span> value&gt;<span class="number">0</span>, name+<span class="string">" must larger than 0"</span></span><br><span class="line">        self.__dict__[name]=value</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__delattr__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__delattr__"</span>,name</span><br><span class="line">        <span class="keyword">if</span> name==<span class="string">'owner'</span>:</span><br><span class="line">            self.__dict__[name]=<span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">            </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    a = Car(<span class="number">1.2</span>,<span class="number">1.4</span>,<span class="number">1.5</span>,<span class="string">u'黑板客'</span>)</span><br><span class="line">    <span class="string">"""</span><br><span class="line">    print a.owner</span><br><span class="line">    del a.owner</span><br><span class="line">    print a.owner</span><br><span class="line">    a.length=1</span><br><span class="line">    </span><br><span class="line">    print a.country</span><br><span class="line">    a.country = 'china'</span><br><span class="line">    print a.country</span><br><span class="line">    """</span></span><br><span class="line">    a.name = <span class="string">u"一汽"</span></span><br></pre></td></tr></table></figure>
+<h3 id="…attr与slots搭配使用时会产生的问题"><a href="#…attr与slots搭配使用时会产生的问题" class="headerlink" title="…attr与slots搭配使用时会产生的问题"></a>…attr与slots搭配使用时会产生的问题</h3><p>没有 slots 没有对 dict 进行隐藏</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    country = <span class="string">u'中国'</span></span><br><span class="line">    __slots__=(<span class="string">'length'</span>,<span class="string">'width'</span>,<span class="string">'height'</span>,<span class="string">'owner'</span>,<span class="string">'__dict__'</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length, width, height, owner=None)</span>:</span></span><br><span class="line">        self.owner = owner</span><br><span class="line">        self.length = length</span><br><span class="line">        self.width = width</span><br><span class="line">        self.height = height</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__getattr__"</span>,name</span><br><span class="line">        <span class="keyword">assert</span> name <span class="keyword">in</span> self.__slots__, <span class="string">"Not have this attribute "</span>+name</span><br><span class="line">        <span class="keyword">return</span> self.__dict__.get(name,<span class="keyword">None</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self,name,value)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__setattr__"</span>,name</span><br><span class="line">        <span class="keyword">assert</span> name <span class="keyword">in</span> self.__slots__, <span class="string">"Not have this attribute "</span>+name</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> name!=<span class="string">'owner'</span>:</span><br><span class="line">            <span class="keyword">assert</span> value&gt;<span class="number">0</span>, name+<span class="string">" must larger than 0"</span></span><br><span class="line">        self.__dict__[name]=value</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__delattr__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"__delattr__"</span>,name</span><br><span class="line">        <span class="keyword">assert</span> name <span class="keyword">in</span> self.__slots__, <span class="string">"Not have this attribute "</span>+name</span><br><span class="line">        <span class="keyword">if</span> name==<span class="string">'owner'</span>:</span><br><span class="line">            self.__dict__[name]=<span class="keyword">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    a = Car(<span class="number">1.2</span>,<span class="number">1.4</span>,<span class="number">1.5</span>,<span class="string">u'黑板客'</span>)</span><br><span class="line">    <span class="string">"""</span><br><span class="line">    print a.owner</span><br><span class="line">    del a.owner</span><br><span class="line">    print a.owner</span><br><span class="line">    a.length=1</span><br><span class="line">    </span><br><span class="line">    print a.country</span><br><span class="line">    a.country = 'china'    </span><br><span class="line">    print a.country</span><br><span class="line">    </span><br><span class="line">    a.name = u"一汽"</span><br><span class="line">    """</span></span><br></pre></td></tr></table></figure>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>类方法, 实例方法<code>@classmethod</code>, 静态方法<code>@staticmethod</code>, 特殊方法</p>
+<ul>
+<li>形式区别</li>
+</ul>
+<blockquote>
+<p>通过类和实例进行,不能直接调用</p>
+<p>有自己的特殊参数 self, cls</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; @classmethod</span><br><span class="line">&gt; <span class="function"><span class="keyword">def</span> <span class="title">from_string</span><span class="params">(cls,date_as_string)</span>:</span></span><br><span class="line">&gt;     <span class="keyword">return</span> cls(map(int,date_as_string.split(<span class="string">'-'</span>)))</span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>有自己的声明语法</p>
+</blockquote>
+<ul>
+<li>实质区别</li>
+</ul>
+<blockquote>
+<p>绑定类</p>
+<p>绑定实例对象</p>
+<p>无绑定</p>
+</blockquote>
+<h2 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h2><h3 id="属性访问"><a href="#属性访问" class="headerlink" title="属性访问"></a>属性访问</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__getattr__</span><br><span class="line">__setattr__</span><br><span class="line">__getattribute__</span><br></pre></td></tr></table></figure>
+<h3 id="实例生成"><a href="#实例生成" class="headerlink" title="实例生成"></a>实例生成</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">__init__</span><br><span class="line">__new__</span><br></pre></td></tr></table></figure>
+<h3 id="数字计算"><a href="#数字计算" class="headerlink" title="数字计算"></a>数字计算</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__add__ <span class="comment"># 运算符重载</span></span><br><span class="line">__sub__</span><br><span class="line">__mul__</span><br><span class="line">__div__</span><br><span class="line">__pow__</span><br><span class="line">__round__</span><br></pre></td></tr></table></figure>
+<h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__str__ <span class="comment"># print</span></span><br><span class="line">__repr__ <span class="comment"># 在解释器中敲出这个类之后的显示(一般给计算机看的东西)</span></span><br><span class="line">__len__</span><br><span class="line">__bool__ <span class="comment"># if</span></span><br></pre></td></tr></table></figure>
+<h3 id="比较大小"><a href="#比较大小" class="headerlink" title="比较大小"></a>比较大小</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">__cmp__</span><br><span class="line"><span class="string">'''</span><br><span class="line">l : less</span><br><span class="line">t : than</span><br><span class="line">e : equal</span><br><span class="line">g : great</span><br><span class="line">n : negative</span><br><span class="line">'''</span></span><br><span class="line">__lt__ __le__ __eq__ __ne__ __gt__ __ge__</span><br></pre></td></tr></table></figure>
+<h3 id="集合访问"><a href="#集合访问" class="headerlink" title="集合访问"></a>集合访问</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__setslice__ __getsclice__ <span class="comment"># 集合切片</span></span><br><span class="line">__getitem__ __setitem__  <span class="comment"># 字典遍历</span></span><br><span class="line">__contains__ <span class="comment"># if a in b</span></span><br></pre></td></tr></table></figure>
+<h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">__iter__</span><br><span class="line">__next__</span><br></pre></td></tr></table></figure>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承:"></a>多重继承:</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    b = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    a = <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    a = <span class="number">3</span></span><br><span class="line">    b = <span class="number">3</span></span><br><span class="line">    c = <span class="number">3</span></span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B,C)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> inspect</span><br><span class="line">inspect.getmro(D) <span class="comment"># Method Resolution Order </span></span><br><span class="line"><span class="comment"># Classic Dfs</span></span><br><span class="line"><span class="comment"># New Bfs</span></span><br></pre></td></tr></table></figure>
+<h2 id="钻石继承"><a href="#钻石继承" class="headerlink" title="钻石继承"></a>钻石继承</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">super(D,self).method()</span><br><span class="line">多重继承之后只执行一遍...</span><br></pre></td></tr></table></figure>
+<h1 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h1><p>has a</p>
+<p>is a</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">De</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, *args)</span>:</span></span><br><span class="line">        self.members = list(args)</span><br><span class="line">       	</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addMember</span><span class="params">(self, person)</span>:</span></span><br><span class="line">        self.members.append(person)</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python函数式编程]]></title>
+      <url>http://renld.github.io/2016/09/11/function/</url>
+      <content type="html"><![CDATA[<ul>
+<li><p>函数做参数</p>
+</li>
+<li><p>map,filter,reduce</p>
+</li>
+<li><p>lambda</p>
+</li>
+</ul>
+<blockquote>
+<p>函数第一个单词小写,后面所有单词首字母大写</p>
+<p>类的首字母大写</p>
+<p>变量用下划线分开</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># filter 选择字母</span></span><br><span class="line">a = <span class="string">"aAsmr3idd4bgs7Dlsf9eAF"</span>  </span><br><span class="line">b = list(filter(str.isalpha,a))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 排序</span></span><br><span class="line"></span><br><span class="line">c = sorted(b,cmp=<span class="keyword">lambda</span> x,y:<span class="number">1</span> <span class="keyword">if</span> (x.upper()&gt;y.upper() <span class="keyword">or</span> x&gt;y) <span class="keyword">else</span> <span class="number">-1</span>,reverse=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># b.sort(lambda x,y:1 if (x.upper()&gt;y.upper() or x&gt;y) else -1)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.join(c)</span><br><span class="line"><span class="keyword">print</span> <span class="string">''</span>.join(b)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>回调函数 : 函数作为参数</p>
+</li>
+<li><p>闭包: 绑定外部变量的函数</p>
+<ul>
+<li>嵌套结构的函数</li>
+<li>内部函数用到了外部变量</li>
+<li>外部函数返回内部函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">(num1)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> num1 * num</span><br><span class="line">    <span class="keyword">return</span> b <span class="comment"># 返回了一个绑定了num的函数</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>内部函数不能<strong>改变</strong>外部变量</p>
+</li>
+<li><p>可以修改外部list变量的值</p>
+<blockquote>
+<p> 用来维护游戏中不同角色的状态</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>装饰器 <strong>把函数作为参数而后返回当前函数</strong></p>
+<ul>
+<li>当然不返回函数但是在装饰器中使用也是可以的</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(f)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> f</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfun1</span><span class="params">()</span>:</span></span><br><span class="line">    ...</span><br><span class="line">decorator(myfunc1())</span><br><span class="line"></span><br><span class="line"><span class="meta">@decorator</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc2</span><span class="params">()</span>:</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二层嵌套装饰器<ul>
+<li>使用闭包</li>
+</ul>
+</li>
+<li>三层嵌套..是的装饰器可以自带参数=.=</li>
+</ul>
+</li>
+<li><p>[fib(i) for i in range(100)] 这个样子可以生成</p>
+<ul>
+<li><p>next 迭代器 优化</p>
+</li>
+<li><p>惰性计算</p>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">()</span>:</span></span><br><span class="line">    a,b = <span class="number">0</span>,<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">True</span>): <span class="keyword">yield</span> b</span><br><span class="line">        a,b = b,a+b</span><br><span class="line">        </span><br><span class="line">A = fib()</span><br><span class="line">[A.next() <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>)]</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>send 应用 产生static变量…</p>
+</li>
+<li><p>send给generator的value会成为当前yield的结果 并且send的返回结果是下一个yield的结果</p>
+<p>​</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    input = []</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        a = <span class="keyword">yield</span></span><br><span class="line">        ...</span><br><span class="line">        </span><br><span class="line">ptr = func.send(...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">double_inputs</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line"><span class="meta">... </span>        x = <span class="keyword">yield</span></span><br><span class="line"><span class="meta">... </span>        <span class="keyword">yield</span> x * <span class="number">2</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen = double_inputs()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.next() <span class="comment">#run up to the first yield</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.send(<span class="number">10</span>) <span class="comment">#goes into 'x' variable</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.next() <span class="comment">#run up to the next yield</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.send(<span class="number">6</span>) <span class="comment">#goes into 'x' again</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.next() <span class="comment">#run up to the next yield</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>gen.send(<span class="number">94.3</span>) <span class="comment">#goes into 'x' again</span></span><br><span class="line"><span class="number">188.5999999999999</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>itertools</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">itertools.permutations([...])</span><br><span class="line">itertools.product([...],[...])</span><br><span class="line">itertools.repeat([...], n)</span><br><span class="line">itertools.chain(a,b,c)</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[python2 passwords]]></title>
       <url>http://renld.github.io/2016/09/07/python-passwords/</url>
       <content type="html"><![CDATA[<p>源自黑板课作业</p>
@@ -23,7 +739,8 @@
 <p>所以需要深拷贝  b = a[:]<br><a id="more"></a></p>
 <h1 id="列表和元组"><a href="#列表和元组" class="headerlink" title="列表和元组"></a>列表和元组</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">print</span> <span class="string">"----------- index and slice ----------"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">-1</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line"><span class="keyword">print</span> a[<span class="number">0</span>:<span class="number">5</span>:<span class="number">2</span>] <span class="comment">#从0开始到第五个元素 step = 2 == [1,3,5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ ref and copy -----------"</span></span><br><span class="line"></span><br><span class="line">a_ref=a</span><br><span class="line"></span><br><span class="line">a[<span class="number">2</span>]=<span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a="</span>+str(a)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_ref="</span>+str(a_ref)</span><br><span class="line"></span><br><span class="line">a_copy = a[:] <span class="comment">#深拷贝</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_copy="</span>+str(a_copy)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ list methods ----------"</span></span><br><span class="line">a.append(<span class="number">300</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After append: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.insert(<span class="number">1</span>,<span class="number">50</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After insert: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.pop()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After pop: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.sort()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After sort: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.reverse()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After reverse: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line">a.count(num) <span class="comment">#a含num的个数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> a[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">print</span> <span class="string">"After del: a="</span>+str(a)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"------------ ref and copy ------------"</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"a="</span>+str(a)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_ref="</span>+str(a_ref)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"a_copy="</span>+str(a_copy)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=[a,a_ref,a_copy] <span class="comment">#第一个和第二个列表指向相同地址...</span></span><br><span class="line">c=[<span class="number">1</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">'abc'</span>]</span><br></pre></td></tr></table></figure>
 <h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment">#copyRight by heibanke</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------用dict直接生成, </span></span><br><span class="line">name_age=((<span class="string">'xiaoli'</span>,<span class="number">33</span>),(<span class="string">'xiaowang'</span>,<span class="number">20</span>),(<span class="string">'xiaozhang'</span>,<span class="number">40</span>))</span><br><span class="line">a=dict(name_age)</span><br><span class="line">b=dict(xiaoli=<span class="number">33</span>,xiaowang=<span class="number">20</span>,xiaozhang=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------如何将两个等长度的list合并成dict</span></span><br><span class="line">text = <span class="string">'c++ python shell ruby java javascript c'</span></span><br><span class="line">code_num = [<span class="number">38599</span>, <span class="number">100931</span>, <span class="number">26153</span>, <span class="number">93142</span>, <span class="number">84275</span>, <span class="number">184220</span>, <span class="number">46843</span>]</span><br><span class="line"></span><br><span class="line">text_list=text.split(<span class="string">' '</span>)</span><br><span class="line">code_dict = dict(zip(text_list,code_num))<span class="comment"># zip将两个list生成字典</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------key, keys, items, values</span></span><br><span class="line">code_dict[<span class="string">'python'</span>]</span><br><span class="line">code_dict.keys()</span><br><span class="line">code_dict.values()</span><br><span class="line">code_dict.items()</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------get</span></span><br><span class="line">a=code_dict.get(<span class="string">'fortran'</span>,<span class="keyword">None</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#------- ref and copy</span></span><br><span class="line">a_ref = code_dict</span><br><span class="line">a_copy = code_dict.copy() <span class="keyword">or</span> = copy.copy(code_dict)<span class="comment">#浅拷贝</span></span><br><span class="line">a_copy = copy.deepcopy(code_dict) <span class="comment">#浅拷贝</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#--------update, del, copy, clear</span></span><br><span class="line">other_code = &#123;<span class="string">'php'</span>:<span class="number">78014</span>,<span class="string">'objective-c'</span>:<span class="number">34444</span>&#125;</span><br><span class="line">code_dict.update(other_code)</span><br><span class="line"><span class="keyword">del</span> code_dict[<span class="string">'c++'</span>]</span><br><span class="line">a_ref</span><br><span class="line">a_copy</span><br><span class="line">a_ref.clear()</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------sort key and value</span></span><br><span class="line">[(k,a_copy[k]) <span class="keyword">for</span> k <span class="keyword">in</span> sorted(a_copy.keys())]</span><br><span class="line">sorted(dict.iteritems(), key = <span class="keyword">lambda</span> d:d[<span class="number">1</span>], reverse = <span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h1>]]></content>
+<h1 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[expr <span class="keyword">for</span> iter_var <span class="keyword">in</span> iterable] </span><br><span class="line">[expr <span class="keyword">for</span> iter_var <span class="keyword">in</span> iterable <span class="keyword">if</span> cond_expr]</span><br></pre></td></tr></table></figure>
+]]></content>
     </entry>
     
     <entry>
@@ -1699,10 +2416,10 @@
       <content type="html"><![CDATA[<p>engerineering time</p>
 <a id="more"></a>
 <h1 id="Finding"><a href="#Finding" class="headerlink" title="Finding"></a>Finding</h1><blockquote>
-<p>十多天了谢谢两条大腿带飞😭</p>
+<p>十多天了谢谢两条大腿带飞</p>
 <p>每天都可以准时吃饭非常爽</p>
 <p>hhhh虽然每天也是花式懵逼地坐在一边有点惭愧</p>
-<p><em>(:з」∠)</em>总之非常开心的（😘</p>
+<p><em>(:з」∠)</em>总之非常开心的（</p>
 <p>—by rxy</p>
 </blockquote>
 <p>很有意思的课程,怪不得那么多人怀念小学期.</p>
