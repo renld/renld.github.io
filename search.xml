@@ -4,6 +4,139 @@
   
     
     <entry>
+      <title><![CDATA[人脸识别]]></title>
+      <url>http://renld.github.io/2017/03/04/face/</url>
+      <content type="html"><![CDATA[<ul>
+<li>人脸检测 detection-&gt;location-&gt;tracking</li>
+<li>人脸表征 representation</li>
+<li>人脸识别 recognition</li>
+</ul>
+<a id="more"></a>
+<p><strong>对于挑选出来的框,采用rcnn等方法引入一个阈值,而后进行判断是否为人脸</strong></p>
+<ul>
+<li>神经网络</li>
+<li>SVM Osuan</li>
+<li>Adaboost VJ : 特征值=白块-黑块<ul>
+<li>Gentle: 添加自适应牛顿法,拟合加性logistic模型</li>
+</ul>
+</li>
+</ul>
+<h2 id="原始阶段"><a href="#原始阶段" class="headerlink" title="原始阶段"></a>原始阶段</h2><ol>
+<li>人脸识别最初是按<ol>
+<li>可视特征,<code>可视特征: 几何特征/纹理特征(SGLD)/颜色特征(很多种颜色)</code></li>
+<li>规则定义,<code>通用模板匹配:计算轮廓,眼睛,鼻子//Craw正面/Leung五点</code></li>
+</ol>
+</li>
+<li>对于相片光照有MLV,RLI两种处理方式</li>
+<li>机器学习参与为聚类方法<ol>
+<li>划分: k-means, k-medoids, CLARANS</li>
+<li>层次hierarchical method : 合并和分解</li>
+<li>密度density-based method: DB-SCAN</li>
+<li>网格grid-based : STING,CLIQUE,WAVE-CLUSTER</li>
+<li>模型聚类</li>
+</ol>
+</li>
+</ol>
+<h2 id="VJ方法"><a href="#VJ方法" class="headerlink" title="VJ方法"></a>VJ方法</h2><ol>
+<li><p>原始是按金字塔型(区别于树型,叔叔可以有边连接),进行滑动窗口范式</p>
+<ol>
+<li>选择图像上的某个（矩形）区域作为一个观察窗口；</li>
+<li>在选定的窗口中提取一些特征对其包含的图像区域进行描述；</li>
+<li>根据特征描述来判断这个窗口是不是正好框住了一张人脸。</li>
+</ol>
+</li>
+<li><p>为了提升效率,将图像缩放到不同的大小，然后用相同大小的窗口去扫描</p>
+</li>
+<li><p>VJ方法使用三大优化,提升效率</p>
+<ol>
+<li><p>特征的快速计算方法——积分图</p>
+<ul>
+<li>Haar特征反映了局部区域之间的相对明暗关系</li>
+<li>之后衍生出来各式各样的Haar特征,其中三点,四点各有实际用途</li>
+</ul>
+</li>
+<li><p>有效的分类器学习方法——AdaBoost</p>
+<blockquote>
+<p>采用AdaBoost方法由弱分类器构建强分类器，这是一个顺序执行的过程，换言之，一旦一个弱分类器被选中，其就必定会成为强分类器的组成部分，不允许反悔，这其实是假设增加弱分类器一定会使得强分类器的分类准确度更高，但是，这个假设并不总是成立。[贪心]基于这样的想法，出现了允许回溯的FloatBoost方法。</p>
+</blockquote>
+</li>
+<li><p>以及高效的分类策略——级联结构的设计</p>
+</li>
+</ol>
+</li>
+<li><p>发展</p>
+<ol>
+<li>LBP特征是一种二值编码特征，其直接基于像素灰度值进行计算，特点是在编码时考虑的是两个值的相对大小，并且按照一定的空间结构来进行编码，局部组合二值特征就是在LBP特征的启发下设计的；</li>
+<li>简化的SURF特征是一种和Haar特征相类似的特征，但是其计算的是局部区域中像素点的梯度和，并在求和的过程中考虑了梯度方向</li>
+<li>HOG特征也是一种基于梯度的特征，其对一个局部区域内不同方向的梯度进行统计，计算梯度直方图来表示这个区域。</li>
+</ol>
+<p>​</p>
+</li>
+</ol>
+<h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><p>旋转/遮挡</p>
+<p>旋转通常采用分治的策略(周志华)</p>
+<p>对<strong>遮挡的鲁棒性</strong>——Deepid2+</p>
+<h2 id="Rcnn"><a href="#Rcnn" class="headerlink" title="Rcnn"></a>Rcnn</h2><p><strong>Selective Search方法先基于各种颜色特征将图像划分为多个小块，然后自底向上地对不同的块进行合并</strong></p>
+<p><strong>用R-CNN进行目标检测的流程是：先采用如 Selective Search等方法生成候选窗口，然后用学习好的CNN提取候选窗口对应的特征，接着训练分类器基于提取的特征对候选窗口进行分类，最后对判别为人脸的窗口采用边框回归进行修正。</strong></p>
+<blockquote>
+<p><strong>全连接层的坏处就在于其会破坏图像的空间结构</strong></p>
+<p><strong>深度学习方法有很多，如：自动编码器、稀疏自动编码器、受限波尔兹曼机（RBM）、深度信念网络（DBN）、卷积神经网络（CNN）、循环神经网络（RNN）、长短期记忆递归网络（LSTM）等。</strong></p>
+</blockquote>
+<h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><p>参考图片(来自网络,侵删)</p>
+<p><img src="http://cloth-10050281.cos.myqcloud.com/a.jpg" alt=""></p>
+<h3 id="matlab自带"><a href="#matlab自带" class="headerlink" title="matlab自带"></a>matlab自带</h3><h4 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%To detect Face  </span></span><br><span class="line">FDetect = vision.CascadeObjectDetector();</span><br><span class="line"></span><br><span class="line"><span class="comment">%Read the input image</span></span><br><span class="line">I = imread(<span class="string">'E:6.jpg'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%Returns Bounding Box values based on number of objects</span></span><br><span class="line">face_dtect = step(FDetect,I);</span><br><span class="line"></span><br><span class="line">figure(<span class="number">1</span>),</span><br><span class="line">imshow(I); hold on</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="built_in">size</span>(face_dtect,<span class="number">1</span>)</span><br><span class="line">    rectangle(<span class="string">'Position'</span>,face_dtect(<span class="built_in">i</span>,:),<span class="string">'LineWidth'</span>,<span class="number">5</span>,<span class="string">'LineStyle'</span>,<span class="string">'-'</span>,<span class="string">'EdgeColor'</span>,<span class="string">'m'</span>);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">title(<span class="string">'Face Detection'</span>);</span><br><span class="line">hold off;</span><br></pre></td></tr></table></figure>
+<p><img src="http://cloth-10050281.cos.myqcloud.com/face.jpg" alt=""></p>
+<h4 id="人眼识别"><a href="#人眼识别" class="headerlink" title="人眼识别"></a>人眼识别</h4><p>效果其实挺不错,不过对于眼镜扑街了.</p>
+<p>把这一句加一个属性</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%To detect Face  </span></span><br><span class="line">FDetect = vision.CascadeObjectDetector(<span class="string">'EyePairBig'</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://cloth-10050281.cos.myqcloud.com/eye.jpg" alt=""></p>
+<h3 id="opencv"><a href="#opencv" class="headerlink" title="opencv"></a>opencv</h3><p><a href="http://cloth-10050281.cos.myqcloud.com/opencv.zip" target="_blank" rel="external">&lt;<opencv3编程入门>&gt;中windows可执行程序</opencv3编程入门></a></p>
+<p>python版本图片太大泰坦显卡都没imshow出来…….</p>
+<h2 id="人脸验证"><a href="#人脸验证" class="headerlink" title="人脸验证"></a>人脸验证</h2><ul>
+<li><p>PCA降维+LDA获取类间差值</p>
+<ul>
+<li>Fisher</li>
+<li>2dPCA,CSLDA</li>
+</ul>
+</li>
+<li><p>Gabor变换+SVM</p>
+</li>
+<li><p>SIFT特征:连连看</p>
+</li>
+<li><p>LBP特征: 纹理 ~中值滤波器,高斯滤波器,DOG</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>对于服装属性而言,通过成熟的人脸去画bb其实是有一定可行性的.但是对比而言有相同或是进一步的困难</p>
+<ol>
+<li>在初期人脸是需要干净环境(受限/部分受限),服装需求度可能更大,因为服饰和背景相比更近</li>
+<li>现有的工业化,港中文等高校的人脸高精度框架没有开源,开源代码除了opencv自带的之外并不好配置,然而opencv对于倾斜度大于15’的图片识别不出来..</li>
+<li>隐形马尔科夫模型也是可以借鉴的一个点,人脸识别中一层一层走的,集体照中可以一排一排推</li>
+<li>但是可以借鉴的是模型select search+RCNN,交替网络方法<ul>
+<li>Haar算子识别边缘信息这一点十分有用</li>
+<li>下一周可能开始折腾caffe</li>
+</ul>
+</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/21450533" target="_blank" rel="external">从VJ到深度学习</a></li>
+<li><a href="http://blog.csdn.net/qq_18343569/article/details/49024541" target="_blank" rel="external">matlab自带的分类器对人脸、鼻子、嘴进行检测</a></li>
+<li>&lt;<opencv3编程入门>&gt;示例源代码</opencv3编程入门></li>
+<li><a href="http://blog.csdn.net/u012162613/article/details/43523507" target="_blank" rel="external">python-opencv2人脸检测</a></li>
+</ul>
+<ul>
+<li><p>人脸自动机器识别 科学出版社</p>
+</li>
+<li><p>人脸识别与人体动作识别技术及应用 中国工信出版集团</p>
+<p>​</p>
+<p>readmore:</p>
+<p><a href="https://github.com/betars/Face-Resources" target="_blank" rel="external">15整理</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[淘宝零食推荐]]></title>
       <url>http://renld.github.io/2016/11/06/yummy/</url>
       <content type="html"><![CDATA[<p>改用印象笔记(for pdf reason)和pages(for pretty reason)做笔记了,这个博客估计会从笔记博客回归技术博客了哈哈哈</p>
